@@ -9541,9 +9541,6 @@ namespace KafkaConsumer.MDMSVC {
         private string StatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> TimeStampField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TopicField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -9701,19 +9698,6 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.StatusField, value) != true)) {
                     this.StatusField = value;
                     this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> TimeStamp {
-            get {
-                return this.TimeStampField;
-            }
-            set {
-                if ((this.TimeStampField.Equals(value) != true)) {
-                    this.TimeStampField = value;
-                    this.RaisePropertyChanged("TimeStamp");
                 }
             }
         }
@@ -59291,6 +59275,14 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPentaho/Pentaho_SupplierApi_Call", ReplyAction="http://tempuri.org/IPentaho/Pentaho_SupplierApi_CallResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Pentaho_SupplierApi_CallAsync(string ApiLocationId, string CalledBy);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPentaho/Pentaho_SupplierApi_Call_ByChecker", ReplyAction="http://tempuri.org/IPentaho/Pentaho_SupplierApi_Call_ByCheckerResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IPentaho/Pentaho_SupplierApi_Call_ByCheckerDC_ErrorStatusFault" +
+            "", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Message Pentaho_SupplierApi_Call_ByChecker(string ApiLocationId, string CalledBy, string Task_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPentaho/Pentaho_SupplierApi_Call_ByChecker", ReplyAction="http://tempuri.org/IPentaho/Pentaho_SupplierApi_Call_ByCheckerResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Pentaho_SupplierApi_Call_ByCheckerAsync(string ApiLocationId, string CalledBy, string Task_Id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetails", ReplyAction="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsDC_ErrorStatusFaul" +
             "t", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -62523,6 +62515,14 @@ namespace KafkaConsumer.MDMSVC {
         
         public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Pentaho_SupplierApi_CallAsync(string ApiLocationId, string CalledBy) {
             return base.Channel.Pentaho_SupplierApi_CallAsync(ApiLocationId, CalledBy);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Message Pentaho_SupplierApi_Call_ByChecker(string ApiLocationId, string CalledBy, string Task_Id) {
+            return base.Channel.Pentaho_SupplierApi_Call_ByChecker(ApiLocationId, CalledBy, Task_Id);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Pentaho_SupplierApi_Call_ByCheckerAsync(string ApiLocationId, string CalledBy, string Task_Id) {
+            return base.Channel.Pentaho_SupplierApi_Call_ByCheckerAsync(ApiLocationId, CalledBy, Task_Id);
         }
         
         public KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus Pentaho_SupplierApiCall_ViewDetails(string PentahoCallId) {

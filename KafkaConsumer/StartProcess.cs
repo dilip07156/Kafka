@@ -18,17 +18,13 @@ namespace KafkaConsumer
                 PageNo = 0,
                 PageSize = int.MaxValue
             };
-            object returnObject = null;
-            Proxy.PostData(ProxyFor.MDM_CONSUMER, System.Configuration.ConfigurationManager.AppSettings["GetMasterAttributes"].ToString(), requestObject, requestObject.GetType(), typeof(IList<DC_M_masterattribute>), out returnObject);
-            IList<DC_M_masterattribute> Kafka = (IList<DC_M_masterattribute>)returnObject;
+            IList<DC_M_masterattribute> Kafka = Proxy.Post<IList<DC_M_masterattribute>, DC_M_masterattribute>(System.Configuration.ConfigurationManager.AppSettings["GetMasterAttributes"], requestObject).GetAwaiter().GetResult();
 
             IList<DC_M_masterattributevalue> KafkaVariables = new List<DC_M_masterattributevalue>();
             if (Kafka != null)
             {
-                object mavObject = null;
                 Guid MasterAttribute_Id = Kafka.Where(w => w.Name == "KafkaVariables").Select(s => s.MasterAttribute_Id).FirstOrDefault();
-                Proxy.GetData(ProxyFor.MDM_CONSUMER, string.Format(System.Configuration.ConfigurationManager.AppSettings["GetAllAttributeValuesByMasterId"].ToString(), MasterAttribute_Id.ToString(), int.MaxValue, 0), typeof(IList<DC_M_masterattributevalue>), out mavObject);
-                KafkaVariables = (IList<DC_M_masterattributevalue>)mavObject;
+                KafkaVariables = Proxy.Get<IList<DC_M_masterattributevalue>>(string.Format(System.Configuration.ConfigurationManager.AppSettings["GetAllAttributeValuesByMasterId"].ToString(), MasterAttribute_Id.ToString(), int.MaxValue, 0)).GetAwaiter().GetResult();
             }
 
             var mode = "poll";
@@ -66,6 +62,27 @@ namespace KafkaConsumer
                     AdvancedConsumer.PrintUsage();
                     break;
             }
+
+
+            #region Thread to Get File details from DB and Process them
+            int TimerInterval = int.Parse(System.Configuration.ConfigurationManager.AppSettings["TimerInterval"]);
+            Task.Run(async () =>
+            {
+                try
+                {
+                    while (!cancellationToken.IsCancellationRequested)
+                    {
+                        ProcessKafkaMessage.Process_StgKafkaData();
+                        await Task.Delay(TimerInterval, cancellationToken);
+                    }
+                }
+                catch (OperationCanceledException)
+                {
+                    Console.WriteLine("Canceled!");
+                }
+            });
+            #endregion Thread to Get File details from DB and Process them
+
         }
 
         //public static Dictionary<string, object> constructConfig(string brokerList, bool enableAutoCommit) =>

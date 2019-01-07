@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KafkaConsumer
+namespace KafkaConsumer.Models
 {
     public class Lock
     {
@@ -495,15 +495,9 @@ namespace KafkaConsumer
         public List<Amenity> amenities { get; set; }
     }
 
-    public class Data
+    public class AccommodationPayload
     {
         public AccomodationData accomodationData { get; set; }
         public List<AccomodationRoomData> accomodationRoomData { get; set; }
-    }
-
-    public class RootObject
-    {
-        public string method { get; set; }
-        public Data data { get; set; }
     }
 }

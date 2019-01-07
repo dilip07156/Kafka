@@ -1,23 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization.Json;
 using System.Net;
 using System.IO;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace KafkaConsumer
 {
-
-    public enum ProxyFor
-    {
-        MDM_CONSUMER
-    }
-    // class Proxy
     public static class Proxy
     {
-
         public static string MDMSVC_URL
         {
             get
@@ -26,114 +18,57 @@ namespace KafkaConsumer
             }
         }
 
-        public static bool GetData(ProxyFor For, string uri, Type ResponseType, out object ReturnValue)
+        public static async Task<TResponse> Get<TResponse>(string RelativeUrl)
         {
-            try
+            using (HttpClient client = new HttpClient())
             {
-                string AbsPath = string.Empty;
-                if (For == ProxyFor.MDM_CONSUMER)
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage response = await client.GetAsync(MDMSVC_URL + RelativeUrl);
+                if (response.IsSuccessStatusCode)
                 {
-                    AbsPath = MDMSVC_URL;
-                }
-
-                HttpWebRequest request;
-                request = (HttpWebRequest)WebRequest.Create(AbsPath + uri);
-
-                request.KeepAlive = false;
-                HttpWebResponse response = request.GetResponse() as HttpWebResponse;
-
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    Stream stream = response.GetResponseStream();
-                    DataContractJsonSerializer obj = new DataContractJsonSerializer(ResponseType);
-                    ReturnValue = obj.ReadObject(stream);
-                    obj = null;
-
-                    stream = null;
-                    response.Dispose();
-                    request = null;
-                    return true;
+                    return await response.Content.ReadAsAsync<TResponse>();
                 }
                 else
                 {
-                    response.Dispose();
-                    request = null;
-                    ReturnValue = null;
-                    return false;
+                    return default(TResponse);
                 }
-            }
-            catch (Exception ex)
-            {
-                ReturnValue = null;
-                return false;
             }
         }
 
-        public static bool PostData(ProxyFor For, string URI, object Param, Type RequestType, Type ResponseType, out object ReturnValue)
+        public static async Task<TResponse> Post<TResponse, TRequest>(string RelativeUrl, TRequest value)
         {
-            try
+            using (HttpClient client = new HttpClient())
             {
-                string AbsPath = string.Empty;
-                if (For == ProxyFor.MDM_CONSUMER)
-                {
-                    AbsPath = MDMSVC_URL;
-                }
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpWebRequest request;
-                request = (HttpWebRequest)WebRequest.Create(AbsPath + URI);
+                DataContractJsonSerializer serializerToUpload = new DataContractJsonSerializer(value.GetType());
 
-                request.Method = "POST";
-                request.ContentType = "application/json";
-                request.KeepAlive = false;
-                DataContractJsonSerializer serializerToUpload = new DataContractJsonSerializer(RequestType);
+                ByteArrayContent content = null;
 
                 using (var memoryStream = new MemoryStream())
                 {
                     using (var reader = new StreamReader(memoryStream))
                     {
-                        serializerToUpload.WriteObject(memoryStream, Param);
+                        serializerToUpload.WriteObject(memoryStream, value);
                         memoryStream.Position = 0;
                         string body = reader.ReadToEnd();
-
-                        using (var streamWriter = new StreamWriter(request.GetRequestStream()))
-                        {
-                            streamWriter.Write(body);
-                        }
+                        var buffer = System.Text.Encoding.UTF8.GetBytes(body);
+                        content = new ByteArrayContent(buffer);
+                        content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
                     }
                 }
 
-                var response = request.GetResponse();
-
-                if (((System.Net.HttpWebResponse)response).StatusCode != HttpStatusCode.OK)
+                HttpResponseMessage response = await client.PostAsync((MDMSVC_URL + RelativeUrl), content);
+                if (response.IsSuccessStatusCode)
                 {
-                    ReturnValue = null;
+                    return await response.Content.ReadAsAsync<TResponse>();
                 }
                 else
                 {
-                    var stream = response.GetResponseStream();
-
-                    var obj = new DataContractJsonSerializer(ResponseType);
-                    ReturnValue = obj.ReadObject(stream);
-
-                    obj = null;
-                    stream = null;
+                    return default(TResponse);
                 }
-
-                serializerToUpload = null;
-
-                response.Dispose();
-                response = null;
-                request = null;
-
-                if (ReturnValue != null)
-                    return true;
-                else
-                    return false;
-            }
-            catch (Exception e)
-            {
-                ReturnValue = null;
-                return false;
             }
         }
     }

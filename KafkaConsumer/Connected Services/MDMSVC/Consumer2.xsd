@@ -14,7 +14,6 @@
       <xs:element minOccurs="0" name="Process_User" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Row_Id" type="ser:guid" />
       <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Topic" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TopicPartion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TopicPartionOffset" nillable="true" type="xs:string" />
