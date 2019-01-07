@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\librdkafka.redist.0.11.6\build\librdkafka.redist.props" Condition="Exists('..\packages\librdkafka.redist.0.11.6\build\librdkafka.redist.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CED3F4F-00EE-413E-8C88-6BDD6A4ED26A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KafkaConsumer</RootNamespace>
+    <AssemblyName>KafkaConsumer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Confluent.Kafka, Version=0.11.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Confluent.Kafka.0.11.6\lib\net45\Confluent.Kafka.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedConsumer.cs" />
+    <Compile Include="Connected Services\MDMSVC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="PayLoad.cs" />
+    <Compile Include="ProcessKafkaMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy.cs" />
+    <Compile Include="ProxyAsync.cs" />
+    <Compile Include="StartProcess.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\MDMSVC\Consumer.wsdl" />
+    <None Include="Connected Services\MDMSVC\Consumer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\Consumer9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.Activity_MediaDetailsForAttribute.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.City_AlphaPage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_Contact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_Descriptions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_Facility.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_HealthAndSafety.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_HotelUpdates.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_Media.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_NearbyPlaces.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_PaxOccupancy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_RoomInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_RouteInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_Status.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_SupplierRoomTypeMap_SearchRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_AccomodationBasic.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_AutoComplete_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_Category_DDL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_Category_DDL_WithExtraDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_ClassificationAttributes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_DDL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_Media_Attributes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_ProductMapping.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_RoomFacilities.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_Search_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accomodation_SupplierRoomTypeMapping.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Acitivity_SupplierProductMapping.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Acitivity_SupplierProductMappingForDDL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ActivityProductDetailsReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ActivitySearch_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_CategoryTypes_DDL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_ClassificationAttributes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Contact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Content.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_DDL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Deals.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Descriptions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Flavour.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Flavour_Options.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Inclusions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_InclusionsDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Media.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_MediaAttributesForImageReview.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_OperatingDays.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_PickUpDrop.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_PickUpDropDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Policy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Prices.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Report_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_ReviewsAndScores.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_Status.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_SupplierProductMapping.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_SupplierProductMapping_CA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ApplicationMgmt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_CityArea.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_CityAreaLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_CityMapping.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_City_Master_DDL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_CountryMapping.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_CountryMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_DynamicAttributes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_EntityDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_EntityType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_FileProgressDashboard.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_FileUploadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_GenericMasterDetails_ByIDOrName.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_GeoLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_HotelListByCityCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_HotelMappingReport_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Keys.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Keyword.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_keyword_alias.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_MappingStats.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_MasterAttribute.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_MasterAttributeMapping.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_MasterAttributeMappingAdd_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_MasterAttributeMapping_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_MasterAttributeValueMappingRS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Master_City.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Master_Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Master_Region.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Master_State.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Message.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_M_masterattribute.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_M_masterattributelists.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_M_masterattributevalue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_M_masterparentattributes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_NewDashBoardReportCountry_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_newHotelsReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_PentahoApiCallLogDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_PortMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Priorities.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Ranks.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_RefreshDistributionDataLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Roles.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_RollOffReportRule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_RollOffReportStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_RollOffReportUpdate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SiteMap.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SRT_ML_Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SRT_ML_Response_Semantic.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SRT_ML_Response_Supervised_Semantic.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SRT_ML_Response_Syntactic.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_State_Master_DDL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Statuses.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Stg_Kafka.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Supplier.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierAccoMappingExportDataReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierExportDataReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierImportAttributes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierMarket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierRoomTypeAttributes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_supplierwisesummaryReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_supplierwiseUnmappedReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_supplierwiseunmappedsummaryReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Supplier_ApiLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Supplier_DDL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Supplier_ProductCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Supplier_Schedule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Supplier_StaticDataDownload.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Teams.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_unmappedActivityReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_UnmappedCityReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_UnmappedCountryReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_unmappedProductReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_UploadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_UserDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_UserEntity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_VelocityMappingStats.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ZoneCitiesSearch.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ZoneHotelList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ZoneSearch.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.State_AlphaPage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.SupplierScheduledTask.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.Supplier_Task_Calender.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.Supplier_Task_Logs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.Supplier_Task_Notifications.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MDMSVC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MDMSVC\Consumer.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MDMSVC\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MDMSVC\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MDMSVC\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\librdkafka.redist.0.11.6\build\librdkafka.redist.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\librdkafka.redist.0.11.6\build\librdkafka.redist.props'))" />
+  </Target>
+</Project>

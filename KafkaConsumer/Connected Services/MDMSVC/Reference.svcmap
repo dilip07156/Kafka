@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4e5bd2d0-9df1-441e-ac02-34c853060b4b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:57643/Consumer.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Consumer.xsd" MetadataType="Schema" ID="32b06540-a85d-47cb-909a-5969c663d3fc" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd14" />
+    <MetadataFile FileName="Consumer1.xsd" MetadataType="Schema" ID="0727f753-aa76-4492-a48c-f60e297ec29d" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd15" />
+    <MetadataFile FileName="Consumer2.xsd" MetadataType="Schema" ID="8fc66376-503f-45ec-9546-07f7ddfda107" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd16" />
+    <MetadataFile FileName="Consumer3.xsd" MetadataType="Schema" ID="1a61f680-c911-404a-aa25-f9433979dbe2" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd17" />
+    <MetadataFile FileName="Consumer4.xsd" MetadataType="Schema" ID="868ce4b0-eda0-481e-83d6-b523569b8b14" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd10" />
+    <MetadataFile FileName="Consumer5.xsd" MetadataType="Schema" ID="9d4283a5-bc6a-4aa0-bf44-1c4e0f9ea6e8" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd0" />
+    <MetadataFile FileName="Consumer6.xsd" MetadataType="Schema" ID="bcf4dcca-fa9b-4e3e-94e4-5287bab42076" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd12" />
+    <MetadataFile FileName="Consumer7.xsd" MetadataType="Schema" ID="4df93ca3-4429-48f9-b373-cb27b93baa91" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd13" />
+    <MetadataFile FileName="Consumer8.xsd" MetadataType="Schema" ID="96a120f1-ca51-474c-bbe9-7906b75da591" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd2" />
+    <MetadataFile FileName="Consumer9.xsd" MetadataType="Schema" ID="58ce3187-a9b8-4388-936a-4c724db42220" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd7" />
+    <MetadataFile FileName="Consumer.wsdl" MetadataType="Wsdl" ID="e76a4b02-62cc-44c7-b0cb-93713116a3c4" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?wsdl" />
+    <MetadataFile FileName="Consumer10.xsd" MetadataType="Schema" ID="9b9f16a4-b84d-4faa-98f6-49fce808ff13" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd9" />
+    <MetadataFile FileName="Consumer11.xsd" MetadataType="Schema" ID="ccd3f75e-53cc-456a-a0c3-6031b5057837" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd11" />
+    <MetadataFile FileName="Consumer.disco" MetadataType="Disco" ID="e6fbefc7-c934-4cbc-b4c2-f82369a53380" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?disco" />
+    <MetadataFile FileName="Consumer12.xsd" MetadataType="Schema" ID="83dc7dde-e1e3-4699-a74d-313fb216e497" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd1" />
+    <MetadataFile FileName="Consumer13.xsd" MetadataType="Schema" ID="00fc3369-fda4-465b-b73e-650fa1ab4994" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd3" />
+    <MetadataFile FileName="Consumer14.xsd" MetadataType="Schema" ID="a8660c24-0ae5-400e-aa4e-38c0aae814c2" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd4" />
+    <MetadataFile FileName="Consumer15.xsd" MetadataType="Schema" ID="ba30b920-b092-4349-b997-ba1382b2c56f" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd5" />
+    <MetadataFile FileName="Consumer16.xsd" MetadataType="Schema" ID="958b3cb7-94a6-47aa-9feb-97210e21dfc9" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd6" />
+    <MetadataFile FileName="Consumer17.xsd" MetadataType="Schema" ID="b07749b1-d9ec-4ad8-a1f8-bac421faa468" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd8" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

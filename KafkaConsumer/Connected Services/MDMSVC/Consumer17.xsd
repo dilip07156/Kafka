@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.Admin" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfDC_SiteMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SiteMap" nillable="true" type="tns:DC_SiteMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SiteMap" nillable="true" type="tns:ArrayOfDC_SiteMap" />
+  <xs:complexType name="DC_SiteMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSiteMapNode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ParentID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Roles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteMap_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SiteMap" nillable="true" type="tns:DC_SiteMap" />
+  <xs:complexType name="ArrayOfDC_Roles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Roles" nillable="true" type="tns:DC_Roles" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Roles" nillable="true" type="tns:ArrayOfDC_Roles" />
+  <xs:complexType name="DC_Roles">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Roles" nillable="true" type="tns:DC_Roles" />
+  <xs:complexType name="DC_RoleAuthorizedForUrl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_RoleAuthorizedForUrl" nillable="true" type="tns:DC_RoleAuthorizedForUrl" />
+  <xs:complexType name="ArrayOfDC_EntityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_EntityType" nillable="true" type="tns:DC_EntityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_EntityType" nillable="true" type="tns:ArrayOfDC_EntityType" />
+  <xs:complexType name="DC_EntityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnityTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="EntityTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_EntityType" nillable="true" type="tns:DC_EntityType" />
+  <xs:complexType name="DC_EntityDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntityID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="EntityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_EntityDetails" nillable="true" type="tns:DC_EntityDetails" />
+  <xs:complexType name="ArrayOfDC_EntityDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_EntityDetails" nillable="true" type="tns:DC_EntityDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_EntityDetails" nillable="true" type="tns:ArrayOfDC_EntityDetails" />
+  <xs:complexType name="DC_UserEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="EntityTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManagerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_UserEntity" nillable="true" type="tns:DC_UserEntity" />
+  <xs:complexType name="ArrayOfDC_UserDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_UserDetails" nillable="true" type="tns:DC_UserDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_UserDetails" nillable="true" type="tns:ArrayOfDC_UserDetails" />
+  <xs:complexType name="DC_UserDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_UserDetails" nillable="true" type="tns:DC_UserDetails" />
+  <xs:complexType name="ArrayOfDC_ApplicationMgmt">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_ApplicationMgmt" nillable="true" type="tns:DC_ApplicationMgmt" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_ApplicationMgmt" nillable="true" type="tns:ArrayOfDC_ApplicationMgmt" />
+  <xs:complexType name="DC_ApplicationMgmt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_ApplicationMgmt" nillable="true" type="tns:DC_ApplicationMgmt" />
+</xs:schema>

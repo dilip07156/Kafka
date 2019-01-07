@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.DC_Address" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.DC_Address" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="DC_Country_State_City_Area_Location">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Country_State_City_Area_Location" nillable="true" type="tns:DC_Country_State_City_Area_Location" />
+  <xs:complexType name="DC_Address_Physical">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityAreaOrDistrict" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CityOrTownOrVillage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountyOrState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Address_Physical" nillable="true" type="tns:DC_Address_Physical" />
+  <xs:complexType name="DC_Address_GeoCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Latitude" type="xs:float" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:float" />
+      <xs:element minOccurs="0" name="Product_Id" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Address_GeoCode" nillable="true" type="tns:DC_Address_GeoCode" />
+  <xs:complexType name="DC_Address_GeoCodeForNearBy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlaceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="radius" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Address_GeoCodeForNearBy" nillable="true" type="tns:DC_Address_GeoCodeForNearBy" />
+</xs:schema>

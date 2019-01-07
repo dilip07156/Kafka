@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Net" />
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DataContracts.Masters" />
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" />
+  <xs:complexType name="ArrayOfDC_Accommodation_Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_Status" nillable="true" type="tns:DC_Accommodation_Status" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_Status" nillable="true" type="tns:ArrayOfDC_Accommodation_Status" />
+  <xs:complexType name="DC_Accommodation_Status">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Status_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="CompanyMarket" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeactivationReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="From" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="To" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_Status" nillable="true" type="tns:DC_Accommodation_Status" />
+  <xs:complexType name="DC_ErrorStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ErrorStatusCode" type="q1:HttpStatusCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_ErrorStatus" nillable="true" type="tns:DC_ErrorStatus" />
+  <xs:complexType name="DC_Message">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StatusCode" type="tns:ReadOnlyMessage.StatusCode" />
+      <xs:element minOccurs="0" name="StatusMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Message" nillable="true" type="tns:DC_Message" />
+  <xs:simpleType name="ReadOnlyMessage.StatusCode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Plain" />
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Information" />
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Danger" />
+      <xs:enumeration value="Primary" />
+      <xs:enumeration value="Duplicate" />
+      <xs:enumeration value="Failed" />
+      <xs:enumeration value="Stopped" />
+      <xs:enumeration value="Paused" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ReadOnlyMessage.StatusCode" nillable="true" type="tns:ReadOnlyMessage.StatusCode" />
+  <xs:complexType name="ArrayOfDC_Accomodation_ClassificationAttributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_ClassificationAttributes" nillable="true" type="tns:DC_Accomodation_ClassificationAttributes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation_ClassificationAttributes" nillable="true" type="tns:ArrayOfDC_Accomodation_ClassificationAttributes" />
+  <xs:complexType name="DC_Accomodation_ClassificationAttributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_ClassificationAttribute_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="AttributeSubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AttributeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AttributeValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternalOnly" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_ClassificationAttributes" nillable="true" type="tns:DC_Accomodation_ClassificationAttributes" />
+  <xs:complexType name="ArrayOfDC_Accommodation_Descriptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_Descriptions" nillable="true" type="tns:DC_Accommodation_Descriptions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_Descriptions" nillable="true" type="tns:ArrayOfDC_Accommodation_Descriptions" />
+  <xs:complexType name="DC_Accommodation_Descriptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Description_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescriptionType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Language_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_Descriptions" nillable="true" type="tns:DC_Accommodation_Descriptions" />
+  <xs:complexType name="ArrayOfDC_Accommodation_Facility">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_Facility" nillable="true" type="tns:DC_Accommodation_Facility" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_Facility" nillable="true" type="tns:ArrayOfDC_Accommodation_Facility" />
+  <xs:complexType name="DC_Accommodation_Facility">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Facility_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FacilityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_Facility" nillable="true" type="tns:DC_Accommodation_Facility" />
+  <xs:complexType name="ArrayOfDC_Accommodation_Contact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_Contact" nillable="true" type="tns:DC_Accommodation_Contact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_Contact" nillable="true" type="tns:ArrayOfDC_Accommodation_Contact" />
+  <xs:complexType name="DC_Accommodation_Contact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Contact_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="City_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Country_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WebSiteURL" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_Contact" nillable="true" type="tns:DC_Accommodation_Contact" />
+  <xs:complexType name="ArrayOfDC_Accommodation_RoomInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_RoomInfo" nillable="true" type="tns:DC_Accommodation_RoomInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_RoomInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RoomInfo" />
+  <xs:complexType name="DC_Accommodation_RoomInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Amenities" nillable="true" type="tns:ArrayOfDC_Accomodation_Roomamenities" />
+      <xs:element minOccurs="0" name="AmenityTypes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BathRoomType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BedType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyRoomCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FloorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FloorNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAmenityChanges" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MysteryRoom" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NoOfInterconnectingRooms" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NoOfRooms" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RoomCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomDecor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomFacilities" nillable="true" type="tns:ArrayOfDC_Accomodation_RoomFacilities" />
+      <xs:element minOccurs="0" name="RoomId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomSize" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomView" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Smoking" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TLGXAccoRoomId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_RoomInfo" nillable="true" type="tns:DC_Accommodation_RoomInfo" />
+  <xs:complexType name="ArrayOfDC_Accomodation_Roomamenities">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_Roomamenities" nillable="true" type="tns:DC_Accomodation_Roomamenities" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation_Roomamenities" nillable="true" type="tns:ArrayOfDC_Accomodation_Roomamenities" />
+  <xs:complexType name="DC_Accomodation_Roomamenities">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoomInfo_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="isChargeable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_Roomamenities" nillable="true" type="tns:DC_Accomodation_Roomamenities" />
+  <xs:complexType name="ArrayOfDC_Accomodation_RoomFacilities">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_RoomFacilities" nillable="true" type="tns:DC_Accomodation_RoomFacilities" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation_RoomFacilities" nillable="true" type="tns:ArrayOfDC_Accomodation_RoomFacilities" />
+  <xs:complexType name="DC_Accomodation_RoomFacilities">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RoomFacility_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="AmenityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AmenityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_user" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRoomActive" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_RoomFacilities" nillable="true" type="tns:DC_Accomodation_RoomFacilities" />
+  <xs:complexType name="ArrayOfDC_Accomodation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation" nillable="true" type="tns:DC_Accomodation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation" nillable="true" type="tns:ArrayOfDC_Accomodation" />
+  <xs:complexType name="DC_Accomodation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Descriptions" nillable="true" type="tns:ArrayOfDC_Accommodation_Descriptions" />
+      <xs:element minOccurs="0" name="Accommodation_Facility" nillable="true" type="tns:ArrayOfDC_Accommodation_Facility" />
+      <xs:element minOccurs="0" name="Accommodation_HealthAndSafety" nillable="true" type="tns:ArrayOfDC_Accommodation_HealthAndSafety" />
+      <xs:element minOccurs="0" name="Accommodation_HotelUpdates" nillable="true" type="tns:ArrayOfDC_Accommodation_HotelUpdates" />
+      <xs:element minOccurs="0" name="Accommodation_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Media" nillable="true" type="tns:ArrayOfDC_Accommodation_Media" />
+      <xs:element minOccurs="0" name="Accommodation_NearbyPlaces" nillable="true" type="tns:ArrayOfDC_Accommodation_NearbyPlaces" />
+      <xs:element minOccurs="0" name="Accommodation_PaxOccupancy" nillable="true" type="tns:ArrayOfDC_Accommodation_PaxOccupancy" />
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RoomInfo" />
+      <xs:element minOccurs="0" name="Accommodation_RouteInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RouteInfo" />
+      <xs:element minOccurs="0" name="Accommodation_RuleInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RuleInfo" />
+      <xs:element minOccurs="0" name="Accomodation_ClassificationAttributes" nillable="true" type="tns:ArrayOfDC_Accomodation_ClassificationAttributes" />
+      <xs:element minOccurs="0" name="Accomodation_Contact" nillable="true" type="tns:ArrayOfDC_Accommodation_Contact" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataContracts.Masters" minOccurs="0" name="Accomodation_DynamicAttributes" nillable="true" type="q2:ArrayOfDC_DynamicAttributes" />
+      <xs:element minOccurs="0" name="Accomodation_Status" nillable="true" type="tns:ArrayOfDC_Accommodation_Status" />
+      <xs:element minOccurs="0" name="Affiliation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Area_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="AwardsReceived" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarbonFootPrint" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Chain" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckInTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CheckOutTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_ISO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CompanyHotelID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyRating" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyRecommended" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country_ISO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinanceControlID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FullAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Google_Place_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hashtag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelRating" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertFrom" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InternalRemarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMysteryProduct" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRoomMappingCompleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LEGACY_CITY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LEGACY_COUNTRY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LEGACY_STATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude_Tx" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Legacy_HTL_ID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude_Tx" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Null_Columns" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfflineDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OnlineDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCategorySubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RatingDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecommendedFor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Room_Amenities" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State_ISO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuburbDowntown" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TLGXAccoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telephone_TX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalFloors" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_Descriptions" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_Facility" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_HealthAndSafety" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_HotelUpdates" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_Media" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_NearbyPlaces" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_PaxOccupancy" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_RoomInfo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_RouteInfo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accommodation_RuleInfo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accomodation_ClassificationAttributes" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accomodation_Contact" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRecords_Accomodation_Status" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalRooms" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Town" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="YearBuilt" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation" nillable="true" type="tns:DC_Accomodation" />
+  <xs:complexType name="ArrayOfDC_Accommodation_HealthAndSafety">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_HealthAndSafety" nillable="true" type="tns:DC_Accommodation_HealthAndSafety" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_HealthAndSafety" nillable="true" type="tns:ArrayOfDC_Accommodation_HealthAndSafety" />
+  <xs:complexType name="DC_Accommodation_HealthAndSafety">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_HealthAndSafety_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_HealthAndSafety" nillable="true" type="tns:DC_Accommodation_HealthAndSafety" />
+  <xs:complexType name="ArrayOfDC_Accommodation_HotelUpdates">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_HotelUpdates" nillable="true" type="tns:DC_Accommodation_HotelUpdates" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_HotelUpdates" nillable="true" type="tns:ArrayOfDC_Accommodation_HotelUpdates" />
+  <xs:complexType name="DC_Accommodation_HotelUpdates">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_HotelUpdates_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInternal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_HotelUpdates" nillable="true" type="tns:DC_Accommodation_HotelUpdates" />
+  <xs:complexType name="ArrayOfDC_Accommodation_Media">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_Media" nillable="true" type="tns:DC_Accommodation_Media" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_Media" nillable="true" type="tns:ArrayOfDC_Accommodation_Media" />
+  <xs:complexType name="DC_Accommodation_Media">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Media_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MediaFileMaster" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediaID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediaType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Media_Attributes" nillable="true" type="tns:ArrayOfDC_Accomodation_Media_Attributes" />
+      <xs:element minOccurs="0" name="Media_Path" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Media_Position" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Media_URL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_Media" nillable="true" type="tns:DC_Accommodation_Media" />
+  <xs:complexType name="ArrayOfDC_Accomodation_Media_Attributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_Media_Attributes" nillable="true" type="tns:DC_Accomodation_Media_Attributes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation_Media_Attributes" nillable="true" type="tns:ArrayOfDC_Accomodation_Media_Attributes" />
+  <xs:complexType name="DC_Accomodation_Media_Attributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accomodation_Media_Attributes_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accomodation_Media_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="AttributeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AttributeValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMediaActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSystemAttribute" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_Media_Attributes" nillable="true" type="tns:DC_Accomodation_Media_Attributes" />
+  <xs:complexType name="ArrayOfDC_Accommodation_NearbyPlaces">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_NearbyPlaces" nillable="true" type="tns:DC_Accommodation_NearbyPlaces" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_NearbyPlaces" nillable="true" type="tns:ArrayOfDC_Accommodation_NearbyPlaces" />
+  <xs:complexType name="DC_Accommodation_NearbyPlaces">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_NearbyPlace_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accomodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistanceFromProperty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistanceUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PlaceCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlaceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlaceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_NearbyPlaces" nillable="true" type="tns:DC_Accommodation_NearbyPlaces" />
+  <xs:complexType name="ArrayOfDC_Accommodation_PaxOccupancy">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_PaxOccupancy" nillable="true" type="tns:DC_Accommodation_PaxOccupancy" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_PaxOccupancy" nillable="true" type="tns:ArrayOfDC_Accommodation_PaxOccupancy" />
+  <xs:complexType name="DC_Accommodation_PaxOccupancy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_PaxOccupancy_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromAgeForCIOR" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FromAgeForCNB" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FromAgeForExtraBed" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRoomActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxAdults" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxCNB" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxChild" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxPax" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxPaxWithExtraBed" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RoomDisplayNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToAgeForCIOR" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ToAgeForCNB" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ToAgeForExtraBed" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_PaxOccupancy" nillable="true" type="tns:DC_Accommodation_PaxOccupancy" />
+  <xs:complexType name="ArrayOfDC_Accommodation_RouteInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_RouteInfo" nillable="true" type="tns:DC_Accommodation_RouteInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_RouteInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RouteInfo" />
+  <xs:complexType name="DC_Accommodation_RouteInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccommodationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Route_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="ApproximateDuration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistanceFromProperty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistanceUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DrivingDirection" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromPlace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ModeOfTransport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameOfPlace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransportType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ValidTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_RouteInfo" nillable="true" type="tns:DC_Accommodation_RouteInfo" />
+  <xs:complexType name="ArrayOfDC_Accommodation_RuleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_RuleInfo" nillable="true" type="tns:DC_Accommodation_RuleInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_RuleInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RuleInfo" />
+  <xs:complexType name="DC_Accommodation_RuleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RuleInfo_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInternal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RuleType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_RuleInfo" nillable="true" type="tns:DC_Accommodation_RuleInfo" />
+  <xs:complexType name="DC_Accomodation_Search_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccomodationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Chain" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyHotelId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Google_Place_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertFrom" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element name="PageNo" type="xs:int" />
+      <xs:element name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:int" />
+      <xs:element name="ProductCategory" nillable="true" type="xs:string" />
+      <xs:element name="ProductCategorySubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Searchfrom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Starrating" nillable="true" type="xs:string" />
+      <xs:element name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TLGXAccoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TotalRecords" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_Search_RQ" nillable="true" type="tns:DC_Accomodation_Search_RQ" />
+  <xs:complexType name="ArrayOfDC_Accomodation_Search_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_Search_RS" nillable="true" type="tns:DC_Accomodation_Search_RS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation_Search_RS" nillable="true" type="tns:ArrayOfDC_Accomodation_Search_RS" />
+  <xs:complexType name="DC_Accomodation_Search_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccomodationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CompanyHotelId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="FullAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Google_Place_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelBrand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelChain" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelNameWithCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InsertFrom" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MapCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductSubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Starrating" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telephone_Tx" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_Search_RS" nillable="true" type="tns:DC_Accomodation_Search_RS" />
+  <xs:complexType name="DC_RoomCategoryMaster_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RoomCategory" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_RoomCategoryMaster_RQ" nillable="true" type="tns:DC_RoomCategoryMaster_RQ" />
+  <xs:complexType name="DC_Accomodation_AutoComplete_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="HotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageNo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_AutoComplete_RQ" nillable="true" type="tns:DC_Accomodation_AutoComplete_RQ" />
+  <xs:complexType name="ArrayOfDC_Accomodation_AutoComplete_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_AutoComplete_RS" nillable="true" type="tns:DC_Accomodation_AutoComplete_RS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation_AutoComplete_RS" nillable="true" type="tns:ArrayOfDC_Accomodation_AutoComplete_RS" />
+  <xs:complexType name="DC_Accomodation_AutoComplete_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_AutoComplete_RS" nillable="true" type="tns:DC_Accomodation_AutoComplete_RS" />
+  <xs:complexType name="ArrayOfDC_AccomodationBasic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_AccomodationBasic" nillable="true" type="tns:DC_AccomodationBasic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_AccomodationBasic" nillable="true" type="tns:ArrayOfDC_AccomodationBasic" />
+  <xs:complexType name="DC_AccomodationBasic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CompanyHotelID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Country_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuburbDowntown" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemProductType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telephone_Tx" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Town" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_AccomodationBasic" nillable="true" type="tns:DC_AccomodationBasic" />
+  <xs:complexType name="DC_Accommodation_RoomInfo_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="PageNo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_RoomInfo_RQ" nillable="true" type="tns:DC_Accommodation_RoomInfo_RQ" />
+  <xs:complexType name="DC_Accomodation_CopyRoomDef">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NewRoomCategory" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_CopyRoomDef" nillable="true" type="tns:DC_Accomodation_CopyRoomDef" />
+  <xs:complexType name="DC_Accomodation_UpdateStatus_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Edit_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_UpdateStatus_RQ" nillable="true" type="tns:DC_Accomodation_UpdateStatus_RQ" />
+  <xs:complexType name="DC_GooglePlaceNearByWithAccoID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accomodation_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GooglePlaceNearBy" nillable="true" type="tns:ArrayOfDC_GooglePlaceNearBy" />
+      <xs:element minOccurs="0" name="PlaceCategory" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_GooglePlaceNearByWithAccoID" nillable="true" type="tns:DC_GooglePlaceNearByWithAccoID" />
+  <xs:complexType name="ArrayOfDC_GooglePlaceNearBy">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_GooglePlaceNearBy" nillable="true" type="tns:DC_GooglePlaceNearBy" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_GooglePlaceNearBy" nillable="true" type="tns:ArrayOfDC_GooglePlaceNearBy" />
+  <xs:complexType name="DC_GooglePlaceNearBy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="geometry" nillable="true" type="tns:GeometryGooglePlaceNearBy" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="html_attributions" nillable="true" type="q3:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="icon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="opening_hours" nillable="true" type="tns:OpeningHoursGooglePlaceNearBy" />
+      <xs:element minOccurs="0" name="photos" nillable="true" type="tns:ArrayOfPhotoGooglePlaceNearBy" />
+      <xs:element minOccurs="0" name="place_id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rating" type="xs:double" />
+      <xs:element minOccurs="0" name="reference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="scope" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="types" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="vicinity" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_GooglePlaceNearBy" nillable="true" type="tns:DC_GooglePlaceNearBy" />
+  <xs:complexType name="GeometryGooglePlaceNearBy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="location" nillable="true" type="tns:Location" />
+      <xs:element minOccurs="0" name="viewport" nillable="true" type="tns:Viewport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeometryGooglePlaceNearBy" nillable="true" type="tns:GeometryGooglePlaceNearBy" />
+  <xs:complexType name="Location">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:float" />
+      <xs:element minOccurs="0" name="lng" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Location" nillable="true" type="tns:Location" />
+  <xs:complexType name="Viewport">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="northeast" nillable="true" type="tns:Northeast" />
+      <xs:element minOccurs="0" name="southwest" nillable="true" type="tns:Southwest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Viewport" nillable="true" type="tns:Viewport" />
+  <xs:complexType name="Northeast">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:float" />
+      <xs:element minOccurs="0" name="lng" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Northeast" nillable="true" type="tns:Northeast" />
+  <xs:complexType name="Southwest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:float" />
+      <xs:element minOccurs="0" name="lng" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Southwest" nillable="true" type="tns:Southwest" />
+  <xs:complexType name="OpeningHoursGooglePlaceNearBy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="open_now" type="xs:boolean" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="weekday_text" nillable="true" type="q5:ArrayOfanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpeningHoursGooglePlaceNearBy" nillable="true" type="tns:OpeningHoursGooglePlaceNearBy" />
+  <xs:complexType name="ArrayOfPhotoGooglePlaceNearBy">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhotoGooglePlaceNearBy" nillable="true" type="tns:PhotoGooglePlaceNearBy" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhotoGooglePlaceNearBy" nillable="true" type="tns:ArrayOfPhotoGooglePlaceNearBy" />
+  <xs:complexType name="PhotoGooglePlaceNearBy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="height" type="xs:int" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="html_attributions" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element minOccurs="0" name="width" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhotoGooglePlaceNearBy" nillable="true" type="tns:PhotoGooglePlaceNearBy" />
+  <xs:complexType name="ArrayOfDC_Accomodation_Category_DDL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_Category_DDL" nillable="true" type="tns:DC_Accomodation_Category_DDL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation_Category_DDL" nillable="true" type="tns:ArrayOfDC_Accomodation_Category_DDL" />
+  <xs:complexType name="DC_Accomodation_Category_DDL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoomCategory" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_Category_DDL" nillable="true" type="tns:DC_Accomodation_Category_DDL" />
+  <xs:complexType name="ArrayOfDC_Accomodation_Category_DDL_WithExtraDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_Category_DDL_WithExtraDetails" nillable="true" type="tns:DC_Accomodation_Category_DDL_WithExtraDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation_Category_DDL_WithExtraDetails" nillable="true" type="tns:ArrayOfDC_Accomodation_Category_DDL_WithExtraDetails" />
+  <xs:complexType name="DC_Accomodation_Category_DDL_WithExtraDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_SupplierRoomTypeMapping_Value_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="BedType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EditUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSmoking" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MatchingScore" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="RoomCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomSize" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomView" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SystemEditUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemMappingStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TLGXAccoRoomId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserEditDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserMappingStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_Category_DDL_WithExtraDetails" nillable="true" type="tns:DC_Accomodation_Category_DDL_WithExtraDetails" />
+  <xs:complexType name="DC_Accomodation_DDL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accomodation_DDL" nillable="true" type="tns:DC_Accomodation_DDL" />
+  <xs:complexType name="ArrayOfDC_Accomodation_DDL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_DDL" nillable="true" type="tns:DC_Accomodation_DDL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accomodation_DDL" nillable="true" type="tns:ArrayOfDC_Accomodation_DDL" />
+  <xs:complexType name="ArrayOfDC_CountryMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_CountryMaster" nillable="true" type="tns:DC_CountryMaster" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_CountryMaster" nillable="true" type="tns:ArrayOfDC_CountryMaster" />
+  <xs:complexType name="DC_CountryMaster">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="ISO3166_1_Alpha_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISO3166_1_Alpha_3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NameWithCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_CountryMaster" nillable="true" type="tns:DC_CountryMaster" />
+  <xs:complexType name="ArrayOfDC_Master_Region">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Master_Region" nillable="true" type="tns:DC_Master_Region" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Master_Region" nillable="true" type="tns:ArrayOfDC_Master_Region" />
+  <xs:complexType name="DC_Master_Region">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RegionCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Master_Region" nillable="true" type="tns:DC_Master_Region" />
+  <xs:complexType name="ArrayOfDC_Master_Country">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Master_Country" nillable="true" type="tns:DC_Master_Country" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Master_Country" nillable="true" type="tns:ArrayOfDC_Master_Country" />
+  <xs:complexType name="DC_Master_Country">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Country_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Master_Country" nillable="true" type="tns:DC_Master_Country" />
+  <xs:complexType name="ArrayOfDC_Master_City">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Master_City" nillable="true" type="tns:DC_Master_City" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Master_City" nillable="true" type="tns:ArrayOfDC_Master_City" />
+  <xs:complexType name="DC_Master_City">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="City_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Country_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Master_City" nillable="true" type="tns:DC_Master_City" />
+  <xs:complexType name="ArrayOfDC_Teams">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Teams" nillable="true" type="tns:DC_Teams" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Teams" nillable="true" type="tns:ArrayOfDC_Teams" />
+  <xs:complexType name="DC_Teams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Team_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Team_Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Teams" nillable="true" type="tns:DC_Teams" />
+  <xs:complexType name="DC_GeoLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="results" nillable="true" type="tns:ArrayOfResult" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_GeoLocation" nillable="true" type="tns:DC_GeoLocation" />
+  <xs:complexType name="ArrayOfResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Result" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResult" nillable="true" type="tns:ArrayOfResult" />
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address_components" nillable="true" type="tns:ArrayOfAddress_Components" />
+      <xs:element minOccurs="0" name="formatted_address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="geometry" nillable="true" type="tns:Geometry" />
+      <xs:element minOccurs="0" name="partial_match" type="xs:boolean" />
+      <xs:element minOccurs="0" name="place_id" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="types" nillable="true" type="q7:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result" />
+  <xs:complexType name="ArrayOfAddress_Components">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address_Components" nillable="true" type="tns:Address_Components" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddress_Components" nillable="true" type="tns:ArrayOfAddress_Components" />
+  <xs:complexType name="Address_Components">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="long_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="short_name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="types" nillable="true" type="q8:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address_Components" nillable="true" type="tns:Address_Components" />
+  <xs:complexType name="Geometry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bounds" nillable="true" type="tns:Bounds" />
+      <xs:element minOccurs="0" name="location" nillable="true" type="tns:Location" />
+      <xs:element minOccurs="0" name="location_type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="viewport" nillable="true" type="tns:Viewport" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Geometry" nillable="true" type="tns:Geometry" />
+  <xs:complexType name="Bounds">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="northeast" nillable="true" type="tns:Northeast" />
+      <xs:element minOccurs="0" name="southwest" nillable="true" type="tns:Southwest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bounds" nillable="true" type="tns:Bounds" />
+  <xs:complexType name="ArrayOfDC_SRT_ML_Response_Syntactic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SRT_ML_Response_Syntactic" nillable="true" type="tns:DC_SRT_ML_Response_Syntactic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SRT_ML_Response_Syntactic" nillable="true" type="tns:ArrayOfDC_SRT_ML_Response_Syntactic" />
+  <xs:complexType name="DC_SRT_ML_Response_Syntactic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccommodationRoomInfo_Id" nillable="true" type="tns:ArrayOfDC_SRT_ML_AccommodationRoomInfo_Syntactic" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="matches" nillable="true" type="tns:ArrayOfDC_SRT_ML_Match_Syntactic" />
+      <xs:element minOccurs="0" name="matching_string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_Response_Syntactic" nillable="true" type="tns:DC_SRT_ML_Response_Syntactic" />
+  <xs:complexType name="ArrayOfDC_SRT_ML_AccommodationRoomInfo_Syntactic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SRT_ML_AccommodationRoomInfo_Syntactic" nillable="true" type="tns:DC_SRT_ML_AccommodationRoomInfo_Syntactic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SRT_ML_AccommodationRoomInfo_Syntactic" nillable="true" type="tns:ArrayOfDC_SRT_ML_AccommodationRoomInfo_Syntactic" />
+  <xs:complexType name="DC_SRT_ML_AccommodationRoomInfo_Syntactic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccommodationRoomInfo_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="system_room_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_AccommodationRoomInfo_Syntactic" nillable="true" type="tns:DC_SRT_ML_AccommodationRoomInfo_Syntactic" />
+  <xs:complexType name="ArrayOfDC_SRT_ML_Match_Syntactic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SRT_ML_Match_Syntactic" nillable="true" type="tns:DC_SRT_ML_Match_Syntactic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SRT_ML_Match_Syntactic" nillable="true" type="tns:ArrayOfDC_SRT_ML_Match_Syntactic" />
+  <xs:complexType name="DC_SRT_ML_Match_Syntactic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="matched_string" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="score" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_Match_Syntactic" nillable="true" type="tns:DC_SRT_ML_Match_Syntactic" />
+  <xs:complexType name="ArrayOfDC_SRT_ML_Response_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SRT_ML_Response_Semantic" nillable="true" type="tns:DC_SRT_ML_Response_Semantic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SRT_ML_Response_Semantic" nillable="true" type="tns:ArrayOfDC_SRT_ML_Response_Semantic" />
+  <xs:complexType name="DC_SRT_ML_Response_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccommodationRoomInfo_Id" nillable="true" type="tns:ArrayOfDC_SRT_ML_AccommodationRoomInfo_Semantic" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="matches" nillable="true" type="tns:ArrayOfDC_SRT_ML_Match_Semantic" />
+      <xs:element minOccurs="0" name="matching_string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_Response_Semantic" nillable="true" type="tns:DC_SRT_ML_Response_Semantic" />
+  <xs:complexType name="ArrayOfDC_SRT_ML_AccommodationRoomInfo_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SRT_ML_AccommodationRoomInfo_Semantic" nillable="true" type="tns:DC_SRT_ML_AccommodationRoomInfo_Semantic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SRT_ML_AccommodationRoomInfo_Semantic" nillable="true" type="tns:ArrayOfDC_SRT_ML_AccommodationRoomInfo_Semantic" />
+  <xs:complexType name="DC_SRT_ML_AccommodationRoomInfo_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccommodationRoomInfo_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="system_room_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_AccommodationRoomInfo_Semantic" nillable="true" type="tns:DC_SRT_ML_AccommodationRoomInfo_Semantic" />
+  <xs:complexType name="ArrayOfDC_SRT_ML_Match_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SRT_ML_Match_Semantic" nillable="true" type="tns:DC_SRT_ML_Match_Semantic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SRT_ML_Match_Semantic" nillable="true" type="tns:ArrayOfDC_SRT_ML_Match_Semantic" />
+  <xs:complexType name="DC_SRT_ML_Match_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="matched_string" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="score" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_Match_Semantic" nillable="true" type="tns:DC_SRT_ML_Match_Semantic" />
+  <xs:complexType name="ArrayOfDC_SRT_ML_Response_Supervised_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SRT_ML_Response_Supervised_Semantic" nillable="true" type="tns:DC_SRT_ML_Response_Supervised_Semantic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SRT_ML_Response_Supervised_Semantic" nillable="true" type="tns:ArrayOfDC_SRT_ML_Response_Supervised_Semantic" />
+  <xs:complexType name="DC_SRT_ML_Response_Supervised_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccommodationRoomInfo_Id" nillable="true" type="tns:ArrayOfDC_SRT_ML_AccommodationRoomInfo_Supervised_Semantic" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="matches" nillable="true" type="tns:ArrayOfDC_SRT_ML_Match_Supervised_Semantic" />
+      <xs:element minOccurs="0" name="matching_string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_Response_Supervised_Semantic" nillable="true" type="tns:DC_SRT_ML_Response_Supervised_Semantic" />
+  <xs:complexType name="ArrayOfDC_SRT_ML_AccommodationRoomInfo_Supervised_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SRT_ML_AccommodationRoomInfo_Supervised_Semantic" nillable="true" type="tns:DC_SRT_ML_AccommodationRoomInfo_Supervised_Semantic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SRT_ML_AccommodationRoomInfo_Supervised_Semantic" nillable="true" type="tns:ArrayOfDC_SRT_ML_AccommodationRoomInfo_Supervised_Semantic" />
+  <xs:complexType name="DC_SRT_ML_AccommodationRoomInfo_Supervised_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccommodationRoomInfo_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="system_room_name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_AccommodationRoomInfo_Supervised_Semantic" nillable="true" type="tns:DC_SRT_ML_AccommodationRoomInfo_Supervised_Semantic" />
+  <xs:complexType name="ArrayOfDC_SRT_ML_Match_Supervised_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SRT_ML_Match_Supervised_Semantic" nillable="true" type="tns:DC_SRT_ML_Match_Supervised_Semantic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SRT_ML_Match_Supervised_Semantic" nillable="true" type="tns:ArrayOfDC_SRT_ML_Match_Supervised_Semantic" />
+  <xs:complexType name="DC_SRT_ML_Match_Supervised_Semantic">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="matched_string" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="score" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_Match_Supervised_Semantic" nillable="true" type="tns:DC_SRT_ML_Match_Supervised_Semantic" />
+  <xs:complexType name="DC_SRT_ML_Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_objMLSem" nillable="true" type="tns:DC_SRT_ML_Response_Semantic" />
+      <xs:element minOccurs="0" name="_objMLSupSem" nillable="true" type="tns:DC_SRT_ML_Response_Supervised_Semantic" />
+      <xs:element minOccurs="0" name="_objMLSyn" nillable="true" type="tns:DC_SRT_ML_Response_Syntactic" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SRT_ML_Response" nillable="true" type="tns:DC_SRT_ML_Response" />
+  <xs:complexType name="DC_FileProgressDashboard">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" minOccurs="0" name="ErrorLog" nillable="true" type="q9:ArrayOfDC_SupplierImportFile_ErrorLog" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" minOccurs="0" name="FileDetails" nillable="true" type="q10:ArrayOfDC_SupplierImportFileDetails" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" minOccurs="0" name="FileStatistics" nillable="true" type="q11:ArrayOfDC_SupplierImportFile_Statistics" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" minOccurs="0" name="ProgressLog" nillable="true" type="q12:ArrayOfDC_SupplierImportFile_Progress" />
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" minOccurs="0" name="VerboseLog" nillable="true" type="q13:ArrayOfDC_SupplierImportFile_VerboseLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_FileProgressDashboard" nillable="true" type="tns:DC_FileProgressDashboard" />
+  <xs:complexType name="ArrayOfDC_RefreshDistributionDataLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_RefreshDistributionDataLog" nillable="true" type="tns:DC_RefreshDistributionDataLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_RefreshDistributionDataLog" nillable="true" type="tns:ArrayOfDC_RefreshDistributionDataLog" />
+  <xs:complexType name="DC_RefreshDistributionDataLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Element" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_RefreshDistributionDataLog" nillable="true" type="tns:DC_RefreshDistributionDataLog" />
+  <xs:complexType name="ArrayOfDC_SupplierEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SupplierEntity" nillable="true" type="tns:DC_SupplierEntity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SupplierEntity" nillable="true" type="tns:ArrayOfDC_SupplierEntity" />
+  <xs:complexType name="DC_SupplierEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Element" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdated" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MongoPushCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Supplier_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SupplierEntity" nillable="true" type="tns:DC_SupplierEntity" />
+  <xs:complexType name="DC_Distribution_MLDataRQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Element" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logid" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Distribution_MLDataRQ" nillable="true" type="tns:DC_Distribution_MLDataRQ" />
+  <xs:complexType name="DC_MongoDbSyncRQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Element" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_MongoDbSyncRQ" nillable="true" type="tns:DC_MongoDbSyncRQ" />
+</xs:schema>

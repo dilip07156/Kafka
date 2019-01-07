@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.STG" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.STG" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="DC_Stg_Kafka">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Offset" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Partion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayLoad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Process_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Process_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Row_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeStamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Topic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TopicPartion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TopicPartionOffset" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Stg_Kafka" nillable="true" type="tns:DC_Stg_Kafka" />
+  <xs:complexType name="ArrayOfDC_Stg_Kafka">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Stg_Kafka" nillable="true" type="tns:DC_Stg_Kafka" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Stg_Kafka" nillable="true" type="tns:ArrayOfDC_Stg_Kafka" />
+</xs:schema>
