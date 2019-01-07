@@ -82,11 +82,11 @@ namespace KafkaConsumer
 
                 JObject rss = JObject.Parse(payload);
                 string method = (string)rss["method"];
-                string data = (string)rss["data"];
+                JObject data = (JObject)rss["data"];
 
                 if ((method.ToUpper() == "PUT" || method.ToUpper() == "POST") && topic.ToUpper().EndsWith(".PRODUCTACCO.PUB"))
                 {
-                    AccommodationPayload AccoPayload = JsonConvert.DeserializeObject<AccommodationPayload>(data);
+                    AccommodationPayload AccoPayload = JsonConvert.DeserializeObject<AccommodationPayload>(data.ToString());
 
                     if (AccoPayload != null)
                     {
@@ -95,7 +95,7 @@ namespace KafkaConsumer
                 }
                 else if (method.ToUpper() == "DELETE" && topic.ToUpper().EndsWith(".PRODUCTACCO.PUB"))
                 {
-                    Result = DeleteMasterRoom(data, Guid.Empty);
+                    Result = DeleteMasterRoom(data.ToString(), Guid.Empty);
                 }
 
                 return Result;
