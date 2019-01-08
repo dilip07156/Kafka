@@ -44,7 +44,7 @@ namespace KafkaConsumerDebugger
             var cancelSource = new CancellationTokenSource();
 
             StartProcess sp = new StartProcess();
-            sp.Start(cancelSource.Token);
+            sp.Start(cancelSource);
 
             //Task.Run(async () =>
             //{

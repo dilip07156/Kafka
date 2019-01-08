@@ -75,15 +75,16 @@ namespace KafkaConsumerService
 
                 //IPAddress SERVICEURLIP;
                 double dTIMERINTERVAL = 0;
+                double dPOLLINTERVAL = 0;
                 string SERVICEURLPORT = string.Empty;
-                string SERVICEURLMARKUP = string.Empty;
+                string POLLINTERVAL = string.Empty;
                 string TIMERINTERVAL = string.Empty;
                 string sSERVICEURLIP = string.Empty;
 
                 try
                 {
                     SERVICEURLPORT = Context.Parameters["SERVICEURLPORT"];
-                    SERVICEURLMARKUP = Context.Parameters["SERVICEURLMARKUP"];
+                    POLLINTERVAL = Context.Parameters["POLLINTERVAL"];
                     TIMERINTERVAL = Context.Parameters["TIMERINTERVAL"];
                     sSERVICEURLIP = Context.Parameters["SERVICEURLIP"];
                 }
@@ -132,13 +133,33 @@ namespace KafkaConsumerService
                     }
                 }
 
+                if (string.IsNullOrWhiteSpace(POLLINTERVAL))
+                {
+                    throw new ApplicationException("Please specify the Poll Interval in Milliseconds");
+                }
+                else
+                {
+                    if (!double.TryParse(POLLINTERVAL, out dPOLLINTERVAL))
+                    {
+                        throw new ApplicationException("Invalid Poll Interval.");
+                    }
+                    else
+                    {
+                        if (!(dPOLLINTERVAL >= 1000 && dPOLLINTERVAL <= 10000))
+                        {
+                            throw new ApplicationException("Invalid Poll Interval.");
+                        }
+                    }
+                }
+
+
                 //Construct Service URL.
                 string SERVICEURL;
 
                 if (string.IsNullOrWhiteSpace(SERVICEURLPORT))
-                    SERVICEURL = SERVICEURLMARKUP + "://" + sSERVICEURLIP + "/Consumer.svc";
+                    SERVICEURL = "http://" + sSERVICEURLIP + "/Consumer.svc";
                 else
-                    SERVICEURL = SERVICEURLMARKUP + "://" + sSERVICEURLIP + ":" + SERVICEURLPORT + "/Consumer.svc";
+                    SERVICEURL = "http://" + sSERVICEURLIP + ":" + SERVICEURLPORT + "/Consumer.svc";
 
                 //Check Service Url Exists or Not.
                 try
@@ -206,6 +227,9 @@ namespace KafkaConsumerService
                                         break;
                                     case "TimerInterval":
                                         attribute.Value = TIMERINTERVAL;
+                                        break;
+                                    case "PollInterval":
+                                        attribute.Value = POLLINTERVAL;
                                         break;
                                 }
                             }

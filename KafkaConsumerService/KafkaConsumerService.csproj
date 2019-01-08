@@ -88,6 +88,12 @@
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KafkaConsumer\KafkaConsumer.csproj">
+      <Project>{8ced3f4f-00ee-413e-8c88-6bdd6a4ed26a}</Project>
+      <Name>KafkaConsumer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

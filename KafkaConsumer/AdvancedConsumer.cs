@@ -25,7 +25,7 @@ namespace KafkaConsumer
         ///             (all other events are still handled by event handlers)
         ///         - no extra thread is created for the Poll (Consume) loop.
         /// </summary>
-        public static void Run_Consume(Dictionary<string, object> constructConfig, List<string> topics, CancellationToken cancellationToken)
+        public static void Run_Consume(Dictionary<string, object> constructConfig, List<string> topics, CancellationTokenSource cancellationTokenSource)
         {
             using (var consumer = new Confluent.Kafka.Consumer<Confluent.Kafka.Ignore, string>(constructConfig, null, new StringDeserializer(Encoding.UTF8)))
             {
@@ -59,14 +59,14 @@ namespace KafkaConsumer
 
                 Console.WriteLine($"Started consumer, Ctrl-C to stop consuming");
 
-                var cancelled = false;
-                Console.CancelKeyPress += (_, e) =>
-                {
-                    e.Cancel = true; // prevent the process from terminating.
-                    cancelled = true;
-                };
+                //var cancelled = false;
+                //Console.CancelKeyPress += (_, e) =>
+                //{
+                //    e.Cancel = true; // prevent the process from terminating.
+                //    cancelled = true;
+                //};
 
-                while (!cancelled)
+                while (!cancellationTokenSource.IsCancellationRequested)
                 {
                     Confluent.Kafka.Message<Confluent.Kafka.Ignore, string> msg;
                     if (!consumer.Consume(out msg, TimeSpan.FromMilliseconds(100)))
@@ -87,12 +87,12 @@ namespace KafkaConsumer
         }
 
         /// <summary>
-        //      In this example:
+        //  In this example:
         ///         - offsets are auto commited.
         ///         - consumer.Poll / OnMessage is used to consume messages.
         ///         - no extra thread is created for the Poll loop.
         /// </summary>
-        public static void Run_Poll(Dictionary<string, object> constructConfig, List<string> topics, CancellationToken cancellationToken)
+        public static void Run_Poll(Dictionary<string, object> constructConfig, List<string> topics, CancellationTokenSource cancellationTokenSource)
         {
             using (var consumer = new Confluent.Kafka.Consumer<Confluent.Kafka.Null, string>(constructConfig, null, new StringDeserializer(Encoding.UTF8)))
             {
@@ -144,7 +144,7 @@ namespace KafkaConsumer
                 //};
 
                 Console.WriteLine("Ctrl-C to exit.");
-                while (!cancellationToken.IsCancellationRequested)
+                while (!cancellationTokenSource.IsCancellationRequested)
                 {
                     consumer.Poll(TimeSpan.FromMilliseconds(1000));
                 }

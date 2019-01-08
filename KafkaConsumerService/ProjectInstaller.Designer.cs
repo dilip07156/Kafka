@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.KafkaConsumerServiceProcessInstaller = new System.ServiceProcess.ServiceProcessInstaller();
             this.KafkaConsumerServiceInstaller = new System.ServiceProcess.ServiceInstaller();
-            this.timerLoop = new System.Windows.Forms.Timer(this.components);
             // 
             // KafkaConsumerServiceProcessInstaller
             // 
@@ -41,14 +39,11 @@
             // 
             // KafkaConsumerServiceInstaller
             // 
-            this.KafkaConsumerServiceInstaller.Description = "This service reads data from Kafka queues and update it into TLGX sql db";
+            this.KafkaConsumerServiceInstaller.Description = "This service reads data from Kafka queues from the upstream MDM system periodical" +
+    "ly and update it into Nakshatra sql db";
             this.KafkaConsumerServiceInstaller.DisplayName = "Kafka Consumer Service";
             this.KafkaConsumerServiceInstaller.ServiceName = "KafkaConsumerService";
             this.KafkaConsumerServiceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
-            // 
-            // timerLoop
-            // 
-            this.timerLoop.Interval = 60000;
             // 
             // ProjectInstaller
             // 
@@ -62,6 +57,5 @@
 
         private System.ServiceProcess.ServiceProcessInstaller KafkaConsumerServiceProcessInstaller;
         private System.ServiceProcess.ServiceInstaller KafkaConsumerServiceInstaller;
-        private System.Windows.Forms.Timer timerLoop;
     }
 }
