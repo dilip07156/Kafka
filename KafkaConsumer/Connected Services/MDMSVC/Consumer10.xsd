@@ -168,7 +168,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="color" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="start" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="start" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

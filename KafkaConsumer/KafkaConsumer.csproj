@@ -441,6 +441,12 @@
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_RollOffReportUpdate.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SiteMap.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

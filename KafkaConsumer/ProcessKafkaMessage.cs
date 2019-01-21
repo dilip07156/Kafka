@@ -271,6 +271,42 @@ namespace KafkaConsumer
             accoToInsertUpdate.IsActive = !acco.deleted;
             accoToInsertUpdate.IsMysteryProduct = acco.accomodationInfo.isMysteryProduct;
 
+            //Accommodation Version Data
+            accoToInsertUpdate.AccVersion.Accommodation_Id = AccommodationId;
+            accoToInsertUpdate.AccVersion.CompanyId = acco.accomodationInfo.companyId;
+            accoToInsertUpdate.AccVersion.CommonProductId = acco.accomodationInfo.commonProductId;
+            accoToInsertUpdate.AccVersion.CompanyProductId = acco.accomodationInfo.companyProductId;
+            accoToInsertUpdate.AccVersion.CompanyName = acco.accomodationInfo.companyName;
+            accoToInsertUpdate.AccVersion.ProductName = acco.accomodationInfo.name;
+            accoToInsertUpdate.AccVersion.ProductDisplayName = acco.accomodationInfo.name;//Check
+            accoToInsertUpdate.AccVersion.StarRating = acco.accomodationInfo.rating;
+            accoToInsertUpdate.AccVersion.CompanyRating = acco.accomodationInfo.companyRating;
+            accoToInsertUpdate.AccVersion.ProductCatSubType = acco.accomodationInfo.productCatSubType;
+            accoToInsertUpdate.AccVersion.Brand = acco.accomodationInfo.brand;
+            accoToInsertUpdate.AccVersion.Chain = acco.accomodationInfo.chain;
+            //Need to confirm Address
+            accoToInsertUpdate.AccVersion.HouseNumber = acco.accomodationInfo.address.houseNumber ;
+            accoToInsertUpdate.AccVersion.Street = acco.accomodationInfo.address.street;
+            accoToInsertUpdate.AccVersion.Street2 = acco.accomodationInfo.address.street2;
+            accoToInsertUpdate.AccVersion.Street3 = acco.accomodationInfo.address.street3;
+            accoToInsertUpdate.AccVersion.Street4 = acco.accomodationInfo.address.street4;
+            accoToInsertUpdate.AccVersion.Street5 = acco.accomodationInfo.address.street5;
+            accoToInsertUpdate.AccVersion.Zone = acco.accomodationInfo.address.zone;
+            accoToInsertUpdate.AccVersion.PostalCode = acco.accomodationInfo.address.postalCode;
+            accoToInsertUpdate.AccVersion.Country = acco.accomodationInfo.address.country;
+            accoToInsertUpdate.AccVersion.State = acco.accomodationInfo.address.state;
+            accoToInsertUpdate.AccVersion.City = acco.accomodationInfo.address.city;
+            accoToInsertUpdate.AccVersion.Area= acco.accomodationInfo.address.area;
+            accoToInsertUpdate.AccVersion.Location = acco.accomodationInfo.address.location;
+
+
+            if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)
+            {
+                accoToInsertUpdate.AccVersion.Latitude = acco.accomodationInfo.address.geometry.coordinates[0].ToString();
+                accoToInsertUpdate.AccVersion.Longitude = acco.accomodationInfo.address.geometry.coordinates[1].ToString();
+            }
+                        
+
             if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)
             {
                 accoToInsertUpdate.Latitude = acco.accomodationInfo.address.geometry.coordinates[0].ToString();
@@ -326,6 +362,7 @@ namespace KafkaConsumer
             #endregion
 
             #region Update / Add Accommodation
+
             var addUpdateAcco = Proxy.Post<bool, DC_Accomodation>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_UpdateURI"], accoToInsertUpdate).GetAwaiter().GetResult();
             #endregion
 
