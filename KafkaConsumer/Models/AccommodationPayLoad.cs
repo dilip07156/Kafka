@@ -470,7 +470,7 @@ namespace KafkaConsumer.Models
         public bool isMysteryRoom { get; set; }
         public string roomDescription { get; set; }
         public string roomUnit { get; set; }
-        public int roomSize { get; set; }
+        public double roomSize { get; set; }
         public string name { get; set; }
         public string category { get; set; }
         public string view { get; set; }

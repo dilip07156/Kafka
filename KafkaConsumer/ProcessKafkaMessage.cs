@@ -272,13 +272,14 @@ namespace KafkaConsumer
             accoToInsertUpdate.IsMysteryProduct = acco.accomodationInfo.isMysteryProduct;
 
             //Accommodation Version Data
+            accoToInsertUpdate.AccVersion = new DC_Accommodation_CompanyVersion();
             accoToInsertUpdate.AccVersion.Accommodation_Id = AccommodationId;
             accoToInsertUpdate.AccVersion.CompanyId = acco.accomodationInfo.companyId;
             accoToInsertUpdate.AccVersion.CommonProductId = acco.accomodationInfo.commonProductId;
             accoToInsertUpdate.AccVersion.CompanyProductId = acco.accomodationInfo.companyProductId;
             accoToInsertUpdate.AccVersion.CompanyName = acco.accomodationInfo.companyName;
             accoToInsertUpdate.AccVersion.ProductName = acco.accomodationInfo.name;
-            accoToInsertUpdate.AccVersion.ProductDisplayName = acco.accomodationInfo.name;//Check
+            accoToInsertUpdate.AccVersion.ProductDisplayName = acco.accomodationInfo.displayName;//Check
             accoToInsertUpdate.AccVersion.StarRating = acco.accomodationInfo.rating;
             accoToInsertUpdate.AccVersion.CompanyRating = acco.accomodationInfo.companyRating;
             accoToInsertUpdate.AccVersion.ProductCatSubType = acco.accomodationInfo.productCatSubType;
@@ -298,6 +299,7 @@ namespace KafkaConsumer
             accoToInsertUpdate.AccVersion.City = acco.accomodationInfo.address.city;
             accoToInsertUpdate.AccVersion.Area= acco.accomodationInfo.address.area;
             accoToInsertUpdate.AccVersion.Location = acco.accomodationInfo.address.location;
+            accoToInsertUpdate.AccVersion.TLGXAccoId = acco._id;
 
 
             if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)
