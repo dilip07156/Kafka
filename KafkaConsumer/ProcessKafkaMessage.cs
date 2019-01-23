@@ -370,6 +370,13 @@ namespace KafkaConsumer
 
             return new Tuple<DC_Accomodation, bool>(accoToInsertUpdate, IsUpdate);
         }
+
+        public static List<DC_Accommodation_CompanyVersion> GetAccomodationCompanyVersionInfo(Guid Acco_id)
+        {
+            List<DC_Accommodation_CompanyVersion> AccoList = new List<DC_Accommodation_CompanyVersion>();
+            AccoList = Proxy.Get<List<DC_Accommodation_CompanyVersion>>(string.Format(System.Configuration.ConfigurationManager.AppSettings["AccomodationCompanyVersion_SearchURI"], Acco_id)).GetAwaiter().GetResult();
+            return AccoList;
+        }
         #endregion
 
         #region Description
@@ -623,6 +630,7 @@ namespace KafkaConsumer
 
         public static bool ProcessAccoRoomData(DC_Accomodation dbAcco, List<AccomodationRoomData> AccoRoomData)
         {
+            
             List<DC_Accommodation_RoomInfo> ExistingRooms = GetMasterRoomList(dbAcco.Accommodation_Id);
             var result = AddUpdateAccoRooms(ExistingRooms, dbAcco, AccoRoomData);
             return result;
@@ -640,6 +648,9 @@ namespace KafkaConsumer
             try
             {
                 List<Guid> NewRooms = new List<Guid>();
+
+                List<DC_Accommodation_CompanyVersion> lstAccommodation_CompanyVersion = GetAccomodationCompanyVersionInfo(dbAcco.Accommodation_Id);
+
                 foreach (var room in AccoRoomData)
                 {
                     //Check if room is there
@@ -676,7 +687,24 @@ namespace KafkaConsumer
                         CompanyName = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.CompanyName,
                         IsAmenityChanges = ExistingAccommodationRoom == null ? false : ExistingAccommodationRoom.IsAmenityChanges,
                         AmenityTypes = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.AmenityTypes,
+                       
+                        
+
                     };
+
+                    DC_Accommodation_CompanyVersion companyVersion = lstAccommodation_CompanyVersion.Where(x => x.Accommodation_Id == dbAcco.Accommodation_Id && x.CommonProductId == dbAcco.AccVersion.CommonProductId && x.CompanyId == dbAcco.AccVersion.CompanyId).SingleOrDefault();
+
+                    RoomToAddUpdate.AccoRoomVersion = new Accommodation_RoomInfo_CompanyVersion();
+                    RoomToAddUpdate.AccoRoomVersion.Accommodation_CompanyVersion_Id = companyVersion.Accommodation_CompanyVersion_Id;
+                    RoomToAddUpdate.AccoRoomVersion.BedType = RoomToAddUpdate.BedType;
+                    RoomToAddUpdate.AccoRoomVersion.Accommodation_RoomInfo_Id = RoomToAddUpdate.Accommodation_RoomInfo_Id;
+                    RoomToAddUpdate.AccoRoomVersion.RoomCategory = RoomToAddUpdate.RoomCategory;
+                    RoomToAddUpdate.AccoRoomVersion.RoomName = RoomToAddUpdate.RoomName;
+                    RoomToAddUpdate.AccoRoomVersion.CompanyRoomCategory = RoomToAddUpdate.CompanyRoomCategory;
+                    RoomToAddUpdate.AccoRoomVersion.RoomDescription = room.roomDescription;
+                    RoomToAddUpdate.AccoRoomVersion.TlgxAccoId = companyVersion.TLGXAccoId;
+                    RoomToAddUpdate.AccoRoomVersion.TlgxAccoRoomId = room._id;
+
 
                     if (ExistingAccommodationRoom == null)
                     {

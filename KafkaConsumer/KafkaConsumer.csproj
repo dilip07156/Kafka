@@ -135,6 +135,9 @@
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.City_AlphaPage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_Contact.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -219,6 +222,12 @@
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ActivityImageReport_RS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ActivityProductDetailsReport.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -292,6 +301,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Activity_SupplierProductMapping_CA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_AllCountry_Search_RQ.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_ApplicationMgmt.datasource">

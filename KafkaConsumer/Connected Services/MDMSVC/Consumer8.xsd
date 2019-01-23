@@ -5,6 +5,12 @@
   <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DataContracts.Masters" />
   <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" />
+  <xs:complexType name="ArrayOfDC_Accommodation_RuleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_RuleInfo" nillable="true" type="tns:DC_Accommodation_RuleInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_RuleInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RuleInfo" />
   <xs:complexType name="DC_Accommodation_RuleInfo">
     <xs:sequence>
       <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
@@ -176,6 +182,7 @@
   <xs:element name="ArrayOfDC_Accommodation_RoomInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RoomInfo" />
   <xs:complexType name="DC_Accommodation_RoomInfo">
     <xs:sequence>
+      <xs:element minOccurs="0" name="AccoRoomVersion" nillable="true" type="tns:Accommodation_RoomInfo_CompanyVersion" />
       <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" type="ser:guid" />
       <xs:element minOccurs="0" name="Amenities" nillable="true" type="tns:ArrayOfDC_Accomodation_Roomamenities" />
@@ -211,6 +218,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Accommodation_RoomInfo" nillable="true" type="tns:DC_Accommodation_RoomInfo" />
+  <xs:complexType name="Accommodation_RoomInfo_CompanyVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_CompanyVersion_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_CompanyVersion_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="BedType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyRoomCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomView" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Smoking" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TlgxAccoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TlgxAccoRoomId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Accommodation_RoomInfo_CompanyVersion" nillable="true" type="tns:Accommodation_RoomInfo_CompanyVersion" />
   <xs:complexType name="ArrayOfDC_Accomodation_Roomamenities">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_Roomamenities" nillable="true" type="tns:DC_Accomodation_Roomamenities" />
@@ -593,12 +617,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Accommodation_RouteInfo" nillable="true" type="tns:DC_Accommodation_RouteInfo" />
-  <xs:complexType name="ArrayOfDC_Accommodation_RuleInfo">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_RuleInfo" nillable="true" type="tns:DC_Accommodation_RuleInfo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_Accommodation_RuleInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RuleInfo" />
   <xs:complexType name="DC_Accomodation_Search_RQ">
     <xs:sequence>
       <xs:element minOccurs="0" name="AccomodationId" nillable="true" type="xs:string" />
@@ -758,6 +776,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Accomodation_UpdateStatus_RQ" nillable="true" type="tns:DC_Accomodation_UpdateStatus_RQ" />
+  <xs:complexType name="ArrayOfDC_Accommodation_CompanyVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_CompanyVersion" nillable="true" type="tns:DC_Accommodation_CompanyVersion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_CompanyVersion" nillable="true" type="tns:ArrayOfDC_Accommodation_CompanyVersion" />
   <xs:complexType name="DC_GooglePlaceNearByWithAccoID">
     <xs:sequence>
       <xs:element minOccurs="0" name="Accomodation_Id" type="ser:guid" />
