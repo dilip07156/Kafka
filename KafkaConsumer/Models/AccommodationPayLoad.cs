@@ -493,6 +493,7 @@ namespace KafkaConsumer.Models
         public DateTime lastUpdated { get; set; }
         public DateTime createdAt { get; set; }
         public List<Amenity> amenities { get; set; }
+        public string commonRoomId { get; set; }
     }
 
     public class AccommodationPayload

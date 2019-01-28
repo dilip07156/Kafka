@@ -1783,6 +1783,9 @@ namespace KafkaConsumer.MDMSVC {
         private string CategoryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommonRoomIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CompanyNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1967,6 +1970,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.CategoryField, value) != true)) {
                     this.CategoryField = value;
                     this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CommonRoomId {
+            get {
+                return this.CommonRoomIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommonRoomIdField, value) != true)) {
+                    this.CommonRoomIdField = value;
+                    this.RaisePropertyChanged("CommonRoomId");
                 }
             }
         }

@@ -32,6 +32,7 @@ namespace KafkaConsumer
             Dictionary<string, object> constructConfig = new Dictionary<string, object>();
             var topics = new List<string>();
 
+
             if (KafkaVariables != null)
             {
                 KafkaVariables = KafkaVariables.Where(w => w.IsActive == "Y").ToList();
@@ -62,7 +63,7 @@ namespace KafkaConsumer
                     AdvancedConsumer.PrintUsage();
                     break;
             }
-
+            
 
             #region Thread to Get File details from DB and Process them
             int TimerInterval = int.Parse(System.Configuration.ConfigurationManager.AppSettings["TimerInterval"]);

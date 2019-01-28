@@ -636,6 +636,7 @@ namespace KafkaConsumer
             return result;
         }
 
+        //Room Id cannot be null as per new json response from Kafka
         public static List<DC_Accommodation_RoomInfo> GetMasterRoomList(Guid Acco_id)
         {
             List<DC_Accommodation_RoomInfo> RoomList = new List<DC_Accommodation_RoomInfo>();
@@ -654,8 +655,9 @@ namespace KafkaConsumer
                 foreach (var room in AccoRoomData)
                 {
                     //Check if room is there
-                    var ExistingAccommodationRoom = ExistingRooms.Where(w => w.TLGXAccoRoomId.ToUpper() == room._id.ToUpper()).Select(s => s).FirstOrDefault();
+                    var ExistingAccommodationRoom = ExistingRooms.Where(w => w.TLGXAccoRoomId.ToUpper() == room._id.ToUpper() && w.CommonRoomId == (room.commonRoomId == null ? string.Empty : room.commonRoomId)).FirstOrDefault();
 
+                
                     DC_Accommodation_RoomInfo RoomToAddUpdate = new DC_Accommodation_RoomInfo
                     {
                         Accommodation_Id = dbAcco.Accommodation_Id,
@@ -665,9 +667,9 @@ namespace KafkaConsumer
                         BedType = room.bedType == null ? (ExistingAccommodationRoom == null ? room.bedType : ExistingAccommodationRoom.BedType) : room.bedType,
                         Category = room.category == null ? (ExistingAccommodationRoom == null ? room.category : ExistingAccommodationRoom.Category) : room.category,
                         CompanyRoomCategory = room.companyRoomCategory == null ? (ExistingAccommodationRoom == null ? room.companyRoomCategory : ExistingAccommodationRoom.CompanyRoomCategory) : room.companyRoomCategory,
-                        Edit_Date = room.lastUpdated,
+                        //Edit_Date = room.lastUpdated,
                         Edit_User = dbAcco.Edit_User,
-                        Create_Date = room.createdAt,
+                        //Create_Date = room.createdAt,
                         Create_User = dbAcco.Create_User,
                         FloorName = room.floorName == null ? (ExistingAccommodationRoom == null ? room.floorName : ExistingAccommodationRoom.FloorName) : room.floorName,
                         FloorNumber = room.floorNo == 0 ? (ExistingAccommodationRoom == null ? room.floorNo.ToString() : ExistingAccommodationRoom.FloorNumber) : room.floorNo.ToString(),
@@ -687,10 +689,31 @@ namespace KafkaConsumer
                         CompanyName = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.CompanyName,
                         IsAmenityChanges = ExistingAccommodationRoom == null ? false : ExistingAccommodationRoom.IsAmenityChanges,
                         AmenityTypes = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.AmenityTypes,
-                       
-                        
+                        CommonRoomId = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.CommonRoomId,
+
+
+
 
                     };
+
+                    if (room.createdAt != null && room.createdAt <= DateTime.MinValue)
+                    {
+                        RoomToAddUpdate.Create_Date = null;
+                    }
+                    else
+                    {
+                        RoomToAddUpdate.Create_Date = room.createdAt;
+                    }
+
+
+                    if (room.lastUpdated != null && room.lastUpdated <= DateTime.MinValue)
+                    {
+                        RoomToAddUpdate.Create_Date = null;
+                    }
+                    else
+                    {
+                        RoomToAddUpdate.Edit_Date = room.lastUpdated;
+                    }
 
                     DC_Accommodation_CompanyVersion companyVersion = lstAccommodation_CompanyVersion.Where(x => x.Accommodation_Id == dbAcco.Accommodation_Id && x.CommonProductId == dbAcco.AccVersion.CommonProductId && x.CompanyId == dbAcco.AccVersion.CompanyId).SingleOrDefault();
 
@@ -729,7 +752,7 @@ namespace KafkaConsumer
                     {
                         foreach (var roomAmenity in room.amenities)
                         {
-                            var AddRoomFacilityResult = Proxy.Post<bool, DC_Accomodation_RoomFacilities>(System.Configuration.ConfigurationManager.AppSettings["Accommodation_AddRoomFacilities"], new DC_Accomodation_RoomFacilities
+                            var roomFacilites = new DC_Accomodation_RoomFacilities
                             {
                                 Accommodation_Id = dbAcco.Accommodation_Id,
                                 Accommodation_RoomInfo_Id = RoomToAddUpdate.Accommodation_RoomInfo_Id,
@@ -738,12 +761,37 @@ namespace KafkaConsumer
                                 AmenityType = roomAmenity.type,
                                 IsActive = true,
                                 IsRoomActive = true,
-                                Create_Date = room.createdAt,
+
                                 Create_User = dbAcco.Create_User,
                                 Description = roomAmenity.desc,
-                                Edit_Date = room.lastUpdated,
+                                //Edit_Date = room.lastUpdated,
                                 Edit_user = dbAcco.Edit_User
-                            }).GetAwaiter().GetResult();
+                            };
+
+
+                            if (room.createdAt != null && room.createdAt <= DateTime.MinValue)
+                            {
+                                roomFacilites.Create_Date = null;
+                            }
+                            else
+                            {
+                                roomFacilites.Create_Date = room.createdAt;
+                            }
+
+
+                            if (room.lastUpdated != null && room.lastUpdated <= DateTime.MinValue)
+                            {
+                                roomFacilites.Create_Date = null;
+                            }
+                            else
+                            {
+                                roomFacilites.Edit_Date = room.lastUpdated;
+                            }
+
+
+
+
+                            var AddRoomFacilityResult = Proxy.Post<bool, DC_Accomodation_RoomFacilities>(System.Configuration.ConfigurationManager.AppSettings["Accommodation_AddRoomFacilities"], roomFacilites).GetAwaiter().GetResult();
                         }
                     }
 

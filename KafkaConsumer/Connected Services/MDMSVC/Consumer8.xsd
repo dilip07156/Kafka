@@ -190,6 +190,7 @@
       <xs:element minOccurs="0" name="BathRoomType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="BedType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonRoomId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CompanyRoomCategory" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
