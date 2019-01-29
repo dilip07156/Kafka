@@ -46,23 +46,25 @@ namespace KafkaConsumerDebugger
             StartProcess sp = new StartProcess();
             sp.Start(cancelSource);
 
-            //Task.Run(async () =>
-            //{
-            //    try
-            //    {
-            //        while (!cancelSource.IsCancellationRequested)
-            //        {
-
-            //            await Task.Delay(6000, cancelSource.Token);
-            //        }
-            //    }
-            //    catch (OperationCanceledException)
-            //    {
-            //        Console.WriteLine("Canceled!");
-            //    }
-            //});
-
             Console.WriteLine("Press C to cancel the operation.");
+
+            Task.Run(async () =>
+            {
+                try
+                {
+                    while (!cancelSource.IsCancellationRequested)
+                    {
+
+                        await Task.Delay(6000, cancelSource.Token);
+                    }
+                }
+                catch (OperationCanceledException)
+                {
+                    Console.WriteLine("Canceled!");
+                }
+            });
+
+
 
             input = Console.ReadLine();
 

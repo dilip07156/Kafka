@@ -13,9 +13,9 @@ namespace KafkaConsumer
 {
     public static class ProcessKafkaMessage
     {
-        public static void InsertInto_StgKafka(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
+        public static async void InsertInto_StgKafka(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
         {
-            Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], new DC_Stg_Kafka()
+            await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], new DC_Stg_Kafka()
             {
                 Error = msg.Error.Reason,
                 TopicPartion = msg.TopicPartition.Partition.ToString(),
@@ -29,7 +29,7 @@ namespace KafkaConsumer
                 Row_Id = Guid.NewGuid(),
                 Topic = msg.Topic,
                 TopicPartionOffset = msg.TopicPartition.Partition.ToString()
-            }).Start();
+            });
         }
 
         public static bool Process_StgKafkaData()
@@ -286,7 +286,7 @@ namespace KafkaConsumer
             accoToInsertUpdate.AccVersion.Brand = acco.accomodationInfo.brand;
             accoToInsertUpdate.AccVersion.Chain = acco.accomodationInfo.chain;
             //Need to confirm Address
-            accoToInsertUpdate.AccVersion.HouseNumber = acco.accomodationInfo.address.houseNumber ;
+            accoToInsertUpdate.AccVersion.HouseNumber = acco.accomodationInfo.address.houseNumber;
             accoToInsertUpdate.AccVersion.Street = acco.accomodationInfo.address.street;
             accoToInsertUpdate.AccVersion.Street2 = acco.accomodationInfo.address.street2;
             accoToInsertUpdate.AccVersion.Street3 = acco.accomodationInfo.address.street3;
@@ -297,7 +297,7 @@ namespace KafkaConsumer
             accoToInsertUpdate.AccVersion.Country = acco.accomodationInfo.address.country;
             accoToInsertUpdate.AccVersion.State = acco.accomodationInfo.address.state;
             accoToInsertUpdate.AccVersion.City = acco.accomodationInfo.address.city;
-            accoToInsertUpdate.AccVersion.Area= acco.accomodationInfo.address.area;
+            accoToInsertUpdate.AccVersion.Area = acco.accomodationInfo.address.area;
             accoToInsertUpdate.AccVersion.Location = acco.accomodationInfo.address.location;
             accoToInsertUpdate.AccVersion.TLGXAccoId = acco._id;
 
@@ -307,7 +307,7 @@ namespace KafkaConsumer
                 accoToInsertUpdate.AccVersion.Latitude = acco.accomodationInfo.address.geometry.coordinates[0].ToString();
                 accoToInsertUpdate.AccVersion.Longitude = acco.accomodationInfo.address.geometry.coordinates[1].ToString();
             }
-                        
+
 
             if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)
             {
@@ -630,7 +630,7 @@ namespace KafkaConsumer
 
         public static bool ProcessAccoRoomData(DC_Accomodation dbAcco, List<AccomodationRoomData> AccoRoomData)
         {
-            
+
             List<DC_Accommodation_RoomInfo> ExistingRooms = GetMasterRoomList(dbAcco.Accommodation_Id);
             var result = AddUpdateAccoRooms(ExistingRooms, dbAcco, AccoRoomData);
             return result;
@@ -657,7 +657,7 @@ namespace KafkaConsumer
                     //Check if room is there
                     var ExistingAccommodationRoom = ExistingRooms.Where(w => w.TLGXAccoRoomId.ToUpper() == room._id.ToUpper() && w.CommonRoomId == (room.commonRoomId == null ? string.Empty : room.commonRoomId)).FirstOrDefault();
 
-                
+
                     DC_Accommodation_RoomInfo RoomToAddUpdate = new DC_Accommodation_RoomInfo
                     {
                         Accommodation_Id = dbAcco.Accommodation_Id,
@@ -831,14 +831,14 @@ namespace KafkaConsumer
 
         #endregion Room
 
-        public static void UpdateStg_KafkaInfo(DC_Stg_Kafka Kafka)
+        public static async void UpdateStg_KafkaInfo(DC_Stg_Kafka Kafka)
         {
             DC_Stg_Kafka obj = new DC_Stg_Kafka();
             obj.Row_Id = Kafka.Row_Id;
             obj.Process_User = "Kafka";
             obj.Process_Date = DateTime.Now;
             obj.Status = "Processed";
-            Proxy.Post<bool, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Update"], obj).GetAwaiter().GetResult();
+            await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Update"], obj);
             obj = null;
         }
     }
