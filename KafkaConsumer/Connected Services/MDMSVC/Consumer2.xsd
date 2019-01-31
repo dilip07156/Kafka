@@ -3,6 +3,7 @@
   <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
   <xs:complexType name="DC_Stg_Kafka">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" type="ser:guid" />
       <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
@@ -17,6 +18,7 @@
       <xs:element minOccurs="0" name="Topic" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TopicPartion" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TopicPartionOffset" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="message_log" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Stg_Kafka" nillable="true" type="tns:DC_Stg_Kafka" />

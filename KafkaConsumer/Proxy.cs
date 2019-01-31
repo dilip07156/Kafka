@@ -18,10 +18,15 @@ namespace KafkaConsumer
             }
         }
 
+        //private static HttpClient client = null;
+
+        //private static readonly object padlock = new object();
+
         public static async Task<TResponse> Get<TResponse>(string RelativeUrl)
         {
             using (HttpClient client = new HttpClient())
             {
+
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpResponseMessage response = await client.GetAsync(MDMSVC_URL + RelativeUrl);
@@ -40,6 +45,8 @@ namespace KafkaConsumer
         {
             using (HttpClient client = new HttpClient())
             {
+                //client = Instance;
+                client.Timeout = TimeSpan.FromMilliseconds(3600000);
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -70,6 +77,24 @@ namespace KafkaConsumer
                     return default(TResponse);
                 }
             }
+
         }
+
+
+        //public static HttpClient Instance
+        //{
+        //    get
+        //    {
+        //        lock (padlock)
+        //        {
+        //            if (client == null)
+        //            {
+        //                client = new HttpClient();
+        //                client.Timeout = TimeSpan.FromMilliseconds(2000);
+        //            }
+        //            return client;
+        //        }
+        //    }
+        //}
     }
 }

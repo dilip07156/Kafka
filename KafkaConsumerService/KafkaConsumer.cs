@@ -26,7 +26,30 @@ namespace KafkaConsumerService
         {
             cancelSource = new CancellationTokenSource();
             StartProcess objProcess = new StartProcess();
-            objProcess.Start(cancelSource);
+
+            Task.Run(async () =>
+            {
+                try
+                {
+                    await objProcess.StartPolling(cancelSource);
+                }
+                catch (OperationCanceledException)
+                {
+                    Console.WriteLine("Canceled!");
+                }
+            });
+
+            Task.Run(async () =>
+            {
+                try
+                {
+                    await objProcess.StartConsuming(cancelSource);
+                }
+                catch (OperationCanceledException)
+                {
+                    Console.WriteLine("Canceled!");
+                }
+            });
         }
 
         protected override void OnStop()

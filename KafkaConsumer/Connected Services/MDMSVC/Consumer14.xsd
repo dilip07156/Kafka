@@ -1424,6 +1424,7 @@
       <xs:element minOccurs="0" name="Activity_Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="City_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CommonProductNameSubType_Id" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="InterestType" nillable="true" type="xs:string" />
@@ -1443,6 +1444,7 @@
       <xs:element minOccurs="0" name="ProductNameSubTypeId" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ProductTypeId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="SuplierProductCode" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierCityName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierCountryName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierProductNameSubType" nillable="true" type="xs:string" />
