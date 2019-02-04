@@ -71,13 +71,17 @@ namespace KafkaConsumer
                     constructConfig.Add("enable.auto.commit", KafkaVariables.Where(w => w.AttributeValue == "enable.auto.commit").Select(s => s.OTA_CodeTableValue).FirstOrDefault());
                     constructConfig.Add("auto.commit.interval.ms", KafkaVariables.Where(w => w.AttributeValue == "auto.commit.interval.ms").Select(s => s.OTA_CodeTableValue).FirstOrDefault());
                     constructConfig.Add("statistics.interval.ms", KafkaVariables.Where(w => w.AttributeValue == "statistics.interval.ms").Select(s => s.OTA_CodeTableValue).FirstOrDefault());
-                    constructConfig.Add("bootstrap.servers", KafkaVariables.Where(w => w.AttributeValue == "bootstrap.servers").Select(s => s.OTA_CodeTableValue).FirstOrDefault());
+                    //constructConfig.Add("bootstrap.servers", KafkaVariables.Where(w => w.AttributeValue == "bootstrap.servers").Select(s => s.OTA_CodeTableValue).FirstOrDefault());
+                    foreach (var bootstrap in KafkaVariables.Where(w => w.AttributeValue.StartsWith("bootstrap.servers")).Select(s => s.OTA_CodeTableValue))
+                    {
+                        constructConfig.Add("bootstrap.servers", bootstrap);
+                    }
                     constructConfig.Add("default.topic.config", new Dictionary<string, object>()
                     {
                         { "auto.offset.reset", KafkaVariables.Where(w => w.AttributeValue == "auto.offset.reset").Select(s => s.OTA_CodeTableValue).FirstOrDefault() }
                     //{ "auto.offset.reset", "smallest" }
                     });
-                    topics = KafkaVariables.Where(w => w.AttributeValue.StartsWith("topic")).Select(s => s.OTA_CodeTableValue).ToList();
+                    topics = KafkaVariables.Where(w => w.AttributeValue.StartsWith("topic_acco")).Select(s => s.OTA_CodeTableValue).ToList();
                 }
 
                 switch (mode)
