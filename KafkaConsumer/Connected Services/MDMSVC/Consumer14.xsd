@@ -481,6 +481,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Priorities" nillable="true" type="tns:DC_Priorities" />
+  <xs:complexType name="ArrayOfDC_MasterAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_MasterAttribute" nillable="true" type="tns:DC_MasterAttribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_MasterAttribute" nillable="true" type="tns:ArrayOfDC_MasterAttribute" />
+  <xs:complexType name="DC_MasterAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttributeValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterAttributeValue_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="MasterAttribute_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="MasterFor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentAttributeValue_Id" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_MasterAttribute" nillable="true" type="tns:DC_MasterAttribute" />
   <xs:complexType name="DC_Country_Search_RQ">
     <xs:sequence>
       <xs:element minOccurs="0" name="Country_Code" nillable="true" type="xs:string" />
@@ -572,6 +589,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Ranks" nillable="true" type="tns:DC_Ranks" />
+  <xs:complexType name="ArrayOfDC_AllCountry_Search_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_AllCountry_Search_RQ" nillable="true" type="tns:DC_AllCountry_Search_RQ" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_AllCountry_Search_RQ" nillable="true" type="tns:ArrayOfDC_AllCountry_Search_RQ" />
+  <xs:complexType name="DC_AllCountry_Search_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_AllCountry_Search_RQ" nillable="true" type="tns:DC_AllCountry_Search_RQ" />
   <xs:complexType name="ArrayOfDC_Master_State">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Master_State" nillable="true" type="tns:DC_Master_State" />
@@ -751,23 +781,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_PortMaster_RQ" nillable="true" type="tns:DC_PortMaster_RQ" />
-  <xs:complexType name="DC_MasterAttribute">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AttributeValue" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="MasterAttributeValue_Id" type="ser:guid" />
-      <xs:element minOccurs="0" name="MasterAttribute_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="MasterFor" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ParentAttributeValue_Id" nillable="true" type="ser:guid" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_MasterAttribute" nillable="true" type="tns:DC_MasterAttribute" />
-  <xs:complexType name="ArrayOfDC_MasterAttribute">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_MasterAttribute" nillable="true" type="tns:DC_MasterAttribute" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_MasterAttribute" nillable="true" type="tns:ArrayOfDC_MasterAttribute" />
   <xs:complexType name="DC_M_masterattribute">
     <xs:sequence>
       <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
@@ -1411,6 +1424,7 @@
       <xs:element minOccurs="0" name="Activity_Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="City_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CommonProductNameSubType_Id" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="InterestType" nillable="true" type="xs:string" />
@@ -1430,6 +1444,7 @@
       <xs:element minOccurs="0" name="ProductNameSubTypeId" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ProductTypeId" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="SuplierProductCode" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierCityName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierCountryName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierProductNameSubType" nillable="true" type="xs:string" />
@@ -1658,6 +1673,7 @@
       <xs:element minOccurs="0" name="FromPax" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="Market" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackageSupplier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PersonType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Price" nillable="true" type="xs:decimal" />
       <xs:element minOccurs="0" name="PriceBasis" nillable="true" type="xs:string" />

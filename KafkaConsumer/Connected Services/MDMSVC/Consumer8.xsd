@@ -5,6 +5,35 @@
   <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DataContracts.Masters" />
   <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" />
+  <xs:complexType name="ArrayOfDC_Accommodation_RuleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_RuleInfo" nillable="true" type="tns:DC_Accommodation_RuleInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_RuleInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RuleInfo" />
+  <xs:complexType name="DC_Accommodation_RuleInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RuleInfo_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInternal" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RuleType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_RuleInfo" nillable="true" type="tns:DC_Accommodation_RuleInfo" />
+  <xs:complexType name="DC_ErrorStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ErrorStatusCode" type="q1:HttpStatusCode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_ErrorStatus" nillable="true" type="tns:DC_ErrorStatus" />
   <xs:complexType name="ArrayOfDC_Accommodation_Status">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_Status" nillable="true" type="tns:DC_Accommodation_Status" />
@@ -28,13 +57,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Accommodation_Status" nillable="true" type="tns:DC_Accommodation_Status" />
-  <xs:complexType name="DC_ErrorStatus">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
-      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Net" minOccurs="0" name="ErrorStatusCode" type="q1:HttpStatusCode" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_ErrorStatus" nillable="true" type="tns:DC_ErrorStatus" />
   <xs:complexType name="DC_Message">
     <xs:sequence>
       <xs:element minOccurs="0" name="StatusCode" type="tns:ReadOnlyMessage.StatusCode" />
@@ -160,6 +182,7 @@
   <xs:element name="ArrayOfDC_Accommodation_RoomInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RoomInfo" />
   <xs:complexType name="DC_Accommodation_RoomInfo">
     <xs:sequence>
+      <xs:element minOccurs="0" name="AccoRoomVersion" nillable="true" type="tns:Accommodation_RoomInfo_CompanyVersion" />
       <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" type="ser:guid" />
       <xs:element minOccurs="0" name="Amenities" nillable="true" type="tns:ArrayOfDC_Accomodation_Roomamenities" />
@@ -167,6 +190,7 @@
       <xs:element minOccurs="0" name="BathRoomType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="BedType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonRoomId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CompanyRoomCategory" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
@@ -195,6 +219,23 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Accommodation_RoomInfo" nillable="true" type="tns:DC_Accommodation_RoomInfo" />
+  <xs:complexType name="Accommodation_RoomInfo_CompanyVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_CompanyVersion_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_CompanyVersion_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_RoomInfo_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="BedType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyRoomCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoomView" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Smoking" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TlgxAccoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TlgxAccoRoomId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Accommodation_RoomInfo_CompanyVersion" nillable="true" type="tns:Accommodation_RoomInfo_CompanyVersion" />
   <xs:complexType name="ArrayOfDC_Accomodation_Roomamenities">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accomodation_Roomamenities" nillable="true" type="tns:DC_Accomodation_Roomamenities" />
@@ -242,6 +283,7 @@
   <xs:element name="ArrayOfDC_Accomodation" nillable="true" type="tns:ArrayOfDC_Accomodation" />
   <xs:complexType name="DC_Accomodation">
     <xs:sequence>
+      <xs:element minOccurs="0" name="AccVersion" nillable="true" type="tns:DC_Accommodation_CompanyVersion" />
       <xs:element minOccurs="0" name="Accommodation_Descriptions" nillable="true" type="tns:ArrayOfDC_Accommodation_Descriptions" />
       <xs:element minOccurs="0" name="Accommodation_Facility" nillable="true" type="tns:ArrayOfDC_Accommodation_Facility" />
       <xs:element minOccurs="0" name="Accommodation_HealthAndSafety" nillable="true" type="tns:ArrayOfDC_Accommodation_HealthAndSafety" />
@@ -344,6 +386,40 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Accomodation" nillable="true" type="tns:DC_Accomodation" />
+  <xs:complexType name="DC_Accommodation_CompanyVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_CompanyVersion_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Chain" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyRating" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HouseNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCatSubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductDisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StarRating" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TLGXAccoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Accommodation_CompanyVersion" nillable="true" type="tns:DC_Accommodation_CompanyVersion" />
   <xs:complexType name="ArrayOfDC_Accommodation_HealthAndSafety">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_HealthAndSafety" nillable="true" type="tns:DC_Accommodation_HealthAndSafety" />
@@ -542,28 +618,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Accommodation_RouteInfo" nillable="true" type="tns:DC_Accommodation_RouteInfo" />
-  <xs:complexType name="ArrayOfDC_Accommodation_RuleInfo">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_RuleInfo" nillable="true" type="tns:DC_Accommodation_RuleInfo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_Accommodation_RuleInfo" nillable="true" type="tns:ArrayOfDC_Accommodation_RuleInfo" />
-  <xs:complexType name="DC_Accommodation_RuleInfo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="Accommodation_RuleInfo_Id" type="ser:guid" />
-      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
-      <xs:element minOccurs="0" name="IsInternal" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Legacy_Htl_Id" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="RuleType" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_Accommodation_RuleInfo" nillable="true" type="tns:DC_Accommodation_RuleInfo" />
   <xs:complexType name="DC_Accomodation_Search_RQ">
     <xs:sequence>
       <xs:element minOccurs="0" name="AccomodationId" nillable="true" type="xs:string" />
@@ -723,6 +777,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Accomodation_UpdateStatus_RQ" nillable="true" type="tns:DC_Accomodation_UpdateStatus_RQ" />
+  <xs:complexType name="ArrayOfDC_Accommodation_CompanyVersion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Accommodation_CompanyVersion" nillable="true" type="tns:DC_Accommodation_CompanyVersion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Accommodation_CompanyVersion" nillable="true" type="tns:ArrayOfDC_Accommodation_CompanyVersion" />
   <xs:complexType name="DC_GooglePlaceNearByWithAccoID">
     <xs:sequence>
       <xs:element minOccurs="0" name="Accomodation_Id" type="ser:guid" />
@@ -1136,6 +1196,44 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_SRT_ML_Response" nillable="true" type="tns:DC_SRT_ML_Response" />
+  <xs:complexType name="DC_SchedulerServicesTasks">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Api_Call_Log_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Operation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Schedule_Datetime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Schedule_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Task_Id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SchedulerServicesTasks" nillable="true" type="tns:DC_SchedulerServicesTasks" />
+  <xs:complexType name="ArrayOfDC_SchedulerServicesTasks">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SchedulerServicesTasks" nillable="true" type="tns:DC_SchedulerServicesTasks" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SchedulerServicesTasks" nillable="true" type="tns:ArrayOfDC_SchedulerServicesTasks" />
+  <xs:complexType name="DC_SchedulerServicesLogs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Log_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Log_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Operation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status_Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Task_Id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_SchedulerServicesLogs" nillable="true" type="tns:DC_SchedulerServicesLogs" />
+  <xs:complexType name="ArrayOfDC_SchedulerServicesLogs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SchedulerServicesLogs" nillable="true" type="tns:DC_SchedulerServicesLogs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_SchedulerServicesLogs" nillable="true" type="tns:ArrayOfDC_SchedulerServicesLogs" />
   <xs:complexType name="DC_FileProgressDashboard">
     <xs:sequence>
       <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" minOccurs="0" name="ErrorLog" nillable="true" type="q9:ArrayOfDC_SupplierImportFile_ErrorLog" />
@@ -1157,8 +1255,11 @@
       <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Element" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Per" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PushedCount" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalCount" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

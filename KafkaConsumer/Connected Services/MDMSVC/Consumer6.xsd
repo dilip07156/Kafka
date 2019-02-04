@@ -13,6 +13,8 @@
       <xs:element minOccurs="0" name="Result" nillable="true" type="tns:DC_PentahoTransStatus_Result" />
       <xs:element minOccurs="0" name="Status_desc" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Stepstatuslist" nillable="true" type="tns:DC_PentahoTransStatus_Stepstatuslist" />
+      <xs:element minOccurs="0" name="TransactionImage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactionLog" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Transname" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

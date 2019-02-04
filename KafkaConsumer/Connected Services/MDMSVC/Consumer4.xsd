@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <xs:complexType name="DC_SupplierImportAttributes_RQ">
     <xs:sequence>
       <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
@@ -91,7 +92,9 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="CurrentBatch" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FilterStatuses" nillable="true" type="q1:ArrayOfstring" />
       <xs:element minOccurs="0" name="From_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsPaused" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsRestarted" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsResumed" nillable="true" type="xs:boolean" />
@@ -266,9 +269,17 @@
       <xs:element minOccurs="0" name="Supplier" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierImportFile_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="SupplierImportFile_Statistics_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="ser:guid">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
       <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
       <xs:element minOccurs="0" name="TotalRows" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="Unmapped" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="isRerun" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_SupplierImportFile_Statistics" nillable="true" type="tns:DC_SupplierImportFile_Statistics" />

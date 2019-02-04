@@ -15,6 +15,272 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Accommodation_RuleInfo", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class DC_Accommodation_RuleInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Accommodation_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Accommodation_RuleInfo_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Create_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Create_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Edit_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Edit_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsInternalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> Legacy_Htl_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RuleTypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Accommodation_Id {
+            get {
+                return this.Accommodation_IdField;
+            }
+            set {
+                if ((this.Accommodation_IdField.Equals(value) != true)) {
+                    this.Accommodation_IdField = value;
+                    this.RaisePropertyChanged("Accommodation_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Accommodation_RuleInfo_Id {
+            get {
+                return this.Accommodation_RuleInfo_IdField;
+            }
+            set {
+                if ((this.Accommodation_RuleInfo_IdField.Equals(value) != true)) {
+                    this.Accommodation_RuleInfo_IdField = value;
+                    this.RaisePropertyChanged("Accommodation_RuleInfo_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Create_Date {
+            get {
+                return this.Create_DateField;
+            }
+            set {
+                if ((this.Create_DateField.Equals(value) != true)) {
+                    this.Create_DateField = value;
+                    this.RaisePropertyChanged("Create_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Create_User {
+            get {
+                return this.Create_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
+                    this.Create_UserField = value;
+                    this.RaisePropertyChanged("Create_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Edit_Date {
+            get {
+                return this.Edit_DateField;
+            }
+            set {
+                if ((this.Edit_DateField.Equals(value) != true)) {
+                    this.Edit_DateField = value;
+                    this.RaisePropertyChanged("Edit_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Edit_User {
+            get {
+                return this.Edit_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
+                    this.Edit_UserField = value;
+                    this.RaisePropertyChanged("Edit_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsInternal {
+            get {
+                return this.IsInternalField;
+            }
+            set {
+                if ((this.IsInternalField.Equals(value) != true)) {
+                    this.IsInternalField = value;
+                    this.RaisePropertyChanged("IsInternal");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Legacy_Htl_Id {
+            get {
+                return this.Legacy_Htl_IdField;
+            }
+            set {
+                if ((this.Legacy_Htl_IdField.Equals(value) != true)) {
+                    this.Legacy_Htl_IdField = value;
+                    this.RaisePropertyChanged("Legacy_Htl_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RuleType {
+            get {
+                return this.RuleTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RuleTypeField, value) != true)) {
+                    this.RuleTypeField = value;
+                    this.RaisePropertyChanged("RuleType");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class DC_ErrorStatus : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Net.HttpStatusCode ErrorStatusCodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMessage {
+            get {
+                return this.ErrorMessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMessageField, value) != true)) {
+                    this.ErrorMessageField = value;
+                    this.RaisePropertyChanged("ErrorMessage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Net.HttpStatusCode ErrorStatusCode {
+            get {
+                return this.ErrorStatusCodeField;
+            }
+            set {
+                if ((this.ErrorStatusCodeField.Equals(value) != true)) {
+                    this.ErrorStatusCodeField = value;
+                    this.RaisePropertyChanged("ErrorStatusCode");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DC_Accommodation_Status", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
     [System.SerializableAttribute()]
     public partial class DC_Accommodation_Status : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -220,67 +486,6 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.ToField.Equals(value) != true)) {
                     this.ToField = value;
                     this.RaisePropertyChanged("To");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
-    [System.SerializableAttribute()]
-    public partial class DC_ErrorStatus : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ErrorMessageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Net.HttpStatusCode ErrorStatusCodeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrorMessage {
-            get {
-                return this.ErrorMessageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ErrorMessageField, value) != true)) {
-                    this.ErrorMessageField = value;
-                    this.RaisePropertyChanged("ErrorMessage");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Net.HttpStatusCode ErrorStatusCode {
-            get {
-                return this.ErrorStatusCodeField;
-            }
-            set {
-                if ((this.ErrorStatusCodeField.Equals(value) != true)) {
-                    this.ErrorStatusCodeField = value;
-                    this.RaisePropertyChanged("ErrorStatusCode");
                 }
             }
         }
@@ -1554,6 +1759,9 @@ namespace KafkaConsumer.MDMSVC {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.Accommodation_RoomInfo_CompanyVersion AccoRoomVersionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.Guid> Accommodation_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1573,6 +1781,9 @@ namespace KafkaConsumer.MDMSVC {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommonRoomIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CompanyNameField;
@@ -1656,6 +1867,19 @@ namespace KafkaConsumer.MDMSVC {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.Accommodation_RoomInfo_CompanyVersion AccoRoomVersion {
+            get {
+                return this.AccoRoomVersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AccoRoomVersionField, value) != true)) {
+                    this.AccoRoomVersionField = value;
+                    this.RaisePropertyChanged("AccoRoomVersion");
+                }
             }
         }
         
@@ -1746,6 +1970,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.CategoryField, value) != true)) {
                     this.CategoryField = value;
                     this.RaisePropertyChanged("Category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CommonRoomId {
+            get {
+                return this.CommonRoomIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommonRoomIdField, value) != true)) {
+                    this.CommonRoomIdField = value;
+                    this.RaisePropertyChanged("CommonRoomId");
                 }
             }
         }
@@ -2071,6 +2308,227 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.TotalRecordsField.Equals(value) != true)) {
                     this.TotalRecordsField = value;
                     this.RaisePropertyChanged("TotalRecords");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Accommodation_RoomInfo_CompanyVersion", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class Accommodation_RoomInfo_CompanyVersion : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Accommodation_CompanyVersion_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Accommodation_RoomInfo_CompanyVersion_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Accommodation_RoomInfo_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BedTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyRoomCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RoomCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RoomDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RoomNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RoomViewField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SmokingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TlgxAccoIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TlgxAccoRoomIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Accommodation_CompanyVersion_Id {
+            get {
+                return this.Accommodation_CompanyVersion_IdField;
+            }
+            set {
+                if ((this.Accommodation_CompanyVersion_IdField.Equals(value) != true)) {
+                    this.Accommodation_CompanyVersion_IdField = value;
+                    this.RaisePropertyChanged("Accommodation_CompanyVersion_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Accommodation_RoomInfo_CompanyVersion_Id {
+            get {
+                return this.Accommodation_RoomInfo_CompanyVersion_IdField;
+            }
+            set {
+                if ((this.Accommodation_RoomInfo_CompanyVersion_IdField.Equals(value) != true)) {
+                    this.Accommodation_RoomInfo_CompanyVersion_IdField = value;
+                    this.RaisePropertyChanged("Accommodation_RoomInfo_CompanyVersion_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Accommodation_RoomInfo_Id {
+            get {
+                return this.Accommodation_RoomInfo_IdField;
+            }
+            set {
+                if ((this.Accommodation_RoomInfo_IdField.Equals(value) != true)) {
+                    this.Accommodation_RoomInfo_IdField = value;
+                    this.RaisePropertyChanged("Accommodation_RoomInfo_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BedType {
+            get {
+                return this.BedTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BedTypeField, value) != true)) {
+                    this.BedTypeField = value;
+                    this.RaisePropertyChanged("BedType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CompanyRoomCategory {
+            get {
+                return this.CompanyRoomCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyRoomCategoryField, value) != true)) {
+                    this.CompanyRoomCategoryField = value;
+                    this.RaisePropertyChanged("CompanyRoomCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RoomCategory {
+            get {
+                return this.RoomCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RoomCategoryField, value) != true)) {
+                    this.RoomCategoryField = value;
+                    this.RaisePropertyChanged("RoomCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RoomDescription {
+            get {
+                return this.RoomDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RoomDescriptionField, value) != true)) {
+                    this.RoomDescriptionField = value;
+                    this.RaisePropertyChanged("RoomDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RoomName {
+            get {
+                return this.RoomNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RoomNameField, value) != true)) {
+                    this.RoomNameField = value;
+                    this.RaisePropertyChanged("RoomName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RoomView {
+            get {
+                return this.RoomViewField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RoomViewField, value) != true)) {
+                    this.RoomViewField = value;
+                    this.RaisePropertyChanged("RoomView");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Smoking {
+            get {
+                return this.SmokingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SmokingField, value) != true)) {
+                    this.SmokingField = value;
+                    this.RaisePropertyChanged("Smoking");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TlgxAccoId {
+            get {
+                return this.TlgxAccoIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TlgxAccoIdField, value) != true)) {
+                    this.TlgxAccoIdField = value;
+                    this.RaisePropertyChanged("TlgxAccoId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TlgxAccoRoomId {
+            get {
+                return this.TlgxAccoRoomIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TlgxAccoRoomIdField, value) != true)) {
+                    this.TlgxAccoRoomIdField = value;
+                    this.RaisePropertyChanged("TlgxAccoRoomId");
                 }
             }
         }
@@ -2425,6 +2883,9 @@ namespace KafkaConsumer.MDMSVC {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion AccVersionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private KafkaConsumer.MDMSVC.DC_Accommodation_Descriptions[] Accommodation_DescriptionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -2728,6 +3189,19 @@ namespace KafkaConsumer.MDMSVC {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion AccVersion {
+            get {
+                return this.AccVersionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AccVersionField, value) != true)) {
+                    this.AccVersionField = value;
+                    this.RaisePropertyChanged("AccVersion");
+                }
             }
         }
         
@@ -4014,6 +4488,499 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.YearBuiltField, value) != true)) {
                     this.YearBuiltField = value;
                     this.RaisePropertyChanged("YearBuilt");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Accommodation_CompanyVersion", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class DC_Accommodation_CompanyVersion : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Accommodation_CompanyVersion_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Accommodation_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AreaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BrandField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ChainField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommonProductIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyProductIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CompanyRatingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HouseNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LatitudeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LongitudeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PostalCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductCatSubTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductDisplayNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StarRatingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StreetField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Street2Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Street3Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Street4Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Street5Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TLGXAccoIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ZoneField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Accommodation_CompanyVersion_Id {
+            get {
+                return this.Accommodation_CompanyVersion_IdField;
+            }
+            set {
+                if ((this.Accommodation_CompanyVersion_IdField.Equals(value) != true)) {
+                    this.Accommodation_CompanyVersion_IdField = value;
+                    this.RaisePropertyChanged("Accommodation_CompanyVersion_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Accommodation_Id {
+            get {
+                return this.Accommodation_IdField;
+            }
+            set {
+                if ((this.Accommodation_IdField.Equals(value) != true)) {
+                    this.Accommodation_IdField = value;
+                    this.RaisePropertyChanged("Accommodation_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Area {
+            get {
+                return this.AreaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AreaField, value) != true)) {
+                    this.AreaField = value;
+                    this.RaisePropertyChanged("Area");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Brand {
+            get {
+                return this.BrandField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BrandField, value) != true)) {
+                    this.BrandField = value;
+                    this.RaisePropertyChanged("Brand");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Chain {
+            get {
+                return this.ChainField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ChainField, value) != true)) {
+                    this.ChainField = value;
+                    this.RaisePropertyChanged("Chain");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CommonProductId {
+            get {
+                return this.CommonProductIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommonProductIdField, value) != true)) {
+                    this.CommonProductIdField = value;
+                    this.RaisePropertyChanged("CommonProductId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CompanyId {
+            get {
+                return this.CompanyIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyIdField, value) != true)) {
+                    this.CompanyIdField = value;
+                    this.RaisePropertyChanged("CompanyId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CompanyName {
+            get {
+                return this.CompanyNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyNameField, value) != true)) {
+                    this.CompanyNameField = value;
+                    this.RaisePropertyChanged("CompanyName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CompanyProductId {
+            get {
+                return this.CompanyProductIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyProductIdField, value) != true)) {
+                    this.CompanyProductIdField = value;
+                    this.RaisePropertyChanged("CompanyProductId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CompanyRating {
+            get {
+                return this.CompanyRatingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CompanyRatingField, value) != true)) {
+                    this.CompanyRatingField = value;
+                    this.RaisePropertyChanged("CompanyRating");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HouseNumber {
+            get {
+                return this.HouseNumberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HouseNumberField, value) != true)) {
+                    this.HouseNumberField = value;
+                    this.RaisePropertyChanged("HouseNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Latitude {
+            get {
+                return this.LatitudeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LatitudeField, value) != true)) {
+                    this.LatitudeField = value;
+                    this.RaisePropertyChanged("Latitude");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Location {
+            get {
+                return this.LocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LocationField, value) != true)) {
+                    this.LocationField = value;
+                    this.RaisePropertyChanged("Location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Longitude {
+            get {
+                return this.LongitudeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LongitudeField, value) != true)) {
+                    this.LongitudeField = value;
+                    this.RaisePropertyChanged("Longitude");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PostalCode {
+            get {
+                return this.PostalCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PostalCodeField, value) != true)) {
+                    this.PostalCodeField = value;
+                    this.RaisePropertyChanged("PostalCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductCatSubType {
+            get {
+                return this.ProductCatSubTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductCatSubTypeField, value) != true)) {
+                    this.ProductCatSubTypeField = value;
+                    this.RaisePropertyChanged("ProductCatSubType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductDisplayName {
+            get {
+                return this.ProductDisplayNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductDisplayNameField, value) != true)) {
+                    this.ProductDisplayNameField = value;
+                    this.RaisePropertyChanged("ProductDisplayName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductName {
+            get {
+                return this.ProductNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
+                    this.ProductNameField = value;
+                    this.RaisePropertyChanged("ProductName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StarRating {
+            get {
+                return this.StarRatingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StarRatingField, value) != true)) {
+                    this.StarRatingField = value;
+                    this.RaisePropertyChanged("StarRating");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string State {
+            get {
+                return this.StateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StateField, value) != true)) {
+                    this.StateField = value;
+                    this.RaisePropertyChanged("State");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Street {
+            get {
+                return this.StreetField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StreetField, value) != true)) {
+                    this.StreetField = value;
+                    this.RaisePropertyChanged("Street");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Street2 {
+            get {
+                return this.Street2Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Street2Field, value) != true)) {
+                    this.Street2Field = value;
+                    this.RaisePropertyChanged("Street2");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Street3 {
+            get {
+                return this.Street3Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Street3Field, value) != true)) {
+                    this.Street3Field = value;
+                    this.RaisePropertyChanged("Street3");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Street4 {
+            get {
+                return this.Street4Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Street4Field, value) != true)) {
+                    this.Street4Field = value;
+                    this.RaisePropertyChanged("Street4");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Street5 {
+            get {
+                return this.Street5Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Street5Field, value) != true)) {
+                    this.Street5Field = value;
+                    this.RaisePropertyChanged("Street5");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TLGXAccoId {
+            get {
+                return this.TLGXAccoIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TLGXAccoIdField, value) != true)) {
+                    this.TLGXAccoIdField = value;
+                    this.RaisePropertyChanged("TLGXAccoId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Zone {
+            get {
+                return this.ZoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ZoneField, value) != true)) {
+                    this.ZoneField = value;
+                    this.RaisePropertyChanged("Zone");
                 }
             }
         }
@@ -5916,211 +6883,6 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.ValidToField.Equals(value) != true)) {
                     this.ValidToField = value;
                     this.RaisePropertyChanged("ValidTo");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Accommodation_RuleInfo", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
-    [System.SerializableAttribute()]
-    public partial class DC_Accommodation_RuleInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Accommodation_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid Accommodation_RuleInfo_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Create_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Create_UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Edit_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Edit_UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsInternalField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> Legacy_Htl_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RuleTypeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Accommodation_Id {
-            get {
-                return this.Accommodation_IdField;
-            }
-            set {
-                if ((this.Accommodation_IdField.Equals(value) != true)) {
-                    this.Accommodation_IdField = value;
-                    this.RaisePropertyChanged("Accommodation_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid Accommodation_RuleInfo_Id {
-            get {
-                return this.Accommodation_RuleInfo_IdField;
-            }
-            set {
-                if ((this.Accommodation_RuleInfo_IdField.Equals(value) != true)) {
-                    this.Accommodation_RuleInfo_IdField = value;
-                    this.RaisePropertyChanged("Accommodation_RuleInfo_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Create_Date {
-            get {
-                return this.Create_DateField;
-            }
-            set {
-                if ((this.Create_DateField.Equals(value) != true)) {
-                    this.Create_DateField = value;
-                    this.RaisePropertyChanged("Create_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Create_User {
-            get {
-                return this.Create_UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
-                    this.Create_UserField = value;
-                    this.RaisePropertyChanged("Create_User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Edit_Date {
-            get {
-                return this.Edit_DateField;
-            }
-            set {
-                if ((this.Edit_DateField.Equals(value) != true)) {
-                    this.Edit_DateField = value;
-                    this.RaisePropertyChanged("Edit_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Edit_User {
-            get {
-                return this.Edit_UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
-                    this.Edit_UserField = value;
-                    this.RaisePropertyChanged("Edit_User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsActive {
-            get {
-                return this.IsActiveField;
-            }
-            set {
-                if ((this.IsActiveField.Equals(value) != true)) {
-                    this.IsActiveField = value;
-                    this.RaisePropertyChanged("IsActive");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsInternal {
-            get {
-                return this.IsInternalField;
-            }
-            set {
-                if ((this.IsInternalField.Equals(value) != true)) {
-                    this.IsInternalField = value;
-                    this.RaisePropertyChanged("IsInternal");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Legacy_Htl_Id {
-            get {
-                return this.Legacy_Htl_IdField;
-            }
-            set {
-                if ((this.Legacy_Htl_IdField.Equals(value) != true)) {
-                    this.Legacy_Htl_IdField = value;
-                    this.RaisePropertyChanged("Legacy_Htl_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RuleType {
-            get {
-                return this.RuleTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RuleTypeField, value) != true)) {
-                    this.RuleTypeField = value;
-                    this.RaisePropertyChanged("RuleType");
                 }
             }
         }
@@ -8303,9 +9065,11 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileUploadResponse))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileData))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UploadResponse))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_Status[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_Status))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Message))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ReadOnlyMessageStatusCode))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_ClassificationAttributes[]))]
@@ -8318,12 +9082,14 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_Contact))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RoomInfo[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RoomInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Accommodation_RoomInfo_CompanyVersion))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Roomamenities[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Roomamenities))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_RoomFacilities[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_RoomFacilities))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_HealthAndSafety[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_HealthAndSafety))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_HotelUpdates[]))]
@@ -8338,8 +9104,6 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_PaxOccupancy))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RouteInfo[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RouteInfo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Search_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Search_RS[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Search_RS))]
@@ -8352,6 +9116,7 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RoomInfo_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_CopyRoomDef))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_UpdateStatus_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_GooglePlaceNearByWithAccoID))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_GooglePlaceNearBy[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.GeometryGooglePlaceNearBy))]
@@ -8404,6 +9169,10 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SRT_ML_Match_Supervised_Semantic[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SRT_ML_Match_Supervised_Semantic))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SRT_ML_Response))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileProgressDashboard))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RefreshDistributionDataLog[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RefreshDistributionDataLog))]
@@ -8472,6 +9241,12 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_HotelMappingReport_RS[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_HotelMappingReport_RS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RS[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MappingStats[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MappingStats))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MappingStatsFor[]))]
@@ -8569,6 +9344,8 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_StaticDataDownload[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Priorities[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Priorities))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MasterAttribute[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MasterAttribute))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Country_Search_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Country[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Country))]
@@ -8576,6 +9353,8 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Keys))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Ranks[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Ranks))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_AllCountry_Search_RQ[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_AllCountry_Search_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Master_State[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Master_State))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_State_Search_RQ))]
@@ -8590,8 +9369,6 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PortMaster[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PortMaster))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PortMaster_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MasterAttribute))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MasterAttribute[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_M_masterattribute))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_M_masterattribute[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_M_masterparentattributes[]))]
@@ -9042,9 +9819,11 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileUploadResponse))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileData))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UploadResponse))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_Status[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_Status))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Message))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ReadOnlyMessageStatusCode))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_ClassificationAttributes[]))]
@@ -9057,12 +9836,14 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_Contact))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RoomInfo[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RoomInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Accommodation_RoomInfo_CompanyVersion))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Roomamenities[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Roomamenities))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_RoomFacilities[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_RoomFacilities))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_HealthAndSafety[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_HealthAndSafety))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_HotelUpdates[]))]
@@ -9077,8 +9858,6 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_PaxOccupancy))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RouteInfo[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RouteInfo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Search_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Search_RS[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_Search_RS))]
@@ -9091,6 +9870,7 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RoomInfo_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_CopyRoomDef))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accomodation_UpdateStatus_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_GooglePlaceNearByWithAccoID))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_GooglePlaceNearBy[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_GooglePlaceNearBy))]
@@ -9143,6 +9923,10 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SRT_ML_Match_Supervised_Semantic[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SRT_ML_Match_Supervised_Semantic))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SRT_ML_Response))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileProgressDashboard))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RefreshDistributionDataLog[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RefreshDistributionDataLog))]
@@ -9211,6 +9995,12 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_HotelMappingReport_RS[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_HotelMappingReport_RS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RS[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MappingStats[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MappingStats))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MappingStatsFor[]))]
@@ -9308,6 +10098,8 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_StaticDataDownload[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Priorities[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Priorities))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MasterAttribute[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MasterAttribute))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Country_Search_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Country[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Country))]
@@ -9315,6 +10107,8 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Keys))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Ranks[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Ranks))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_AllCountry_Search_RQ[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_AllCountry_Search_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Master_State[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Master_State))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_State_Search_RQ))]
@@ -9329,8 +10123,6 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PortMaster[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PortMaster))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PortMaster_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MasterAttribute))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_MasterAttribute[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_M_masterattribute))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_M_masterattribute[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_M_masterparentattributes[]))]
@@ -9508,6 +10300,9 @@ namespace KafkaConsumer.MDMSVC {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Accommodation_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> Create_DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -9549,6 +10344,9 @@ namespace KafkaConsumer.MDMSVC {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TopicPartionOffsetField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string message_logField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -9556,6 +10354,19 @@ namespace KafkaConsumer.MDMSVC {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Accommodation_Id {
+            get {
+                return this.Accommodation_IdField;
+            }
+            set {
+                if ((this.Accommodation_IdField.Equals(value) != true)) {
+                    this.Accommodation_IdField = value;
+                    this.RaisePropertyChanged("Accommodation_Id");
+                }
             }
         }
         
@@ -9737,6 +10548,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.TopicPartionOffsetField, value) != true)) {
                     this.TopicPartionOffsetField = value;
                     this.RaisePropertyChanged("TopicPartionOffset");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string message_log {
+            get {
+                return this.message_logField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.message_logField, value) != true)) {
+                    this.message_logField = value;
+                    this.RaisePropertyChanged("message_log");
                 }
             }
         }
@@ -10872,7 +11696,13 @@ namespace KafkaConsumer.MDMSVC {
         private string EntityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] FilterStatusesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> From_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsActiveField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<bool> IsPausedField;
@@ -10950,6 +11780,19 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] FilterStatuses {
+            get {
+                return this.FilterStatusesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FilterStatusesField, value) != true)) {
+                    this.FilterStatusesField = value;
+                    this.RaisePropertyChanged("FilterStatuses");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> From_Date {
             get {
                 return this.From_DateField;
@@ -10958,6 +11801,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.From_DateField.Equals(value) != true)) {
                     this.From_DateField = value;
                     this.RaisePropertyChanged("From_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
                 }
             }
         }
@@ -12616,6 +13472,9 @@ namespace KafkaConsumer.MDMSVC {
         private System.Guid SupplierImportFile_Statistics_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Supplier_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int TotalRecordsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -12623,6 +13482,9 @@ namespace KafkaConsumer.MDMSVC {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> UnmappedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool isRerunField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -12777,6 +13639,19 @@ namespace KafkaConsumer.MDMSVC {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Nullable<System.Guid> Supplier_Id {
+            get {
+                return this.Supplier_IdField;
+            }
+            set {
+                if ((this.Supplier_IdField.Equals(value) != true)) {
+                    this.Supplier_IdField = value;
+                    this.RaisePropertyChanged("Supplier_Id");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int TotalRecords {
             get {
@@ -12812,6 +13687,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.UnmappedField.Equals(value) != true)) {
                     this.UnmappedField = value;
                     this.RaisePropertyChanged("Unmapped");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool isRerun {
+            get {
+                return this.isRerunField;
+            }
+            set {
+                if ((this.isRerunField.Equals(value) != true)) {
+                    this.isRerunField = value;
+                    this.RaisePropertyChanged("isRerun");
                 }
             }
         }
@@ -13039,6 +13927,12 @@ namespace KafkaConsumer.MDMSVC {
         private KafkaConsumer.MDMSVC.DC_PentahoTransStatus_Stepstatuslist StepstatuslistField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TransactionImageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TransactionLogField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TransnameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -13177,6 +14071,32 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.StepstatuslistField, value) != true)) {
                     this.StepstatuslistField = value;
                     this.RaisePropertyChanged("Stepstatuslist");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TransactionImage {
+            get {
+                return this.TransactionImageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TransactionImageField, value) != true)) {
+                    this.TransactionImageField = value;
+                    this.RaisePropertyChanged("TransactionImage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TransactionLog {
+            get {
+                return this.TransactionLogField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TransactionLogField, value) != true)) {
+                    this.TransactionLogField = value;
+                    this.RaisePropertyChanged("TransactionLog");
                 }
             }
         }
@@ -17044,6 +17964,320 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SchedulerServicesTasks", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class DC_SchedulerServicesTasks : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Api_Call_Log_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Create_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OperationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime Schedule_DatetimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Schedule_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Task_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Api_Call_Log_Id {
+            get {
+                return this.Api_Call_Log_IdField;
+            }
+            set {
+                if ((this.Api_Call_Log_IdField.Equals(value) != true)) {
+                    this.Api_Call_Log_IdField = value;
+                    this.RaisePropertyChanged("Api_Call_Log_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Create_User {
+            get {
+                return this.Create_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
+                    this.Create_UserField = value;
+                    this.RaisePropertyChanged("Create_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Operation {
+            get {
+                return this.OperationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OperationField, value) != true)) {
+                    this.OperationField = value;
+                    this.RaisePropertyChanged("Operation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Schedule_Datetime {
+            get {
+                return this.Schedule_DatetimeField;
+            }
+            set {
+                if ((this.Schedule_DatetimeField.Equals(value) != true)) {
+                    this.Schedule_DatetimeField = value;
+                    this.RaisePropertyChanged("Schedule_Datetime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Schedule_Id {
+            get {
+                return this.Schedule_IdField;
+            }
+            set {
+                if ((this.Schedule_IdField.Equals(value) != true)) {
+                    this.Schedule_IdField = value;
+                    this.RaisePropertyChanged("Schedule_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Task_Id {
+            get {
+                return this.Task_IdField;
+            }
+            set {
+                if ((this.Task_IdField.Equals(value) != true)) {
+                    this.Task_IdField = value;
+                    this.RaisePropertyChanged("Task_Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SchedulerServicesLogs", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+    [System.SerializableAttribute()]
+    public partial class DC_SchedulerServicesLogs : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Create_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Log_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Log_TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OperationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RemarksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Status_MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Task_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Create_User {
+            get {
+                return this.Create_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
+                    this.Create_UserField = value;
+                    this.RaisePropertyChanged("Create_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Log_Id {
+            get {
+                return this.Log_IdField;
+            }
+            set {
+                if ((this.Log_IdField.Equals(value) != true)) {
+                    this.Log_IdField = value;
+                    this.RaisePropertyChanged("Log_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Log_Type {
+            get {
+                return this.Log_TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Log_TypeField, value) != true)) {
+                    this.Log_TypeField = value;
+                    this.RaisePropertyChanged("Log_Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Operation {
+            get {
+                return this.OperationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OperationField, value) != true)) {
+                    this.OperationField = value;
+                    this.RaisePropertyChanged("Operation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Remarks {
+            get {
+                return this.RemarksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RemarksField, value) != true)) {
+                    this.RemarksField = value;
+                    this.RaisePropertyChanged("Remarks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status_Message {
+            get {
+                return this.Status_MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Status_MessageField, value) != true)) {
+                    this.Status_MessageField = value;
+                    this.RaisePropertyChanged("Status_Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Task_Id {
+            get {
+                return this.Task_IdField;
+            }
+            set {
+                if ((this.Task_IdField.Equals(value) != true)) {
+                    this.Task_IdField = value;
+                    this.RaisePropertyChanged("Task_Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DC_FileProgressDashboard", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
     [System.SerializableAttribute()]
     public partial class DC_FileProgressDashboard : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -17170,10 +18404,19 @@ namespace KafkaConsumer.MDMSVC {
         private string ElementField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PushedCountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SupplierIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TotalCountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TypeField;
@@ -17228,6 +18471,32 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Per {
+            get {
+                return this.PerField;
+            }
+            set {
+                if ((this.PerField.Equals(value) != true)) {
+                    this.PerField = value;
+                    this.RaisePropertyChanged("Per");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PushedCount {
+            get {
+                return this.PushedCountField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PushedCountField, value) != true)) {
+                    this.PushedCountField = value;
+                    this.RaisePropertyChanged("PushedCount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Status {
             get {
                 return this.StatusField;
@@ -17249,6 +18518,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.SupplierIdField, value) != true)) {
                     this.SupplierIdField = value;
                     this.RaisePropertyChanged("SupplierId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TotalCount {
+            get {
+                return this.TotalCountField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TotalCountField, value) != true)) {
+                    this.TotalCountField = value;
+                    this.RaisePropertyChanged("TotalCount");
                 }
             }
         }
@@ -29011,6 +30293,586 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_ActivityImageReport_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Mapping")]
+    [System.SerializableAttribute()]
+    public partial class DC_ActivityImageReport_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] CountryField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_ActivityImageReport_RS", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Mapping")]
+    [System.SerializableAttribute()]
+    public partial class DC_ActivityImageReport_RS : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommonProductNameSubType_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DimensionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HeightField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HorizontalResolutionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LandscapeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MediaIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PortraitField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VerticalResolutionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WidthField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CommonProductNameSubType_Id {
+            get {
+                return this.CommonProductNameSubType_IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommonProductNameSubType_IdField, value) != true)) {
+                    this.CommonProductNameSubType_IdField = value;
+                    this.RaisePropertyChanged("CommonProductNameSubType_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Dimensions {
+            get {
+                return this.DimensionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DimensionsField, value) != true)) {
+                    this.DimensionsField = value;
+                    this.RaisePropertyChanged("Dimensions");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Height {
+            get {
+                return this.HeightField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HeightField, value) != true)) {
+                    this.HeightField = value;
+                    this.RaisePropertyChanged("Height");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HorizontalResolution {
+            get {
+                return this.HorizontalResolutionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HorizontalResolutionField, value) != true)) {
+                    this.HorizontalResolutionField = value;
+                    this.RaisePropertyChanged("HorizontalResolution");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Landscape {
+            get {
+                return this.LandscapeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LandscapeField, value) != true)) {
+                    this.LandscapeField = value;
+                    this.RaisePropertyChanged("Landscape");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MediaID {
+            get {
+                return this.MediaIDField;
+            }
+            set {
+                if ((this.MediaIDField.Equals(value) != true)) {
+                    this.MediaIDField = value;
+                    this.RaisePropertyChanged("MediaID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Portrait {
+            get {
+                return this.PortraitField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PortraitField, value) != true)) {
+                    this.PortraitField = value;
+                    this.RaisePropertyChanged("Portrait");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductName {
+            get {
+                return this.ProductNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
+                    this.ProductNameField = value;
+                    this.RaisePropertyChanged("ProductName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string VerticalResolution {
+            get {
+                return this.VerticalResolutionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VerticalResolutionField, value) != true)) {
+                    this.VerticalResolutionField = value;
+                    this.RaisePropertyChanged("VerticalResolution");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Width {
+            get {
+                return this.WidthField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WidthField, value) != true)) {
+                    this.WidthField = value;
+                    this.RaisePropertyChanged("Width");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_ActivityImageReportDetails_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Mapping")]
+    [System.SerializableAttribute()]
+    public partial class DC_ActivityImageReportDetails_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] CountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] SupplierNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] SupplierName {
+            get {
+                return this.SupplierNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierNameField, value) != true)) {
+                    this.SupplierNameField = value;
+                    this.RaisePropertyChanged("SupplierName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_ActivityImageReportDetails_RS", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Mapping")]
+    [System.SerializableAttribute()]
+    public partial class DC_ActivityImageReportDetails_RS : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HorizontalresolutionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IsExistHighResField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IsImageSize1250x500Field;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Landscape_PortraitBothPresentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int NumberOfImagesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ProductNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SuplierProductCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string VerticalresolutionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City {
+            get {
+                return this.CityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityField, value) != true)) {
+                    this.CityField = value;
+                    this.RaisePropertyChanged("City");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Country {
+            get {
+                return this.CountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Horizontalresolution {
+            get {
+                return this.HorizontalresolutionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HorizontalresolutionField, value) != true)) {
+                    this.HorizontalresolutionField = value;
+                    this.RaisePropertyChanged("Horizontalresolution");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IsExistHighRes {
+            get {
+                return this.IsExistHighResField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IsExistHighResField, value) != true)) {
+                    this.IsExistHighResField = value;
+                    this.RaisePropertyChanged("IsExistHighRes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IsImageSize1250x500 {
+            get {
+                return this.IsImageSize1250x500Field;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IsImageSize1250x500Field, value) != true)) {
+                    this.IsImageSize1250x500Field = value;
+                    this.RaisePropertyChanged("IsImageSize1250x500");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Landscape_PortraitBothPresent {
+            get {
+                return this.Landscape_PortraitBothPresentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Landscape_PortraitBothPresentField, value) != true)) {
+                    this.Landscape_PortraitBothPresentField = value;
+                    this.RaisePropertyChanged("Landscape_PortraitBothPresent");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int NumberOfImages {
+            get {
+                return this.NumberOfImagesField;
+            }
+            set {
+                if ((this.NumberOfImagesField.Equals(value) != true)) {
+                    this.NumberOfImagesField = value;
+                    this.RaisePropertyChanged("NumberOfImages");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProductName {
+            get {
+                return this.ProductNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProductNameField, value) != true)) {
+                    this.ProductNameField = value;
+                    this.RaisePropertyChanged("ProductName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SuplierProductCode {
+            get {
+                return this.SuplierProductCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SuplierProductCodeField, value) != true)) {
+                    this.SuplierProductCodeField = value;
+                    this.RaisePropertyChanged("SuplierProductCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SupplierName {
+            get {
+                return this.SupplierNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierNameField, value) != true)) {
+                    this.SupplierNameField = value;
+                    this.RaisePropertyChanged("SupplierName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Verticalresolution {
+            get {
+                return this.VerticalresolutionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.VerticalresolutionField, value) != true)) {
+                    this.VerticalresolutionField = value;
+                    this.RaisePropertyChanged("Verticalresolution");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productId {
+            get {
+                return this.productIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productIdField, value) != true)) {
+                    this.productIdField = value;
+                    this.RaisePropertyChanged("productId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DC_MappingStats", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Mapping")]
     [System.SerializableAttribute()]
     public partial class DC_MappingStats : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -32687,6 +34549,9 @@ namespace KafkaConsumer.MDMSVC {
         private System.Nullable<System.DateTime> FromDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsAdminUserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.Guid> LogIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -32777,6 +34642,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.FromDateField.Equals(value) != true)) {
                     this.FromDateField = value;
                     this.RaisePropertyChanged("FromDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsAdminUser {
+            get {
+                return this.IsAdminUserField;
+            }
+            set {
+                if ((this.IsAdminUserField.Equals(value) != true)) {
+                    this.IsAdminUserField = value;
+                    this.RaisePropertyChanged("IsAdminUser");
                 }
             }
         }
@@ -38044,6 +39922,131 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_MasterAttribute", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Masters")]
+    [System.SerializableAttribute()]
+    public partial class DC_MasterAttribute : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AttributeValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid MasterAttributeValue_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> MasterAttribute_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MasterForField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> ParentAttributeValue_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AttributeValue {
+            get {
+                return this.AttributeValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttributeValueField, value) != true)) {
+                    this.AttributeValueField = value;
+                    this.RaisePropertyChanged("AttributeValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid MasterAttributeValue_Id {
+            get {
+                return this.MasterAttributeValue_IdField;
+            }
+            set {
+                if ((this.MasterAttributeValue_IdField.Equals(value) != true)) {
+                    this.MasterAttributeValue_IdField = value;
+                    this.RaisePropertyChanged("MasterAttributeValue_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> MasterAttribute_Id {
+            get {
+                return this.MasterAttribute_IdField;
+            }
+            set {
+                if ((this.MasterAttribute_IdField.Equals(value) != true)) {
+                    this.MasterAttribute_IdField = value;
+                    this.RaisePropertyChanged("MasterAttribute_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MasterFor {
+            get {
+                return this.MasterForField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MasterForField, value) != true)) {
+                    this.MasterForField = value;
+                    this.RaisePropertyChanged("MasterFor");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> ParentAttributeValue_Id {
+            get {
+                return this.ParentAttributeValue_IdField;
+            }
+            set {
+                if ((this.ParentAttributeValue_IdField.Equals(value) != true)) {
+                    this.ParentAttributeValue_IdField = value;
+                    this.RaisePropertyChanged("ParentAttributeValue_Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DC_Country_Search_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Masters")]
     [System.SerializableAttribute()]
     public partial class DC_Country_Search_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -38992,6 +40995,67 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.ValueField, value) != true)) {
                     this.ValueField = value;
                     this.RaisePropertyChanged("Value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_AllCountry_Search_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Masters")]
+    [System.SerializableAttribute()]
+    public partial class DC_AllCountry_Search_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Country_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Country_Id {
+            get {
+                return this.Country_IdField;
+            }
+            set {
+                if ((this.Country_IdField.Equals(value) != true)) {
+                    this.Country_IdField = value;
+                    this.RaisePropertyChanged("Country_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
@@ -40917,131 +42981,6 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.Port_IdField.Equals(value) != true)) {
                     this.Port_IdField = value;
                     this.RaisePropertyChanged("Port_Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_MasterAttribute", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Masters")]
-    [System.SerializableAttribute()]
-    public partial class DC_MasterAttribute : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AttributeValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid MasterAttributeValue_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> MasterAttribute_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MasterForField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> ParentAttributeValue_IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AttributeValue {
-            get {
-                return this.AttributeValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AttributeValueField, value) != true)) {
-                    this.AttributeValueField = value;
-                    this.RaisePropertyChanged("AttributeValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid MasterAttributeValue_Id {
-            get {
-                return this.MasterAttributeValue_IdField;
-            }
-            set {
-                if ((this.MasterAttributeValue_IdField.Equals(value) != true)) {
-                    this.MasterAttributeValue_IdField = value;
-                    this.RaisePropertyChanged("MasterAttributeValue_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> MasterAttribute_Id {
-            get {
-                return this.MasterAttribute_IdField;
-            }
-            set {
-                if ((this.MasterAttribute_IdField.Equals(value) != true)) {
-                    this.MasterAttribute_IdField = value;
-                    this.RaisePropertyChanged("MasterAttribute_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MasterFor {
-            get {
-                return this.MasterForField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MasterForField, value) != true)) {
-                    this.MasterForField = value;
-                    this.RaisePropertyChanged("MasterFor");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> ParentAttributeValue_Id {
-            get {
-                return this.ParentAttributeValue_IdField;
-            }
-            set {
-                if ((this.ParentAttributeValue_IdField.Equals(value) != true)) {
-                    this.ParentAttributeValue_IdField = value;
-                    this.RaisePropertyChanged("ParentAttributeValue_Id");
                 }
             }
         }
@@ -48114,6 +50053,9 @@ namespace KafkaConsumer.MDMSVC {
         private System.Nullable<System.Guid> City_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommonProductNameSubType_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -48169,6 +50111,9 @@ namespace KafkaConsumer.MDMSVC {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.Guid> ProductTypeIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SuplierProductCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SupplierCityNameField;
@@ -48240,6 +50185,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.City_IdField.Equals(value) != true)) {
                     this.City_IdField = value;
                     this.RaisePropertyChanged("City_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CommonProductNameSubType_Id {
+            get {
+                return this.CommonProductNameSubType_IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommonProductNameSubType_IdField, value) != true)) {
+                    this.CommonProductNameSubType_IdField = value;
+                    this.RaisePropertyChanged("CommonProductNameSubType_Id");
                 }
             }
         }
@@ -48487,6 +50445,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.ProductTypeIdField.Equals(value) != true)) {
                     this.ProductTypeIdField = value;
                     this.RaisePropertyChanged("ProductTypeId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SuplierProductCode {
+            get {
+                return this.SuplierProductCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SuplierProductCodeField, value) != true)) {
+                    this.SuplierProductCodeField = value;
+                    this.RaisePropertyChanged("SuplierProductCode");
                 }
             }
         }
@@ -50927,6 +52898,9 @@ namespace KafkaConsumer.MDMSVC {
         private string MarketField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PackageSupplierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PersonTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -51127,6 +53101,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.MarketField, value) != true)) {
                     this.MarketField = value;
                     this.RaisePropertyChanged("Market");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PackageSupplier {
+            get {
+                return this.PackageSupplierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PackageSupplierField, value) != true)) {
+                    this.PackageSupplierField = value;
+                    this.RaisePropertyChanged("PackageSupplier");
                 }
             }
         }
@@ -56987,6 +58974,27 @@ namespace KafkaConsumer.MDMSVC {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="MDMSVC.IConsumer")]
     public interface IConsumer {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/GetAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/GetAccomodationRuleInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/GetAccomodationRuleInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[] GetAccomodationRuleInfo(string Accomodation_Id, string DataKey_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/GetAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/GetAccomodationRuleInfoResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]> GetAccomodationRuleInfoAsync(string Accomodation_Id, string DataKey_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/AddAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/AddAccomodationRuleInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/AddAccomodationRuleInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        bool AddAccomodationRuleInfo(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/AddAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/AddAccomodationRuleInfoResponse")]
+        System.Threading.Tasks.Task<bool> AddAccomodationRuleInfoAsync(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        bool UpdateAccomodationRuleInfo(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfoResponse")]
+        System.Threading.Tasks.Task<bool> UpdateAccomodationRuleInfoAsync(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/GetAccomodationStatus", ReplyAction="http://tempuri.org/IAccomodation/GetAccomodationStatusResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/GetAccomodationStatusDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
         KafkaConsumer.MDMSVC.DC_Accommodation_Status[] GetAccomodationStatus(string Accomodation_Id, string DataKey_Id);
@@ -57219,6 +59227,14 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationInfo", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationInfoResponse")]
         System.Threading.Tasks.Task<bool> UpdateAccomodationInfoAsync(KafkaConsumer.MDMSVC.DC_Accomodation AccomodationInfo);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationCompanyVersionInfo", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationCompanyVersionInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/UpdateAccomodationCompanyVersionInfoDC_ErrorStat" +
+            "usFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        bool UpdateAccomodationCompanyVersionInfo(KafkaConsumer.MDMSVC.DC_Accomodation AccomodationDetails);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationCompanyVersionInfo", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationCompanyVersionInfoResponse")]
+        System.Threading.Tasks.Task<bool> UpdateAccomodationCompanyVersionInfoAsync(KafkaConsumer.MDMSVC.DC_Accomodation AccomodationDetails);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/CopyAccomodationInfo", ReplyAction="http://tempuri.org/IAccomodation/CopyAccomodationInfoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/CopyAccomodationInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
         KafkaConsumer.MDMSVC.DC_Message CopyAccomodationInfo(KafkaConsumer.MDMSVC.DC_Accomodation_CopyRoomDef AccomodationInfo);
@@ -57247,6 +59263,14 @@ namespace KafkaConsumer.MDMSVC {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationDetailStatus", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationDetailStatusResponse")]
         System.Threading.Tasks.Task<bool> UpdateAccomodationDetailStatusAsync(KafkaConsumer.MDMSVC.DC_Accomodation_UpdateStatus_RQ obj);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/GetAccomodationCompanyVersionInfo", ReplyAction="http://tempuri.org/IAccomodation/GetAccomodationCompanyVersionInfoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/GetAccomodationCompanyVersionInfoDC_ErrorStatusF" +
+            "ault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion[] GetAccomodationCompanyVersionInfo(string Accomodation_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/GetAccomodationCompanyVersionInfo", ReplyAction="http://tempuri.org/IAccomodation/GetAccomodationCompanyVersionInfoResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion[]> GetAccomodationCompanyVersionInfoAsync(string Accomodation_Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/GetAccomodationContacts", ReplyAction="http://tempuri.org/IAccomodation/GetAccomodationContactsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/GetAccomodationContactsDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -57565,6 +59589,16 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationRoomFacilities", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationRoomFacilitiesResponse")]
         System.Threading.Tasks.Task<bool> UpdateAccomodationRoomFacilitiesAsync(KafkaConsumer.MDMSVC.DC_Accomodation_RoomFacilities RF);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/DeleteAccomodationRoomFacilities_ByAccoRoomId", ReplyAction="http://tempuri.org/IAccomodation/DeleteAccomodationRoomFacilities_ByAccoRoomIdRes" +
+            "ponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/DeleteAccomodationRoomFacilities_ByAccoRoomIdDC_" +
+            "ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        bool DeleteAccomodationRoomFacilities_ByAccoRoomId(string Accommodation_RoomInfo_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/DeleteAccomodationRoomFacilities_ByAccoRoomId", ReplyAction="http://tempuri.org/IAccomodation/DeleteAccomodationRoomFacilities_ByAccoRoomIdRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<bool> DeleteAccomodationRoomFacilities_ByAccoRoomIdAsync(string Accommodation_RoomInfo_Id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/GetAccomodationRouteInfo", ReplyAction="http://tempuri.org/IAccomodation/GetAccomodationRouteInfoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/GetAccomodationRouteInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
         KafkaConsumer.MDMSVC.DC_Accommodation_RouteInfo[] GetAccomodationRouteInfo(string Accomodation_Id, string DataKey_Id);
@@ -57586,26 +59620,12 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationRouteInfo", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationRouteInfoResponse")]
         System.Threading.Tasks.Task<bool> UpdateAccomodationRouteInfoAsync(KafkaConsumer.MDMSVC.DC_Accommodation_RouteInfo RI);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/GetAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/GetAccomodationRuleInfoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/GetAccomodationRuleInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
-        KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[] GetAccomodationRuleInfo(string Accomodation_Id, string DataKey_Id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetActivityMaster", ReplyAction="http://tempuri.org/IMasters/GetActivityMasterResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMasters/GetActivityMasterDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Activity[] GetActivityMaster(KafkaConsumer.MDMSVC.DC_Activity_Search_RQ RQ);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/GetAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/GetAccomodationRuleInfoResponse")]
-        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]> GetAccomodationRuleInfoAsync(string Accomodation_Id, string DataKey_Id);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/AddAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/AddAccomodationRuleInfoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/AddAccomodationRuleInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
-        bool AddAccomodationRuleInfo(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/AddAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/AddAccomodationRuleInfoResponse")]
-        System.Threading.Tasks.Task<bool> AddAccomodationRuleInfoAsync(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
-        bool UpdateAccomodationRuleInfo(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfo", ReplyAction="http://tempuri.org/IAccomodation/UpdateAccomodationRuleInfoResponse")]
-        System.Threading.Tasks.Task<bool> UpdateAccomodationRuleInfoAsync(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetActivityMaster", ReplyAction="http://tempuri.org/IMasters/GetActivityMasterResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Activity[]> GetActivityMasterAsync(KafkaConsumer.MDMSVC.DC_Activity_Search_RQ RQ);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetActivityMasterBySupplier", ReplyAction="http://tempuri.org/IMasters/GetActivityMasterBySupplierResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMasters/GetActivityMasterBySupplierDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -57938,6 +59958,14 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetPrioritiesOfAccommodationMaster", ReplyAction="http://tempuri.org/IMasters/GetPrioritiesOfAccommodationMasterResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Priorities[]> GetPrioritiesOfAccommodationMasterAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetAllAttributeAndValuesOnSupplierChange", ReplyAction="http://tempuri.org/IMasters/GetAllAttributeAndValuesOnSupplierChangeResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMasters/GetAllAttributeAndValuesOnSupplierChangeDC_ErrorStatu" +
+            "sFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_MasterAttribute[] GetAllAttributeAndValuesOnSupplierChange(string SupplierID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetAllAttributeAndValuesOnSupplierChange", ReplyAction="http://tempuri.org/IMasters/GetAllAttributeAndValuesOnSupplierChangeResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_MasterAttribute[]> GetAllAttributeAndValuesOnSupplierChangeAsync(string SupplierID);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetCountryNameList", ReplyAction="http://tempuri.org/IMasters/GetCountryNameListResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMasters/GetCountryNameListDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
         string[] GetCountryNameList(KafkaConsumer.MDMSVC.DC_Country_Search_RQ RQ);
@@ -58000,6 +60028,13 @@ namespace KafkaConsumer.MDMSVC {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetRanksOfCountryMaster", ReplyAction="http://tempuri.org/IMasters/GetRanksOfCountryMasterResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Ranks[]> GetRanksOfCountryMasterAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetAllCountryNameList", ReplyAction="http://tempuri.org/IMasters/GetAllCountryNameListResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMasters/GetAllCountryNameListDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_AllCountry_Search_RQ[] GetAllCountryNameList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetAllCountryNameList", ReplyAction="http://tempuri.org/IMasters/GetAllCountryNameListResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_AllCountry_Search_RQ[]> GetAllCountryNameListAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetAllStates", ReplyAction="http://tempuri.org/IMasters/GetAllStatesResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMasters/GetAllStatesDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -58383,13 +60418,6 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetAllStatuses", ReplyAction="http://tempuri.org/IMasters/GetAllStatusesResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Statuses[]> GetAllStatusesAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetActivityMaster", ReplyAction="http://tempuri.org/IMasters/GetActivityMasterResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMasters/GetActivityMasterDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
-        KafkaConsumer.MDMSVC.DC_Activity[] GetActivityMaster(KafkaConsumer.MDMSVC.DC_Activity_Search_RQ RQ);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMasters/GetActivityMaster", ReplyAction="http://tempuri.org/IMasters/GetActivityMasterResponse")]
-        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Activity[]> GetActivityMasterAsync(KafkaConsumer.MDMSVC.DC_Activity_Search_RQ RQ);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGeoLocation/GetGeoLocationByAddress", ReplyAction="http://tempuri.org/IGeoLocation/GetGeoLocationByAddressResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IGeoLocation/GetGeoLocationByAddressDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
         KafkaConsumer.MDMSVC.DC_GeoLocation GetGeoLocationByAddress(KafkaConsumer.MDMSVC.DC_Address_Physical PA);
@@ -58734,6 +60762,20 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/AccomodationSupplierRoomTypeMapping_Reset", ReplyAction="http://tempuri.org/IMapping/AccomodationSupplierRoomTypeMapping_ResetResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> AccomodationSupplierRoomTypeMapping_ResetAsync(KafkaConsumer.MDMSVC.DC_SupplierRoomType_TTFU_RQ[] Acco_RoomTypeMap_Ids);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetMediaAttributesDetailsReport", ReplyAction="http://tempuri.org/IMapping/GetMediaAttributesDetailsReportResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMapping/GetMediaAttributesDetailsReportDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_ActivityImageReport_RS[] GetMediaAttributesDetailsReport(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RQ param);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetMediaAttributesDetailsReport", ReplyAction="http://tempuri.org/IMapping/GetMediaAttributesDetailsReportResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_ActivityImageReport_RS[]> GetMediaAttributesDetailsReportAsync(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RQ param);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetMediaDetailByActivitiesReport", ReplyAction="http://tempuri.org/IMapping/GetMediaDetailByActivitiesReportResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMapping/GetMediaDetailByActivitiesReportDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS[] GetMediaDetailByActivitiesReport(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RQ param);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetMediaDetailByActivitiesReport", ReplyAction="http://tempuri.org/IMapping/GetMediaDetailByActivitiesReportResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS[]> GetMediaDetailByActivitiesReportAsync(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RQ param);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdmin/GetSiteMapMaster", ReplyAction="http://tempuri.org/IAdmin/GetSiteMapMasterResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAdmin/GetSiteMapMasterDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
         KafkaConsumer.MDMSVC.DC_SiteMap[] GetSiteMapMaster(string ID, string applicationid);
@@ -58860,6 +60902,13 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdmin/GetApplicationID", ReplyAction="http://tempuri.org/IAdmin/GetApplicationIDResponse")]
         System.Threading.Tasks.Task<string> GetApplicationIDAsync(string username);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdmin/IsAdminUser", ReplyAction="http://tempuri.org/IAdmin/IsAdminUserResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAdmin/IsAdminUserDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        bool IsAdminUser(string UserName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdmin/IsAdminUser", ReplyAction="http://tempuri.org/IAdmin/IsAdminUserResponse")]
+        System.Threading.Tasks.Task<bool> IsAdminUserAsync(string UserName);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticData/GetMappingStatistics", ReplyAction="http://tempuri.org/IStaticData/GetMappingStatisticsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IStaticData/GetMappingStatisticsDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
         KafkaConsumer.MDMSVC.DC_MappingStats[] GetMappingStatistics(string SupplierID, string PriorityId, string ProductCategory, string ISMDM);
@@ -58971,6 +61020,62 @@ namespace KafkaConsumer.MDMSVC {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticData/EzeegoHotelVsSupplierHotelMappingReport", ReplyAction="http://tempuri.org/IStaticData/EzeegoHotelVsSupplierHotelMappingReportResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport[]> EzeegoHotelVsSupplierHotelMappingReportAsync(KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport_RQ parm);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Add_Scheduled_Tasks", ReplyAction="http://tempuri.org/ITaskOperations/Add_Scheduled_TasksResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/ITaskOperations/Add_Scheduled_TasksDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Message Add_Scheduled_Tasks(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Add_Scheduled_Tasks", ReplyAction="http://tempuri.org/ITaskOperations/Add_Scheduled_TasksResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Add_Scheduled_TasksAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Get_Scheduled_Tasks", ReplyAction="http://tempuri.org/ITaskOperations/Get_Scheduled_TasksResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/ITaskOperations/Get_Scheduled_TasksDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks[] Get_Scheduled_Tasks(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RqDC_SchedulerServices);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Get_Scheduled_Tasks", ReplyAction="http://tempuri.org/ITaskOperations/Get_Scheduled_TasksResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks[]> Get_Scheduled_TasksAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RqDC_SchedulerServices);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Update_Scheduled_Tasks", ReplyAction="http://tempuri.org/ITaskOperations/Update_Scheduled_TasksResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/ITaskOperations/Update_Scheduled_TasksDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Message Update_Scheduled_Tasks(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Update_Scheduled_Tasks", ReplyAction="http://tempuri.org/ITaskOperations/Update_Scheduled_TasksResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Update_Scheduled_TasksAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Delete_Scheduled_Tasks", ReplyAction="http://tempuri.org/ITaskOperations/Delete_Scheduled_TasksResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/ITaskOperations/Delete_Scheduled_TasksDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Message Delete_Scheduled_Tasks(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Delete_Scheduled_Tasks", ReplyAction="http://tempuri.org/ITaskOperations/Delete_Scheduled_TasksResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Delete_Scheduled_TasksAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Add_Scheduled_Tasklog", ReplyAction="http://tempuri.org/ITaskOperations/Add_Scheduled_TasklogResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/ITaskOperations/Add_Scheduled_TasklogDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Message Add_Scheduled_Tasklog(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Add_Scheduled_Tasklog", ReplyAction="http://tempuri.org/ITaskOperations/Add_Scheduled_TasklogResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Add_Scheduled_TasklogAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Get_Scheduled_Logs", ReplyAction="http://tempuri.org/ITaskOperations/Get_Scheduled_LogsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/ITaskOperations/Get_Scheduled_LogsDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs[] Get_Scheduled_Logs(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RqDC_SchedulerServices);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Get_Scheduled_Logs", ReplyAction="http://tempuri.org/ITaskOperations/Get_Scheduled_LogsResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs[]> Get_Scheduled_LogsAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RqDC_SchedulerServices);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Update_Scheduled_Logs", ReplyAction="http://tempuri.org/ITaskOperations/Update_Scheduled_LogsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/ITaskOperations/Update_Scheduled_LogsDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Message Update_Scheduled_Logs(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Update_Scheduled_Logs", ReplyAction="http://tempuri.org/ITaskOperations/Update_Scheduled_LogsResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Update_Scheduled_LogsAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Delete_Scheduled_Logs", ReplyAction="http://tempuri.org/ITaskOperations/Delete_Scheduled_LogsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/ITaskOperations/Delete_Scheduled_LogsDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Message Delete_Scheduled_Logs(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITaskOperations/Delete_Scheduled_Logs", ReplyAction="http://tempuri.org/ITaskOperations/Delete_Scheduled_LogsResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Delete_Scheduled_LogsAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISchedule/GetSchedule", ReplyAction="http://tempuri.org/ISchedule/GetScheduleResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/ISchedule/GetScheduleDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -59286,10 +61391,20 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetails", ReplyAction="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsDC_ErrorStatusFaul" +
             "t", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
-        KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus Pentaho_SupplierApiCall_ViewDetails(string PentahoCallId);
+        KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus Pentaho_SupplierApiCall_ViewDetails(string PentahoCallId, string Name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetails", ReplyAction="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsResponse")]
-        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus> Pentaho_SupplierApiCall_ViewDetailsAsync(string PentahoCallId);
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus> Pentaho_SupplierApiCall_ViewDetailsAsync(string PentahoCallId, string Name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsForScheduler", ReplyAction="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsForSchedulerRespon" +
+            "se")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsForSchedulerDC_Err" +
+            "orStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus Pentaho_SupplierApiCall_ViewDetailsForScheduler(string PentahoCallId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsForScheduler", ReplyAction="http://tempuri.org/IPentaho/Pentaho_SupplierApiCall_ViewDetailsForSchedulerRespon" +
+            "se")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus> Pentaho_SupplierApiCall_ViewDetailsForSchedulerAsync(string PentahoCallId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiLocation_Get", ReplyAction="http://tempuri.org/IPentaho/Pentaho_SupplierApiLocation_GetResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IPentaho/Pentaho_SupplierApiLocation_GetDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -59884,6 +61999,16 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRefreshDistributionData/SyncAccommodationMaster", ReplyAction="http://tempuri.org/IRefreshDistributionData/SyncAccommodationMasterResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> SyncAccommodationMasterAsync(string log_id, string Accommodation_Id, string CreatedBy);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRefreshDistributionData/SyncAccommodationRoomInfoMaster", ReplyAction="http://tempuri.org/IRefreshDistributionData/SyncAccommodationRoomInfoMasterRespon" +
+            "se")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IRefreshDistributionData/SyncAccommodationRoomInfoMasterDC_Err" +
+            "orStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Message SyncAccommodationRoomInfoMaster(string log_id, string Accommodation_Id, string CreatedBy);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRefreshDistributionData/SyncAccommodationRoomInfoMaster", ReplyAction="http://tempuri.org/IRefreshDistributionData/SyncAccommodationRoomInfoMasterRespon" +
+            "se")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> SyncAccommodationRoomInfoMasterAsync(string log_id, string Accommodation_Id, string CreatedBy);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRefreshDistributionData/SyncHotelRoomTypeMapping", ReplyAction="http://tempuri.org/IRefreshDistributionData/SyncHotelRoomTypeMappingResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IRefreshDistributionData/SyncHotelRoomTypeMappingDC_ErrorStatu" +
             "sFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -59891,6 +62016,13 @@ namespace KafkaConsumer.MDMSVC {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRefreshDistributionData/SyncHotelRoomTypeMapping", ReplyAction="http://tempuri.org/IRefreshDistributionData/SyncHotelRoomTypeMappingResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> SyncHotelRoomTypeMappingAsync(string log_id, string Supplier_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRefreshDistributionData/SyncVisaMapping", ReplyAction="http://tempuri.org/IRefreshDistributionData/SyncVisaMappingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IRefreshDistributionData/SyncVisaMappingDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.DC_Message SyncVisaMapping(string log_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRefreshDistributionData/SyncVisaMapping", ReplyAction="http://tempuri.org/IRefreshDistributionData/SyncVisaMappingResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> SyncVisaMappingAsync(string log_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKafka/InsertKafkaInfo", ReplyAction="http://tempuri.org/IKafka/InsertKafkaInfoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IKafka/InsertKafkaInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -60043,6 +62175,30 @@ namespace KafkaConsumer.MDMSVC {
         
         public ConsumerClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[] GetAccomodationRuleInfo(string Accomodation_Id, string DataKey_Id) {
+            return base.Channel.GetAccomodationRuleInfo(Accomodation_Id, DataKey_Id);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]> GetAccomodationRuleInfoAsync(string Accomodation_Id, string DataKey_Id) {
+            return base.Channel.GetAccomodationRuleInfoAsync(Accomodation_Id, DataKey_Id);
+        }
+        
+        public bool AddAccomodationRuleInfo(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI) {
+            return base.Channel.AddAccomodationRuleInfo(RI);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddAccomodationRuleInfoAsync(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI) {
+            return base.Channel.AddAccomodationRuleInfoAsync(RI);
+        }
+        
+        public bool UpdateAccomodationRuleInfo(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI) {
+            return base.Channel.UpdateAccomodationRuleInfo(RI);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateAccomodationRuleInfoAsync(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI) {
+            return base.Channel.UpdateAccomodationRuleInfoAsync(RI);
         }
         
         public KafkaConsumer.MDMSVC.DC_Accommodation_Status[] GetAccomodationStatus(string Accomodation_Id, string DataKey_Id) {
@@ -60293,6 +62449,14 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.UpdateAccomodationInfoAsync(AccomodationInfo);
         }
         
+        public bool UpdateAccomodationCompanyVersionInfo(KafkaConsumer.MDMSVC.DC_Accomodation AccomodationDetails) {
+            return base.Channel.UpdateAccomodationCompanyVersionInfo(AccomodationDetails);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateAccomodationCompanyVersionInfoAsync(KafkaConsumer.MDMSVC.DC_Accomodation AccomodationDetails) {
+            return base.Channel.UpdateAccomodationCompanyVersionInfoAsync(AccomodationDetails);
+        }
+        
         public KafkaConsumer.MDMSVC.DC_Message CopyAccomodationInfo(KafkaConsumer.MDMSVC.DC_Accomodation_CopyRoomDef AccomodationInfo) {
             return base.Channel.CopyAccomodationInfo(AccomodationInfo);
         }
@@ -60323,6 +62487,14 @@ namespace KafkaConsumer.MDMSVC {
         
         public System.Threading.Tasks.Task<bool> UpdateAccomodationDetailStatusAsync(KafkaConsumer.MDMSVC.DC_Accomodation_UpdateStatus_RQ obj) {
             return base.Channel.UpdateAccomodationDetailStatusAsync(obj);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion[] GetAccomodationCompanyVersionInfo(string Accomodation_Id) {
+            return base.Channel.GetAccomodationCompanyVersionInfo(Accomodation_Id);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion[]> GetAccomodationCompanyVersionInfoAsync(string Accomodation_Id) {
+            return base.Channel.GetAccomodationCompanyVersionInfoAsync(Accomodation_Id);
         }
         
         public KafkaConsumer.MDMSVC.DC_Accommodation_Contact[] GetAccomodationContacts(string Accomodation_Id, string DataKey_Id) {
@@ -60661,6 +62833,14 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.UpdateAccomodationRoomFacilitiesAsync(RF);
         }
         
+        public bool DeleteAccomodationRoomFacilities_ByAccoRoomId(string Accommodation_RoomInfo_Id) {
+            return base.Channel.DeleteAccomodationRoomFacilities_ByAccoRoomId(Accommodation_RoomInfo_Id);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteAccomodationRoomFacilities_ByAccoRoomIdAsync(string Accommodation_RoomInfo_Id) {
+            return base.Channel.DeleteAccomodationRoomFacilities_ByAccoRoomIdAsync(Accommodation_RoomInfo_Id);
+        }
+        
         public KafkaConsumer.MDMSVC.DC_Accommodation_RouteInfo[] GetAccomodationRouteInfo(string Accomodation_Id, string DataKey_Id) {
             return base.Channel.GetAccomodationRouteInfo(Accomodation_Id, DataKey_Id);
         }
@@ -60685,28 +62865,12 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.UpdateAccomodationRouteInfoAsync(RI);
         }
         
-        public KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[] GetAccomodationRuleInfo(string Accomodation_Id, string DataKey_Id) {
-            return base.Channel.GetAccomodationRuleInfo(Accomodation_Id, DataKey_Id);
+        public KafkaConsumer.MDMSVC.DC_Activity[] GetActivityMaster(KafkaConsumer.MDMSVC.DC_Activity_Search_RQ RQ) {
+            return base.Channel.GetActivityMaster(RQ);
         }
         
-        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]> GetAccomodationRuleInfoAsync(string Accomodation_Id, string DataKey_Id) {
-            return base.Channel.GetAccomodationRuleInfoAsync(Accomodation_Id, DataKey_Id);
-        }
-        
-        public bool AddAccomodationRuleInfo(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI) {
-            return base.Channel.AddAccomodationRuleInfo(RI);
-        }
-        
-        public System.Threading.Tasks.Task<bool> AddAccomodationRuleInfoAsync(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI) {
-            return base.Channel.AddAccomodationRuleInfoAsync(RI);
-        }
-        
-        public bool UpdateAccomodationRuleInfo(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI) {
-            return base.Channel.UpdateAccomodationRuleInfo(RI);
-        }
-        
-        public System.Threading.Tasks.Task<bool> UpdateAccomodationRuleInfoAsync(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo RI) {
-            return base.Channel.UpdateAccomodationRuleInfoAsync(RI);
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Activity[]> GetActivityMasterAsync(KafkaConsumer.MDMSVC.DC_Activity_Search_RQ RQ) {
+            return base.Channel.GetActivityMasterAsync(RQ);
         }
         
         public KafkaConsumer.MDMSVC.DC_Activity[] GetActivityMasterBySupplier(KafkaConsumer.MDMSVC.DC_Activity_Search_RQ RQ) {
@@ -61085,6 +63249,14 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.GetPrioritiesOfAccommodationMasterAsync();
         }
         
+        public KafkaConsumer.MDMSVC.DC_MasterAttribute[] GetAllAttributeAndValuesOnSupplierChange(string SupplierID) {
+            return base.Channel.GetAllAttributeAndValuesOnSupplierChange(SupplierID);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_MasterAttribute[]> GetAllAttributeAndValuesOnSupplierChangeAsync(string SupplierID) {
+            return base.Channel.GetAllAttributeAndValuesOnSupplierChangeAsync(SupplierID);
+        }
+        
         public string[] GetCountryNameList(KafkaConsumer.MDMSVC.DC_Country_Search_RQ RQ) {
             return base.Channel.GetCountryNameList(RQ);
         }
@@ -61155,6 +63327,14 @@ namespace KafkaConsumer.MDMSVC {
         
         public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Ranks[]> GetRanksOfCountryMasterAsync() {
             return base.Channel.GetRanksOfCountryMasterAsync();
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_AllCountry_Search_RQ[] GetAllCountryNameList() {
+            return base.Channel.GetAllCountryNameList();
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_AllCountry_Search_RQ[]> GetAllCountryNameListAsync() {
+            return base.Channel.GetAllCountryNameListAsync();
         }
         
         public KafkaConsumer.MDMSVC.DC_Master_State[] GetAllStates() {
@@ -61589,14 +63769,6 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.GetAllStatusesAsync();
         }
         
-        public KafkaConsumer.MDMSVC.DC_Activity[] GetActivityMaster(KafkaConsumer.MDMSVC.DC_Activity_Search_RQ RQ) {
-            return base.Channel.GetActivityMaster(RQ);
-        }
-        
-        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Activity[]> GetActivityMasterAsync(KafkaConsumer.MDMSVC.DC_Activity_Search_RQ RQ) {
-            return base.Channel.GetActivityMasterAsync(RQ);
-        }
-        
         public KafkaConsumer.MDMSVC.DC_GeoLocation GetGeoLocationByAddress(KafkaConsumer.MDMSVC.DC_Address_Physical PA) {
             return base.Channel.GetGeoLocationByAddress(PA);
         }
@@ -61957,6 +64129,22 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.AccomodationSupplierRoomTypeMapping_ResetAsync(Acco_RoomTypeMap_Ids);
         }
         
+        public KafkaConsumer.MDMSVC.DC_ActivityImageReport_RS[] GetMediaAttributesDetailsReport(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RQ param) {
+            return base.Channel.GetMediaAttributesDetailsReport(param);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_ActivityImageReport_RS[]> GetMediaAttributesDetailsReportAsync(KafkaConsumer.MDMSVC.DC_ActivityImageReport_RQ param) {
+            return base.Channel.GetMediaAttributesDetailsReportAsync(param);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS[] GetMediaDetailByActivitiesReport(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RQ param) {
+            return base.Channel.GetMediaDetailByActivitiesReport(param);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS[]> GetMediaDetailByActivitiesReportAsync(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RQ param) {
+            return base.Channel.GetMediaDetailByActivitiesReportAsync(param);
+        }
+        
         public KafkaConsumer.MDMSVC.DC_SiteMap[] GetSiteMapMaster(string ID, string applicationid) {
             return base.Channel.GetSiteMapMaster(ID, applicationid);
         }
@@ -62101,6 +64289,14 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.GetApplicationIDAsync(username);
         }
         
+        public bool IsAdminUser(string UserName) {
+            return base.Channel.IsAdminUser(UserName);
+        }
+        
+        public System.Threading.Tasks.Task<bool> IsAdminUserAsync(string UserName) {
+            return base.Channel.IsAdminUserAsync(UserName);
+        }
+        
         public KafkaConsumer.MDMSVC.DC_MappingStats[] GetMappingStatistics(string SupplierID, string PriorityId, string ProductCategory, string ISMDM) {
             return base.Channel.GetMappingStatistics(SupplierID, PriorityId, ProductCategory, ISMDM);
         }
@@ -62219,6 +64415,70 @@ namespace KafkaConsumer.MDMSVC {
         
         public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport[]> EzeegoHotelVsSupplierHotelMappingReportAsync(KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport_RQ parm) {
             return base.Channel.EzeegoHotelVsSupplierHotelMappingReportAsync(parm);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Message Add_Scheduled_Tasks(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ) {
+            return base.Channel.Add_Scheduled_Tasks(RQ);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Add_Scheduled_TasksAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ) {
+            return base.Channel.Add_Scheduled_TasksAsync(RQ);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks[] Get_Scheduled_Tasks(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RqDC_SchedulerServices) {
+            return base.Channel.Get_Scheduled_Tasks(RqDC_SchedulerServices);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks[]> Get_Scheduled_TasksAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RqDC_SchedulerServices) {
+            return base.Channel.Get_Scheduled_TasksAsync(RqDC_SchedulerServices);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Message Update_Scheduled_Tasks(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ) {
+            return base.Channel.Update_Scheduled_Tasks(RQ);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Update_Scheduled_TasksAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ) {
+            return base.Channel.Update_Scheduled_TasksAsync(RQ);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Message Delete_Scheduled_Tasks(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ) {
+            return base.Channel.Delete_Scheduled_Tasks(RQ);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Delete_Scheduled_TasksAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesTasks RQ) {
+            return base.Channel.Delete_Scheduled_TasksAsync(RQ);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Message Add_Scheduled_Tasklog(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ) {
+            return base.Channel.Add_Scheduled_Tasklog(RQ);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Add_Scheduled_TasklogAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ) {
+            return base.Channel.Add_Scheduled_TasklogAsync(RQ);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs[] Get_Scheduled_Logs(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RqDC_SchedulerServices) {
+            return base.Channel.Get_Scheduled_Logs(RqDC_SchedulerServices);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs[]> Get_Scheduled_LogsAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RqDC_SchedulerServices) {
+            return base.Channel.Get_Scheduled_LogsAsync(RqDC_SchedulerServices);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Message Update_Scheduled_Logs(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ) {
+            return base.Channel.Update_Scheduled_Logs(RQ);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Update_Scheduled_LogsAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ) {
+            return base.Channel.Update_Scheduled_LogsAsync(RQ);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Message Delete_Scheduled_Logs(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ) {
+            return base.Channel.Delete_Scheduled_Logs(RQ);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> Delete_Scheduled_LogsAsync(KafkaConsumer.MDMSVC.DC_SchedulerServicesLogs RQ) {
+            return base.Channel.Delete_Scheduled_LogsAsync(RQ);
         }
         
         public KafkaConsumer.MDMSVC.DC_Supplier_Schedule[] GetSchedule(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RQ RQ) {
@@ -62525,12 +64785,20 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.Pentaho_SupplierApi_Call_ByCheckerAsync(ApiLocationId, CalledBy, Task_Id);
         }
         
-        public KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus Pentaho_SupplierApiCall_ViewDetails(string PentahoCallId) {
-            return base.Channel.Pentaho_SupplierApiCall_ViewDetails(PentahoCallId);
+        public KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus Pentaho_SupplierApiCall_ViewDetails(string PentahoCallId, string Name) {
+            return base.Channel.Pentaho_SupplierApiCall_ViewDetails(PentahoCallId, Name);
         }
         
-        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus> Pentaho_SupplierApiCall_ViewDetailsAsync(string PentahoCallId) {
-            return base.Channel.Pentaho_SupplierApiCall_ViewDetailsAsync(PentahoCallId);
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus> Pentaho_SupplierApiCall_ViewDetailsAsync(string PentahoCallId, string Name) {
+            return base.Channel.Pentaho_SupplierApiCall_ViewDetailsAsync(PentahoCallId, Name);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus Pentaho_SupplierApiCall_ViewDetailsForScheduler(string PentahoCallId) {
+            return base.Channel.Pentaho_SupplierApiCall_ViewDetailsForScheduler(PentahoCallId);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus> Pentaho_SupplierApiCall_ViewDetailsForSchedulerAsync(string PentahoCallId) {
+            return base.Channel.Pentaho_SupplierApiCall_ViewDetailsForSchedulerAsync(PentahoCallId);
         }
         
         public KafkaConsumer.MDMSVC.DC_Supplier_ApiLocation[] Pentaho_SupplierApiLocation_Get(string SupplierId, string EntityId) {
@@ -63189,12 +65457,28 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.SyncAccommodationMasterAsync(log_id, Accommodation_Id, CreatedBy);
         }
         
+        public KafkaConsumer.MDMSVC.DC_Message SyncAccommodationRoomInfoMaster(string log_id, string Accommodation_Id, string CreatedBy) {
+            return base.Channel.SyncAccommodationRoomInfoMaster(log_id, Accommodation_Id, CreatedBy);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> SyncAccommodationRoomInfoMasterAsync(string log_id, string Accommodation_Id, string CreatedBy) {
+            return base.Channel.SyncAccommodationRoomInfoMasterAsync(log_id, Accommodation_Id, CreatedBy);
+        }
+        
         public KafkaConsumer.MDMSVC.DC_Message SyncHotelRoomTypeMapping(string log_id, string Supplier_Id) {
             return base.Channel.SyncHotelRoomTypeMapping(log_id, Supplier_Id);
         }
         
         public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> SyncHotelRoomTypeMappingAsync(string log_id, string Supplier_Id) {
             return base.Channel.SyncHotelRoomTypeMappingAsync(log_id, Supplier_Id);
+        }
+        
+        public KafkaConsumer.MDMSVC.DC_Message SyncVisaMapping(string log_id) {
+            return base.Channel.SyncVisaMapping(log_id);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Message> SyncVisaMappingAsync(string log_id) {
+            return base.Channel.SyncVisaMappingAsync(log_id);
         }
         
         public KafkaConsumer.MDMSVC.DC_Message InsertKafkaInfo(KafkaConsumer.MDMSVC.DC_Stg_Kafka KafkaInfo) {

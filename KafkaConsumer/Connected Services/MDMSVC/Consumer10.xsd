@@ -77,6 +77,7 @@
       <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FromDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsAdminUser" type="xs:boolean" />
       <xs:element minOccurs="0" name="LogId" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="Notification" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="PageNo" type="xs:int" />

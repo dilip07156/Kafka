@@ -13,23 +13,31 @@ namespace KafkaConsumer
 {
     public static class ProcessKafkaMessage
     {
-        public static void InsertInto_StgKafka(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
+        public static async void InsertInto_StgKafka(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
         {
-            Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], new DC_Stg_Kafka()
+            try
             {
-                Error = msg.Error.Reason,
-                TopicPartion = msg.TopicPartition.Partition.ToString(),
-                Key = Convert.ToString(msg.Key),
-                //TimeStamp = msg.Timestamp.UtcDateTime,
-                PayLoad = msg.Value,
-                Offset = msg.Offset.Value.ToString(),
-                Partion = msg.Partition.ToString(),
-                Create_User = "KafkaConsumer",
-                Create_Date = DateTime.Now,
-                Row_Id = Guid.NewGuid(),
-                Topic = msg.Topic,
-                TopicPartionOffset = msg.TopicPartition.Partition.ToString()
-            }).Start();
+                await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], new DC_Stg_Kafka()
+                {
+                    Error = msg.Error.Reason,
+                    TopicPartion = msg.TopicPartition.Partition.ToString(),
+                    Key = Convert.ToString(msg.Key),
+                    //TimeStamp = msg.Timestamp.UtcDateTime,
+                    PayLoad = msg.Value,
+                    Offset = msg.Offset.Value.ToString(),
+                    Partion = msg.Partition.ToString(),
+                    Create_User = "KafkaConsumer",
+                    Create_Date = DateTime.Now,
+                    Row_Id = Guid.NewGuid(),
+                    Topic = msg.Topic,
+                    TopicPartionOffset = msg.TopicPartition.Partition.ToString()
+                });
+            }
+            catch (Exception Ex)
+            {
+
+                throw;
+            }
         }
 
         public static bool Process_StgKafkaData()
@@ -90,7 +98,7 @@ namespace KafkaConsumer
 
                     if (AccoPayload != null)
                     {
-                        Result = Process_AccommodationData(AccoPayload);
+                        Result = Process_AccommodationData(AccoPayload, KafkaData);
                     }
                 }
                 else if (method.ToUpper() == "DELETE" && topic.ToUpper().EndsWith(".PRODUCTACCO.PUB"))
@@ -107,7 +115,7 @@ namespace KafkaConsumer
             }
         }
 
-        public static bool Process_AccommodationData(AccommodationPayload AccoData)
+        public static bool Process_AccommodationData(AccommodationPayload AccoData, DC_Stg_Kafka dC_Stg_Kafka)
         {
             if (AccoData.accomodationData != null)
             {
@@ -118,37 +126,59 @@ namespace KafkaConsumer
 
                 dbAcco = resAddUpdateAccommodationData.Item1;
                 bool IsUpdate = resAddUpdateAccommodationData.Item2;
-
-                AccommodationId = dbAcco.Accommodation_Id;
-
-                if (IsUpdate)
+                if (dbAcco != null)
                 {
-                    DeleteHotelContacts(AccommodationId);
-                    DeleteHotelStatus(AccommodationId);
-                    DeleteHoteldescription(AccommodationId);
-                    DeleteHotelFacilities(AccommodationId);
-                }
 
-                AddHotelContacts(dbAcco, AccoData);
+                    AccommodationId = dbAcco.Accommodation_Id;
 
-                if (AccoData.accomodationRoomData != null && AccoData.accomodationRoomData.Count > 0)
-                {
-                    ProcessAccoRoomData(dbAcco, AccoData.accomodationRoomData);
-                }
+                    UpdateStg_KafkaInfoWithLog(dC_Stg_Kafka, "Accommodation is Loaded.", AccommodationId);
 
-                if (AccoData.accomodationData.productStatus != null)
-                {
-                    AddAccomodationStatusList(dbAcco, AccoData);
-                }
+                    if (IsUpdate)
+                    {
+                        DeleteHotelContacts(AccommodationId);
+                        DeleteHotelStatus(AccommodationId);
+                        DeleteHoteldescription(AccommodationId);
+                        DeleteHotelFacilities(AccommodationId);
+                    }
 
-                if (AccoData.accomodationData.facility != null && AccoData.accomodationData.facility.Count > 0)
-                {
-                    AddAccomodationFacilitiesList(dbAcco, AccoData);
-                }
+                    AddHotelContacts(dbAcco, AccoData);
 
-                if (AccoData.accomodationData.accomodationInfo.general.extras != null && AccoData.accomodationData.accomodationInfo.general.extras.Count() > 0)
-                {
-                    AddHotelDescriptionList(dbAcco, AccoData);
+                    if (AccoData.accomodationRoomData != null && AccoData.accomodationRoomData.Count > 0)
+                    {
+                        bool isDataLoad = ProcessAccoRoomData(dbAcco, AccoData.accomodationRoomData);
+
+                        if (isDataLoad)
+                        {
+                            UpdateStg_KafkaInfoWithLog(dC_Stg_Kafka, "RoomData is Loaded.", AccommodationId);
+                        }
+                    }
+
+                    if (AccoData.accomodationData.productStatus != null)
+                    {
+                        bool isDataLoad = AddAccomodationStatusList(dbAcco, AccoData);
+                        if (isDataLoad)
+                        {
+                            UpdateStg_KafkaInfoWithLog(dC_Stg_Kafka, "Accomodation Status are Loaded.", AccommodationId);
+                        }
+                    }
+
+                    if (AccoData.accomodationData.facility != null && AccoData.accomodationData.facility.Count > 0)
+                    {
+                        bool isDataLoad = AddAccomodationFacilitiesList(dbAcco, AccoData);
+                        if (isDataLoad)
+                        {
+                            UpdateStg_KafkaInfoWithLog(dC_Stg_Kafka, "Accomodation Facilities are Loaded.", AccommodationId);
+                        }
+                    }
+
+                    if (AccoData.accomodationData.accomodationInfo.general.extras != null && AccoData.accomodationData.accomodationInfo.general.extras.Count() > 0)
+                    {
+                        bool isDataLoad = AddHotelDescriptionList(dbAcco, AccoData);
+                        if (isDataLoad)
+                        {
+                            UpdateStg_KafkaInfoWithLog(dC_Stg_Kafka, "Accomodation HotelDescription are Loaded.", AccommodationId);
+                        }
+                    }
                 }
             }
 
@@ -158,6 +188,13 @@ namespace KafkaConsumer
         #region Accommodation
         public static Tuple<DC_Accomodation, bool> AddUpdateAccommodationData(AccommodationPayload AccoData)
         {
+
+            if (string.IsNullOrEmpty(AccoData.accomodationData.accomodationInfo.companyId))
+            {
+                return new Tuple<DC_Accomodation, bool>(null, false);
+            }
+
+
             Guid AccommodationId = Guid.Empty;
             bool IsUpdate = false;
 
@@ -271,6 +308,44 @@ namespace KafkaConsumer
             accoToInsertUpdate.IsActive = !acco.deleted;
             accoToInsertUpdate.IsMysteryProduct = acco.accomodationInfo.isMysteryProduct;
 
+            //Accommodation Version Data
+            accoToInsertUpdate.AccVersion = new DC_Accommodation_CompanyVersion();
+            accoToInsertUpdate.AccVersion.Accommodation_Id = AccommodationId;
+            accoToInsertUpdate.AccVersion.CompanyId = acco.accomodationInfo.companyId;
+            accoToInsertUpdate.AccVersion.CommonProductId = acco.accomodationInfo.commonProductId;
+            accoToInsertUpdate.AccVersion.CompanyProductId = acco.accomodationInfo.companyProductId;
+            accoToInsertUpdate.AccVersion.CompanyName = acco.accomodationInfo.companyName;
+            accoToInsertUpdate.AccVersion.ProductName = acco.accomodationInfo.name;
+            accoToInsertUpdate.AccVersion.ProductDisplayName = acco.accomodationInfo.displayName;//Check
+            accoToInsertUpdate.AccVersion.StarRating = acco.accomodationInfo.rating;
+            accoToInsertUpdate.AccVersion.CompanyRating = acco.accomodationInfo.companyRating;
+            accoToInsertUpdate.AccVersion.ProductCatSubType = acco.accomodationInfo.productCatSubType;
+            accoToInsertUpdate.AccVersion.Brand = acco.accomodationInfo.brand;
+            accoToInsertUpdate.AccVersion.Chain = acco.accomodationInfo.chain;
+            //Need to confirm Address
+            accoToInsertUpdate.AccVersion.HouseNumber = acco.accomodationInfo.address.houseNumber;
+            accoToInsertUpdate.AccVersion.Street = acco.accomodationInfo.address.street;
+            accoToInsertUpdate.AccVersion.Street2 = acco.accomodationInfo.address.street2;
+            accoToInsertUpdate.AccVersion.Street3 = acco.accomodationInfo.address.street3;
+            accoToInsertUpdate.AccVersion.Street4 = acco.accomodationInfo.address.street4;
+            accoToInsertUpdate.AccVersion.Street5 = acco.accomodationInfo.address.street5;
+            accoToInsertUpdate.AccVersion.Zone = acco.accomodationInfo.address.zone;
+            accoToInsertUpdate.AccVersion.PostalCode = acco.accomodationInfo.address.postalCode;
+            accoToInsertUpdate.AccVersion.Country = acco.accomodationInfo.address.country;
+            accoToInsertUpdate.AccVersion.State = acco.accomodationInfo.address.state;
+            accoToInsertUpdate.AccVersion.City = acco.accomodationInfo.address.city;
+            accoToInsertUpdate.AccVersion.Area = acco.accomodationInfo.address.area;
+            accoToInsertUpdate.AccVersion.Location = acco.accomodationInfo.address.location;
+            accoToInsertUpdate.AccVersion.TLGXAccoId = acco._id;
+
+
+            if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)
+            {
+                accoToInsertUpdate.AccVersion.Latitude = acco.accomodationInfo.address.geometry.coordinates[0].ToString();
+                accoToInsertUpdate.AccVersion.Longitude = acco.accomodationInfo.address.geometry.coordinates[1].ToString();
+            }
+
+
             if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)
             {
                 accoToInsertUpdate.Latitude = acco.accomodationInfo.address.geometry.coordinates[0].ToString();
@@ -326,10 +401,18 @@ namespace KafkaConsumer
             #endregion
 
             #region Update / Add Accommodation
+
             var addUpdateAcco = Proxy.Post<bool, DC_Accomodation>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_UpdateURI"], accoToInsertUpdate).GetAwaiter().GetResult();
             #endregion
 
             return new Tuple<DC_Accomodation, bool>(accoToInsertUpdate, IsUpdate);
+        }
+
+        public static List<DC_Accommodation_CompanyVersion> GetAccomodationCompanyVersionInfo(Guid Acco_id)
+        {
+            List<DC_Accommodation_CompanyVersion> AccoList = new List<DC_Accommodation_CompanyVersion>();
+            AccoList = Proxy.Get<List<DC_Accommodation_CompanyVersion>>(string.Format(System.Configuration.ConfigurationManager.AppSettings["AccomodationCompanyVersion_SearchURI"], Acco_id)).GetAwaiter().GetResult();
+            return AccoList;
         }
         #endregion
 
@@ -563,7 +646,7 @@ namespace KafkaConsumer
                 }
 
                 var result = Proxy.Post<bool, List<DC_Accommodation_Status>>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_AddLstStatusURI"], Lst).GetAwaiter().GetResult();
-                return true;
+                return result;
             }
             catch (Exception ex)
             {
@@ -584,11 +667,13 @@ namespace KafkaConsumer
 
         public static bool ProcessAccoRoomData(DC_Accomodation dbAcco, List<AccomodationRoomData> AccoRoomData)
         {
+
             List<DC_Accommodation_RoomInfo> ExistingRooms = GetMasterRoomList(dbAcco.Accommodation_Id);
             var result = AddUpdateAccoRooms(ExistingRooms, dbAcco, AccoRoomData);
             return result;
         }
 
+        //Room Id cannot be null as per new json response from Kafka
         public static List<DC_Accommodation_RoomInfo> GetMasterRoomList(Guid Acco_id)
         {
             List<DC_Accommodation_RoomInfo> RoomList = new List<DC_Accommodation_RoomInfo>();
@@ -601,85 +686,162 @@ namespace KafkaConsumer
             try
             {
                 List<Guid> NewRooms = new List<Guid>();
+                bool IsUpdate = false;
+                List<DC_Accommodation_CompanyVersion> lstAccommodation_CompanyVersion = GetAccomodationCompanyVersionInfo(dbAcco.Accommodation_Id);
+
                 foreach (var room in AccoRoomData)
                 {
-                    //Check if room is there
-                    var ExistingAccommodationRoom = ExistingRooms.Where(w => w.TLGXAccoRoomId.ToUpper() == room._id.ToUpper()).Select(s => s).FirstOrDefault();
 
-                    DC_Accommodation_RoomInfo RoomToAddUpdate = new DC_Accommodation_RoomInfo
+
+                    if (!string.IsNullOrEmpty(room.commonRoomId))
                     {
-                        Accommodation_Id = dbAcco.Accommodation_Id,
-                        Accommodation_RoomInfo_Id = ExistingAccommodationRoom == null ? Guid.NewGuid() : ExistingAccommodationRoom.Accommodation_RoomInfo_Id,
-                        Legacy_Htl_Id = dbAcco.CompanyHotelID,
-                        BathRoomType = room.bathroomType == null ? (ExistingAccommodationRoom == null ? room.bathroomType : ExistingAccommodationRoom.BathRoomType) : room.bathroomType,
-                        BedType = room.bedType == null ? (ExistingAccommodationRoom == null ? room.bedType : ExistingAccommodationRoom.BedType) : room.bedType,
-                        Category = room.category == null ? (ExistingAccommodationRoom == null ? room.category : ExistingAccommodationRoom.Category) : room.category,
-                        CompanyRoomCategory = room.companyRoomCategory == null ? (ExistingAccommodationRoom == null ? room.companyRoomCategory : ExistingAccommodationRoom.CompanyRoomCategory) : room.companyRoomCategory,
-                        Edit_Date = room.lastUpdated,
-                        Edit_User = dbAcco.Edit_User,
-                        Create_Date = room.createdAt,
-                        Create_User = dbAcco.Create_User,
-                        FloorName = room.floorName == null ? (ExistingAccommodationRoom == null ? room.floorName : ExistingAccommodationRoom.FloorName) : room.floorName,
-                        FloorNumber = room.floorNo == 0 ? (ExistingAccommodationRoom == null ? room.floorNo.ToString() : ExistingAccommodationRoom.FloorNumber) : room.floorNo.ToString(),
-                        RoomCategory = room.category == null ? (ExistingAccommodationRoom == null ? room.category : ExistingAccommodationRoom.RoomCategory) : room.category,
-                        RoomDecor = room.roomDecor == null ? (ExistingAccommodationRoom == null ? room.roomDecor : ExistingAccommodationRoom.RoomDecor) : room.roomDecor,
-                        RoomName = room.name == null ? (ExistingAccommodationRoom == null ? room.name : ExistingAccommodationRoom.RoomName) : room.name,
-                        RoomSize = room.roomSize == 0 ? (ExistingAccommodationRoom == null ? room.roomSize.ToString() : ExistingAccommodationRoom.RoomSize) : room.roomSize.ToString(),
-                        RoomView = room.view == null ? (ExistingAccommodationRoom == null ? room.view : ExistingAccommodationRoom.RoomView) : room.view,
-                        Smoking = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.Smoking,
-                        Description = room.roomDescription == null ? (ExistingAccommodationRoom == null ? room.roomDescription : ExistingAccommodationRoom.Description) : room.roomDescription,
-                        IsActive = !room.deleted,
-                        RoomId = room.roomId == null ? (ExistingAccommodationRoom == null ? room.roomId : ExistingAccommodationRoom.RoomId) : room.roomId,
-                        TLGXAccoRoomId = room._id,
-                        MysteryRoom = room.isMysteryRoom,
-                        NoOfInterconnectingRooms = room.noOfInterconnectingRooms == 0 ? (ExistingAccommodationRoom == null ? room.noOfInterconnectingRooms : ExistingAccommodationRoom.NoOfInterconnectingRooms) : room.noOfInterconnectingRooms,
-                        NoOfRooms = room.noOfRooms == 0 ? (ExistingAccommodationRoom == null ? room.noOfRooms : ExistingAccommodationRoom.NoOfRooms) : room.noOfRooms,
-                        CompanyName = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.CompanyName,
-                        IsAmenityChanges = ExistingAccommodationRoom == null ? false : ExistingAccommodationRoom.IsAmenityChanges,
-                        AmenityTypes = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.AmenityTypes,
-                    };
+                        //Check if room is there
+                        var ExistingAccommodationRoom = ExistingRooms.Where(w => w.TLGXAccoRoomId.ToUpper() == room._id.ToUpper() && w.CommonRoomId == (room.commonRoomId == null ? string.Empty : room.commonRoomId)).FirstOrDefault();
 
-                    if (ExistingAccommodationRoom == null)
-                    {
-                        var AddRoomResult = Proxy.Post<bool, DC_Accommodation_RoomInfo>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_AddRoomURI"], RoomToAddUpdate).GetAwaiter().GetResult();
 
-                    }
-                    else
-                    {
-                        var UpdateRoomResult = Proxy.Post<bool, DC_Accommodation_RoomInfo>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_UpdateRoomURI"], RoomToAddUpdate).GetAwaiter().GetResult();
+                        DC_Accommodation_RoomInfo RoomToAddUpdate = new DC_Accommodation_RoomInfo
+                        {
+                            Accommodation_Id = dbAcco.Accommodation_Id,
+                            Accommodation_RoomInfo_Id = ExistingAccommodationRoom == null ? Guid.NewGuid() : ExistingAccommodationRoom.Accommodation_RoomInfo_Id,
+                            Legacy_Htl_Id = dbAcco.CompanyHotelID,
+                            BathRoomType = room.bathroomType == null ? (ExistingAccommodationRoom == null ? room.bathroomType : ExistingAccommodationRoom.BathRoomType) : room.bathroomType,
+                            BedType = room.bedType == null ? (ExistingAccommodationRoom == null ? room.bedType : ExistingAccommodationRoom.BedType) : room.bedType,
+                            Category = room.category == null ? (ExistingAccommodationRoom == null ? room.category : ExistingAccommodationRoom.Category) : room.category,
+                            CompanyRoomCategory = room.companyRoomCategory == null ? (ExistingAccommodationRoom == null ? room.companyRoomCategory : ExistingAccommodationRoom.CompanyRoomCategory) : room.companyRoomCategory,
+                            //Edit_Date = room.lastUpdated,
+                            Edit_User = dbAcco.Edit_User,
+                            //Create_Date = room.createdAt,
+                            Create_User = dbAcco.Create_User,
+                            FloorName = room.floorName == null ? (ExistingAccommodationRoom == null ? room.floorName : ExistingAccommodationRoom.FloorName) : room.floorName,
+                            FloorNumber = room.floorNo == 0 ? (ExistingAccommodationRoom == null ? room.floorNo.ToString() : ExistingAccommodationRoom.FloorNumber) : room.floorNo.ToString(),
+                            RoomCategory = room.category == null ? (ExistingAccommodationRoom == null ? room.category : ExistingAccommodationRoom.RoomCategory) : room.category,
+                            RoomDecor = room.roomDecor == null ? (ExistingAccommodationRoom == null ? room.roomDecor : ExistingAccommodationRoom.RoomDecor) : room.roomDecor,
+                            RoomName = room.name == null ? (ExistingAccommodationRoom == null ? room.name : ExistingAccommodationRoom.RoomName) : room.name,
+                            RoomSize = room.roomSize == 0 ? (ExistingAccommodationRoom == null ? room.roomSize.ToString() : ExistingAccommodationRoom.RoomSize) : room.roomSize.ToString(),
+                            RoomView = room.view == null ? (ExistingAccommodationRoom == null ? room.view : ExistingAccommodationRoom.RoomView) : room.view,
+                            Smoking = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.Smoking,
+                            Description = room.roomDescription == null ? (ExistingAccommodationRoom == null ? room.roomDescription : ExistingAccommodationRoom.Description) : room.roomDescription,
+                            IsActive = !room.deleted,
+                            RoomId = room.roomId == null ? (ExistingAccommodationRoom == null ? room.roomId : ExistingAccommodationRoom.RoomId) : room.roomId,
+                            TLGXAccoRoomId = room._id,
+                            MysteryRoom = room.isMysteryRoom,
+                            NoOfInterconnectingRooms = room.noOfInterconnectingRooms == 0 ? (ExistingAccommodationRoom == null ? room.noOfInterconnectingRooms : ExistingAccommodationRoom.NoOfInterconnectingRooms) : room.noOfInterconnectingRooms,
+                            NoOfRooms = room.noOfRooms == 0 ? (ExistingAccommodationRoom == null ? room.noOfRooms : ExistingAccommodationRoom.NoOfRooms) : room.noOfRooms,
+                            CompanyName = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.CompanyName,
+                            IsAmenityChanges = ExistingAccommodationRoom == null ? false : ExistingAccommodationRoom.IsAmenityChanges,
+                            AmenityTypes = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.AmenityTypes,
+                            CommonRoomId = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.CommonRoomId,
 
-                        //Remove Room Facilities
+
+
+
+                        };
+
+                        if (room.createdAt != null && room.createdAt <= DateTime.MinValue)
+                        {
+                            RoomToAddUpdate.Create_Date = null;
+                        }
+                        else
+                        {
+                            RoomToAddUpdate.Create_Date = room.createdAt;
+                        }
+
+
+                        if (room.lastUpdated != null && room.lastUpdated <= DateTime.MinValue)
+                        {
+                            RoomToAddUpdate.Create_Date = null;
+                        }
+                        else
+                        {
+                            RoomToAddUpdate.Edit_Date = room.lastUpdated;
+                        }
+
+                        DC_Accommodation_CompanyVersion companyVersion = lstAccommodation_CompanyVersion.Where(x => x.Accommodation_Id == dbAcco.Accommodation_Id && x.CommonProductId == dbAcco.AccVersion.CommonProductId && x.CompanyId == dbAcco.AccVersion.CompanyId).SingleOrDefault();
+
+                        RoomToAddUpdate.AccoRoomVersion = new Accommodation_RoomInfo_CompanyVersion();
+                        RoomToAddUpdate.AccoRoomVersion.Accommodation_CompanyVersion_Id = companyVersion.Accommodation_CompanyVersion_Id;
+                        RoomToAddUpdate.AccoRoomVersion.BedType = RoomToAddUpdate.BedType;
+                        RoomToAddUpdate.AccoRoomVersion.Accommodation_RoomInfo_Id = RoomToAddUpdate.Accommodation_RoomInfo_Id;
+                        RoomToAddUpdate.AccoRoomVersion.RoomCategory = RoomToAddUpdate.RoomCategory;
+                        RoomToAddUpdate.AccoRoomVersion.RoomName = RoomToAddUpdate.RoomName;
+                        RoomToAddUpdate.AccoRoomVersion.CompanyRoomCategory = RoomToAddUpdate.CompanyRoomCategory;
+                        RoomToAddUpdate.AccoRoomVersion.RoomDescription = room.roomDescription;
+                        RoomToAddUpdate.AccoRoomVersion.TlgxAccoId = companyVersion.TLGXAccoId;
+                        RoomToAddUpdate.AccoRoomVersion.TlgxAccoRoomId = room._id;
+
+
+                        if (ExistingAccommodationRoom == null)
+                        {
+                            var AddRoomResult = Proxy.Post<bool, DC_Accommodation_RoomInfo>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_AddRoomURI"], RoomToAddUpdate).GetAwaiter().GetResult();
+                            //Task.WaitAny(Proxy.Post<bool, DC_Accommodation_RoomInfo>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_AddRoomURI"], RoomToAddUpdate));
+
+                            IsUpdate = AddRoomResult;
+
+                        }
+                        else
+                        {
+                            var UpdateRoomResult = Proxy.Post<bool, DC_Accommodation_RoomInfo>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_UpdateRoomURI"], RoomToAddUpdate).GetAwaiter().GetResult();
+
+                            IsUpdate = UpdateRoomResult;
+
+                            //Remove Room Facilities
+                            if (room.amenities != null && room.amenities.Count() > 0)
+                            {
+                                var RemoveRoomFacilityResult = Proxy.Get<bool>(string.Format(System.Configuration.ConfigurationManager.AppSettings["Accommodation_DeleteRoomFacilities_ByAccoRoomId"], ExistingAccommodationRoom.Accommodation_RoomInfo_Id)).GetAwaiter().GetResult();
+                            }
+                        }
+
+                        NewRooms.Add(RoomToAddUpdate.Accommodation_RoomInfo_Id);
+
+                        //Add Room Amenities
                         if (room.amenities != null && room.amenities.Count() > 0)
                         {
-                            var RemoveRoomFacilityResult = Proxy.Get<bool>(string.Format(System.Configuration.ConfigurationManager.AppSettings["Accommodation_DeleteRoomFacilities_ByAccoRoomId"], ExistingAccommodationRoom.Accommodation_RoomInfo_Id)).GetAwaiter().GetResult();
-                        }
-                    }
-
-                    NewRooms.Add(RoomToAddUpdate.Accommodation_RoomInfo_Id);
-
-                    //Add Room Amenities
-                    if (room.amenities != null && room.amenities.Count() > 0)
-                    {
-                        foreach (var roomAmenity in room.amenities)
-                        {
-                            var AddRoomFacilityResult = Proxy.Post<bool, DC_Accomodation_RoomFacilities>(System.Configuration.ConfigurationManager.AppSettings["Accommodation_AddRoomFacilities"], new DC_Accomodation_RoomFacilities
+                            foreach (var roomAmenity in room.amenities)
                             {
-                                Accommodation_Id = dbAcco.Accommodation_Id,
-                                Accommodation_RoomInfo_Id = RoomToAddUpdate.Accommodation_RoomInfo_Id,
-                                Accommodation_RoomFacility_Id = Guid.NewGuid(),
-                                AmenityName = roomAmenity.name,
-                                AmenityType = roomAmenity.type,
-                                IsActive = true,
-                                IsRoomActive = true,
-                                Create_Date = room.createdAt,
-                                Create_User = dbAcco.Create_User,
-                                Description = roomAmenity.desc,
-                                Edit_Date = room.lastUpdated,
-                                Edit_user = dbAcco.Edit_User
-                            }).GetAwaiter().GetResult();
-                        }
-                    }
+                                var roomFacilites = new DC_Accomodation_RoomFacilities
+                                {
+                                    Accommodation_Id = dbAcco.Accommodation_Id,
+                                    Accommodation_RoomInfo_Id = RoomToAddUpdate.Accommodation_RoomInfo_Id,
+                                    Accommodation_RoomFacility_Id = Guid.NewGuid(),
+                                    AmenityName = roomAmenity.name,
+                                    AmenityType = roomAmenity.type,
+                                    IsActive = true,
+                                    IsRoomActive = true,
 
+                                    Create_User = dbAcco.Create_User,
+                                    Description = roomAmenity.desc,
+                                    //Edit_Date = room.lastUpdated,
+                                    Edit_user = dbAcco.Edit_User
+                                };
+
+
+                                if (room.createdAt != null && room.createdAt <= DateTime.MinValue)
+                                {
+                                    roomFacilites.Create_Date = null;
+                                }
+                                else
+                                {
+                                    roomFacilites.Create_Date = room.createdAt;
+                                }
+
+
+                                if (room.lastUpdated != null && room.lastUpdated <= DateTime.MinValue)
+                                {
+                                    roomFacilites.Create_Date = null;
+                                }
+                                else
+                                {
+                                    roomFacilites.Edit_Date = room.lastUpdated;
+                                }
+
+
+
+
+                                var AddRoomFacilityResult = Proxy.Post<bool, DC_Accomodation_RoomFacilities>(System.Configuration.ConfigurationManager.AppSettings["Accommodation_AddRoomFacilities"], roomFacilites).GetAwaiter().GetResult();
+                            }
+                        }
+
+                    }
                 }
 
                 //Remove Unupdated Rooms
@@ -689,7 +851,7 @@ namespace KafkaConsumer
                     DeleteMasterRoom(null, RoomInfoId);
                 }
 
-                return true;
+                return IsUpdate;
             }
             catch (Exception ex)
             {
@@ -716,14 +878,25 @@ namespace KafkaConsumer
 
         #endregion Room
 
-        public static void UpdateStg_KafkaInfo(DC_Stg_Kafka Kafka)
+        public static async void UpdateStg_KafkaInfo(DC_Stg_Kafka Kafka)
         {
             DC_Stg_Kafka obj = new DC_Stg_Kafka();
             obj.Row_Id = Kafka.Row_Id;
             obj.Process_User = "Kafka";
             obj.Process_Date = DateTime.Now;
             obj.Status = "Processed";
-            Proxy.Post<bool, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Update"], obj).GetAwaiter().GetResult();
+            await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Update"], obj);
+            obj = null;
+        }
+
+        public static async void UpdateStg_KafkaInfoWithLog(DC_Stg_Kafka Kafka, string Message, Guid Accommodation_id)
+        {
+            DC_Stg_Kafka obj = new DC_Stg_Kafka();
+            obj.Row_Id = Kafka.Row_Id;
+            obj.Process_User = "Kafka";
+            obj.message_log = Message;
+            obj.Accommodation_Id = Accommodation_id;
+            await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Update"], obj);
             obj = null;
         }
     }
