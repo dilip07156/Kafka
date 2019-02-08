@@ -27,12 +27,12 @@ namespace KafkaConsumerService
 
             try
             {
-                //ShowParameters();
+                ShowParameters();
                 AddConfigurationFileDetails();
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.InnerException.Message, e.Message, MessageBoxButtons.OK);
+                MessageBox.Show(e.Message + Environment.NewLine + (e.InnerException != null ? e.InnerException.Message : "") , "Error while installing", MessageBoxButtons.OK);
                 base.Rollback(savedState);
             }
         }
@@ -145,7 +145,7 @@ namespace KafkaConsumerService
                     }
                     else
                     {
-                        if (!(dPOLLINTERVAL >= 1000 && dPOLLINTERVAL <= 10000))
+                        if (!(dPOLLINTERVAL >= 1000 && dPOLLINTERVAL <= 60000))
                         {
                             throw new ApplicationException("Invalid Poll Interval.");
                         }
@@ -242,6 +242,16 @@ namespace KafkaConsumerService
             {
                 throw new Exception(ex.Message, ex.InnerException);
             }
+        }
+
+        private void KafkaConsumerServiceProcessInstaller_AfterInstall(object sender, InstallEventArgs e)
+        {
+
+        }
+
+        private void KafkaConsumerServiceInstaller_AfterInstall(object sender, InstallEventArgs e)
+        {
+
         }
     }
 }

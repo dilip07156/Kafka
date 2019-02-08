@@ -36,6 +36,7 @@
             this.KafkaConsumerServiceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
             this.KafkaConsumerServiceProcessInstaller.Password = null;
             this.KafkaConsumerServiceProcessInstaller.Username = null;
+            this.KafkaConsumerServiceProcessInstaller.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.KafkaConsumerServiceProcessInstaller_AfterInstall);
             // 
             // KafkaConsumerServiceInstaller
             // 
@@ -44,6 +45,7 @@
             this.KafkaConsumerServiceInstaller.DisplayName = "Kafka Consumer Service";
             this.KafkaConsumerServiceInstaller.ServiceName = "KafkaConsumerService";
             this.KafkaConsumerServiceInstaller.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this.KafkaConsumerServiceInstaller.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.KafkaConsumerServiceInstaller_AfterInstall);
             // 
             // ProjectInstaller
             // 
