@@ -27,7 +27,7 @@ namespace KafkaConsumerService
 
             try
             {
-                ShowParameters();
+                //ShowParameters();
                 AddConfigurationFileDetails();
             }
             catch (Exception e)
