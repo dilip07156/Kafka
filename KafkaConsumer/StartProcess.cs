@@ -72,10 +72,12 @@ namespace KafkaConsumer
                     constructConfig.Add("auto.commit.interval.ms", KafkaVariables.Where(w => w.AttributeValue == "auto.commit.interval.ms").Select(s => s.OTA_CodeTableValue).FirstOrDefault());
                     constructConfig.Add("statistics.interval.ms", KafkaVariables.Where(w => w.AttributeValue == "statistics.interval.ms").Select(s => s.OTA_CodeTableValue).FirstOrDefault());
                     //constructConfig.Add("bootstrap.servers", KafkaVariables.Where(w => w.AttributeValue == "bootstrap.servers").Select(s => s.OTA_CodeTableValue).FirstOrDefault());
-                    foreach (var bootstrap in KafkaVariables.Where(w => w.AttributeValue.StartsWith("bootstrap.servers")).Select(s => s.OTA_CodeTableValue))
-                    {
-                        constructConfig.Add("bootstrap.servers", bootstrap);
-                    }
+
+                    
+
+                    var bootstrap =  KafkaVariables.Where(w => w.AttributeValue.StartsWith("bootstrap.servers")).Select(s => s.OTA_CodeTableValue).ToList();
+                    
+                    constructConfig.Add("bootstrap.servers", string.Join(",", bootstrap));
                     constructConfig.Add("default.topic.config", new Dictionary<string, object>()
                     {
                         { "auto.offset.reset", KafkaVariables.Where(w => w.AttributeValue == "auto.offset.reset").Select(s => s.OTA_CodeTableValue).FirstOrDefault() }
