@@ -15,6 +15,7 @@ namespace KafkaConsumer
     {
         public static async void InsertInto_StgKafka(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
         {
+            StartProcess sp = new StartProcess();
             try
             {
                 await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], new DC_Stg_Kafka()
@@ -35,7 +36,8 @@ namespace KafkaConsumer
             }
             catch (Exception Ex)
             {
-
+                sp.Log("Execption occurs InsertInto_StgKafka Method");
+                sp.Log(Ex.ToString());
                 throw;
             }
         }
