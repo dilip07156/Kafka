@@ -330,8 +330,10 @@
       <xs:element minOccurs="0" name="HotelName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="HotelRating" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="InsertFrom" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Interest" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="InternalRemarks" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDirectContract" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsMysteryProduct" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsRoomMappingCompleted" type="xs:boolean" />
       <xs:element minOccurs="0" name="LEGACY_CITY" nillable="true" type="xs:string" />
@@ -401,6 +403,7 @@
       <xs:element minOccurs="0" name="CompanyRating" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="HouseNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Interest" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />

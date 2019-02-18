@@ -45,17 +45,17 @@ namespace KafkaConsumerDebugger
 
             StartProcess sp = new StartProcess();
             Console.WriteLine("Press C to cancel the operation.");
-            Task.Run(async () =>
-            {
-                try
-                {
-                    await sp.StartPolling(cancelSource);
-                }
-                catch (OperationCanceledException Ex)
-                {
-                    Console.WriteLine("Canceled!");
-                }
-            });
+            //Task.Run(async () =>
+            //{
+            //    try
+            //    {
+            //        await sp.StartPolling(cancelSource);
+            //    }
+            //    catch (OperationCanceledException Ex)
+            //    {
+            //        Console.WriteLine("Canceled!");
+            //    }
+            //});
 
             Task.Run(async () =>
             {

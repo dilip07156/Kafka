@@ -93,6 +93,8 @@
   <xs:complexType name="DC_PentahoApiCallLogDetails_RQ">
     <xs:sequence>
       <xs:element minOccurs="0" name="Entity_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="PageNo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="ser:guid" />
     </xs:sequence>
@@ -120,6 +122,7 @@
       <xs:element minOccurs="0" name="SupplierApiCallLog_Id" type="ser:guid" />
       <xs:element minOccurs="0" name="SupplierApiLocation_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="TotalRecords" nillable="true" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_PentahoApiCallLogDetails" nillable="true" type="tns:DC_PentahoApiCallLogDetails" />
