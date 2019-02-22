@@ -42,6 +42,7 @@
     <MetadataFile FileName="Consumer15.xsd" MetadataType="Schema" ID="ba30b920-b092-4349-b997-ba1382b2c56f" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd5" />
     <MetadataFile FileName="Consumer16.xsd" MetadataType="Schema" ID="958b3cb7-94a6-47aa-9feb-97210e21dfc9" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd6" />
     <MetadataFile FileName="Consumer17.xsd" MetadataType="Schema" ID="b07749b1-d9ec-4ad8-a1f8-bac421faa468" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd8" />
+    <MetadataFile FileName="Consumer18.xsd" MetadataType="Schema" ID="fc1367f9-0030-4563-853c-c1ed5d5afb58" SourceId="1" SourceUrl="http://localhost:57643/Consumer.svc?xsd=xsd18" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

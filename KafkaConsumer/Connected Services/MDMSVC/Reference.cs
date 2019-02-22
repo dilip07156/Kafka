@@ -9071,34 +9071,28 @@ namespace KafkaConsumer.MDMSVC {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DC_GooglePlaceNearBy", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RemoteFileInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileUploadResponse))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UploadResponse))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.IO.Stream))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.MarshalByRefObject))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Stg_Kafka))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Stg_Kafka[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails_TestProcess))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RS[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierScheduledTaskRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SupplierScheduledTask[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SupplierScheduledTask))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Logs[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Logs))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Notifications[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Notifications))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Calender[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Calender))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoTransStatus_Result))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoTransStatus_Resultfile[]))]
@@ -9109,10 +9103,6 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoApiCallLogDetails_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoApiCallLogDetails[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoApiCallLogDetails))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RemoteFileInfo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileUploadResponse))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileData))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UploadResponse))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus))]
@@ -9335,20 +9325,42 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierAccoMappingExportDataReport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RS[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierScheduledTaskRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SupplierScheduledTask[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SupplierScheduledTask))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Logs[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Logs))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Notifications[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Notifications))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Calender[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Calender))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SiteMap[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SiteMap))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Roles[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Roles))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RoleAuthorizedForUrl))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityType[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityDetails))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityDetails[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserEntity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserDetails[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserDetails))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ApplicationMgmt[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ApplicationMgmt))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails_TestProcess))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Net.HttpStatusCode))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_DynamicAttributes[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_DynamicAttributes))]
@@ -9513,20 +9525,74 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Address_Physical))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Address_GeoCode))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Address_GeoCodeForNearBy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SiteMap[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SiteMap))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Roles[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Roles))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RoleAuthorizedForUrl))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityType[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityType))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityDetails))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityDetails[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserEntity))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserDetails[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserDetails))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ApplicationMgmt[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ApplicationMgmt))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Holiday_Search_Params_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayMappingSearchResult))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Holiday_Search_RS[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Holiday_Search_RS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayModel))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayAccommodation[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayAccommodation))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayActivity[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayActivity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayTermsConditions[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayTermsConditions))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayBrandsAndBrochures[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayBrandsAndBrochures))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ClassificationAttributes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ClassificationAttributes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayCollections[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayCollections))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ComfortLevel[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ComfortLevel))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDayWiseItineraries[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDayWiseItineraries))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDates[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDates))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDeparture[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDeparture))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDestinations[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDestinations))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayInclusionExclusion[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayInclusionExclusion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayHighlights[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayHighlights))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayIncludes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayIncludes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayTypes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayTypes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SubType[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SubType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayMedia[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayMedia))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PaceOfHoliday[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PaceOfHoliday))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PackagePrice[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PackagePrice))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.BasePriceStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.BasePriceStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DiscountStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DiscountStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PriceDetailsStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PriceDetailsStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.TaxStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.TaxStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Tax[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Tax))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayPerPersonPrice[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayPerPersonPrice))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PreTourStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PreTourStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PreTourPrice[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PreTourPrice))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayStartingPrice[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayStartingPrice))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.TravelFrequency[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.TravelFrequency))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayUniqueSellingPoints))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.CustomClassificationAttributes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.CustomClassificationAttributes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus))]
     public partial class DC_GooglePlaceNearBy : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -9825,34 +9891,28 @@ namespace KafkaConsumer.MDMSVC {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OpeningHoursGooglePlaceNearBy", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RemoteFileInfo))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileUploadResponse))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileData))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UploadResponse))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.IO.Stream))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.MarshalByRefObject))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Stg_Kafka))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Stg_Kafka[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails_TestProcess))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RS[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierScheduledTaskRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SupplierScheduledTask[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SupplierScheduledTask))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Logs[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Logs))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Notifications[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Notifications))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Calender[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Calender))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoTransStatus_TransStatus))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoTransStatus_Result))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoTransStatus_Resultfile[]))]
@@ -9863,10 +9923,6 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoApiCallLogDetails_RQ))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoApiCallLogDetails[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_PentahoApiCallLogDetails))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RemoteFileInfo))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileUploadResponse))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_FileData))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UploadResponse))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Accommodation_RuleInfo))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus))]
@@ -10089,20 +10145,42 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierAccoMappingExportDataReport))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EzeegoHotelVsSupplierHotelMappingReport))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RS[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Supplier_Schedule_RS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierScheduledTaskRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SupplierScheduledTask[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SupplierScheduledTask))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Logs[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Logs))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Notifications[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Notifications))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Calender[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Supplier_Task_Calender))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SiteMap[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SiteMap))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Roles[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Roles))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RoleAuthorizedForUrl))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityType[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityDetails))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityDetails[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserEntity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserDetails[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserDetails))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ApplicationMgmt[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ApplicationMgmt))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportAttributeValues))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_ErrorLog[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Progress))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_VerboseLog))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFile_Statistics))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SupplierImportFileDetails_TestProcess))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Net.HttpStatusCode))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_DynamicAttributes[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_DynamicAttributes))]
@@ -10267,20 +10345,74 @@ namespace KafkaConsumer.MDMSVC {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Address_Physical))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Address_GeoCode))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Address_GeoCodeForNearBy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SiteMap[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_SiteMap))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Roles[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Roles))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_RoleAuthorizedForUrl))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityType[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityType))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityDetails))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_EntityDetails[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserEntity))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserDetails[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_UserDetails))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ApplicationMgmt[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_ApplicationMgmt))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Holiday_Search_Params_RQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayMappingSearchResult))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Holiday_Search_RS[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DC_Holiday_Search_RS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayModel))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayAccommodation[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayAccommodation))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayActivity[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayActivity))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayTermsConditions[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayTermsConditions))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayBrandsAndBrochures[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayBrandsAndBrochures))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ClassificationAttributes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ClassificationAttributes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayCollections[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayCollections))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ComfortLevel[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.ComfortLevel))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDayWiseItineraries[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDayWiseItineraries))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDates[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDates))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDeparture[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDeparture))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDestinations[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayDestinations))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayInclusionExclusion[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayInclusionExclusion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayHighlights[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayHighlights))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayIncludes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayIncludes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayTypes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayTypes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SubType[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.SubType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayMedia[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayMedia))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PaceOfHoliday[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PaceOfHoliday))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PackagePrice[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PackagePrice))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.BasePriceStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.BasePriceStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DiscountStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DiscountStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PriceDetailsStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PriceDetailsStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.TaxStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.TaxStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Tax[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.Tax))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayPerPersonPrice[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayPerPersonPrice))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PreTourStructure[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PreTourStructure))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PreTourPrice[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.PreTourPrice))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayStartingPrice[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayStartingPrice))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.TravelFrequency[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.TravelFrequency))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.HolidayUniqueSellingPoints))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.CustomClassificationAttributes[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.CustomClassificationAttributes))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus))]
     public partial class OpeningHoursGooglePlaceNearBy : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -10324,6 +10456,266 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.weekday_textField, value) != true)) {
                     this.weekday_textField = value;
                     this.RaisePropertyChanged("weekday_text");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_RemoteFileInfo", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer")]
+    [System.SerializableAttribute()]
+    public partial class DC_RemoteFileInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.IO.Stream FileByteStreamField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FileNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long LengthField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.IO.Stream FileByteStream {
+            get {
+                return this.FileByteStreamField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileByteStreamField, value) != true)) {
+                    this.FileByteStreamField = value;
+                    this.RaisePropertyChanged("FileByteStream");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName {
+            get {
+                return this.FileNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
+                    this.FileNameField = value;
+                    this.RaisePropertyChanged("FileName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long Length {
+            get {
+                return this.LengthField;
+            }
+            set {
+                if ((this.LengthField.Equals(value) != true)) {
+                    this.LengthField = value;
+                    this.RaisePropertyChanged("Length");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_FileUploadResponse", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer")]
+    [System.SerializableAttribute()]
+    public partial class DC_FileUploadResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UploadedPathField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UploadedPath {
+            get {
+                return this.UploadedPathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UploadedPathField, value) != true)) {
+                    this.UploadedPathField = value;
+                    this.RaisePropertyChanged("UploadedPath");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_FileData", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer")]
+    [System.SerializableAttribute()]
+    public partial class DC_FileData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] BufferDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FileNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long FilePostitionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] BufferData {
+            get {
+                return this.BufferDataField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BufferDataField, value) != true)) {
+                    this.BufferDataField = value;
+                    this.RaisePropertyChanged("BufferData");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName {
+            get {
+                return this.FileNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
+                    this.FileNameField = value;
+                    this.RaisePropertyChanged("FileName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long FilePostition {
+            get {
+                return this.FilePostitionField;
+            }
+            set {
+                if ((this.FilePostitionField.Equals(value) != true)) {
+                    this.FilePostitionField = value;
+                    this.RaisePropertyChanged("FilePostition");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_UploadResponse", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer")]
+    [System.SerializableAttribute()]
+    public partial class DC_UploadResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool UploadSucceededField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UploadedPathField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool UploadSucceeded {
+            get {
+                return this.UploadSucceededField;
+            }
+            set {
+                if ((this.UploadSucceededField.Equals(value) != true)) {
+                    this.UploadSucceededField = value;
+                    this.RaisePropertyChanged("UploadSucceeded");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UploadedPath {
+            get {
+                return this.UploadedPathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UploadedPathField, value) != true)) {
+                    this.UploadedPathField = value;
+                    this.RaisePropertyChanged("UploadedPath");
                 }
             }
         }
@@ -10625,2683 +11017,24 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DL_ML_DL_EntityStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.ML")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Supplier_Schedule_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
     [System.SerializableAttribute()]
-    public partial class DL_ML_DL_EntityStatus : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class DC_Supplier_Schedule_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityTypeField;
+        private System.Nullable<System.DateTime> Edit_DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime LastUpdateField;
+        private string Edit_UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PerField;
+        private string[] EntitiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PushedCountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TotalCountField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EntityType {
-            get {
-                return this.EntityTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityTypeField, value) != true)) {
-                    this.EntityTypeField = value;
-                    this.RaisePropertyChanged("EntityType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime LastUpdate {
-            get {
-                return this.LastUpdateField;
-            }
-            set {
-                if ((this.LastUpdateField.Equals(value) != true)) {
-                    this.LastUpdateField = value;
-                    this.RaisePropertyChanged("LastUpdate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Per {
-            get {
-                return this.PerField;
-            }
-            set {
-                if ((this.PerField.Equals(value) != true)) {
-                    this.PerField = value;
-                    this.RaisePropertyChanged("Per");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PushedCount {
-            get {
-                return this.PushedCountField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PushedCountField, value) != true)) {
-                    this.PushedCountField = value;
-                    this.RaisePropertyChanged("PushedCount");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TotalCount {
-            get {
-                return this.TotalCountField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TotalCountField, value) != true)) {
-                    this.TotalCountField = value;
-                    this.RaisePropertyChanged("TotalCount");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportAttributes_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportAttributes_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ForField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageSizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusExceptField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportAttribute_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Supplier_IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
-            get {
-                return this.EntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string For {
-            get {
-                return this.ForField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ForField, value) != true)) {
-                    this.ForField = value;
-                    this.RaisePropertyChanged("For");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageNo {
-            get {
-                return this.PageNoField;
-            }
-            set {
-                if ((this.PageNoField.Equals(value) != true)) {
-                    this.PageNoField = value;
-                    this.RaisePropertyChanged("PageNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageSize {
-            get {
-                return this.PageSizeField;
-            }
-            set {
-                if ((this.PageSizeField.Equals(value) != true)) {
-                    this.PageSizeField = value;
-                    this.RaisePropertyChanged("PageSize");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StatusExcept {
-            get {
-                return this.StatusExceptField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
-                    this.StatusExceptField = value;
-                    this.RaisePropertyChanged("StatusExcept");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Supplier {
-            get {
-                return this.SupplierField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
-                    this.SupplierField = value;
-                    this.RaisePropertyChanged("Supplier");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportAttribute_Id {
-            get {
-                return this.SupplierImportAttribute_IdField;
-            }
-            set {
-                if ((this.SupplierImportAttribute_IdField.Equals(value) != true)) {
-                    this.SupplierImportAttribute_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportAttribute_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Supplier_Id {
-            get {
-                return this.Supplier_IdField;
-            }
-            set {
-                if ((this.Supplier_IdField.Equals(value) != true)) {
-                    this.Supplier_IdField = value;
-                    this.RaisePropertyChanged("Supplier_Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportAttributes", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportAttributes : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> CREATE_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CREATE_USERField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> EDIT_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EDIT_USERField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ForField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Mapping_TableField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Master_TableField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string STG_TableField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportAttribute_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid Supplier_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalRecordsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> CREATE_DATE {
-            get {
-                return this.CREATE_DATEField;
-            }
-            set {
-                if ((this.CREATE_DATEField.Equals(value) != true)) {
-                    this.CREATE_DATEField = value;
-                    this.RaisePropertyChanged("CREATE_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CREATE_USER {
-            get {
-                return this.CREATE_USERField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CREATE_USERField, value) != true)) {
-                    this.CREATE_USERField = value;
-                    this.RaisePropertyChanged("CREATE_USER");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> EDIT_DATE {
-            get {
-                return this.EDIT_DATEField;
-            }
-            set {
-                if ((this.EDIT_DATEField.Equals(value) != true)) {
-                    this.EDIT_DATEField = value;
-                    this.RaisePropertyChanged("EDIT_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EDIT_USER {
-            get {
-                return this.EDIT_USERField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EDIT_USERField, value) != true)) {
-                    this.EDIT_USERField = value;
-                    this.RaisePropertyChanged("EDIT_USER");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
-            get {
-                return this.EntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string For {
-            get {
-                return this.ForField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ForField, value) != true)) {
-                    this.ForField = value;
-                    this.RaisePropertyChanged("For");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Mapping_Table {
-            get {
-                return this.Mapping_TableField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Mapping_TableField, value) != true)) {
-                    this.Mapping_TableField = value;
-                    this.RaisePropertyChanged("Mapping_Table");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Master_Table {
-            get {
-                return this.Master_TableField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Master_TableField, value) != true)) {
-                    this.Master_TableField = value;
-                    this.RaisePropertyChanged("Master_Table");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string STG_Table {
-            get {
-                return this.STG_TableField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.STG_TableField, value) != true)) {
-                    this.STG_TableField = value;
-                    this.RaisePropertyChanged("STG_Table");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Supplier {
-            get {
-                return this.SupplierField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
-                    this.SupplierField = value;
-                    this.RaisePropertyChanged("Supplier");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportAttribute_Id {
-            get {
-                return this.SupplierImportAttribute_IdField;
-            }
-            set {
-                if ((this.SupplierImportAttribute_IdField.Equals(value) != true)) {
-                    this.SupplierImportAttribute_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportAttribute_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid Supplier_Id {
-            get {
-                return this.Supplier_IdField;
-            }
-            set {
-                if ((this.Supplier_IdField.Equals(value) != true)) {
-                    this.Supplier_IdField = value;
-                    this.RaisePropertyChanged("Supplier_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalRecords {
-            get {
-                return this.TotalRecordsField;
-            }
-            set {
-                if ((this.TotalRecordsField.Equals(value) != true)) {
-                    this.TotalRecordsField = value;
-                    this.RaisePropertyChanged("TotalRecords");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportAttributeValues_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportAttributeValues_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AttributeNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AttributeTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AttributeValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ForField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageSizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> PriorityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusExceptField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportAttributeValue_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportAttribute_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Supplier_IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AttributeName {
-            get {
-                return this.AttributeNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AttributeNameField, value) != true)) {
-                    this.AttributeNameField = value;
-                    this.RaisePropertyChanged("AttributeName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AttributeType {
-            get {
-                return this.AttributeTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AttributeTypeField, value) != true)) {
-                    this.AttributeTypeField = value;
-                    this.RaisePropertyChanged("AttributeType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AttributeValue {
-            get {
-                return this.AttributeValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AttributeValueField, value) != true)) {
-                    this.AttributeValueField = value;
-                    this.RaisePropertyChanged("AttributeValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
-            get {
-                return this.EntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string For {
-            get {
-                return this.ForField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ForField, value) != true)) {
-                    this.ForField = value;
-                    this.RaisePropertyChanged("For");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageNo {
-            get {
-                return this.PageNoField;
-            }
-            set {
-                if ((this.PageNoField.Equals(value) != true)) {
-                    this.PageNoField = value;
-                    this.RaisePropertyChanged("PageNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageSize {
-            get {
-                return this.PageSizeField;
-            }
-            set {
-                if ((this.PageSizeField.Equals(value) != true)) {
-                    this.PageSizeField = value;
-                    this.RaisePropertyChanged("PageSize");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Priority {
-            get {
-                return this.PriorityField;
-            }
-            set {
-                if ((this.PriorityField.Equals(value) != true)) {
-                    this.PriorityField = value;
-                    this.RaisePropertyChanged("Priority");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StatusExcept {
-            get {
-                return this.StatusExceptField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
-                    this.StatusExceptField = value;
-                    this.RaisePropertyChanged("StatusExcept");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Supplier {
-            get {
-                return this.SupplierField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
-                    this.SupplierField = value;
-                    this.RaisePropertyChanged("Supplier");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportAttributeValue_Id {
-            get {
-                return this.SupplierImportAttributeValue_IdField;
-            }
-            set {
-                if ((this.SupplierImportAttributeValue_IdField.Equals(value) != true)) {
-                    this.SupplierImportAttributeValue_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportAttributeValue_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportAttribute_Id {
-            get {
-                return this.SupplierImportAttribute_IdField;
-            }
-            set {
-                if ((this.SupplierImportAttribute_IdField.Equals(value) != true)) {
-                    this.SupplierImportAttribute_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportAttribute_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Supplier_Id {
-            get {
-                return this.Supplier_IdField;
-            }
-            set {
-                if ((this.Supplier_IdField.Equals(value) != true)) {
-                    this.Supplier_IdField = value;
-                    this.RaisePropertyChanged("Supplier_Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportAttributeValues", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportAttributeValues : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AttributeNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AttributeTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AttributeValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string AttributeValueTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> AttributeValue_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> CREATE_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CREATE_USERField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ComparisonField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> EDIT_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EDIT_USERField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PriorityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string STATUSField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportAttributeValue_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportAttribute_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalRecordsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AttributeName {
-            get {
-                return this.AttributeNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AttributeNameField, value) != true)) {
-                    this.AttributeNameField = value;
-                    this.RaisePropertyChanged("AttributeName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AttributeType {
-            get {
-                return this.AttributeTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AttributeTypeField, value) != true)) {
-                    this.AttributeTypeField = value;
-                    this.RaisePropertyChanged("AttributeType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AttributeValue {
-            get {
-                return this.AttributeValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AttributeValueField, value) != true)) {
-                    this.AttributeValueField = value;
-                    this.RaisePropertyChanged("AttributeValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AttributeValueType {
-            get {
-                return this.AttributeValueTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.AttributeValueTypeField, value) != true)) {
-                    this.AttributeValueTypeField = value;
-                    this.RaisePropertyChanged("AttributeValueType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> AttributeValue_ID {
-            get {
-                return this.AttributeValue_IDField;
-            }
-            set {
-                if ((this.AttributeValue_IDField.Equals(value) != true)) {
-                    this.AttributeValue_IDField = value;
-                    this.RaisePropertyChanged("AttributeValue_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> CREATE_DATE {
-            get {
-                return this.CREATE_DATEField;
-            }
-            set {
-                if ((this.CREATE_DATEField.Equals(value) != true)) {
-                    this.CREATE_DATEField = value;
-                    this.RaisePropertyChanged("CREATE_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CREATE_USER {
-            get {
-                return this.CREATE_USERField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CREATE_USERField, value) != true)) {
-                    this.CREATE_USERField = value;
-                    this.RaisePropertyChanged("CREATE_USER");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comparison {
-            get {
-                return this.ComparisonField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ComparisonField, value) != true)) {
-                    this.ComparisonField = value;
-                    this.RaisePropertyChanged("Comparison");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> EDIT_DATE {
-            get {
-                return this.EDIT_DATEField;
-            }
-            set {
-                if ((this.EDIT_DATEField.Equals(value) != true)) {
-                    this.EDIT_DATEField = value;
-                    this.RaisePropertyChanged("EDIT_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EDIT_USER {
-            get {
-                return this.EDIT_USERField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EDIT_USERField, value) != true)) {
-                    this.EDIT_USERField = value;
-                    this.RaisePropertyChanged("EDIT_USER");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Priority {
-            get {
-                return this.PriorityField;
-            }
-            set {
-                if ((this.PriorityField.Equals(value) != true)) {
-                    this.PriorityField = value;
-                    this.RaisePropertyChanged("Priority");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string STATUS {
-            get {
-                return this.STATUSField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
-                    this.STATUSField = value;
-                    this.RaisePropertyChanged("STATUS");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportAttributeValue_Id {
-            get {
-                return this.SupplierImportAttributeValue_IdField;
-            }
-            set {
-                if ((this.SupplierImportAttributeValue_IdField.Equals(value) != true)) {
-                    this.SupplierImportAttributeValue_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportAttributeValue_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportAttribute_Id {
-            get {
-                return this.SupplierImportAttribute_IdField;
-            }
-            set {
-                if ((this.SupplierImportAttribute_IdField.Equals(value) != true)) {
-                    this.SupplierImportAttribute_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportAttribute_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalRecords {
-            get {
-                return this.TotalRecordsField;
-            }
-            set {
-                if ((this.TotalRecordsField.Equals(value) != true)) {
-                    this.TotalRecordsField = value;
-                    this.RaisePropertyChanged("TotalRecords");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFileDetails_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFileDetails_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CurrentBatchField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string[] FilterStatusesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> From_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsPausedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsRestartedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsResumedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsStoppedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ModeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageSizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string STATUSField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusExceptField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportFile_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Supplier_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> TO_DateField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CurrentBatch {
-            get {
-                return this.CurrentBatchField;
-            }
-            set {
-                if ((this.CurrentBatchField.Equals(value) != true)) {
-                    this.CurrentBatchField = value;
-                    this.RaisePropertyChanged("CurrentBatch");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
-            get {
-                return this.EntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string[] FilterStatuses {
-            get {
-                return this.FilterStatusesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FilterStatusesField, value) != true)) {
-                    this.FilterStatusesField = value;
-                    this.RaisePropertyChanged("FilterStatuses");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> From_Date {
-            get {
-                return this.From_DateField;
-            }
-            set {
-                if ((this.From_DateField.Equals(value) != true)) {
-                    this.From_DateField = value;
-                    this.RaisePropertyChanged("From_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsActive {
-            get {
-                return this.IsActiveField;
-            }
-            set {
-                if ((this.IsActiveField.Equals(value) != true)) {
-                    this.IsActiveField = value;
-                    this.RaisePropertyChanged("IsActive");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsPaused {
-            get {
-                return this.IsPausedField;
-            }
-            set {
-                if ((this.IsPausedField.Equals(value) != true)) {
-                    this.IsPausedField = value;
-                    this.RaisePropertyChanged("IsPaused");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsRestarted {
-            get {
-                return this.IsRestartedField;
-            }
-            set {
-                if ((this.IsRestartedField.Equals(value) != true)) {
-                    this.IsRestartedField = value;
-                    this.RaisePropertyChanged("IsRestarted");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsResumed {
-            get {
-                return this.IsResumedField;
-            }
-            set {
-                if ((this.IsResumedField.Equals(value) != true)) {
-                    this.IsResumedField = value;
-                    this.RaisePropertyChanged("IsResumed");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsStopped {
-            get {
-                return this.IsStoppedField;
-            }
-            set {
-                if ((this.IsStoppedField.Equals(value) != true)) {
-                    this.IsStoppedField = value;
-                    this.RaisePropertyChanged("IsStopped");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Mode {
-            get {
-                return this.ModeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ModeField, value) != true)) {
-                    this.ModeField = value;
-                    this.RaisePropertyChanged("Mode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageNo {
-            get {
-                return this.PageNoField;
-            }
-            set {
-                if ((this.PageNoField.Equals(value) != true)) {
-                    this.PageNoField = value;
-                    this.RaisePropertyChanged("PageNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageSize {
-            get {
-                return this.PageSizeField;
-            }
-            set {
-                if ((this.PageSizeField.Equals(value) != true)) {
-                    this.PageSizeField = value;
-                    this.RaisePropertyChanged("PageSize");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string STATUS {
-            get {
-                return this.STATUSField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
-                    this.STATUSField = value;
-                    this.RaisePropertyChanged("STATUS");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StatusExcept {
-            get {
-                return this.StatusExceptField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
-                    this.StatusExceptField = value;
-                    this.RaisePropertyChanged("StatusExcept");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Supplier {
-            get {
-                return this.SupplierField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
-                    this.SupplierField = value;
-                    this.RaisePropertyChanged("Supplier");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportFile_Id {
-            get {
-                return this.SupplierImportFile_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Supplier_Id {
-            get {
-                return this.Supplier_IdField;
-            }
-            set {
-                if ((this.Supplier_IdField.Equals(value) != true)) {
-                    this.Supplier_IdField = value;
-                    this.RaisePropertyChanged("Supplier_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> TO_Date {
-            get {
-                return this.TO_DateField;
-            }
-            set {
-                if ((this.TO_DateField.Equals(value) != true)) {
-                    this.TO_DateField = value;
-                    this.RaisePropertyChanged("TO_Date");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFileDetails", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFileDetails : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ArchiveFilePathField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> CREATE_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CREATE_USERField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ComboFile_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> CurrentBatchField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsPausedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsRestartedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsResumedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsStoppedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ModeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string OriginalFilePathField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> PROCESS_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PROCESS_USERField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string STATUSField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SavedFilePathField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportFile_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid Supplier_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalRecordsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ArchiveFilePath {
-            get {
-                return this.ArchiveFilePathField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ArchiveFilePathField, value) != true)) {
-                    this.ArchiveFilePathField = value;
-                    this.RaisePropertyChanged("ArchiveFilePath");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> CREATE_DATE {
-            get {
-                return this.CREATE_DATEField;
-            }
-            set {
-                if ((this.CREATE_DATEField.Equals(value) != true)) {
-                    this.CREATE_DATEField = value;
-                    this.RaisePropertyChanged("CREATE_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CREATE_USER {
-            get {
-                return this.CREATE_USERField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CREATE_USERField, value) != true)) {
-                    this.CREATE_USERField = value;
-                    this.RaisePropertyChanged("CREATE_USER");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ComboFile_Id {
-            get {
-                return this.ComboFile_IdField;
-            }
-            set {
-                if ((this.ComboFile_IdField.Equals(value) != true)) {
-                    this.ComboFile_IdField = value;
-                    this.RaisePropertyChanged("ComboFile_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> CurrentBatch {
-            get {
-                return this.CurrentBatchField;
-            }
-            set {
-                if ((this.CurrentBatchField.Equals(value) != true)) {
-                    this.CurrentBatchField = value;
-                    this.RaisePropertyChanged("CurrentBatch");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
-            get {
-                return this.EntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsActive {
-            get {
-                return this.IsActiveField;
-            }
-            set {
-                if ((this.IsActiveField.Equals(value) != true)) {
-                    this.IsActiveField = value;
-                    this.RaisePropertyChanged("IsActive");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsPaused {
-            get {
-                return this.IsPausedField;
-            }
-            set {
-                if ((this.IsPausedField.Equals(value) != true)) {
-                    this.IsPausedField = value;
-                    this.RaisePropertyChanged("IsPaused");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsRestarted {
-            get {
-                return this.IsRestartedField;
-            }
-            set {
-                if ((this.IsRestartedField.Equals(value) != true)) {
-                    this.IsRestartedField = value;
-                    this.RaisePropertyChanged("IsRestarted");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsResumed {
-            get {
-                return this.IsResumedField;
-            }
-            set {
-                if ((this.IsResumedField.Equals(value) != true)) {
-                    this.IsResumedField = value;
-                    this.RaisePropertyChanged("IsResumed");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsStopped {
-            get {
-                return this.IsStoppedField;
-            }
-            set {
-                if ((this.IsStoppedField.Equals(value) != true)) {
-                    this.IsStoppedField = value;
-                    this.RaisePropertyChanged("IsStopped");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Mode {
-            get {
-                return this.ModeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ModeField, value) != true)) {
-                    this.ModeField = value;
-                    this.RaisePropertyChanged("Mode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string OriginalFilePath {
-            get {
-                return this.OriginalFilePathField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OriginalFilePathField, value) != true)) {
-                    this.OriginalFilePathField = value;
-                    this.RaisePropertyChanged("OriginalFilePath");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> PROCESS_DATE {
-            get {
-                return this.PROCESS_DATEField;
-            }
-            set {
-                if ((this.PROCESS_DATEField.Equals(value) != true)) {
-                    this.PROCESS_DATEField = value;
-                    this.RaisePropertyChanged("PROCESS_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PROCESS_USER {
-            get {
-                return this.PROCESS_USERField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PROCESS_USERField, value) != true)) {
-                    this.PROCESS_USERField = value;
-                    this.RaisePropertyChanged("PROCESS_USER");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string STATUS {
-            get {
-                return this.STATUSField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
-                    this.STATUSField = value;
-                    this.RaisePropertyChanged("STATUS");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SavedFilePath {
-            get {
-                return this.SavedFilePathField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SavedFilePathField, value) != true)) {
-                    this.SavedFilePathField = value;
-                    this.RaisePropertyChanged("SavedFilePath");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Supplier {
-            get {
-                return this.SupplierField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
-                    this.SupplierField = value;
-                    this.RaisePropertyChanged("Supplier");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportFile_Id {
-            get {
-                return this.SupplierImportFile_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid Supplier_Id {
-            get {
-                return this.Supplier_IdField;
-            }
-            set {
-                if ((this.Supplier_IdField.Equals(value) != true)) {
-                    this.Supplier_IdField = value;
-                    this.RaisePropertyChanged("Supplier_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalRecords {
-            get {
-                return this.TotalRecordsField;
-            }
-            set {
-                if ((this.TotalRecordsField.Equals(value) != true)) {
-                    this.TotalRecordsField = value;
-                    this.RaisePropertyChanged("TotalRecords");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_ErrorLog", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFile_ErrorLog : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ErrorCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ErrorDescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ErrorMessage_UIField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ErrorTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Error_DATEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Error_USERField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportFile_ErrorLog_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportFile_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalCountField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ErrorCode {
-            get {
-                return this.ErrorCodeField;
-            }
-            set {
-                if ((this.ErrorCodeField.Equals(value) != true)) {
-                    this.ErrorCodeField = value;
-                    this.RaisePropertyChanged("ErrorCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrorDescription {
-            get {
-                return this.ErrorDescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ErrorDescriptionField, value) != true)) {
-                    this.ErrorDescriptionField = value;
-                    this.RaisePropertyChanged("ErrorDescription");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrorMessage_UI {
-            get {
-                return this.ErrorMessage_UIField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ErrorMessage_UIField, value) != true)) {
-                    this.ErrorMessage_UIField = value;
-                    this.RaisePropertyChanged("ErrorMessage_UI");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrorType {
-            get {
-                return this.ErrorTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ErrorTypeField, value) != true)) {
-                    this.ErrorTypeField = value;
-                    this.RaisePropertyChanged("ErrorType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Error_DATE {
-            get {
-                return this.Error_DATEField;
-            }
-            set {
-                if ((this.Error_DATEField.Equals(value) != true)) {
-                    this.Error_DATEField = value;
-                    this.RaisePropertyChanged("Error_DATE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Error_USER {
-            get {
-                return this.Error_USERField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Error_USERField, value) != true)) {
-                    this.Error_USERField = value;
-                    this.RaisePropertyChanged("Error_USER");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportFile_ErrorLog_Id {
-            get {
-                return this.SupplierImportFile_ErrorLog_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_ErrorLog_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_ErrorLog_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_ErrorLog_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportFile_Id {
-            get {
-                return this.SupplierImportFile_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalCount {
-            get {
-                return this.TotalCountField;
-            }
-            set {
-                if ((this.TotalCountField.Equals(value) != true)) {
-                    this.TotalCountField = value;
-                    this.RaisePropertyChanged("TotalCount");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_ErrorLog_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFile_ErrorLog_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int ErrorCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ErrorTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> PageSizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string STATUSField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusExceptField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportFile_ErrorLog_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportFile_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Supplier_IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
-            get {
-                return this.EntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ErrorCode {
-            get {
-                return this.ErrorCodeField;
-            }
-            set {
-                if ((this.ErrorCodeField.Equals(value) != true)) {
-                    this.ErrorCodeField = value;
-                    this.RaisePropertyChanged("ErrorCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrorType {
-            get {
-                return this.ErrorTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ErrorTypeField, value) != true)) {
-                    this.ErrorTypeField = value;
-                    this.RaisePropertyChanged("ErrorType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageNo {
-            get {
-                return this.PageNoField;
-            }
-            set {
-                if ((this.PageNoField.Equals(value) != true)) {
-                    this.PageNoField = value;
-                    this.RaisePropertyChanged("PageNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> PageSize {
-            get {
-                return this.PageSizeField;
-            }
-            set {
-                if ((this.PageSizeField.Equals(value) != true)) {
-                    this.PageSizeField = value;
-                    this.RaisePropertyChanged("PageSize");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string STATUS {
-            get {
-                return this.STATUSField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
-                    this.STATUSField = value;
-                    this.RaisePropertyChanged("STATUS");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StatusExcept {
-            get {
-                return this.StatusExceptField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
-                    this.StatusExceptField = value;
-                    this.RaisePropertyChanged("StatusExcept");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Supplier {
-            get {
-                return this.SupplierField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
-                    this.SupplierField = value;
-                    this.RaisePropertyChanged("Supplier");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportFile_ErrorLog_Id {
-            get {
-                return this.SupplierImportFile_ErrorLog_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_ErrorLog_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_ErrorLog_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_ErrorLog_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportFile_Id {
-            get {
-                return this.SupplierImportFile_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Supplier_Id {
-            get {
-                return this.Supplier_IdField;
-            }
-            set {
-                if ((this.Supplier_IdField.Equals(value) != true)) {
-                    this.Supplier_IdField = value;
-                    this.RaisePropertyChanged("Supplier_Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_Progress_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFile_Progress_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusExceptField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StepField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierImportFile_IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StatusExcept {
-            get {
-                return this.StatusExceptField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
-                    this.StatusExceptField = value;
-                    this.RaisePropertyChanged("StatusExcept");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Step {
-            get {
-                return this.StepField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StepField, value) != true)) {
-                    this.StepField = value;
-                    this.RaisePropertyChanged("Step");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SupplierImportFile_Id {
-            get {
-                return this.SupplierImportFile_IdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SupplierImportFile_IdField, value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_Progress", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFile_Progress : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int CurrentBatchField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> PercentageValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StepField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportFileProgress_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportFile_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalBatchField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalCountField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CurrentBatch {
-            get {
-                return this.CurrentBatchField;
-            }
-            set {
-                if ((this.CurrentBatchField.Equals(value) != true)) {
-                    this.CurrentBatchField = value;
-                    this.RaisePropertyChanged("CurrentBatch");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> PercentageValue {
-            get {
-                return this.PercentageValueField;
-            }
-            set {
-                if ((this.PercentageValueField.Equals(value) != true)) {
-                    this.PercentageValueField = value;
-                    this.RaisePropertyChanged("PercentageValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Step {
-            get {
-                return this.StepField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StepField, value) != true)) {
-                    this.StepField = value;
-                    this.RaisePropertyChanged("Step");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportFileProgress_Id {
-            get {
-                return this.SupplierImportFileProgress_IdField;
-            }
-            set {
-                if ((this.SupplierImportFileProgress_IdField.Equals(value) != true)) {
-                    this.SupplierImportFileProgress_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFileProgress_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportFile_Id {
-            get {
-                return this.SupplierImportFile_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalBatch {
-            get {
-                return this.TotalBatchField;
-            }
-            set {
-                if ((this.TotalBatchField.Equals(value) != true)) {
-                    this.TotalBatchField = value;
-                    this.RaisePropertyChanged("TotalBatch");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalCount {
-            get {
-                return this.TotalCountField;
-            }
-            set {
-                if ((this.TotalCountField.Equals(value) != true)) {
-                    this.TotalCountField = value;
-                    this.RaisePropertyChanged("TotalCount");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_VerboseLog_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFile_VerboseLog_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> PageSizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StepField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportFile_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportFile_VerboseLog_IdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageNo {
-            get {
-                return this.PageNoField;
-            }
-            set {
-                if ((this.PageNoField.Equals(value) != true)) {
-                    this.PageNoField = value;
-                    this.RaisePropertyChanged("PageNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> PageSize {
-            get {
-                return this.PageSizeField;
-            }
-            set {
-                if ((this.PageSizeField.Equals(value) != true)) {
-                    this.PageSizeField = value;
-                    this.RaisePropertyChanged("PageSize");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Step {
-            get {
-                return this.StepField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StepField, value) != true)) {
-                    this.StepField = value;
-                    this.RaisePropertyChanged("Step");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportFile_Id {
-            get {
-                return this.SupplierImportFile_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportFile_VerboseLog_Id {
-            get {
-                return this.SupplierImportFile_VerboseLog_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_VerboseLog_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_VerboseLog_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_VerboseLog_Id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_VerboseLog", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFile_VerboseLog : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> BatchNumberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MessageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StepField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportFile_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportFile_VerboseLog_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> TimeStampField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalCountField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> BatchNumber {
-            get {
-                return this.BatchNumberField;
-            }
-            set {
-                if ((this.BatchNumberField.Equals(value) != true)) {
-                    this.BatchNumberField = value;
-                    this.RaisePropertyChanged("BatchNumber");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Message {
-            get {
-                return this.MessageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
-                    this.MessageField = value;
-                    this.RaisePropertyChanged("Message");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Step {
-            get {
-                return this.StepField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StepField, value) != true)) {
-                    this.StepField = value;
-                    this.RaisePropertyChanged("Step");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportFile_Id {
-            get {
-                return this.SupplierImportFile_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportFile_VerboseLog_Id {
-            get {
-                return this.SupplierImportFile_VerboseLog_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_VerboseLog_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_VerboseLog_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_VerboseLog_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> TimeStamp {
-            get {
-                return this.TimeStampField;
-            }
-            set {
-                if ((this.TimeStampField.Equals(value) != true)) {
-                    this.TimeStampField = value;
-                    this.RaisePropertyChanged("TimeStamp");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalCount {
-            get {
-                return this.TotalCountField;
-            }
-            set {
-                if ((this.TotalCountField.Equals(value) != true)) {
-                    this.TotalCountField = value;
-                    this.RaisePropertyChanged("TotalCount");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_Statistics_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFile_Statistics_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> From_DateField;
+        private bool IsActiveField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> PageNoField;
@@ -13310,22 +11043,13 @@ namespace KafkaConsumer.MDMSVC {
         private System.Nullable<int> PageSizeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string STATUSField;
+        private string StatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusExceptField;
+        private System.Guid SupplierScheduleIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportFile_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Supplier_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> TO_DateField;
+        private System.Guid Suppllier_IDField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -13338,27 +11062,53 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
+        public System.Nullable<System.DateTime> Edit_Date {
             get {
-                return this.EntityField;
+                return this.Edit_DateField;
             }
             set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
+                if ((this.Edit_DateField.Equals(value) != true)) {
+                    this.Edit_DateField = value;
+                    this.RaisePropertyChanged("Edit_Date");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> From_Date {
+        public string Edit_User {
             get {
-                return this.From_DateField;
+                return this.Edit_UserField;
             }
             set {
-                if ((this.From_DateField.Equals(value) != true)) {
-                    this.From_DateField = value;
-                    this.RaisePropertyChanged("From_Date");
+                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
+                    this.Edit_UserField = value;
+                    this.RaisePropertyChanged("Edit_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] Entities {
+            get {
+                return this.EntitiesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntitiesField, value) != true)) {
+                    this.EntitiesField = value;
+                    this.RaisePropertyChanged("Entities");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
                 }
             }
         }
@@ -13390,79 +11140,40 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string STATUS {
+        public string Status {
             get {
-                return this.STATUSField;
+                return this.StatusField;
             }
             set {
-                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
-                    this.STATUSField = value;
-                    this.RaisePropertyChanged("STATUS");
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StatusExcept {
+        public System.Guid SupplierScheduleID {
             get {
-                return this.StatusExceptField;
+                return this.SupplierScheduleIDField;
             }
             set {
-                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
-                    this.StatusExceptField = value;
-                    this.RaisePropertyChanged("StatusExcept");
+                if ((this.SupplierScheduleIDField.Equals(value) != true)) {
+                    this.SupplierScheduleIDField = value;
+                    this.RaisePropertyChanged("SupplierScheduleID");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Supplier {
+        public System.Guid Suppllier_ID {
             get {
-                return this.SupplierField;
+                return this.Suppllier_IDField;
             }
             set {
-                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
-                    this.SupplierField = value;
-                    this.RaisePropertyChanged("Supplier");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportFile_Id {
-            get {
-                return this.SupplierImportFile_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Supplier_Id {
-            get {
-                return this.Supplier_IdField;
-            }
-            set {
-                if ((this.Supplier_IdField.Equals(value) != true)) {
-                    this.Supplier_IdField = value;
-                    this.RaisePropertyChanged("Supplier_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> TO_Date {
-            get {
-                return this.TO_DateField;
-            }
-            set {
-                if ((this.TO_DateField.Equals(value) != true)) {
-                    this.TO_DateField = value;
-                    this.RaisePropertyChanged("TO_Date");
+                if ((this.Suppllier_IDField.Equals(value) != true)) {
+                    this.Suppllier_IDField = value;
+                    this.RaisePropertyChanged("Suppllier_ID");
                 }
             }
         }
@@ -13479,9 +11190,438 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_Statistics", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Supplier_Schedule", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
     [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFile_Statistics : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class DC_Supplier_Schedule : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Create_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Create_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CronExpressionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> DateOfMonthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DayOfWeekField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Edit_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Edit_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EndTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EndYearField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FrequencyTypeCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ISUpdateFrequenceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ISXMLSupplierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> MonthOfYearField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Recur_NoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StartTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int StartYearField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierScheduleIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Suppllier_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string User_Role_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> WeekOfMonthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] lstEnityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Create_Date {
+            get {
+                return this.Create_DateField;
+            }
+            set {
+                if ((this.Create_DateField.Equals(value) != true)) {
+                    this.Create_DateField = value;
+                    this.RaisePropertyChanged("Create_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Create_User {
+            get {
+                return this.Create_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
+                    this.Create_UserField = value;
+                    this.RaisePropertyChanged("Create_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CronExpression {
+            get {
+                return this.CronExpressionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CronExpressionField, value) != true)) {
+                    this.CronExpressionField = value;
+                    this.RaisePropertyChanged("CronExpression");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> DateOfMonth {
+            get {
+                return this.DateOfMonthField;
+            }
+            set {
+                if ((this.DateOfMonthField.Equals(value) != true)) {
+                    this.DateOfMonthField = value;
+                    this.RaisePropertyChanged("DateOfMonth");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DayOfWeek {
+            get {
+                return this.DayOfWeekField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DayOfWeekField, value) != true)) {
+                    this.DayOfWeekField = value;
+                    this.RaisePropertyChanged("DayOfWeek");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Edit_Date {
+            get {
+                return this.Edit_DateField;
+            }
+            set {
+                if ((this.Edit_DateField.Equals(value) != true)) {
+                    this.Edit_DateField = value;
+                    this.RaisePropertyChanged("Edit_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Edit_User {
+            get {
+                return this.Edit_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
+                    this.Edit_UserField = value;
+                    this.RaisePropertyChanged("Edit_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EndTime {
+            get {
+                return this.EndTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EndTimeField, value) != true)) {
+                    this.EndTimeField = value;
+                    this.RaisePropertyChanged("EndTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EndYear {
+            get {
+                return this.EndYearField;
+            }
+            set {
+                if ((this.EndYearField.Equals(value) != true)) {
+                    this.EndYearField = value;
+                    this.RaisePropertyChanged("EndYear");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Entity {
+            get {
+                return this.EntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FrequencyTypeCode {
+            get {
+                return this.FrequencyTypeCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FrequencyTypeCodeField, value) != true)) {
+                    this.FrequencyTypeCodeField = value;
+                    this.RaisePropertyChanged("FrequencyTypeCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool ISUpdateFrequence {
+            get {
+                return this.ISUpdateFrequenceField;
+            }
+            set {
+                if ((this.ISUpdateFrequenceField.Equals(value) != true)) {
+                    this.ISUpdateFrequenceField = value;
+                    this.RaisePropertyChanged("ISUpdateFrequence");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool ISXMLSupplier {
+            get {
+                return this.ISXMLSupplierField;
+            }
+            set {
+                if ((this.ISXMLSupplierField.Equals(value) != true)) {
+                    this.ISXMLSupplierField = value;
+                    this.RaisePropertyChanged("ISXMLSupplier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> MonthOfYear {
+            get {
+                return this.MonthOfYearField;
+            }
+            set {
+                if ((this.MonthOfYearField.Equals(value) != true)) {
+                    this.MonthOfYearField = value;
+                    this.RaisePropertyChanged("MonthOfYear");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Recur_No {
+            get {
+                return this.Recur_NoField;
+            }
+            set {
+                if ((this.Recur_NoField.Equals(value) != true)) {
+                    this.Recur_NoField = value;
+                    this.RaisePropertyChanged("Recur_No");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StartTime {
+            get {
+                return this.StartTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StartTimeField, value) != true)) {
+                    this.StartTimeField = value;
+                    this.RaisePropertyChanged("StartTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int StartYear {
+            get {
+                return this.StartYearField;
+            }
+            set {
+                if ((this.StartYearField.Equals(value) != true)) {
+                    this.StartYearField = value;
+                    this.RaisePropertyChanged("StartYear");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SupplierName {
+            get {
+                return this.SupplierNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierNameField, value) != true)) {
+                    this.SupplierNameField = value;
+                    this.RaisePropertyChanged("SupplierName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierScheduleID {
+            get {
+                return this.SupplierScheduleIDField;
+            }
+            set {
+                if ((this.SupplierScheduleIDField.Equals(value) != true)) {
+                    this.SupplierScheduleIDField = value;
+                    this.RaisePropertyChanged("SupplierScheduleID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Suppllier_ID {
+            get {
+                return this.Suppllier_IDField;
+            }
+            set {
+                if ((this.Suppllier_IDField.Equals(value) != true)) {
+                    this.Suppllier_IDField = value;
+                    this.RaisePropertyChanged("Suppllier_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string User_Role_Id {
+            get {
+                return this.User_Role_IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.User_Role_IdField, value) != true)) {
+                    this.User_Role_IdField = value;
+                    this.RaisePropertyChanged("User_Role_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> WeekOfMonth {
+            get {
+                return this.WeekOfMonthField;
+            }
+            set {
+                if ((this.WeekOfMonthField.Equals(value) != true)) {
+                    this.WeekOfMonthField = value;
+                    this.RaisePropertyChanged("WeekOfMonth");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] lstEnity {
+            get {
+                return this.lstEnityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.lstEnityField, value) != true)) {
+                    this.lstEnityField = value;
+                    this.RaisePropertyChanged("lstEnity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Supplier_Schedule_RS", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
+    [System.SerializableAttribute()]
+    public partial class DC_Supplier_Schedule_RS : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -13490,49 +11630,206 @@ namespace KafkaConsumer.MDMSVC {
         private string EntityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FileNameField;
+        private string FrequencyTypeCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FinalStatusField;
+        private int PageNoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FromField;
+        private int PageSizeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> MappedField;
+        private string StatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Process_DateField;
+        private System.Guid SupplierScheduleIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Process_UserField;
+        private System.Guid Suppllier_IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ProcessedByField;
+        private int TotalSizeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Entity {
+            get {
+                return this.EntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FrequencyTypeCode {
+            get {
+                return this.FrequencyTypeCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FrequencyTypeCodeField, value) != true)) {
+                    this.FrequencyTypeCodeField = value;
+                    this.RaisePropertyChanged("FrequencyTypeCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageNo {
+            get {
+                return this.PageNoField;
+            }
+            set {
+                if ((this.PageNoField.Equals(value) != true)) {
+                    this.PageNoField = value;
+                    this.RaisePropertyChanged("PageNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageSize {
+            get {
+                return this.PageSizeField;
+            }
+            set {
+                if ((this.PageSizeField.Equals(value) != true)) {
+                    this.PageSizeField = value;
+                    this.RaisePropertyChanged("PageSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierScheduleID {
+            get {
+                return this.SupplierScheduleIDField;
+            }
+            set {
+                if ((this.SupplierScheduleIDField.Equals(value) != true)) {
+                    this.SupplierScheduleIDField = value;
+                    this.RaisePropertyChanged("SupplierScheduleID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Suppllier_ID {
+            get {
+                return this.Suppllier_IDField;
+            }
+            set {
+                if ((this.Suppllier_IDField.Equals(value) != true)) {
+                    this.Suppllier_IDField = value;
+                    this.RaisePropertyChanged("Suppllier_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalSize {
+            get {
+                return this.TotalSizeField;
+            }
+            set {
+                if ((this.TotalSizeField.Equals(value) != true)) {
+                    this.TotalSizeField = value;
+                    this.RaisePropertyChanged("TotalSize");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierScheduledTaskRQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierScheduledTaskRQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierField;
+        private System.Nullable<System.DateTime> Edit_DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierImportFile_IdField;
+        private string Edit_UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportFile_Statistics_IdField;
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> FromDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsAdminUserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> LogIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NotificationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RedirectFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SortByField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.Guid> Supplier_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalRecordsField;
+        private System.Nullable<System.Guid> TaskIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> TotalRowsField;
+        private System.Nullable<System.DateTime> ToDateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> UnmappedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool isRerunField;
+        private string UserNameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -13541,6 +11838,32 @@ namespace KafkaConsumer.MDMSVC {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Edit_Date {
+            get {
+                return this.Edit_DateField;
+            }
+            set {
+                if ((this.Edit_DateField.Equals(value) != true)) {
+                    this.Edit_DateField = value;
+                    this.RaisePropertyChanged("Edit_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Edit_User {
+            get {
+                return this.Edit_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
+                    this.Edit_UserField = value;
+                    this.RaisePropertyChanged("Edit_User");
+                }
             }
         }
         
@@ -13558,136 +11881,123 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FileName {
+        public System.Nullable<System.DateTime> FromDate {
             get {
-                return this.FileNameField;
+                return this.FromDateField;
             }
             set {
-                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
-                    this.FileNameField = value;
-                    this.RaisePropertyChanged("FileName");
+                if ((this.FromDateField.Equals(value) != true)) {
+                    this.FromDateField = value;
+                    this.RaisePropertyChanged("FromDate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FinalStatus {
+        public bool IsAdminUser {
             get {
-                return this.FinalStatusField;
+                return this.IsAdminUserField;
             }
             set {
-                if ((object.ReferenceEquals(this.FinalStatusField, value) != true)) {
-                    this.FinalStatusField = value;
-                    this.RaisePropertyChanged("FinalStatus");
+                if ((this.IsAdminUserField.Equals(value) != true)) {
+                    this.IsAdminUserField = value;
+                    this.RaisePropertyChanged("IsAdminUser");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string From {
+        public System.Nullable<System.Guid> LogId {
             get {
-                return this.FromField;
+                return this.LogIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.FromField, value) != true)) {
-                    this.FromField = value;
-                    this.RaisePropertyChanged("From");
+                if ((this.LogIdField.Equals(value) != true)) {
+                    this.LogIdField = value;
+                    this.RaisePropertyChanged("LogId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Mapped {
+        public string Notification {
             get {
-                return this.MappedField;
+                return this.NotificationField;
             }
             set {
-                if ((this.MappedField.Equals(value) != true)) {
-                    this.MappedField = value;
-                    this.RaisePropertyChanged("Mapped");
+                if ((object.ReferenceEquals(this.NotificationField, value) != true)) {
+                    this.NotificationField = value;
+                    this.RaisePropertyChanged("Notification");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Process_Date {
+        public int PageNo {
             get {
-                return this.Process_DateField;
+                return this.PageNoField;
             }
             set {
-                if ((this.Process_DateField.Equals(value) != true)) {
-                    this.Process_DateField = value;
-                    this.RaisePropertyChanged("Process_Date");
+                if ((this.PageNoField.Equals(value) != true)) {
+                    this.PageNoField = value;
+                    this.RaisePropertyChanged("PageNo");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Process_User {
+        public int PageSize {
             get {
-                return this.Process_UserField;
+                return this.PageSizeField;
             }
             set {
-                if ((object.ReferenceEquals(this.Process_UserField, value) != true)) {
-                    this.Process_UserField = value;
-                    this.RaisePropertyChanged("Process_User");
+                if ((this.PageSizeField.Equals(value) != true)) {
+                    this.PageSizeField = value;
+                    this.RaisePropertyChanged("PageSize");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ProcessedBy {
+        public string RedirectFrom {
             get {
-                return this.ProcessedByField;
+                return this.RedirectFromField;
             }
             set {
-                if ((object.ReferenceEquals(this.ProcessedByField, value) != true)) {
-                    this.ProcessedByField = value;
-                    this.RaisePropertyChanged("ProcessedBy");
+                if ((object.ReferenceEquals(this.RedirectFromField, value) != true)) {
+                    this.RedirectFromField = value;
+                    this.RaisePropertyChanged("RedirectFrom");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Supplier {
+        public string SortBy {
             get {
-                return this.SupplierField;
+                return this.SortByField;
             }
             set {
-                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
-                    this.SupplierField = value;
-                    this.RaisePropertyChanged("Supplier");
+                if ((object.ReferenceEquals(this.SortByField, value) != true)) {
+                    this.SortByField = value;
+                    this.RaisePropertyChanged("SortBy");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierImportFile_Id {
+        public string Status {
             get {
-                return this.SupplierImportFile_IdField;
+                return this.StatusField;
             }
             set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportFile_Statistics_Id {
-            get {
-                return this.SupplierImportFile_Statistics_IdField;
-            }
-            set {
-                if ((this.SupplierImportFile_Statistics_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_Statistics_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Statistics_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public System.Nullable<System.Guid> Supplier_Id {
             get {
                 return this.Supplier_IdField;
@@ -13701,53 +12011,40 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalRecords {
+        public System.Nullable<System.Guid> TaskId {
             get {
-                return this.TotalRecordsField;
+                return this.TaskIdField;
             }
             set {
-                if ((this.TotalRecordsField.Equals(value) != true)) {
-                    this.TotalRecordsField = value;
-                    this.RaisePropertyChanged("TotalRecords");
+                if ((this.TaskIdField.Equals(value) != true)) {
+                    this.TaskIdField = value;
+                    this.RaisePropertyChanged("TaskId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> TotalRows {
+        public System.Nullable<System.DateTime> ToDate {
             get {
-                return this.TotalRowsField;
+                return this.ToDateField;
             }
             set {
-                if ((this.TotalRowsField.Equals(value) != true)) {
-                    this.TotalRowsField = value;
-                    this.RaisePropertyChanged("TotalRows");
+                if ((this.ToDateField.Equals(value) != true)) {
+                    this.ToDateField = value;
+                    this.RaisePropertyChanged("ToDate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Unmapped {
+        public string UserName {
             get {
-                return this.UnmappedField;
+                return this.UserNameField;
             }
             set {
-                if ((this.UnmappedField.Equals(value) != true)) {
-                    this.UnmappedField = value;
-                    this.RaisePropertyChanged("Unmapped");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool isRerun {
-            get {
-                return this.isRerunField;
-            }
-            set {
-                if ((this.isRerunField.Equals(value) != true)) {
-                    this.isRerunField = value;
-                    this.RaisePropertyChanged("isRerun");
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
                 }
             }
         }
@@ -13764,39 +12061,60 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFileDetails_TestProcess", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierScheduledTask", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
     [System.SerializableAttribute()]
-    public partial class DC_SupplierImportFileDetails_TestProcess : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class SupplierScheduledTask : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Data.DataSet DataField;
+        private string APIStatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ApiPathField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EntityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ModeField;
+        private bool ISActiveField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int No_Of_Records_ToProcessField;
+        private bool ISCompleteField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PROCESS_USERField;
+        private System.Nullable<System.Guid> LogIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string STATUSField;
+        private string LogTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SavedFilePathField;
+        private int PendingFordaysField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierImportFile_IdField;
+        private System.Nullable<System.Guid> Pentahocall_idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid Supplier_IdField;
+        private System.Nullable<System.DateTime> ScheduledDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierScheduleTaskIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SuppllierNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Suppllier_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> TaskIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalRecordField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -13809,14 +12127,27 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Data.DataSet Data {
+        public string APIStatus {
             get {
-                return this.DataField;
+                return this.APIStatusField;
             }
             set {
-                if ((object.ReferenceEquals(this.DataField, value) != true)) {
-                    this.DataField = value;
-                    this.RaisePropertyChanged("Data");
+                if ((object.ReferenceEquals(this.APIStatusField, value) != true)) {
+                    this.APIStatusField = value;
+                    this.RaisePropertyChanged("APIStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ApiPath {
+            get {
+                return this.ApiPathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ApiPathField, value) != true)) {
+                    this.ApiPathField = value;
+                    this.RaisePropertyChanged("ApiPath");
                 }
             }
         }
@@ -13835,92 +12166,625 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Mode {
+        public bool ISActive {
             get {
-                return this.ModeField;
+                return this.ISActiveField;
             }
             set {
-                if ((object.ReferenceEquals(this.ModeField, value) != true)) {
-                    this.ModeField = value;
-                    this.RaisePropertyChanged("Mode");
+                if ((this.ISActiveField.Equals(value) != true)) {
+                    this.ISActiveField = value;
+                    this.RaisePropertyChanged("ISActive");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int No_Of_Records_ToProcess {
+        public bool ISComplete {
             get {
-                return this.No_Of_Records_ToProcessField;
+                return this.ISCompleteField;
             }
             set {
-                if ((this.No_Of_Records_ToProcessField.Equals(value) != true)) {
-                    this.No_Of_Records_ToProcessField = value;
-                    this.RaisePropertyChanged("No_Of_Records_ToProcess");
+                if ((this.ISCompleteField.Equals(value) != true)) {
+                    this.ISCompleteField = value;
+                    this.RaisePropertyChanged("ISComplete");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PROCESS_USER {
+        public System.Nullable<System.Guid> LogId {
             get {
-                return this.PROCESS_USERField;
+                return this.LogIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.PROCESS_USERField, value) != true)) {
-                    this.PROCESS_USERField = value;
-                    this.RaisePropertyChanged("PROCESS_USER");
+                if ((this.LogIdField.Equals(value) != true)) {
+                    this.LogIdField = value;
+                    this.RaisePropertyChanged("LogId");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string STATUS {
+        public string LogType {
             get {
-                return this.STATUSField;
+                return this.LogTypeField;
             }
             set {
-                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
-                    this.STATUSField = value;
-                    this.RaisePropertyChanged("STATUS");
+                if ((object.ReferenceEquals(this.LogTypeField, value) != true)) {
+                    this.LogTypeField = value;
+                    this.RaisePropertyChanged("LogType");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SavedFilePath {
+        public int PendingFordays {
             get {
-                return this.SavedFilePathField;
+                return this.PendingFordaysField;
             }
             set {
-                if ((object.ReferenceEquals(this.SavedFilePathField, value) != true)) {
-                    this.SavedFilePathField = value;
-                    this.RaisePropertyChanged("SavedFilePath");
+                if ((this.PendingFordaysField.Equals(value) != true)) {
+                    this.PendingFordaysField = value;
+                    this.RaisePropertyChanged("PendingFordays");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierImportFile_Id {
+        public System.Nullable<System.Guid> Pentahocall_id {
             get {
-                return this.SupplierImportFile_IdField;
+                return this.Pentahocall_idField;
             }
             set {
-                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
-                    this.SupplierImportFile_IdField = value;
-                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                if ((this.Pentahocall_idField.Equals(value) != true)) {
+                    this.Pentahocall_idField = value;
+                    this.RaisePropertyChanged("Pentahocall_id");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid Supplier_Id {
+        public System.Nullable<System.DateTime> ScheduledDate {
             get {
-                return this.Supplier_IdField;
+                return this.ScheduledDateField;
             }
             set {
-                if ((this.Supplier_IdField.Equals(value) != true)) {
-                    this.Supplier_IdField = value;
-                    this.RaisePropertyChanged("Supplier_Id");
+                if ((this.ScheduledDateField.Equals(value) != true)) {
+                    this.ScheduledDateField = value;
+                    this.RaisePropertyChanged("ScheduledDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierScheduleTaskID {
+            get {
+                return this.SupplierScheduleTaskIDField;
+            }
+            set {
+                if ((this.SupplierScheduleTaskIDField.Equals(value) != true)) {
+                    this.SupplierScheduleTaskIDField = value;
+                    this.RaisePropertyChanged("SupplierScheduleTaskID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SuppllierName {
+            get {
+                return this.SuppllierNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SuppllierNameField, value) != true)) {
+                    this.SuppllierNameField = value;
+                    this.RaisePropertyChanged("SuppllierName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Suppllier_ID {
+            get {
+                return this.Suppllier_IDField;
+            }
+            set {
+                if ((this.Suppllier_IDField.Equals(value) != true)) {
+                    this.Suppllier_IDField = value;
+                    this.RaisePropertyChanged("Suppllier_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> TaskId {
+            get {
+                return this.TaskIdField;
+            }
+            set {
+                if ((this.TaskIdField.Equals(value) != true)) {
+                    this.TaskIdField = value;
+                    this.RaisePropertyChanged("TaskId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalRecord {
+            get {
+                return this.TotalRecordField;
+            }
+            set {
+                if ((this.TotalRecordField.Equals(value) != true)) {
+                    this.TotalRecordField = value;
+                    this.RaisePropertyChanged("TotalRecord");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Supplier_Task_Logs", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
+    [System.SerializableAttribute()]
+    public partial class Supplier_Task_Logs : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> CreateDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Edit_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Edit_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LogTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Log_idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RedirectFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RemarksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SortByField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusMessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Task_idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CreateDate {
+            get {
+                return this.CreateDateField;
+            }
+            set {
+                if ((this.CreateDateField.Equals(value) != true)) {
+                    this.CreateDateField = value;
+                    this.RaisePropertyChanged("CreateDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Edit_Date {
+            get {
+                return this.Edit_DateField;
+            }
+            set {
+                if ((this.Edit_DateField.Equals(value) != true)) {
+                    this.Edit_DateField = value;
+                    this.RaisePropertyChanged("Edit_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Edit_User {
+            get {
+                return this.Edit_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
+                    this.Edit_UserField = value;
+                    this.RaisePropertyChanged("Edit_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LogType {
+            get {
+                return this.LogTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LogTypeField, value) != true)) {
+                    this.LogTypeField = value;
+                    this.RaisePropertyChanged("LogType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Log_id {
+            get {
+                return this.Log_idField;
+            }
+            set {
+                if ((this.Log_idField.Equals(value) != true)) {
+                    this.Log_idField = value;
+                    this.RaisePropertyChanged("Log_id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageNo {
+            get {
+                return this.PageNoField;
+            }
+            set {
+                if ((this.PageNoField.Equals(value) != true)) {
+                    this.PageNoField = value;
+                    this.RaisePropertyChanged("PageNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageSize {
+            get {
+                return this.PageSizeField;
+            }
+            set {
+                if ((this.PageSizeField.Equals(value) != true)) {
+                    this.PageSizeField = value;
+                    this.RaisePropertyChanged("PageSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RedirectFrom {
+            get {
+                return this.RedirectFromField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RedirectFromField, value) != true)) {
+                    this.RedirectFromField = value;
+                    this.RaisePropertyChanged("RedirectFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Remarks {
+            get {
+                return this.RemarksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RemarksField, value) != true)) {
+                    this.RemarksField = value;
+                    this.RaisePropertyChanged("Remarks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SortBy {
+            get {
+                return this.SortByField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SortByField, value) != true)) {
+                    this.SortByField = value;
+                    this.RaisePropertyChanged("SortBy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StatusMessage {
+            get {
+                return this.StatusMessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusMessageField, value) != true)) {
+                    this.StatusMessageField = value;
+                    this.RaisePropertyChanged("StatusMessage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Task_id {
+            get {
+                return this.Task_idField;
+            }
+            set {
+                if ((this.Task_idField.Equals(value) != true)) {
+                    this.Task_idField = value;
+                    this.RaisePropertyChanged("Task_id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Supplier_Task_Notifications", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
+    [System.SerializableAttribute()]
+    public partial class Supplier_Task_Notifications : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Log_idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NotificationTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Notification_CountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Status_MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Task_idField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Log_id {
+            get {
+                return this.Log_idField;
+            }
+            set {
+                if ((this.Log_idField.Equals(value) != true)) {
+                    this.Log_idField = value;
+                    this.RaisePropertyChanged("Log_id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string NotificationType {
+            get {
+                return this.NotificationTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NotificationTypeField, value) != true)) {
+                    this.NotificationTypeField = value;
+                    this.RaisePropertyChanged("NotificationType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Notification_Count {
+            get {
+                return this.Notification_CountField;
+            }
+            set {
+                if ((this.Notification_CountField.Equals(value) != true)) {
+                    this.Notification_CountField = value;
+                    this.RaisePropertyChanged("Notification_Count");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status_Message {
+            get {
+                return this.Status_MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Status_MessageField, value) != true)) {
+                    this.Status_MessageField = value;
+                    this.RaisePropertyChanged("Status_Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Task_id {
+            get {
+                return this.Task_idField;
+            }
+            set {
+                if ((this.Task_idField.Equals(value) != true)) {
+                    this.Task_idField = value;
+                    this.RaisePropertyChanged("Task_id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Supplier_Task_Calender", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
+    [System.SerializableAttribute()]
+    public partial class Supplier_Task_Calender : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string classNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string colorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime startField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string titleField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string className {
+            get {
+                return this.classNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.classNameField, value) != true)) {
+                    this.classNameField = value;
+                    this.RaisePropertyChanged("className");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string color {
+            get {
+                return this.colorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.colorField, value) != true)) {
+                    this.colorField = value;
+                    this.RaisePropertyChanged("color");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime start {
+            get {
+                return this.startField;
+            }
+            set {
+                if ((this.startField.Equals(value) != true)) {
+                    this.startField = value;
+                    this.RaisePropertyChanged("start");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string title {
+            get {
+                return this.titleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.titleField, value) != true)) {
+                    this.titleField = value;
+                    this.RaisePropertyChanged("title");
                 }
             }
         }
@@ -15276,266 +14140,6 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.TotalRecordsField.Equals(value) != true)) {
                     this.TotalRecordsField = value;
                     this.RaisePropertyChanged("TotalRecords");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_RemoteFileInfo", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer")]
-    [System.SerializableAttribute()]
-    public partial class DC_RemoteFileInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.IO.Stream FileByteStreamField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FileNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long LengthField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.IO.Stream FileByteStream {
-            get {
-                return this.FileByteStreamField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FileByteStreamField, value) != true)) {
-                    this.FileByteStreamField = value;
-                    this.RaisePropertyChanged("FileByteStream");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FileName {
-            get {
-                return this.FileNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
-                    this.FileNameField = value;
-                    this.RaisePropertyChanged("FileName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long Length {
-            get {
-                return this.LengthField;
-            }
-            set {
-                if ((this.LengthField.Equals(value) != true)) {
-                    this.LengthField = value;
-                    this.RaisePropertyChanged("Length");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_FileUploadResponse", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer")]
-    [System.SerializableAttribute()]
-    public partial class DC_FileUploadResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UploadedPathField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UploadedPath {
-            get {
-                return this.UploadedPathField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UploadedPathField, value) != true)) {
-                    this.UploadedPathField = value;
-                    this.RaisePropertyChanged("UploadedPath");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_FileData", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer")]
-    [System.SerializableAttribute()]
-    public partial class DC_FileData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private byte[] BufferDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FileNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private long FilePostitionField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[] BufferData {
-            get {
-                return this.BufferDataField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BufferDataField, value) != true)) {
-                    this.BufferDataField = value;
-                    this.RaisePropertyChanged("BufferData");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FileName {
-            get {
-                return this.FileNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
-                    this.FileNameField = value;
-                    this.RaisePropertyChanged("FileName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public long FilePostition {
-            get {
-                return this.FilePostitionField;
-            }
-            set {
-                if ((this.FilePostitionField.Equals(value) != true)) {
-                    this.FilePostitionField = value;
-                    this.RaisePropertyChanged("FilePostition");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_UploadResponse", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer")]
-    [System.SerializableAttribute()]
-    public partial class DC_UploadResponse : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool UploadSucceededField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UploadedPathField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool UploadSucceeded {
-            get {
-                return this.UploadSucceededField;
-            }
-            set {
-                if ((this.UploadSucceededField.Equals(value) != true)) {
-                    this.UploadSucceededField = value;
-                    this.RaisePropertyChanged("UploadSucceeded");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UploadedPath {
-            get {
-                return this.UploadedPathField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UploadedPathField, value) != true)) {
-                    this.UploadedPathField = value;
-                    this.RaisePropertyChanged("UploadedPath");
                 }
             }
         }
@@ -33978,12 +32582,24 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Supplier_Schedule_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SiteMap", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
     [System.SerializableAttribute()]
-    public partial class DC_Supplier_Schedule_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class DC_SiteMap : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ApplicationIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Create_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Create_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> Edit_DateField;
@@ -33992,25 +32608,31 @@ namespace KafkaConsumer.MDMSVC {
         private string Edit_UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string[] EntitiesField;
+        private int IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool IsActiveField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> PageNoField;
+        private bool IsSiteMapNodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> PageSizeField;
+        private System.Nullable<int> ParentIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
+        private string ParentTitleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierScheduleIDField;
+        private string RolesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid Suppllier_IDField;
+        private System.Guid SiteMap_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UrlField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -34019,6 +32641,58 @@ namespace KafkaConsumer.MDMSVC {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ApplicationID {
+            get {
+                return this.ApplicationIDField;
+            }
+            set {
+                if ((this.ApplicationIDField.Equals(value) != true)) {
+                    this.ApplicationIDField = value;
+                    this.RaisePropertyChanged("ApplicationID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Create_Date {
+            get {
+                return this.Create_DateField;
+            }
+            set {
+                if ((this.Create_DateField.Equals(value) != true)) {
+                    this.Create_DateField = value;
+                    this.RaisePropertyChanged("Create_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Create_User {
+            get {
+                return this.Create_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
+                    this.Create_UserField = value;
+                    this.RaisePropertyChanged("Create_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
             }
         }
         
@@ -34049,14 +32723,14 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string[] Entities {
+        public int ID {
             get {
-                return this.EntitiesField;
+                return this.IDField;
             }
             set {
-                if ((object.ReferenceEquals(this.EntitiesField, value) != true)) {
-                    this.EntitiesField = value;
-                    this.RaisePropertyChanged("Entities");
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
                 }
             }
         }
@@ -34070,6 +32744,3501 @@ namespace KafkaConsumer.MDMSVC {
                 if ((this.IsActiveField.Equals(value) != true)) {
                     this.IsActiveField = value;
                     this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsSiteMapNode {
+            get {
+                return this.IsSiteMapNodeField;
+            }
+            set {
+                if ((this.IsSiteMapNodeField.Equals(value) != true)) {
+                    this.IsSiteMapNodeField = value;
+                    this.RaisePropertyChanged("IsSiteMapNode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> ParentID {
+            get {
+                return this.ParentIDField;
+            }
+            set {
+                if ((this.ParentIDField.Equals(value) != true)) {
+                    this.ParentIDField = value;
+                    this.RaisePropertyChanged("ParentID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ParentTitle {
+            get {
+                return this.ParentTitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ParentTitleField, value) != true)) {
+                    this.ParentTitleField = value;
+                    this.RaisePropertyChanged("ParentTitle");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Roles {
+            get {
+                return this.RolesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RolesField, value) != true)) {
+                    this.RolesField = value;
+                    this.RaisePropertyChanged("Roles");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SiteMap_ID {
+            get {
+                return this.SiteMap_IDField;
+            }
+            set {
+                if ((this.SiteMap_IDField.Equals(value) != true)) {
+                    this.SiteMap_IDField = value;
+                    this.RaisePropertyChanged("SiteMap_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title {
+            get {
+                return this.TitleField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
+                    this.TitleField = value;
+                    this.RaisePropertyChanged("Title");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Url {
+            get {
+                return this.UrlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UrlField, value) != true)) {
+                    this.UrlField = value;
+                    this.RaisePropertyChanged("Url");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Roles", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
+    [System.SerializableAttribute()]
+    public partial class DC_Roles : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ApplicationIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RoleIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RoleNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalRecordsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ApplicationID {
+            get {
+                return this.ApplicationIDField;
+            }
+            set {
+                if ((this.ApplicationIDField.Equals(value) != true)) {
+                    this.ApplicationIDField = value;
+                    this.RaisePropertyChanged("ApplicationID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RoleID {
+            get {
+                return this.RoleIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RoleIDField, value) != true)) {
+                    this.RoleIDField = value;
+                    this.RaisePropertyChanged("RoleID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RoleName {
+            get {
+                return this.RoleNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RoleNameField, value) != true)) {
+                    this.RoleNameField = value;
+                    this.RaisePropertyChanged("RoleName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalRecords {
+            get {
+                return this.TotalRecordsField;
+            }
+            set {
+                if ((this.TotalRecordsField.Equals(value) != true)) {
+                    this.TotalRecordsField = value;
+                    this.RaisePropertyChanged("TotalRecords");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_RoleAuthorizedForUrl", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
+    [System.SerializableAttribute()]
+    public partial class DC_RoleAuthorizedForUrl : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UrlField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Url {
+            get {
+                return this.UrlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UrlField, value) != true)) {
+                    this.UrlField = value;
+                    this.RaisePropertyChanged("Url");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string User {
+            get {
+                return this.UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserField, value) != true)) {
+                    this.UserField = value;
+                    this.RaisePropertyChanged("User");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_EntityType", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
+    [System.SerializableAttribute()]
+    public partial class DC_EntityType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EnityTypeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityTypeNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EnityTypeID {
+            get {
+                return this.EnityTypeIDField;
+            }
+            set {
+                if ((this.EnityTypeIDField.Equals(value) != true)) {
+                    this.EnityTypeIDField = value;
+                    this.RaisePropertyChanged("EnityTypeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EntityTypeName {
+            get {
+                return this.EntityTypeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityTypeNameField, value) != true)) {
+                    this.EntityTypeNameField = value;
+                    this.RaisePropertyChanged("EntityTypeName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_EntityDetails", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
+    [System.SerializableAttribute()]
+    public partial class DC_EntityDetails : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> EntityIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int EntityTypeIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> EntityID {
+            get {
+                return this.EntityIDField;
+            }
+            set {
+                if ((this.EntityIDField.Equals(value) != true)) {
+                    this.EntityIDField = value;
+                    this.RaisePropertyChanged("EntityID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EntityName {
+            get {
+                return this.EntityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityNameField, value) != true)) {
+                    this.EntityNameField = value;
+                    this.RaisePropertyChanged("EntityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EntityTypeID {
+            get {
+                return this.EntityTypeIDField;
+            }
+            set {
+                if ((this.EntityTypeIDField.Equals(value) != true)) {
+                    this.EntityTypeIDField = value;
+                    this.RaisePropertyChanged("EntityTypeID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_UserEntity", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
+    [System.SerializableAttribute()]
+    public partial class DC_UserEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ApplicationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Create_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Create_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Edit_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Edit_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> EntityIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EntityTypeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ManagerIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid UserIDField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ApplicationId {
+            get {
+                return this.ApplicationIdField;
+            }
+            set {
+                if ((this.ApplicationIdField.Equals(value) != true)) {
+                    this.ApplicationIdField = value;
+                    this.RaisePropertyChanged("ApplicationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Create_Date {
+            get {
+                return this.Create_DateField;
+            }
+            set {
+                if ((this.Create_DateField.Equals(value) != true)) {
+                    this.Create_DateField = value;
+                    this.RaisePropertyChanged("Create_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Create_User {
+            get {
+                return this.Create_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
+                    this.Create_UserField = value;
+                    this.RaisePropertyChanged("Create_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Edit_Date {
+            get {
+                return this.Edit_DateField;
+            }
+            set {
+                if ((this.Edit_DateField.Equals(value) != true)) {
+                    this.Edit_DateField = value;
+                    this.RaisePropertyChanged("Edit_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Edit_User {
+            get {
+                return this.Edit_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
+                    this.Edit_UserField = value;
+                    this.RaisePropertyChanged("Edit_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> EntityID {
+            get {
+                return this.EntityIDField;
+            }
+            set {
+                if ((this.EntityIDField.Equals(value) != true)) {
+                    this.EntityIDField = value;
+                    this.RaisePropertyChanged("EntityID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> EntityTypeID {
+            get {
+                return this.EntityTypeIDField;
+            }
+            set {
+                if ((this.EntityTypeIDField.Equals(value) != true)) {
+                    this.EntityTypeIDField = value;
+                    this.RaisePropertyChanged("EntityTypeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IDField, value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ManagerID {
+            get {
+                return this.ManagerIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ManagerIDField, value) != true)) {
+                    this.ManagerIDField = value;
+                    this.RaisePropertyChanged("ManagerID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid UserID {
+            get {
+                return this.UserIDField;
+            }
+            set {
+                if ((this.UserIDField.Equals(value) != true)) {
+                    this.UserIDField = value;
+                    this.RaisePropertyChanged("UserID");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_UserDetails", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
+    [System.SerializableAttribute()]
+    public partial class DC_UserDetails : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ApplicationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Create_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Create_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Edit_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Edit_UserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> EntityTypeIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalRecordsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UserNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UseridField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ApplicationId {
+            get {
+                return this.ApplicationIdField;
+            }
+            set {
+                if ((this.ApplicationIdField.Equals(value) != true)) {
+                    this.ApplicationIdField = value;
+                    this.RaisePropertyChanged("ApplicationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Create_Date {
+            get {
+                return this.Create_DateField;
+            }
+            set {
+                if ((this.Create_DateField.Equals(value) != true)) {
+                    this.Create_DateField = value;
+                    this.RaisePropertyChanged("Create_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Create_User {
+            get {
+                return this.Create_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
+                    this.Create_UserField = value;
+                    this.RaisePropertyChanged("Create_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Edit_Date {
+            get {
+                return this.Edit_DateField;
+            }
+            set {
+                if ((this.Edit_DateField.Equals(value) != true)) {
+                    this.Edit_DateField = value;
+                    this.RaisePropertyChanged("Edit_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Edit_User {
+            get {
+                return this.Edit_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
+                    this.Edit_UserField = value;
+                    this.RaisePropertyChanged("Edit_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EntityType {
+            get {
+                return this.EntityTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityTypeField, value) != true)) {
+                    this.EntityTypeField = value;
+                    this.RaisePropertyChanged("EntityType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> EntityTypeID {
+            get {
+                return this.EntityTypeIDField;
+            }
+            set {
+                if ((this.EntityTypeIDField.Equals(value) != true)) {
+                    this.EntityTypeIDField = value;
+                    this.RaisePropertyChanged("EntityTypeID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalRecords {
+            get {
+                return this.TotalRecordsField;
+            }
+            set {
+                if ((this.TotalRecordsField.Equals(value) != true)) {
+                    this.TotalRecordsField = value;
+                    this.RaisePropertyChanged("TotalRecords");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserName {
+            get {
+                return this.UserNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
+                    this.UserNameField = value;
+                    this.RaisePropertyChanged("UserName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Userid {
+            get {
+                return this.UseridField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UseridField, value) != true)) {
+                    this.UseridField = value;
+                    this.RaisePropertyChanged("Userid");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_ApplicationMgmt", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
+    [System.SerializableAttribute()]
+    public partial class DC_ApplicationMgmt : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ApplicationIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ApplicationNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalRecordsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ApplicationId {
+            get {
+                return this.ApplicationIdField;
+            }
+            set {
+                if ((this.ApplicationIdField.Equals(value) != true)) {
+                    this.ApplicationIdField = value;
+                    this.RaisePropertyChanged("ApplicationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ApplicationName {
+            get {
+                return this.ApplicationNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ApplicationNameField, value) != true)) {
+                    this.ApplicationNameField = value;
+                    this.RaisePropertyChanged("ApplicationName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalRecords {
+            get {
+                return this.TotalRecordsField;
+            }
+            set {
+                if ((this.TotalRecordsField.Equals(value) != true)) {
+                    this.TotalRecordsField = value;
+                    this.RaisePropertyChanged("TotalRecords");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportAttributes_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportAttributes_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ForField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusExceptField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportAttribute_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Supplier_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Entity {
+            get {
+                return this.EntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string For {
+            get {
+                return this.ForField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ForField, value) != true)) {
+                    this.ForField = value;
+                    this.RaisePropertyChanged("For");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageNo {
+            get {
+                return this.PageNoField;
+            }
+            set {
+                if ((this.PageNoField.Equals(value) != true)) {
+                    this.PageNoField = value;
+                    this.RaisePropertyChanged("PageNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageSize {
+            get {
+                return this.PageSizeField;
+            }
+            set {
+                if ((this.PageSizeField.Equals(value) != true)) {
+                    this.PageSizeField = value;
+                    this.RaisePropertyChanged("PageSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StatusExcept {
+            get {
+                return this.StatusExceptField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
+                    this.StatusExceptField = value;
+                    this.RaisePropertyChanged("StatusExcept");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Supplier {
+            get {
+                return this.SupplierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
+                    this.SupplierField = value;
+                    this.RaisePropertyChanged("Supplier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportAttribute_Id {
+            get {
+                return this.SupplierImportAttribute_IdField;
+            }
+            set {
+                if ((this.SupplierImportAttribute_IdField.Equals(value) != true)) {
+                    this.SupplierImportAttribute_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportAttribute_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Supplier_Id {
+            get {
+                return this.Supplier_IdField;
+            }
+            set {
+                if ((this.Supplier_IdField.Equals(value) != true)) {
+                    this.Supplier_IdField = value;
+                    this.RaisePropertyChanged("Supplier_Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportAttributes", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportAttributes : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> CREATE_DATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CREATE_USERField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> EDIT_DATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EDIT_USERField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ForField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Mapping_TableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Master_TableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string STG_TableField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierImportAttribute_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Supplier_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalRecordsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CREATE_DATE {
+            get {
+                return this.CREATE_DATEField;
+            }
+            set {
+                if ((this.CREATE_DATEField.Equals(value) != true)) {
+                    this.CREATE_DATEField = value;
+                    this.RaisePropertyChanged("CREATE_DATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CREATE_USER {
+            get {
+                return this.CREATE_USERField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CREATE_USERField, value) != true)) {
+                    this.CREATE_USERField = value;
+                    this.RaisePropertyChanged("CREATE_USER");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> EDIT_DATE {
+            get {
+                return this.EDIT_DATEField;
+            }
+            set {
+                if ((this.EDIT_DATEField.Equals(value) != true)) {
+                    this.EDIT_DATEField = value;
+                    this.RaisePropertyChanged("EDIT_DATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EDIT_USER {
+            get {
+                return this.EDIT_USERField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EDIT_USERField, value) != true)) {
+                    this.EDIT_USERField = value;
+                    this.RaisePropertyChanged("EDIT_USER");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Entity {
+            get {
+                return this.EntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string For {
+            get {
+                return this.ForField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ForField, value) != true)) {
+                    this.ForField = value;
+                    this.RaisePropertyChanged("For");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mapping_Table {
+            get {
+                return this.Mapping_TableField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Mapping_TableField, value) != true)) {
+                    this.Mapping_TableField = value;
+                    this.RaisePropertyChanged("Mapping_Table");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Master_Table {
+            get {
+                return this.Master_TableField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Master_TableField, value) != true)) {
+                    this.Master_TableField = value;
+                    this.RaisePropertyChanged("Master_Table");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string STG_Table {
+            get {
+                return this.STG_TableField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.STG_TableField, value) != true)) {
+                    this.STG_TableField = value;
+                    this.RaisePropertyChanged("STG_Table");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Supplier {
+            get {
+                return this.SupplierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
+                    this.SupplierField = value;
+                    this.RaisePropertyChanged("Supplier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierImportAttribute_Id {
+            get {
+                return this.SupplierImportAttribute_IdField;
+            }
+            set {
+                if ((this.SupplierImportAttribute_IdField.Equals(value) != true)) {
+                    this.SupplierImportAttribute_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportAttribute_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Supplier_Id {
+            get {
+                return this.Supplier_IdField;
+            }
+            set {
+                if ((this.Supplier_IdField.Equals(value) != true)) {
+                    this.Supplier_IdField = value;
+                    this.RaisePropertyChanged("Supplier_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalRecords {
+            get {
+                return this.TotalRecordsField;
+            }
+            set {
+                if ((this.TotalRecordsField.Equals(value) != true)) {
+                    this.TotalRecordsField = value;
+                    this.RaisePropertyChanged("TotalRecords");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportAttributeValues_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportAttributeValues_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AttributeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AttributeTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AttributeValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ForField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PriorityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusExceptField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportAttributeValue_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportAttribute_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Supplier_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AttributeName {
+            get {
+                return this.AttributeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttributeNameField, value) != true)) {
+                    this.AttributeNameField = value;
+                    this.RaisePropertyChanged("AttributeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AttributeType {
+            get {
+                return this.AttributeTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttributeTypeField, value) != true)) {
+                    this.AttributeTypeField = value;
+                    this.RaisePropertyChanged("AttributeType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AttributeValue {
+            get {
+                return this.AttributeValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttributeValueField, value) != true)) {
+                    this.AttributeValueField = value;
+                    this.RaisePropertyChanged("AttributeValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Entity {
+            get {
+                return this.EntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string For {
+            get {
+                return this.ForField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ForField, value) != true)) {
+                    this.ForField = value;
+                    this.RaisePropertyChanged("For");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageNo {
+            get {
+                return this.PageNoField;
+            }
+            set {
+                if ((this.PageNoField.Equals(value) != true)) {
+                    this.PageNoField = value;
+                    this.RaisePropertyChanged("PageNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageSize {
+            get {
+                return this.PageSizeField;
+            }
+            set {
+                if ((this.PageSizeField.Equals(value) != true)) {
+                    this.PageSizeField = value;
+                    this.RaisePropertyChanged("PageSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Priority {
+            get {
+                return this.PriorityField;
+            }
+            set {
+                if ((this.PriorityField.Equals(value) != true)) {
+                    this.PriorityField = value;
+                    this.RaisePropertyChanged("Priority");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StatusExcept {
+            get {
+                return this.StatusExceptField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
+                    this.StatusExceptField = value;
+                    this.RaisePropertyChanged("StatusExcept");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Supplier {
+            get {
+                return this.SupplierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
+                    this.SupplierField = value;
+                    this.RaisePropertyChanged("Supplier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportAttributeValue_Id {
+            get {
+                return this.SupplierImportAttributeValue_IdField;
+            }
+            set {
+                if ((this.SupplierImportAttributeValue_IdField.Equals(value) != true)) {
+                    this.SupplierImportAttributeValue_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportAttributeValue_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportAttribute_Id {
+            get {
+                return this.SupplierImportAttribute_IdField;
+            }
+            set {
+                if ((this.SupplierImportAttribute_IdField.Equals(value) != true)) {
+                    this.SupplierImportAttribute_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportAttribute_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Supplier_Id {
+            get {
+                return this.Supplier_IdField;
+            }
+            set {
+                if ((this.Supplier_IdField.Equals(value) != true)) {
+                    this.Supplier_IdField = value;
+                    this.RaisePropertyChanged("Supplier_Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportAttributeValues", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportAttributeValues : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AttributeNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AttributeTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AttributeValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AttributeValueTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> AttributeValue_IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> CREATE_DATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CREATE_USERField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ComparisonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> EDIT_DATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EDIT_USERField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PriorityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string STATUSField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierImportAttributeValue_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierImportAttribute_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalRecordsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AttributeName {
+            get {
+                return this.AttributeNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttributeNameField, value) != true)) {
+                    this.AttributeNameField = value;
+                    this.RaisePropertyChanged("AttributeName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AttributeType {
+            get {
+                return this.AttributeTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttributeTypeField, value) != true)) {
+                    this.AttributeTypeField = value;
+                    this.RaisePropertyChanged("AttributeType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AttributeValue {
+            get {
+                return this.AttributeValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttributeValueField, value) != true)) {
+                    this.AttributeValueField = value;
+                    this.RaisePropertyChanged("AttributeValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AttributeValueType {
+            get {
+                return this.AttributeValueTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AttributeValueTypeField, value) != true)) {
+                    this.AttributeValueTypeField = value;
+                    this.RaisePropertyChanged("AttributeValueType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> AttributeValue_ID {
+            get {
+                return this.AttributeValue_IDField;
+            }
+            set {
+                if ((this.AttributeValue_IDField.Equals(value) != true)) {
+                    this.AttributeValue_IDField = value;
+                    this.RaisePropertyChanged("AttributeValue_ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CREATE_DATE {
+            get {
+                return this.CREATE_DATEField;
+            }
+            set {
+                if ((this.CREATE_DATEField.Equals(value) != true)) {
+                    this.CREATE_DATEField = value;
+                    this.RaisePropertyChanged("CREATE_DATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CREATE_USER {
+            get {
+                return this.CREATE_USERField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CREATE_USERField, value) != true)) {
+                    this.CREATE_USERField = value;
+                    this.RaisePropertyChanged("CREATE_USER");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Comparison {
+            get {
+                return this.ComparisonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ComparisonField, value) != true)) {
+                    this.ComparisonField = value;
+                    this.RaisePropertyChanged("Comparison");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> EDIT_DATE {
+            get {
+                return this.EDIT_DATEField;
+            }
+            set {
+                if ((this.EDIT_DATEField.Equals(value) != true)) {
+                    this.EDIT_DATEField = value;
+                    this.RaisePropertyChanged("EDIT_DATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EDIT_USER {
+            get {
+                return this.EDIT_USERField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EDIT_USERField, value) != true)) {
+                    this.EDIT_USERField = value;
+                    this.RaisePropertyChanged("EDIT_USER");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Priority {
+            get {
+                return this.PriorityField;
+            }
+            set {
+                if ((this.PriorityField.Equals(value) != true)) {
+                    this.PriorityField = value;
+                    this.RaisePropertyChanged("Priority");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string STATUS {
+            get {
+                return this.STATUSField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
+                    this.STATUSField = value;
+                    this.RaisePropertyChanged("STATUS");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierImportAttributeValue_Id {
+            get {
+                return this.SupplierImportAttributeValue_IdField;
+            }
+            set {
+                if ((this.SupplierImportAttributeValue_IdField.Equals(value) != true)) {
+                    this.SupplierImportAttributeValue_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportAttributeValue_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierImportAttribute_Id {
+            get {
+                return this.SupplierImportAttribute_IdField;
+            }
+            set {
+                if ((this.SupplierImportAttribute_IdField.Equals(value) != true)) {
+                    this.SupplierImportAttribute_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportAttribute_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalRecords {
+            get {
+                return this.TotalRecordsField;
+            }
+            set {
+                if ((this.TotalRecordsField.Equals(value) != true)) {
+                    this.TotalRecordsField = value;
+                    this.RaisePropertyChanged("TotalRecords");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFileDetails_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFileDetails_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CurrentBatchField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string[] FilterStatusesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> From_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsPausedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsRestartedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsResumedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsStoppedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string STATUSField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusExceptField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Supplier_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> TO_DateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> CurrentBatch {
+            get {
+                return this.CurrentBatchField;
+            }
+            set {
+                if ((this.CurrentBatchField.Equals(value) != true)) {
+                    this.CurrentBatchField = value;
+                    this.RaisePropertyChanged("CurrentBatch");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Entity {
+            get {
+                return this.EntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string[] FilterStatuses {
+            get {
+                return this.FilterStatusesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FilterStatusesField, value) != true)) {
+                    this.FilterStatusesField = value;
+                    this.RaisePropertyChanged("FilterStatuses");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> From_Date {
+            get {
+                return this.From_DateField;
+            }
+            set {
+                if ((this.From_DateField.Equals(value) != true)) {
+                    this.From_DateField = value;
+                    this.RaisePropertyChanged("From_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsPaused {
+            get {
+                return this.IsPausedField;
+            }
+            set {
+                if ((this.IsPausedField.Equals(value) != true)) {
+                    this.IsPausedField = value;
+                    this.RaisePropertyChanged("IsPaused");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsRestarted {
+            get {
+                return this.IsRestartedField;
+            }
+            set {
+                if ((this.IsRestartedField.Equals(value) != true)) {
+                    this.IsRestartedField = value;
+                    this.RaisePropertyChanged("IsRestarted");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsResumed {
+            get {
+                return this.IsResumedField;
+            }
+            set {
+                if ((this.IsResumedField.Equals(value) != true)) {
+                    this.IsResumedField = value;
+                    this.RaisePropertyChanged("IsResumed");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsStopped {
+            get {
+                return this.IsStoppedField;
+            }
+            set {
+                if ((this.IsStoppedField.Equals(value) != true)) {
+                    this.IsStoppedField = value;
+                    this.RaisePropertyChanged("IsStopped");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mode {
+            get {
+                return this.ModeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModeField, value) != true)) {
+                    this.ModeField = value;
+                    this.RaisePropertyChanged("Mode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageNo {
+            get {
+                return this.PageNoField;
+            }
+            set {
+                if ((this.PageNoField.Equals(value) != true)) {
+                    this.PageNoField = value;
+                    this.RaisePropertyChanged("PageNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageSize {
+            get {
+                return this.PageSizeField;
+            }
+            set {
+                if ((this.PageSizeField.Equals(value) != true)) {
+                    this.PageSizeField = value;
+                    this.RaisePropertyChanged("PageSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string STATUS {
+            get {
+                return this.STATUSField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
+                    this.STATUSField = value;
+                    this.RaisePropertyChanged("STATUS");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StatusExcept {
+            get {
+                return this.StatusExceptField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
+                    this.StatusExceptField = value;
+                    this.RaisePropertyChanged("StatusExcept");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Supplier {
+            get {
+                return this.SupplierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
+                    this.SupplierField = value;
+                    this.RaisePropertyChanged("Supplier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportFile_Id {
+            get {
+                return this.SupplierImportFile_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Supplier_Id {
+            get {
+                return this.Supplier_IdField;
+            }
+            set {
+                if ((this.Supplier_IdField.Equals(value) != true)) {
+                    this.Supplier_IdField = value;
+                    this.RaisePropertyChanged("Supplier_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> TO_Date {
+            get {
+                return this.TO_DateField;
+            }
+            set {
+                if ((this.TO_DateField.Equals(value) != true)) {
+                    this.TO_DateField = value;
+                    this.RaisePropertyChanged("TO_Date");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFileDetails", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFileDetails : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ArchiveFilePathField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> CREATE_DATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CREATE_USERField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid ComboFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> CurrentBatchField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsPausedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsRestartedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsResumedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<bool> IsStoppedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string OriginalFilePathField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> PROCESS_DATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PROCESS_USERField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string STATUSField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SavedFilePathField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierImportFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Supplier_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalRecordsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ArchiveFilePath {
+            get {
+                return this.ArchiveFilePathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ArchiveFilePathField, value) != true)) {
+                    this.ArchiveFilePathField = value;
+                    this.RaisePropertyChanged("ArchiveFilePath");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CREATE_DATE {
+            get {
+                return this.CREATE_DATEField;
+            }
+            set {
+                if ((this.CREATE_DATEField.Equals(value) != true)) {
+                    this.CREATE_DATEField = value;
+                    this.RaisePropertyChanged("CREATE_DATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CREATE_USER {
+            get {
+                return this.CREATE_USERField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CREATE_USERField, value) != true)) {
+                    this.CREATE_USERField = value;
+                    this.RaisePropertyChanged("CREATE_USER");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid ComboFile_Id {
+            get {
+                return this.ComboFile_IdField;
+            }
+            set {
+                if ((this.ComboFile_IdField.Equals(value) != true)) {
+                    this.ComboFile_IdField = value;
+                    this.RaisePropertyChanged("ComboFile_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> CurrentBatch {
+            get {
+                return this.CurrentBatchField;
+            }
+            set {
+                if ((this.CurrentBatchField.Equals(value) != true)) {
+                    this.CurrentBatchField = value;
+                    this.RaisePropertyChanged("CurrentBatch");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Entity {
+            get {
+                return this.EntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsActive {
+            get {
+                return this.IsActiveField;
+            }
+            set {
+                if ((this.IsActiveField.Equals(value) != true)) {
+                    this.IsActiveField = value;
+                    this.RaisePropertyChanged("IsActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsPaused {
+            get {
+                return this.IsPausedField;
+            }
+            set {
+                if ((this.IsPausedField.Equals(value) != true)) {
+                    this.IsPausedField = value;
+                    this.RaisePropertyChanged("IsPaused");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsRestarted {
+            get {
+                return this.IsRestartedField;
+            }
+            set {
+                if ((this.IsRestartedField.Equals(value) != true)) {
+                    this.IsRestartedField = value;
+                    this.RaisePropertyChanged("IsRestarted");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsResumed {
+            get {
+                return this.IsResumedField;
+            }
+            set {
+                if ((this.IsResumedField.Equals(value) != true)) {
+                    this.IsResumedField = value;
+                    this.RaisePropertyChanged("IsResumed");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<bool> IsStopped {
+            get {
+                return this.IsStoppedField;
+            }
+            set {
+                if ((this.IsStoppedField.Equals(value) != true)) {
+                    this.IsStoppedField = value;
+                    this.RaisePropertyChanged("IsStopped");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mode {
+            get {
+                return this.ModeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ModeField, value) != true)) {
+                    this.ModeField = value;
+                    this.RaisePropertyChanged("Mode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OriginalFilePath {
+            get {
+                return this.OriginalFilePathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.OriginalFilePathField, value) != true)) {
+                    this.OriginalFilePathField = value;
+                    this.RaisePropertyChanged("OriginalFilePath");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> PROCESS_DATE {
+            get {
+                return this.PROCESS_DATEField;
+            }
+            set {
+                if ((this.PROCESS_DATEField.Equals(value) != true)) {
+                    this.PROCESS_DATEField = value;
+                    this.RaisePropertyChanged("PROCESS_DATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PROCESS_USER {
+            get {
+                return this.PROCESS_USERField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PROCESS_USERField, value) != true)) {
+                    this.PROCESS_USERField = value;
+                    this.RaisePropertyChanged("PROCESS_USER");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string STATUS {
+            get {
+                return this.STATUSField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
+                    this.STATUSField = value;
+                    this.RaisePropertyChanged("STATUS");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SavedFilePath {
+            get {
+                return this.SavedFilePathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SavedFilePathField, value) != true)) {
+                    this.SavedFilePathField = value;
+                    this.RaisePropertyChanged("SavedFilePath");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Supplier {
+            get {
+                return this.SupplierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
+                    this.SupplierField = value;
+                    this.RaisePropertyChanged("Supplier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierImportFile_Id {
+            get {
+                return this.SupplierImportFile_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid Supplier_Id {
+            get {
+                return this.Supplier_IdField;
+            }
+            set {
+                if ((this.Supplier_IdField.Equals(value) != true)) {
+                    this.Supplier_IdField = value;
+                    this.RaisePropertyChanged("Supplier_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalRecords {
+            get {
+                return this.TotalRecordsField;
+            }
+            set {
+                if ((this.TotalRecordsField.Equals(value) != true)) {
+                    this.TotalRecordsField = value;
+                    this.RaisePropertyChanged("TotalRecords");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_ErrorLog", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFile_ErrorLog : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> ErrorCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMessage_UIField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> Error_DATEField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string Error_USERField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierImportFile_ErrorLog_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierImportFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalCountField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> ErrorCode {
+            get {
+                return this.ErrorCodeField;
+            }
+            set {
+                if ((this.ErrorCodeField.Equals(value) != true)) {
+                    this.ErrorCodeField = value;
+                    this.RaisePropertyChanged("ErrorCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorDescription {
+            get {
+                return this.ErrorDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorDescriptionField, value) != true)) {
+                    this.ErrorDescriptionField = value;
+                    this.RaisePropertyChanged("ErrorDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMessage_UI {
+            get {
+                return this.ErrorMessage_UIField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMessage_UIField, value) != true)) {
+                    this.ErrorMessage_UIField = value;
+                    this.RaisePropertyChanged("ErrorMessage_UI");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorType {
+            get {
+                return this.ErrorTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorTypeField, value) != true)) {
+                    this.ErrorTypeField = value;
+                    this.RaisePropertyChanged("ErrorType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Error_DATE {
+            get {
+                return this.Error_DATEField;
+            }
+            set {
+                if ((this.Error_DATEField.Equals(value) != true)) {
+                    this.Error_DATEField = value;
+                    this.RaisePropertyChanged("Error_DATE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Error_USER {
+            get {
+                return this.Error_USERField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Error_USERField, value) != true)) {
+                    this.Error_USERField = value;
+                    this.RaisePropertyChanged("Error_USER");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierImportFile_ErrorLog_Id {
+            get {
+                return this.SupplierImportFile_ErrorLog_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_ErrorLog_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_ErrorLog_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_ErrorLog_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierImportFile_Id {
+            get {
+                return this.SupplierImportFile_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalCount {
+            get {
+                return this.TotalCountField;
+            }
+            set {
+                if ((this.TotalCountField.Equals(value) != true)) {
+                    this.TotalCountField = value;
+                    this.RaisePropertyChanged("TotalCount");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_ErrorLog_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFile_ErrorLog_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ErrorCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PageSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string STATUSField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusExceptField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportFile_ErrorLog_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Supplier_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Entity {
+            get {
+                return this.EntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ErrorCode {
+            get {
+                return this.ErrorCodeField;
+            }
+            set {
+                if ((this.ErrorCodeField.Equals(value) != true)) {
+                    this.ErrorCodeField = value;
+                    this.RaisePropertyChanged("ErrorCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorType {
+            get {
+                return this.ErrorTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorTypeField, value) != true)) {
+                    this.ErrorTypeField = value;
+                    this.RaisePropertyChanged("ErrorType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageNo {
+            get {
+                return this.PageNoField;
+            }
+            set {
+                if ((this.PageNoField.Equals(value) != true)) {
+                    this.PageNoField = value;
+                    this.RaisePropertyChanged("PageNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> PageSize {
+            get {
+                return this.PageSizeField;
+            }
+            set {
+                if ((this.PageSizeField.Equals(value) != true)) {
+                    this.PageSizeField = value;
+                    this.RaisePropertyChanged("PageSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string STATUS {
+            get {
+                return this.STATUSField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
+                    this.STATUSField = value;
+                    this.RaisePropertyChanged("STATUS");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StatusExcept {
+            get {
+                return this.StatusExceptField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
+                    this.StatusExceptField = value;
+                    this.RaisePropertyChanged("StatusExcept");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Supplier {
+            get {
+                return this.SupplierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
+                    this.SupplierField = value;
+                    this.RaisePropertyChanged("Supplier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportFile_ErrorLog_Id {
+            get {
+                return this.SupplierImportFile_ErrorLog_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_ErrorLog_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_ErrorLog_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_ErrorLog_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportFile_Id {
+            get {
+                return this.SupplierImportFile_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> Supplier_Id {
+            get {
+                return this.Supplier_IdField;
+            }
+            set {
+                if ((this.Supplier_IdField.Equals(value) != true)) {
+                    this.Supplier_IdField = value;
+                    this.RaisePropertyChanged("Supplier_Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_Progress_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFile_Progress_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusExceptField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StepField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierImportFile_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StatusExcept {
+            get {
+                return this.StatusExceptField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
+                    this.StatusExceptField = value;
+                    this.RaisePropertyChanged("StatusExcept");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Step {
+            get {
+                return this.StepField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StepField, value) != true)) {
+                    this.StepField = value;
+                    this.RaisePropertyChanged("Step");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SupplierImportFile_Id {
+            get {
+                return this.SupplierImportFile_IdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierImportFile_IdField, value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_Progress", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFile_Progress : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CurrentBatchField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PercentageValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StepField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierImportFileProgress_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalBatchField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalCountField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CurrentBatch {
+            get {
+                return this.CurrentBatchField;
+            }
+            set {
+                if ((this.CurrentBatchField.Equals(value) != true)) {
+                    this.CurrentBatchField = value;
+                    this.RaisePropertyChanged("CurrentBatch");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> PercentageValue {
+            get {
+                return this.PercentageValueField;
+            }
+            set {
+                if ((this.PercentageValueField.Equals(value) != true)) {
+                    this.PercentageValueField = value;
+                    this.RaisePropertyChanged("PercentageValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Step {
+            get {
+                return this.StepField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StepField, value) != true)) {
+                    this.StepField = value;
+                    this.RaisePropertyChanged("Step");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierImportFileProgress_Id {
+            get {
+                return this.SupplierImportFileProgress_IdField;
+            }
+            set {
+                if ((this.SupplierImportFileProgress_IdField.Equals(value) != true)) {
+                    this.SupplierImportFileProgress_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFileProgress_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportFile_Id {
+            get {
+                return this.SupplierImportFile_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalBatch {
+            get {
+                return this.TotalBatchField;
+            }
+            set {
+                if ((this.TotalBatchField.Equals(value) != true)) {
+                    this.TotalBatchField = value;
+                    this.RaisePropertyChanged("TotalBatch");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalCount {
+            get {
+                return this.TotalCountField;
+            }
+            set {
+                if ((this.TotalCountField.Equals(value) != true)) {
+                    this.TotalCountField = value;
+                    this.RaisePropertyChanged("TotalCount");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_VerboseLog_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFile_VerboseLog_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int PageNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PageSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StepField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportFile_VerboseLog_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageNo {
+            get {
+                return this.PageNoField;
+            }
+            set {
+                if ((this.PageNoField.Equals(value) != true)) {
+                    this.PageNoField = value;
+                    this.RaisePropertyChanged("PageNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> PageSize {
+            get {
+                return this.PageSizeField;
+            }
+            set {
+                if ((this.PageSizeField.Equals(value) != true)) {
+                    this.PageSizeField = value;
+                    this.RaisePropertyChanged("PageSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Step {
+            get {
+                return this.StepField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StepField, value) != true)) {
+                    this.StepField = value;
+                    this.RaisePropertyChanged("Step");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportFile_Id {
+            get {
+                return this.SupplierImportFile_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportFile_VerboseLog_Id {
+            get {
+                return this.SupplierImportFile_VerboseLog_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_VerboseLog_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_VerboseLog_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_VerboseLog_Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_VerboseLog", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFile_VerboseLog : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> BatchNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StepField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierImportFile_VerboseLog_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> TimeStampField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int TotalCountField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> BatchNumber {
+            get {
+                return this.BatchNumberField;
+            }
+            set {
+                if ((this.BatchNumberField.Equals(value) != true)) {
+                    this.BatchNumberField = value;
+                    this.RaisePropertyChanged("BatchNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Message {
+            get {
+                return this.MessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
+                    this.MessageField = value;
+                    this.RaisePropertyChanged("Message");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Step {
+            get {
+                return this.StepField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StepField, value) != true)) {
+                    this.StepField = value;
+                    this.RaisePropertyChanged("Step");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportFile_Id {
+            get {
+                return this.SupplierImportFile_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierImportFile_VerboseLog_Id {
+            get {
+                return this.SupplierImportFile_VerboseLog_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_VerboseLog_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_VerboseLog_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_VerboseLog_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> TimeStamp {
+            get {
+                return this.TimeStampField;
+            }
+            set {
+                if ((this.TimeStampField.Equals(value) != true)) {
+                    this.TimeStampField = value;
+                    this.RaisePropertyChanged("TimeStamp");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalCount {
+            get {
+                return this.TotalCountField;
+            }
+            set {
+                if ((this.TotalCountField.Equals(value) != true)) {
+                    this.TotalCountField = value;
+                    this.RaisePropertyChanged("TotalCount");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_Statistics_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFile_Statistics_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> From_DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PageNoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> PageSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string STATUSField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusExceptField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> SupplierImportFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.Guid> Supplier_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> TO_DateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Entity {
+            get {
+                return this.EntityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> From_Date {
+            get {
+                return this.From_DateField;
+            }
+            set {
+                if ((this.From_DateField.Equals(value) != true)) {
+                    this.From_DateField = value;
+                    this.RaisePropertyChanged("From_Date");
                 }
             }
         }
@@ -34101,859 +36270,53 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
+        public string STATUS {
             get {
-                return this.StatusField;
+                return this.STATUSField;
             }
             set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
+                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
+                    this.STATUSField = value;
+                    this.RaisePropertyChanged("STATUS");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierScheduleID {
+        public string StatusExcept {
             get {
-                return this.SupplierScheduleIDField;
+                return this.StatusExceptField;
             }
             set {
-                if ((this.SupplierScheduleIDField.Equals(value) != true)) {
-                    this.SupplierScheduleIDField = value;
-                    this.RaisePropertyChanged("SupplierScheduleID");
+                if ((object.ReferenceEquals(this.StatusExceptField, value) != true)) {
+                    this.StatusExceptField = value;
+                    this.RaisePropertyChanged("StatusExcept");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid Suppllier_ID {
+        public string Supplier {
             get {
-                return this.Suppllier_IDField;
+                return this.SupplierField;
             }
             set {
-                if ((this.Suppllier_IDField.Equals(value) != true)) {
-                    this.Suppllier_IDField = value;
-                    this.RaisePropertyChanged("Suppllier_ID");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Supplier_Schedule", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
-    [System.SerializableAttribute()]
-    public partial class DC_Supplier_Schedule : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Create_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Create_UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string CronExpressionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> DateOfMonthField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DayOfWeekField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Edit_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Edit_UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EndTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int EndYearField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FrequencyTypeCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ISUpdateFrequenceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ISXMLSupplierField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsActiveField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> MonthOfYearField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Recur_NoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StartTimeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int StartYearField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SupplierNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierScheduleIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid Suppllier_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string User_Role_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> WeekOfMonthField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string[] lstEnityField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Create_Date {
-            get {
-                return this.Create_DateField;
-            }
-            set {
-                if ((this.Create_DateField.Equals(value) != true)) {
-                    this.Create_DateField = value;
-                    this.RaisePropertyChanged("Create_Date");
+                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
+                    this.SupplierField = value;
+                    this.RaisePropertyChanged("Supplier");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Create_User {
+        public System.Nullable<System.Guid> SupplierImportFile_Id {
             get {
-                return this.Create_UserField;
+                return this.SupplierImportFile_IdField;
             }
             set {
-                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
-                    this.Create_UserField = value;
-                    this.RaisePropertyChanged("Create_User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CronExpression {
-            get {
-                return this.CronExpressionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CronExpressionField, value) != true)) {
-                    this.CronExpressionField = value;
-                    this.RaisePropertyChanged("CronExpression");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> DateOfMonth {
-            get {
-                return this.DateOfMonthField;
-            }
-            set {
-                if ((this.DateOfMonthField.Equals(value) != true)) {
-                    this.DateOfMonthField = value;
-                    this.RaisePropertyChanged("DateOfMonth");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string DayOfWeek {
-            get {
-                return this.DayOfWeekField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DayOfWeekField, value) != true)) {
-                    this.DayOfWeekField = value;
-                    this.RaisePropertyChanged("DayOfWeek");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Edit_Date {
-            get {
-                return this.Edit_DateField;
-            }
-            set {
-                if ((this.Edit_DateField.Equals(value) != true)) {
-                    this.Edit_DateField = value;
-                    this.RaisePropertyChanged("Edit_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Edit_User {
-            get {
-                return this.Edit_UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
-                    this.Edit_UserField = value;
-                    this.RaisePropertyChanged("Edit_User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EndTime {
-            get {
-                return this.EndTimeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EndTimeField, value) != true)) {
-                    this.EndTimeField = value;
-                    this.RaisePropertyChanged("EndTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int EndYear {
-            get {
-                return this.EndYearField;
-            }
-            set {
-                if ((this.EndYearField.Equals(value) != true)) {
-                    this.EndYearField = value;
-                    this.RaisePropertyChanged("EndYear");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
-            get {
-                return this.EntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FrequencyTypeCode {
-            get {
-                return this.FrequencyTypeCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FrequencyTypeCodeField, value) != true)) {
-                    this.FrequencyTypeCodeField = value;
-                    this.RaisePropertyChanged("FrequencyTypeCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool ISUpdateFrequence {
-            get {
-                return this.ISUpdateFrequenceField;
-            }
-            set {
-                if ((this.ISUpdateFrequenceField.Equals(value) != true)) {
-                    this.ISUpdateFrequenceField = value;
-                    this.RaisePropertyChanged("ISUpdateFrequence");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool ISXMLSupplier {
-            get {
-                return this.ISXMLSupplierField;
-            }
-            set {
-                if ((this.ISXMLSupplierField.Equals(value) != true)) {
-                    this.ISXMLSupplierField = value;
-                    this.RaisePropertyChanged("ISXMLSupplier");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsActive {
-            get {
-                return this.IsActiveField;
-            }
-            set {
-                if ((this.IsActiveField.Equals(value) != true)) {
-                    this.IsActiveField = value;
-                    this.RaisePropertyChanged("IsActive");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> MonthOfYear {
-            get {
-                return this.MonthOfYearField;
-            }
-            set {
-                if ((this.MonthOfYearField.Equals(value) != true)) {
-                    this.MonthOfYearField = value;
-                    this.RaisePropertyChanged("MonthOfYear");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Recur_No {
-            get {
-                return this.Recur_NoField;
-            }
-            set {
-                if ((this.Recur_NoField.Equals(value) != true)) {
-                    this.Recur_NoField = value;
-                    this.RaisePropertyChanged("Recur_No");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StartTime {
-            get {
-                return this.StartTimeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StartTimeField, value) != true)) {
-                    this.StartTimeField = value;
-                    this.RaisePropertyChanged("StartTime");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int StartYear {
-            get {
-                return this.StartYearField;
-            }
-            set {
-                if ((this.StartYearField.Equals(value) != true)) {
-                    this.StartYearField = value;
-                    this.RaisePropertyChanged("StartYear");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SupplierName {
-            get {
-                return this.SupplierNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SupplierNameField, value) != true)) {
-                    this.SupplierNameField = value;
-                    this.RaisePropertyChanged("SupplierName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierScheduleID {
-            get {
-                return this.SupplierScheduleIDField;
-            }
-            set {
-                if ((this.SupplierScheduleIDField.Equals(value) != true)) {
-                    this.SupplierScheduleIDField = value;
-                    this.RaisePropertyChanged("SupplierScheduleID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid Suppllier_ID {
-            get {
-                return this.Suppllier_IDField;
-            }
-            set {
-                if ((this.Suppllier_IDField.Equals(value) != true)) {
-                    this.Suppllier_IDField = value;
-                    this.RaisePropertyChanged("Suppllier_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string User_Role_Id {
-            get {
-                return this.User_Role_IdField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.User_Role_IdField, value) != true)) {
-                    this.User_Role_IdField = value;
-                    this.RaisePropertyChanged("User_Role_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> WeekOfMonth {
-            get {
-                return this.WeekOfMonthField;
-            }
-            set {
-                if ((this.WeekOfMonthField.Equals(value) != true)) {
-                    this.WeekOfMonthField = value;
-                    this.RaisePropertyChanged("WeekOfMonth");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string[] lstEnity {
-            get {
-                return this.lstEnityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.lstEnityField, value) != true)) {
-                    this.lstEnityField = value;
-                    this.RaisePropertyChanged("lstEnity");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Supplier_Schedule_RS", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
-    [System.SerializableAttribute()]
-    public partial class DC_Supplier_Schedule_RS : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FrequencyTypeCodeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageSizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SupplierScheduleIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid Suppllier_IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalSizeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
-            get {
-                return this.EntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FrequencyTypeCode {
-            get {
-                return this.FrequencyTypeCodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FrequencyTypeCodeField, value) != true)) {
-                    this.FrequencyTypeCodeField = value;
-                    this.RaisePropertyChanged("FrequencyTypeCode");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageNo {
-            get {
-                return this.PageNoField;
-            }
-            set {
-                if ((this.PageNoField.Equals(value) != true)) {
-                    this.PageNoField = value;
-                    this.RaisePropertyChanged("PageNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageSize {
-            get {
-                return this.PageSizeField;
-            }
-            set {
-                if ((this.PageSizeField.Equals(value) != true)) {
-                    this.PageSizeField = value;
-                    this.RaisePropertyChanged("PageSize");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SupplierScheduleID {
-            get {
-                return this.SupplierScheduleIDField;
-            }
-            set {
-                if ((this.SupplierScheduleIDField.Equals(value) != true)) {
-                    this.SupplierScheduleIDField = value;
-                    this.RaisePropertyChanged("SupplierScheduleID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid Suppllier_ID {
-            get {
-                return this.Suppllier_IDField;
-            }
-            set {
-                if ((this.Suppllier_IDField.Equals(value) != true)) {
-                    this.Suppllier_IDField = value;
-                    this.RaisePropertyChanged("Suppllier_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalSize {
-            get {
-                return this.TotalSizeField;
-            }
-            set {
-                if ((this.TotalSizeField.Equals(value) != true)) {
-                    this.TotalSizeField = value;
-                    this.RaisePropertyChanged("TotalSize");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierScheduledTaskRQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
-    [System.SerializableAttribute()]
-    public partial class DC_SupplierScheduledTaskRQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Edit_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Edit_UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> FromDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsAdminUserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> LogIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NotificationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageSizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RedirectFromField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SortByField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Supplier_IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> TaskIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> ToDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Edit_Date {
-            get {
-                return this.Edit_DateField;
-            }
-            set {
-                if ((this.Edit_DateField.Equals(value) != true)) {
-                    this.Edit_DateField = value;
-                    this.RaisePropertyChanged("Edit_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Edit_User {
-            get {
-                return this.Edit_UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
-                    this.Edit_UserField = value;
-                    this.RaisePropertyChanged("Edit_User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Entity {
-            get {
-                return this.EntityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
-                    this.EntityField = value;
-                    this.RaisePropertyChanged("Entity");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> FromDate {
-            get {
-                return this.FromDateField;
-            }
-            set {
-                if ((this.FromDateField.Equals(value) != true)) {
-                    this.FromDateField = value;
-                    this.RaisePropertyChanged("FromDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsAdminUser {
-            get {
-                return this.IsAdminUserField;
-            }
-            set {
-                if ((this.IsAdminUserField.Equals(value) != true)) {
-                    this.IsAdminUserField = value;
-                    this.RaisePropertyChanged("IsAdminUser");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> LogId {
-            get {
-                return this.LogIdField;
-            }
-            set {
-                if ((this.LogIdField.Equals(value) != true)) {
-                    this.LogIdField = value;
-                    this.RaisePropertyChanged("LogId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Notification {
-            get {
-                return this.NotificationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NotificationField, value) != true)) {
-                    this.NotificationField = value;
-                    this.RaisePropertyChanged("Notification");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageNo {
-            get {
-                return this.PageNoField;
-            }
-            set {
-                if ((this.PageNoField.Equals(value) != true)) {
-                    this.PageNoField = value;
-                    this.RaisePropertyChanged("PageNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageSize {
-            get {
-                return this.PageSizeField;
-            }
-            set {
-                if ((this.PageSizeField.Equals(value) != true)) {
-                    this.PageSizeField = value;
-                    this.RaisePropertyChanged("PageSize");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RedirectFrom {
-            get {
-                return this.RedirectFromField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RedirectFromField, value) != true)) {
-                    this.RedirectFromField = value;
-                    this.RaisePropertyChanged("RedirectFrom");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SortBy {
-            get {
-                return this.SortByField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SortByField, value) != true)) {
-                    this.SortByField = value;
-                    this.RaisePropertyChanged("SortBy");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
                 }
             }
         }
@@ -34972,40 +36335,14 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> TaskId {
+        public System.Nullable<System.DateTime> TO_Date {
             get {
-                return this.TaskIdField;
+                return this.TO_DateField;
             }
             set {
-                if ((this.TaskIdField.Equals(value) != true)) {
-                    this.TaskIdField = value;
-                    this.RaisePropertyChanged("TaskId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> ToDate {
-            get {
-                return this.ToDateField;
-            }
-            set {
-                if ((this.ToDateField.Equals(value) != true)) {
-                    this.ToDateField = value;
-                    this.RaisePropertyChanged("ToDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserName {
-            get {
-                return this.UserNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
-                    this.UserNameField = value;
-                    this.RaisePropertyChanged("UserName");
+                if ((this.TO_DateField.Equals(value) != true)) {
+                    this.TO_DateField = value;
+                    this.RaisePropertyChanged("TO_Date");
                 }
             }
         }
@@ -35022,60 +36359,60 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierScheduledTask", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFile_Statistics", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
     [System.SerializableAttribute()]
-    public partial class SupplierScheduledTask : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class DC_SupplierImportFile_Statistics : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string APIStatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApiPathField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EntityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ISActiveField;
+        private string FileNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ISCompleteField;
+        private string FinalStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> LogIdField;
+        private string FromField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LogTypeField;
+        private System.Nullable<int> MappedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PendingFordaysField;
+        private System.Nullable<System.DateTime> Process_DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Pentahocall_idField;
+        private string Process_UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> ScheduledDateField;
+        private string ProcessedByField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
+        private string SupplierField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> SupplierScheduleTaskIDField;
+        private System.Nullable<System.Guid> SupplierImportFile_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SuppllierNameField;
+        private System.Guid SupplierImportFile_Statistics_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Suppllier_IDField;
+        private System.Nullable<System.Guid> Supplier_IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> TaskIdField;
+        private int TotalRecordsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalRecordField;
+        private System.Nullable<int> TotalRowsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> UnmappedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool isRerunField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -35088,27 +36425,278 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string APIStatus {
+        public string Entity {
             get {
-                return this.APIStatusField;
+                return this.EntityField;
             }
             set {
-                if ((object.ReferenceEquals(this.APIStatusField, value) != true)) {
-                    this.APIStatusField = value;
-                    this.RaisePropertyChanged("APIStatus");
+                if ((object.ReferenceEquals(this.EntityField, value) != true)) {
+                    this.EntityField = value;
+                    this.RaisePropertyChanged("Entity");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApiPath {
+        public string FileName {
             get {
-                return this.ApiPathField;
+                return this.FileNameField;
             }
             set {
-                if ((object.ReferenceEquals(this.ApiPathField, value) != true)) {
-                    this.ApiPathField = value;
-                    this.RaisePropertyChanged("ApiPath");
+                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
+                    this.FileNameField = value;
+                    this.RaisePropertyChanged("FileName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FinalStatus {
+            get {
+                return this.FinalStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FinalStatusField, value) != true)) {
+                    this.FinalStatusField = value;
+                    this.RaisePropertyChanged("FinalStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string From {
+            get {
+                return this.FromField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FromField, value) != true)) {
+                    this.FromField = value;
+                    this.RaisePropertyChanged("From");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Mapped {
+            get {
+                return this.MappedField;
+            }
+            set {
+                if ((this.MappedField.Equals(value) != true)) {
+                    this.MappedField = value;
+                    this.RaisePropertyChanged("Mapped");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> Process_Date {
+            get {
+                return this.Process_DateField;
+            }
+            set {
+                if ((this.Process_DateField.Equals(value) != true)) {
+                    this.Process_DateField = value;
+                    this.RaisePropertyChanged("Process_Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Process_User {
+            get {
+                return this.Process_UserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.Process_UserField, value) != true)) {
+                    this.Process_UserField = value;
+                    this.RaisePropertyChanged("Process_User");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ProcessedBy {
+            get {
+                return this.ProcessedByField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProcessedByField, value) != true)) {
+                    this.ProcessedByField = value;
+                    this.RaisePropertyChanged("ProcessedBy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Supplier {
+            get {
+                return this.SupplierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
+                    this.SupplierField = value;
+                    this.RaisePropertyChanged("Supplier");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.Guid> SupplierImportFile_Id {
+            get {
+                return this.SupplierImportFile_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Guid SupplierImportFile_Statistics_Id {
+            get {
+                return this.SupplierImportFile_Statistics_IdField;
+            }
+            set {
+                if ((this.SupplierImportFile_Statistics_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_Statistics_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Statistics_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public System.Nullable<System.Guid> Supplier_Id {
+            get {
+                return this.Supplier_IdField;
+            }
+            set {
+                if ((this.Supplier_IdField.Equals(value) != true)) {
+                    this.Supplier_IdField = value;
+                    this.RaisePropertyChanged("Supplier_Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int TotalRecords {
+            get {
+                return this.TotalRecordsField;
+            }
+            set {
+                if ((this.TotalRecordsField.Equals(value) != true)) {
+                    this.TotalRecordsField = value;
+                    this.RaisePropertyChanged("TotalRecords");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> TotalRows {
+            get {
+                return this.TotalRowsField;
+            }
+            set {
+                if ((this.TotalRowsField.Equals(value) != true)) {
+                    this.TotalRowsField = value;
+                    this.RaisePropertyChanged("TotalRows");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Unmapped {
+            get {
+                return this.UnmappedField;
+            }
+            set {
+                if ((this.UnmappedField.Equals(value) != true)) {
+                    this.UnmappedField = value;
+                    this.RaisePropertyChanged("Unmapped");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool isRerun {
+            get {
+                return this.isRerunField;
+            }
+            set {
+                if ((this.isRerunField.Equals(value) != true)) {
+                    this.isRerunField = value;
+                    this.RaisePropertyChanged("isRerun");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SupplierImportFileDetails_TestProcess", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.UploadStaticData")]
+    [System.SerializableAttribute()]
+    public partial class DC_SupplierImportFileDetails_TestProcess : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Data.DataSet DataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EntityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ModeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int No_Of_Records_ToProcessField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PROCESS_USERField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string STATUSField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SavedFilePathField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid SupplierImportFile_IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Guid Supplier_IdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Data.DataSet Data {
+            get {
+                return this.DataField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DataField, value) != true)) {
+                    this.DataField = value;
+                    this.RaisePropertyChanged("Data");
                 }
             }
         }
@@ -35127,609 +36715,92 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool ISActive {
+        public string Mode {
             get {
-                return this.ISActiveField;
+                return this.ModeField;
             }
             set {
-                if ((this.ISActiveField.Equals(value) != true)) {
-                    this.ISActiveField = value;
-                    this.RaisePropertyChanged("ISActive");
+                if ((object.ReferenceEquals(this.ModeField, value) != true)) {
+                    this.ModeField = value;
+                    this.RaisePropertyChanged("Mode");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool ISComplete {
+        public int No_Of_Records_ToProcess {
             get {
-                return this.ISCompleteField;
+                return this.No_Of_Records_ToProcessField;
             }
             set {
-                if ((this.ISCompleteField.Equals(value) != true)) {
-                    this.ISCompleteField = value;
-                    this.RaisePropertyChanged("ISComplete");
+                if ((this.No_Of_Records_ToProcessField.Equals(value) != true)) {
+                    this.No_Of_Records_ToProcessField = value;
+                    this.RaisePropertyChanged("No_Of_Records_ToProcess");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> LogId {
+        public string PROCESS_USER {
             get {
-                return this.LogIdField;
+                return this.PROCESS_USERField;
             }
             set {
-                if ((this.LogIdField.Equals(value) != true)) {
-                    this.LogIdField = value;
-                    this.RaisePropertyChanged("LogId");
+                if ((object.ReferenceEquals(this.PROCESS_USERField, value) != true)) {
+                    this.PROCESS_USERField = value;
+                    this.RaisePropertyChanged("PROCESS_USER");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LogType {
+        public string STATUS {
             get {
-                return this.LogTypeField;
+                return this.STATUSField;
             }
             set {
-                if ((object.ReferenceEquals(this.LogTypeField, value) != true)) {
-                    this.LogTypeField = value;
-                    this.RaisePropertyChanged("LogType");
+                if ((object.ReferenceEquals(this.STATUSField, value) != true)) {
+                    this.STATUSField = value;
+                    this.RaisePropertyChanged("STATUS");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PendingFordays {
+        public string SavedFilePath {
             get {
-                return this.PendingFordaysField;
+                return this.SavedFilePathField;
             }
             set {
-                if ((this.PendingFordaysField.Equals(value) != true)) {
-                    this.PendingFordaysField = value;
-                    this.RaisePropertyChanged("PendingFordays");
+                if ((object.ReferenceEquals(this.SavedFilePathField, value) != true)) {
+                    this.SavedFilePathField = value;
+                    this.RaisePropertyChanged("SavedFilePath");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Pentahocall_id {
+        public System.Guid SupplierImportFile_Id {
             get {
-                return this.Pentahocall_idField;
+                return this.SupplierImportFile_IdField;
             }
             set {
-                if ((this.Pentahocall_idField.Equals(value) != true)) {
-                    this.Pentahocall_idField = value;
-                    this.RaisePropertyChanged("Pentahocall_id");
+                if ((this.SupplierImportFile_IdField.Equals(value) != true)) {
+                    this.SupplierImportFile_IdField = value;
+                    this.RaisePropertyChanged("SupplierImportFile_Id");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> ScheduledDate {
+        public System.Guid Supplier_Id {
             get {
-                return this.ScheduledDateField;
+                return this.Supplier_IdField;
             }
             set {
-                if ((this.ScheduledDateField.Equals(value) != true)) {
-                    this.ScheduledDateField = value;
-                    this.RaisePropertyChanged("ScheduledDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> SupplierScheduleTaskID {
-            get {
-                return this.SupplierScheduleTaskIDField;
-            }
-            set {
-                if ((this.SupplierScheduleTaskIDField.Equals(value) != true)) {
-                    this.SupplierScheduleTaskIDField = value;
-                    this.RaisePropertyChanged("SupplierScheduleTaskID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SuppllierName {
-            get {
-                return this.SuppllierNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SuppllierNameField, value) != true)) {
-                    this.SuppllierNameField = value;
-                    this.RaisePropertyChanged("SuppllierName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Suppllier_ID {
-            get {
-                return this.Suppllier_IDField;
-            }
-            set {
-                if ((this.Suppllier_IDField.Equals(value) != true)) {
-                    this.Suppllier_IDField = value;
-                    this.RaisePropertyChanged("Suppllier_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> TaskId {
-            get {
-                return this.TaskIdField;
-            }
-            set {
-                if ((this.TaskIdField.Equals(value) != true)) {
-                    this.TaskIdField = value;
-                    this.RaisePropertyChanged("TaskId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalRecord {
-            get {
-                return this.TotalRecordField;
-            }
-            set {
-                if ((this.TotalRecordField.Equals(value) != true)) {
-                    this.TotalRecordField = value;
-                    this.RaisePropertyChanged("TotalRecord");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Supplier_Task_Logs", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
-    [System.SerializableAttribute()]
-    public partial class Supplier_Task_Logs : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> CreateDateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Edit_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Edit_UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LogTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Log_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageNoField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PageSizeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RedirectFromField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RemarksField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string SortByField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusMessageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Task_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> CreateDate {
-            get {
-                return this.CreateDateField;
-            }
-            set {
-                if ((this.CreateDateField.Equals(value) != true)) {
-                    this.CreateDateField = value;
-                    this.RaisePropertyChanged("CreateDate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Edit_Date {
-            get {
-                return this.Edit_DateField;
-            }
-            set {
-                if ((this.Edit_DateField.Equals(value) != true)) {
-                    this.Edit_DateField = value;
-                    this.RaisePropertyChanged("Edit_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Edit_User {
-            get {
-                return this.Edit_UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
-                    this.Edit_UserField = value;
-                    this.RaisePropertyChanged("Edit_User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LogType {
-            get {
-                return this.LogTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.LogTypeField, value) != true)) {
-                    this.LogTypeField = value;
-                    this.RaisePropertyChanged("LogType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Log_id {
-            get {
-                return this.Log_idField;
-            }
-            set {
-                if ((this.Log_idField.Equals(value) != true)) {
-                    this.Log_idField = value;
-                    this.RaisePropertyChanged("Log_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageNo {
-            get {
-                return this.PageNoField;
-            }
-            set {
-                if ((this.PageNoField.Equals(value) != true)) {
-                    this.PageNoField = value;
-                    this.RaisePropertyChanged("PageNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PageSize {
-            get {
-                return this.PageSizeField;
-            }
-            set {
-                if ((this.PageSizeField.Equals(value) != true)) {
-                    this.PageSizeField = value;
-                    this.RaisePropertyChanged("PageSize");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RedirectFrom {
-            get {
-                return this.RedirectFromField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RedirectFromField, value) != true)) {
-                    this.RedirectFromField = value;
-                    this.RaisePropertyChanged("RedirectFrom");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Remarks {
-            get {
-                return this.RemarksField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RemarksField, value) != true)) {
-                    this.RemarksField = value;
-                    this.RaisePropertyChanged("Remarks");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SortBy {
-            get {
-                return this.SortByField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.SortByField, value) != true)) {
-                    this.SortByField = value;
-                    this.RaisePropertyChanged("SortBy");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StatusMessage {
-            get {
-                return this.StatusMessageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusMessageField, value) != true)) {
-                    this.StatusMessageField = value;
-                    this.RaisePropertyChanged("StatusMessage");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Task_id {
-            get {
-                return this.Task_idField;
-            }
-            set {
-                if ((this.Task_idField.Equals(value) != true)) {
-                    this.Task_idField = value;
-                    this.RaisePropertyChanged("Task_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserName {
-            get {
-                return this.UserNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
-                    this.UserNameField = value;
-                    this.RaisePropertyChanged("UserName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Supplier_Task_Notifications", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
-    [System.SerializableAttribute()]
-    public partial class Supplier_Task_Notifications : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Log_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NotificationTypeField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int Notification_CountField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Status_MessageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> Task_idField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Log_id {
-            get {
-                return this.Log_idField;
-            }
-            set {
-                if ((this.Log_idField.Equals(value) != true)) {
-                    this.Log_idField = value;
-                    this.RaisePropertyChanged("Log_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NotificationType {
-            get {
-                return this.NotificationTypeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NotificationTypeField, value) != true)) {
-                    this.NotificationTypeField = value;
-                    this.RaisePropertyChanged("NotificationType");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Notification_Count {
-            get {
-                return this.Notification_CountField;
-            }
-            set {
-                if ((this.Notification_CountField.Equals(value) != true)) {
-                    this.Notification_CountField = value;
-                    this.RaisePropertyChanged("Notification_Count");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status_Message {
-            get {
-                return this.Status_MessageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Status_MessageField, value) != true)) {
-                    this.Status_MessageField = value;
-                    this.RaisePropertyChanged("Status_Message");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> Task_id {
-            get {
-                return this.Task_idField;
-            }
-            set {
-                if ((this.Task_idField.Equals(value) != true)) {
-                    this.Task_idField = value;
-                    this.RaisePropertyChanged("Task_id");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Supplier_Task_Calender", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers")]
-    [System.SerializableAttribute()]
-    public partial class Supplier_Task_Calender : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StatusField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string colorField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime startField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string titleField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status {
-            get {
-                return this.StatusField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
-                    this.StatusField = value;
-                    this.RaisePropertyChanged("Status");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string color {
-            get {
-                return this.colorField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.colorField, value) != true)) {
-                    this.colorField = value;
-                    this.RaisePropertyChanged("color");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime start {
-            get {
-                return this.startField;
-            }
-            set {
-                if ((this.startField.Equals(value) != true)) {
-                    this.startField = value;
-                    this.RaisePropertyChanged("start");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string title {
-            get {
-                return this.titleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.titleField, value) != true)) {
-                    this.titleField = value;
-                    this.RaisePropertyChanged("title");
+                if ((this.Supplier_IdField.Equals(value) != true)) {
+                    this.Supplier_IdField = value;
+                    this.RaisePropertyChanged("Supplier_Id");
                 }
             }
         }
@@ -58132,57 +59203,60 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_SiteMap", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Holiday_Search_Params_RQ", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
     [System.SerializableAttribute()]
-    public partial class DC_SiteMap : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class DC_Holiday_Search_Params_RQ : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ApplicationIDField;
+        private string CityCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Create_DateField;
+        private string CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Create_UserField;
+        private bool CustomisedPackagesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
+        private string HolidayFlavourField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Edit_DateField;
+        private string HolidayNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Edit_UserField;
+        private bool IsComfortLevelMissingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IDField;
+        private bool IsInterestsMissingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsActiveField;
+        private bool IsStayTypeMissingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool IsSiteMapNodeField;
+        private bool IsTravelFrequencyMissingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> ParentIDField;
+        private bool IsTravellerTypeMissingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ParentTitleField;
+        private bool IsUSPMissingField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RolesField;
+        private string MappingStatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid SiteMap_IDField;
+        private int PageNoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TitleField;
+        private int PageSizeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UrlField;
+        private bool PreBuiltPackagesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string SupplierField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -58195,93 +59269,5768 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ApplicationID {
+        public string CityCode {
             get {
-                return this.ApplicationIDField;
+                return this.CityCodeField;
             }
             set {
-                if ((this.ApplicationIDField.Equals(value) != true)) {
-                    this.ApplicationIDField = value;
-                    this.RaisePropertyChanged("ApplicationID");
+                if ((object.ReferenceEquals(this.CityCodeField, value) != true)) {
+                    this.CityCodeField = value;
+                    this.RaisePropertyChanged("CityCode");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Create_Date {
+        public string Country {
             get {
-                return this.Create_DateField;
+                return this.CountryField;
             }
             set {
-                if ((this.Create_DateField.Equals(value) != true)) {
-                    this.Create_DateField = value;
-                    this.RaisePropertyChanged("Create_Date");
+                if ((object.ReferenceEquals(this.CountryField, value) != true)) {
+                    this.CountryField = value;
+                    this.RaisePropertyChanged("Country");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Create_User {
+        public bool CustomisedPackages {
             get {
-                return this.Create_UserField;
+                return this.CustomisedPackagesField;
             }
             set {
-                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
-                    this.Create_UserField = value;
-                    this.RaisePropertyChanged("Create_User");
+                if ((this.CustomisedPackagesField.Equals(value) != true)) {
+                    this.CustomisedPackagesField = value;
+                    this.RaisePropertyChanged("CustomisedPackages");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
+        public string HolidayFlavour {
             get {
-                return this.DescriptionField;
+                return this.HolidayFlavourField;
             }
             set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
+                if ((object.ReferenceEquals(this.HolidayFlavourField, value) != true)) {
+                    this.HolidayFlavourField = value;
+                    this.RaisePropertyChanged("HolidayFlavour");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Edit_Date {
+        public string HolidayName {
             get {
-                return this.Edit_DateField;
+                return this.HolidayNameField;
             }
             set {
-                if ((this.Edit_DateField.Equals(value) != true)) {
-                    this.Edit_DateField = value;
-                    this.RaisePropertyChanged("Edit_Date");
+                if ((object.ReferenceEquals(this.HolidayNameField, value) != true)) {
+                    this.HolidayNameField = value;
+                    this.RaisePropertyChanged("HolidayName");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Edit_User {
+        public bool IsComfortLevelMissing {
             get {
-                return this.Edit_UserField;
+                return this.IsComfortLevelMissingField;
             }
             set {
-                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
-                    this.Edit_UserField = value;
-                    this.RaisePropertyChanged("Edit_User");
+                if ((this.IsComfortLevelMissingField.Equals(value) != true)) {
+                    this.IsComfortLevelMissingField = value;
+                    this.RaisePropertyChanged("IsComfortLevelMissing");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
+        public bool IsInterestsMissing {
             get {
-                return this.IDField;
+                return this.IsInterestsMissingField;
             }
             set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
+                if ((this.IsInterestsMissingField.Equals(value) != true)) {
+                    this.IsInterestsMissingField = value;
+                    this.RaisePropertyChanged("IsInterestsMissing");
                 }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsStayTypeMissing {
+            get {
+                return this.IsStayTypeMissingField;
+            }
+            set {
+                if ((this.IsStayTypeMissingField.Equals(value) != true)) {
+                    this.IsStayTypeMissingField = value;
+                    this.RaisePropertyChanged("IsStayTypeMissing");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsTravelFrequencyMissing {
+            get {
+                return this.IsTravelFrequencyMissingField;
+            }
+            set {
+                if ((this.IsTravelFrequencyMissingField.Equals(value) != true)) {
+                    this.IsTravelFrequencyMissingField = value;
+                    this.RaisePropertyChanged("IsTravelFrequencyMissing");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsTravellerTypeMissing {
+            get {
+                return this.IsTravellerTypeMissingField;
+            }
+            set {
+                if ((this.IsTravellerTypeMissingField.Equals(value) != true)) {
+                    this.IsTravellerTypeMissingField = value;
+                    this.RaisePropertyChanged("IsTravellerTypeMissing");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsUSPMissing {
+            get {
+                return this.IsUSPMissingField;
+            }
+            set {
+                if ((this.IsUSPMissingField.Equals(value) != true)) {
+                    this.IsUSPMissingField = value;
+                    this.RaisePropertyChanged("IsUSPMissing");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MappingStatus {
+            get {
+                return this.MappingStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MappingStatusField, value) != true)) {
+                    this.MappingStatusField = value;
+                    this.RaisePropertyChanged("MappingStatus");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageNo {
+            get {
+                return this.PageNoField;
+            }
+            set {
+                if ((this.PageNoField.Equals(value) != true)) {
+                    this.PageNoField = value;
+                    this.RaisePropertyChanged("PageNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int PageSize {
+            get {
+                return this.PageSizeField;
+            }
+            set {
+                if ((this.PageSizeField.Equals(value) != true)) {
+                    this.PageSizeField = value;
+                    this.RaisePropertyChanged("PageSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool PreBuiltPackages {
+            get {
+                return this.PreBuiltPackagesField;
+            }
+            set {
+                if ((this.PreBuiltPackagesField.Equals(value) != true)) {
+                    this.PreBuiltPackagesField = value;
+                    this.RaisePropertyChanged("PreBuiltPackages");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Supplier {
+            get {
+                return this.SupplierField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.SupplierField, value) != true)) {
+                    this.SupplierField = value;
+                    this.RaisePropertyChanged("Supplier");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayMappingSearchResult", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayMappingSearchResult : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int currentPageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.DC_Holiday_Search_RS[] holidaysField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int pageSizeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private long totalNumberOfHolidaysField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int totalPageField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int currentPage {
+            get {
+                return this.currentPageField;
+            }
+            set {
+                if ((this.currentPageField.Equals(value) != true)) {
+                    this.currentPageField = value;
+                    this.RaisePropertyChanged("currentPage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.DC_Holiday_Search_RS[] holidays {
+            get {
+                return this.holidaysField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.holidaysField, value) != true)) {
+                    this.holidaysField = value;
+                    this.RaisePropertyChanged("holidays");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int pageSize {
+            get {
+                return this.pageSizeField;
+            }
+            set {
+                if ((this.pageSizeField.Equals(value) != true)) {
+                    this.pageSizeField = value;
+                    this.RaisePropertyChanged("pageSize");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public long totalNumberOfHolidays {
+            get {
+                return this.totalNumberOfHolidaysField;
+            }
+            set {
+                if ((this.totalNumberOfHolidaysField.Equals(value) != true)) {
+                    this.totalNumberOfHolidaysField = value;
+                    this.RaisePropertyChanged("totalNumberOfHolidays");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int totalPage {
+            get {
+                return this.totalPageField;
+            }
+            set {
+                if ((this.totalPageField.Equals(value) != true)) {
+                    this.totalPageField = value;
+                    this.RaisePropertyChanged("totalPage");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Holiday_Search_RS", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class DC_Holiday_Search_RS : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string cityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string countryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string flavourIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string holidayFlavourField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string holidayIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string holidayNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nakidField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string sourceField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string city {
+            get {
+                return this.cityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.cityField, value) != true)) {
+                    this.cityField = value;
+                    this.RaisePropertyChanged("city");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string country {
+            get {
+                return this.countryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.countryField, value) != true)) {
+                    this.countryField = value;
+                    this.RaisePropertyChanged("country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string flavourId {
+            get {
+                return this.flavourIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.flavourIdField, value) != true)) {
+                    this.flavourIdField = value;
+                    this.RaisePropertyChanged("flavourId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string holidayFlavour {
+            get {
+                return this.holidayFlavourField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.holidayFlavourField, value) != true)) {
+                    this.holidayFlavourField = value;
+                    this.RaisePropertyChanged("holidayFlavour");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string holidayId {
+            get {
+                return this.holidayIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.holidayIdField, value) != true)) {
+                    this.holidayIdField = value;
+                    this.RaisePropertyChanged("holidayId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string holidayName {
+            get {
+                return this.holidayNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.holidayNameField, value) != true)) {
+                    this.holidayNameField = value;
+                    this.RaisePropertyChanged("holidayName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nakid {
+            get {
+                return this.nakidField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nakidField, value) != true)) {
+                    this.nakidField = value;
+                    this.RaisePropertyChanged("nakid");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.sourceField, value) != true)) {
+                    this.sourceField = value;
+                    this.RaisePropertyChanged("source");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayModel", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayModel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayAccommodation[] accommodationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayActivity[] activityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string bUField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayTermsConditions[] bookingPolicyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayBrandsAndBrochures[] brandsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayBrandsAndBrochures[] brochuresField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string callTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.ClassificationAttributes[] classificationAttributesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayCollections[] collectionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.ComfortLevel[] comfortLevelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string companyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string companyPackageCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string companyProductIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string createUSerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayDayWiseItineraries[] dayWiseItinerariesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int daysField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayDeparture[] departureField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayDestinations[] destinationsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string durationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> editDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string editUserField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> effectiveFromDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> effectiveToDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayInclusionExclusion[] exclusionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string flavorTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> flavourValidFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> flavourValidToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string groupCompanyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string groupOfCompanyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayHighlights[] highlightsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayIncludes[] holidayIncludesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayInclusionExclusion[] inclusionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayTypes[] interestsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool isActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool isRecommendedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayMedia[] mediaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nakshatraHolidayIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int nightsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string overviewField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.PaceOfHoliday[] paceOfHolidayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.PackagePrice[] packagePriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string packageTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayPerPersonPrice[] perPersonPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.PreTourStructure[] postTourField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.PreTourPrice[] postTourPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.PreTourStructure[] preTourField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.PreTourPrice[] preTourPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productCategorySubtypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productFlavorIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productFlavorNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ratingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string sBUField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayStartingPrice[] startingPriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string stayTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierHolidayIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierProductCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayTermsConditions[] termsConditionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayTermsConditions[] tourNotesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tourOptionIDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.TravelFrequency[] travelFrequencyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayTypes[] travellerTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string typeOfHolidayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayUniqueSellingPoints uniqueSellingPointsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string userRemarksField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string userReviewStatusField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayAccommodation[] accommodation {
+            get {
+                return this.accommodationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.accommodationField, value) != true)) {
+                    this.accommodationField = value;
+                    this.RaisePropertyChanged("accommodation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayActivity[] activity {
+            get {
+                return this.activityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.activityField, value) != true)) {
+                    this.activityField = value;
+                    this.RaisePropertyChanged("activity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string bU {
+            get {
+                return this.bUField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bUField, value) != true)) {
+                    this.bUField = value;
+                    this.RaisePropertyChanged("bU");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayTermsConditions[] bookingPolicy {
+            get {
+                return this.bookingPolicyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.bookingPolicyField, value) != true)) {
+                    this.bookingPolicyField = value;
+                    this.RaisePropertyChanged("bookingPolicy");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayBrandsAndBrochures[] brands {
+            get {
+                return this.brandsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.brandsField, value) != true)) {
+                    this.brandsField = value;
+                    this.RaisePropertyChanged("brands");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayBrandsAndBrochures[] brochures {
+            get {
+                return this.brochuresField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.brochuresField, value) != true)) {
+                    this.brochuresField = value;
+                    this.RaisePropertyChanged("brochures");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string callType {
+            get {
+                return this.callTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.callTypeField, value) != true)) {
+                    this.callTypeField = value;
+                    this.RaisePropertyChanged("callType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.ClassificationAttributes[] classificationAttributes {
+            get {
+                return this.classificationAttributesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.classificationAttributesField, value) != true)) {
+                    this.classificationAttributesField = value;
+                    this.RaisePropertyChanged("classificationAttributes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayCollections[] collections {
+            get {
+                return this.collectionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.collectionsField, value) != true)) {
+                    this.collectionsField = value;
+                    this.RaisePropertyChanged("collections");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.ComfortLevel[] comfortLevel {
+            get {
+                return this.comfortLevelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.comfortLevelField, value) != true)) {
+                    this.comfortLevelField = value;
+                    this.RaisePropertyChanged("comfortLevel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string company {
+            get {
+                return this.companyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.companyField, value) != true)) {
+                    this.companyField = value;
+                    this.RaisePropertyChanged("company");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string companyPackageCategory {
+            get {
+                return this.companyPackageCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.companyPackageCategoryField, value) != true)) {
+                    this.companyPackageCategoryField = value;
+                    this.RaisePropertyChanged("companyPackageCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string companyProductId {
+            get {
+                return this.companyProductIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.companyProductIdField, value) != true)) {
+                    this.companyProductIdField = value;
+                    this.RaisePropertyChanged("companyProductId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string createUSer {
+            get {
+                return this.createUSerField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.createUSerField, value) != true)) {
+                    this.createUSerField = value;
+                    this.RaisePropertyChanged("createUSer");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayDayWiseItineraries[] dayWiseItineraries {
+            get {
+                return this.dayWiseItinerariesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dayWiseItinerariesField, value) != true)) {
+                    this.dayWiseItinerariesField = value;
+                    this.RaisePropertyChanged("dayWiseItineraries");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int days {
+            get {
+                return this.daysField;
+            }
+            set {
+                if ((this.daysField.Equals(value) != true)) {
+                    this.daysField = value;
+                    this.RaisePropertyChanged("days");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayDeparture[] departure {
+            get {
+                return this.departureField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.departureField, value) != true)) {
+                    this.departureField = value;
+                    this.RaisePropertyChanged("departure");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayDestinations[] destinations {
+            get {
+                return this.destinationsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.destinationsField, value) != true)) {
+                    this.destinationsField = value;
+                    this.RaisePropertyChanged("destinations");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string duration {
+            get {
+                return this.durationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.durationField, value) != true)) {
+                    this.durationField = value;
+                    this.RaisePropertyChanged("duration");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> editDate {
+            get {
+                return this.editDateField;
+            }
+            set {
+                if ((this.editDateField.Equals(value) != true)) {
+                    this.editDateField = value;
+                    this.RaisePropertyChanged("editDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string editUser {
+            get {
+                return this.editUserField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.editUserField, value) != true)) {
+                    this.editUserField = value;
+                    this.RaisePropertyChanged("editUser");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> effectiveFromDate {
+            get {
+                return this.effectiveFromDateField;
+            }
+            set {
+                if ((this.effectiveFromDateField.Equals(value) != true)) {
+                    this.effectiveFromDateField = value;
+                    this.RaisePropertyChanged("effectiveFromDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> effectiveToDate {
+            get {
+                return this.effectiveToDateField;
+            }
+            set {
+                if ((this.effectiveToDateField.Equals(value) != true)) {
+                    this.effectiveToDateField = value;
+                    this.RaisePropertyChanged("effectiveToDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayInclusionExclusion[] exclusions {
+            get {
+                return this.exclusionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.exclusionsField, value) != true)) {
+                    this.exclusionsField = value;
+                    this.RaisePropertyChanged("exclusions");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string flavorType {
+            get {
+                return this.flavorTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.flavorTypeField, value) != true)) {
+                    this.flavorTypeField = value;
+                    this.RaisePropertyChanged("flavorType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> flavourValidFrom {
+            get {
+                return this.flavourValidFromField;
+            }
+            set {
+                if ((this.flavourValidFromField.Equals(value) != true)) {
+                    this.flavourValidFromField = value;
+                    this.RaisePropertyChanged("flavourValidFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> flavourValidTo {
+            get {
+                return this.flavourValidToField;
+            }
+            set {
+                if ((this.flavourValidToField.Equals(value) != true)) {
+                    this.flavourValidToField = value;
+                    this.RaisePropertyChanged("flavourValidTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string groupCompany {
+            get {
+                return this.groupCompanyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.groupCompanyField, value) != true)) {
+                    this.groupCompanyField = value;
+                    this.RaisePropertyChanged("groupCompany");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string groupOfCompany {
+            get {
+                return this.groupOfCompanyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.groupOfCompanyField, value) != true)) {
+                    this.groupOfCompanyField = value;
+                    this.RaisePropertyChanged("groupOfCompany");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayHighlights[] highlights {
+            get {
+                return this.highlightsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.highlightsField, value) != true)) {
+                    this.highlightsField = value;
+                    this.RaisePropertyChanged("highlights");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayIncludes[] holidayIncludes {
+            get {
+                return this.holidayIncludesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.holidayIncludesField, value) != true)) {
+                    this.holidayIncludesField = value;
+                    this.RaisePropertyChanged("holidayIncludes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayInclusionExclusion[] inclusions {
+            get {
+                return this.inclusionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.inclusionsField, value) != true)) {
+                    this.inclusionsField = value;
+                    this.RaisePropertyChanged("inclusions");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayTypes[] interests {
+            get {
+                return this.interestsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.interestsField, value) != true)) {
+                    this.interestsField = value;
+                    this.RaisePropertyChanged("interests");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool isActive {
+            get {
+                return this.isActiveField;
+            }
+            set {
+                if ((this.isActiveField.Equals(value) != true)) {
+                    this.isActiveField = value;
+                    this.RaisePropertyChanged("isActive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool isRecommended {
+            get {
+                return this.isRecommendedField;
+            }
+            set {
+                if ((this.isRecommendedField.Equals(value) != true)) {
+                    this.isRecommendedField = value;
+                    this.RaisePropertyChanged("isRecommended");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayMedia[] media {
+            get {
+                return this.mediaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.mediaField, value) != true)) {
+                    this.mediaField = value;
+                    this.RaisePropertyChanged("media");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nakshatraHolidayId {
+            get {
+                return this.nakshatraHolidayIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nakshatraHolidayIdField, value) != true)) {
+                    this.nakshatraHolidayIdField = value;
+                    this.RaisePropertyChanged("nakshatraHolidayId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int nights {
+            get {
+                return this.nightsField;
+            }
+            set {
+                if ((this.nightsField.Equals(value) != true)) {
+                    this.nightsField = value;
+                    this.RaisePropertyChanged("nights");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string overview {
+            get {
+                return this.overviewField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.overviewField, value) != true)) {
+                    this.overviewField = value;
+                    this.RaisePropertyChanged("overview");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.PaceOfHoliday[] paceOfHoliday {
+            get {
+                return this.paceOfHolidayField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.paceOfHolidayField, value) != true)) {
+                    this.paceOfHolidayField = value;
+                    this.RaisePropertyChanged("paceOfHoliday");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.PackagePrice[] packagePrice {
+            get {
+                return this.packagePriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.packagePriceField, value) != true)) {
+                    this.packagePriceField = value;
+                    this.RaisePropertyChanged("packagePrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string packageType {
+            get {
+                return this.packageTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.packageTypeField, value) != true)) {
+                    this.packageTypeField = value;
+                    this.RaisePropertyChanged("packageType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayPerPersonPrice[] perPersonPrice {
+            get {
+                return this.perPersonPriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.perPersonPriceField, value) != true)) {
+                    this.perPersonPriceField = value;
+                    this.RaisePropertyChanged("perPersonPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.PreTourStructure[] postTour {
+            get {
+                return this.postTourField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.postTourField, value) != true)) {
+                    this.postTourField = value;
+                    this.RaisePropertyChanged("postTour");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.PreTourPrice[] postTourPrice {
+            get {
+                return this.postTourPriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.postTourPriceField, value) != true)) {
+                    this.postTourPriceField = value;
+                    this.RaisePropertyChanged("postTourPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.PreTourStructure[] preTour {
+            get {
+                return this.preTourField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.preTourField, value) != true)) {
+                    this.preTourField = value;
+                    this.RaisePropertyChanged("preTour");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.PreTourPrice[] preTourPrice {
+            get {
+                return this.preTourPriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.preTourPriceField, value) != true)) {
+                    this.preTourPriceField = value;
+                    this.RaisePropertyChanged("preTourPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productCategory {
+            get {
+                return this.productCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productCategoryField, value) != true)) {
+                    this.productCategoryField = value;
+                    this.RaisePropertyChanged("productCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productCategorySubtype {
+            get {
+                return this.productCategorySubtypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productCategorySubtypeField, value) != true)) {
+                    this.productCategorySubtypeField = value;
+                    this.RaisePropertyChanged("productCategorySubtype");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productFlavorID {
+            get {
+                return this.productFlavorIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productFlavorIDField, value) != true)) {
+                    this.productFlavorIDField = value;
+                    this.RaisePropertyChanged("productFlavorID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productFlavorName {
+            get {
+                return this.productFlavorNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productFlavorNameField, value) != true)) {
+                    this.productFlavorNameField = value;
+                    this.RaisePropertyChanged("productFlavorName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productName {
+            get {
+                return this.productNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productNameField, value) != true)) {
+                    this.productNameField = value;
+                    this.RaisePropertyChanged("productName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productType {
+            get {
+                return this.productTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productTypeField, value) != true)) {
+                    this.productTypeField = value;
+                    this.RaisePropertyChanged("productType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string rating {
+            get {
+                return this.ratingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ratingField, value) != true)) {
+                    this.ratingField = value;
+                    this.RaisePropertyChanged("rating");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string sBU {
+            get {
+                return this.sBUField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.sBUField, value) != true)) {
+                    this.sBUField = value;
+                    this.RaisePropertyChanged("sBU");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayStartingPrice[] startingPrice {
+            get {
+                return this.startingPriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.startingPriceField, value) != true)) {
+                    this.startingPriceField = value;
+                    this.RaisePropertyChanged("startingPrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string stayType {
+            get {
+                return this.stayTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.stayTypeField, value) != true)) {
+                    this.stayTypeField = value;
+                    this.RaisePropertyChanged("stayType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierHolidayId {
+            get {
+                return this.supplierHolidayIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierHolidayIdField, value) != true)) {
+                    this.supplierHolidayIdField = value;
+                    this.RaisePropertyChanged("supplierHolidayId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierName {
+            get {
+                return this.supplierNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierNameField, value) != true)) {
+                    this.supplierNameField = value;
+                    this.RaisePropertyChanged("supplierName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierProductCode {
+            get {
+                return this.supplierProductCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierProductCodeField, value) != true)) {
+                    this.supplierProductCodeField = value;
+                    this.RaisePropertyChanged("supplierProductCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayTermsConditions[] termsConditions {
+            get {
+                return this.termsConditionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.termsConditionsField, value) != true)) {
+                    this.termsConditionsField = value;
+                    this.RaisePropertyChanged("termsConditions");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayTermsConditions[] tourNotes {
+            get {
+                return this.tourNotesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tourNotesField, value) != true)) {
+                    this.tourNotesField = value;
+                    this.RaisePropertyChanged("tourNotes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tourOptionID {
+            get {
+                return this.tourOptionIDField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tourOptionIDField, value) != true)) {
+                    this.tourOptionIDField = value;
+                    this.RaisePropertyChanged("tourOptionID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.TravelFrequency[] travelFrequency {
+            get {
+                return this.travelFrequencyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.travelFrequencyField, value) != true)) {
+                    this.travelFrequencyField = value;
+                    this.RaisePropertyChanged("travelFrequency");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayTypes[] travellerType {
+            get {
+                return this.travellerTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.travellerTypeField, value) != true)) {
+                    this.travellerTypeField = value;
+                    this.RaisePropertyChanged("travellerType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string typeOfHoliday {
+            get {
+                return this.typeOfHolidayField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.typeOfHolidayField, value) != true)) {
+                    this.typeOfHolidayField = value;
+                    this.RaisePropertyChanged("typeOfHoliday");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayUniqueSellingPoints uniqueSellingPoints {
+            get {
+                return this.uniqueSellingPointsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.uniqueSellingPointsField, value) != true)) {
+                    this.uniqueSellingPointsField = value;
+                    this.RaisePropertyChanged("uniqueSellingPoints");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string userRemarks {
+            get {
+                return this.userRemarksField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.userRemarksField, value) != true)) {
+                    this.userRemarksField = value;
+                    this.RaisePropertyChanged("userRemarks");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string userReviewStatus {
+            get {
+                return this.userReviewStatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.userReviewStatusField, value) != true)) {
+                    this.userReviewStatusField = value;
+                    this.RaisePropertyChanged("userReviewStatus");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayAccommodation", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayAccommodation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hostCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hotelCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hotelNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int numberOfNightsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string packageCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCityCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierProductCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCityCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCountryCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCountryNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXProductCodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hostCategory {
+            get {
+                return this.hostCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hostCategoryField, value) != true)) {
+                    this.hostCategoryField = value;
+                    this.RaisePropertyChanged("hostCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hotelCategory {
+            get {
+                return this.hotelCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hotelCategoryField, value) != true)) {
+                    this.hotelCategoryField = value;
+                    this.RaisePropertyChanged("hotelCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hotelName {
+            get {
+                return this.hotelNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hotelNameField, value) != true)) {
+                    this.hotelNameField = value;
+                    this.RaisePropertyChanged("hotelName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int numberOfNights {
+            get {
+                return this.numberOfNightsField;
+            }
+            set {
+                if ((this.numberOfNightsField.Equals(value) != true)) {
+                    this.numberOfNightsField = value;
+                    this.RaisePropertyChanged("numberOfNights");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string packageCategory {
+            get {
+                return this.packageCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.packageCategoryField, value) != true)) {
+                    this.packageCategoryField = value;
+                    this.RaisePropertyChanged("packageCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCityCode {
+            get {
+                return this.supplierCityCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCityCodeField, value) != true)) {
+                    this.supplierCityCodeField = value;
+                    this.RaisePropertyChanged("supplierCityCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCityName {
+            get {
+                return this.supplierCityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCityNameField, value) != true)) {
+                    this.supplierCityNameField = value;
+                    this.RaisePropertyChanged("supplierCityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierProductCode {
+            get {
+                return this.supplierProductCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierProductCodeField, value) != true)) {
+                    this.supplierProductCodeField = value;
+                    this.RaisePropertyChanged("supplierProductCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCityCode {
+            get {
+                return this.tLGXCityCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCityCodeField, value) != true)) {
+                    this.tLGXCityCodeField = value;
+                    this.RaisePropertyChanged("tLGXCityCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCityName {
+            get {
+                return this.tLGXCityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCityNameField, value) != true)) {
+                    this.tLGXCityNameField = value;
+                    this.RaisePropertyChanged("tLGXCityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCountryCode {
+            get {
+                return this.tLGXCountryCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCountryCodeField, value) != true)) {
+                    this.tLGXCountryCodeField = value;
+                    this.RaisePropertyChanged("tLGXCountryCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCountryName {
+            get {
+                return this.tLGXCountryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCountryNameField, value) != true)) {
+                    this.tLGXCountryNameField = value;
+                    this.RaisePropertyChanged("tLGXCountryName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXProductCode {
+            get {
+                return this.tLGXProductCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXProductCodeField, value) != true)) {
+                    this.tLGXProductCodeField = value;
+                    this.RaisePropertyChanged("tLGXProductCode");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayActivity", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayActivity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> dateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int dayNumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> departureEndDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string departureIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> departureStartDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string dropDestinationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string endTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hostCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string pickupDestinationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string sessionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> startDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string startTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCityCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCountryCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCountryNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXActivityIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXActivityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCityCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCountryCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCountryNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> date {
+            get {
+                return this.dateField;
+            }
+            set {
+                if ((this.dateField.Equals(value) != true)) {
+                    this.dateField = value;
+                    this.RaisePropertyChanged("date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int dayNumber {
+            get {
+                return this.dayNumberField;
+            }
+            set {
+                if ((this.dayNumberField.Equals(value) != true)) {
+                    this.dayNumberField = value;
+                    this.RaisePropertyChanged("dayNumber");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> departureEndDate {
+            get {
+                return this.departureEndDateField;
+            }
+            set {
+                if ((this.departureEndDateField.Equals(value) != true)) {
+                    this.departureEndDateField = value;
+                    this.RaisePropertyChanged("departureEndDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string departureId {
+            get {
+                return this.departureIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.departureIdField, value) != true)) {
+                    this.departureIdField = value;
+                    this.RaisePropertyChanged("departureId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> departureStartDate {
+            get {
+                return this.departureStartDateField;
+            }
+            set {
+                if ((this.departureStartDateField.Equals(value) != true)) {
+                    this.departureStartDateField = value;
+                    this.RaisePropertyChanged("departureStartDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string dropDestination {
+            get {
+                return this.dropDestinationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dropDestinationField, value) != true)) {
+                    this.dropDestinationField = value;
+                    this.RaisePropertyChanged("dropDestination");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string endTime {
+            get {
+                return this.endTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.endTimeField, value) != true)) {
+                    this.endTimeField = value;
+                    this.RaisePropertyChanged("endTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hostCategory {
+            get {
+                return this.hostCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hostCategoryField, value) != true)) {
+                    this.hostCategoryField = value;
+                    this.RaisePropertyChanged("hostCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pickupDestination {
+            get {
+                return this.pickupDestinationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pickupDestinationField, value) != true)) {
+                    this.pickupDestinationField = value;
+                    this.RaisePropertyChanged("pickupDestination");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productCategory {
+            get {
+                return this.productCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productCategoryField, value) != true)) {
+                    this.productCategoryField = value;
+                    this.RaisePropertyChanged("productCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string session {
+            get {
+                return this.sessionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.sessionField, value) != true)) {
+                    this.sessionField = value;
+                    this.RaisePropertyChanged("session");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> startDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                if ((this.startDateField.Equals(value) != true)) {
+                    this.startDateField = value;
+                    this.RaisePropertyChanged("startDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string startTime {
+            get {
+                return this.startTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.startTimeField, value) != true)) {
+                    this.startTimeField = value;
+                    this.RaisePropertyChanged("startTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCityCode {
+            get {
+                return this.supplierCityCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCityCodeField, value) != true)) {
+                    this.supplierCityCodeField = value;
+                    this.RaisePropertyChanged("supplierCityCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCityName {
+            get {
+                return this.supplierCityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCityNameField, value) != true)) {
+                    this.supplierCityNameField = value;
+                    this.RaisePropertyChanged("supplierCityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCountryCode {
+            get {
+                return this.supplierCountryCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCountryCodeField, value) != true)) {
+                    this.supplierCountryCodeField = value;
+                    this.RaisePropertyChanged("supplierCountryCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCountryName {
+            get {
+                return this.supplierCountryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCountryNameField, value) != true)) {
+                    this.supplierCountryNameField = value;
+                    this.RaisePropertyChanged("supplierCountryName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXActivityId {
+            get {
+                return this.tLGXActivityIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXActivityIdField, value) != true)) {
+                    this.tLGXActivityIdField = value;
+                    this.RaisePropertyChanged("tLGXActivityId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXActivityName {
+            get {
+                return this.tLGXActivityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXActivityNameField, value) != true)) {
+                    this.tLGXActivityNameField = value;
+                    this.RaisePropertyChanged("tLGXActivityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCityCode {
+            get {
+                return this.tLGXCityCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCityCodeField, value) != true)) {
+                    this.tLGXCityCodeField = value;
+                    this.RaisePropertyChanged("tLGXCityCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCityName {
+            get {
+                return this.tLGXCityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCityNameField, value) != true)) {
+                    this.tLGXCityNameField = value;
+                    this.RaisePropertyChanged("tLGXCityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCountryCode {
+            get {
+                return this.tLGXCountryCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCountryCodeField, value) != true)) {
+                    this.tLGXCountryCodeField = value;
+                    this.RaisePropertyChanged("tLGXCountryCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCountryName {
+            get {
+                return this.tLGXCountryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCountryNameField, value) != true)) {
+                    this.tLGXCountryNameField = value;
+                    this.RaisePropertyChanged("tLGXCountryName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayTermsConditions", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayTermsConditions : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int orderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string serviceTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string textField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int order {
+            get {
+                return this.orderField;
+            }
+            set {
+                if ((this.orderField.Equals(value) != true)) {
+                    this.orderField = value;
+                    this.RaisePropertyChanged("order");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string serviceType {
+            get {
+                return this.serviceTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.serviceTypeField, value) != true)) {
+                    this.serviceTypeField = value;
+                    this.RaisePropertyChanged("serviceType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string text {
+            get {
+                return this.textField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.textField, value) != true)) {
+                    this.textField = value;
+                    this.RaisePropertyChanged("text");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayBrandsAndBrochures", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayBrandsAndBrochures : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string codeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string code {
+            get {
+                return this.codeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.codeField, value) != true)) {
+                    this.codeField = value;
+                    this.RaisePropertyChanged("code");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.idField, value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ClassificationAttributes", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class ClassificationAttributes : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string attributeSubTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string attributeTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string attributeValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool isActiveField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string attributeSubType {
+            get {
+                return this.attributeSubTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.attributeSubTypeField, value) != true)) {
+                    this.attributeSubTypeField = value;
+                    this.RaisePropertyChanged("attributeSubType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string attributeType {
+            get {
+                return this.attributeTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.attributeTypeField, value) != true)) {
+                    this.attributeTypeField = value;
+                    this.RaisePropertyChanged("attributeType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string attributeValue {
+            get {
+                return this.attributeValueField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.attributeValueField, value) != true)) {
+                    this.attributeValueField = value;
+                    this.RaisePropertyChanged("attributeValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool isActive {
+            get {
+                return this.isActiveField;
+            }
+            set {
+                if ((this.isActiveField.Equals(value) != true)) {
+                    this.isActiveField = value;
+                    this.RaisePropertyChanged("isActive");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayCollections", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayCollections : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string displayNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string typeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string displayName {
+            get {
+                return this.displayNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.displayNameField, value) != true)) {
+                    this.displayNameField = value;
+                    this.RaisePropertyChanged("displayName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.typeField, value) != true)) {
+                    this.typeField = value;
+                    this.RaisePropertyChanged("type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ComfortLevel", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class ComfortLevel : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string levelField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string level {
+            get {
+                return this.levelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.levelField, value) != true)) {
+                    this.levelField = value;
+                    this.RaisePropertyChanged("level");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayDayWiseItineraries", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayDayWiseItineraries : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.HolidayDates[] DatesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string destinationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string dynamicAttributesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string endTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string longDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productCategorySubTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string sessionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string shortDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string startTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCountryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tagDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tagTypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.HolidayDates[] Dates {
+            get {
+                return this.DatesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DatesField, value) != true)) {
+                    this.DatesField = value;
+                    this.RaisePropertyChanged("Dates");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string destination {
+            get {
+                return this.destinationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.destinationField, value) != true)) {
+                    this.destinationField = value;
+                    this.RaisePropertyChanged("destination");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string dynamicAttributes {
+            get {
+                return this.dynamicAttributesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dynamicAttributesField, value) != true)) {
+                    this.dynamicAttributesField = value;
+                    this.RaisePropertyChanged("dynamicAttributes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string endTime {
+            get {
+                return this.endTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.endTimeField, value) != true)) {
+                    this.endTimeField = value;
+                    this.RaisePropertyChanged("endTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string longDescription {
+            get {
+                return this.longDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.longDescriptionField, value) != true)) {
+                    this.longDescriptionField = value;
+                    this.RaisePropertyChanged("longDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productCategory {
+            get {
+                return this.productCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productCategoryField, value) != true)) {
+                    this.productCategoryField = value;
+                    this.RaisePropertyChanged("productCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productCategorySubType {
+            get {
+                return this.productCategorySubTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productCategorySubTypeField, value) != true)) {
+                    this.productCategorySubTypeField = value;
+                    this.RaisePropertyChanged("productCategorySubType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productId {
+            get {
+                return this.productIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productIdField, value) != true)) {
+                    this.productIdField = value;
+                    this.RaisePropertyChanged("productId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productName {
+            get {
+                return this.productNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productNameField, value) != true)) {
+                    this.productNameField = value;
+                    this.RaisePropertyChanged("productName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string session {
+            get {
+                return this.sessionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.sessionField, value) != true)) {
+                    this.sessionField = value;
+                    this.RaisePropertyChanged("session");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string shortDescription {
+            get {
+                return this.shortDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.shortDescriptionField, value) != true)) {
+                    this.shortDescriptionField = value;
+                    this.RaisePropertyChanged("shortDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string startTime {
+            get {
+                return this.startTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.startTimeField, value) != true)) {
+                    this.startTimeField = value;
+                    this.RaisePropertyChanged("startTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCity {
+            get {
+                return this.supplierCityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCityField, value) != true)) {
+                    this.supplierCityField = value;
+                    this.RaisePropertyChanged("supplierCity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCountry {
+            get {
+                return this.supplierCountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCountryField, value) != true)) {
+                    this.supplierCountryField = value;
+                    this.RaisePropertyChanged("supplierCountry");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCity {
+            get {
+                return this.tLGXCityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCityField, value) != true)) {
+                    this.tLGXCityField = value;
+                    this.RaisePropertyChanged("tLGXCity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCountry {
+            get {
+                return this.tLGXCountryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCountryField, value) != true)) {
+                    this.tLGXCountryField = value;
+                    this.RaisePropertyChanged("tLGXCountry");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tagDescription {
+            get {
+                return this.tagDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tagDescriptionField, value) != true)) {
+                    this.tagDescriptionField = value;
+                    this.RaisePropertyChanged("tagDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tagType {
+            get {
+                return this.tagTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tagTypeField, value) != true)) {
+                    this.tagTypeField = value;
+                    this.RaisePropertyChanged("tagType");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayDates", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayDates : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string dynamicAttributesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int fromDayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int fromMonthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int fromYearField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string statusField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tagDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int toDayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int toMonthField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int toYearField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descriptionField, value) != true)) {
+                    this.descriptionField = value;
+                    this.RaisePropertyChanged("description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string dynamicAttributes {
+            get {
+                return this.dynamicAttributesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dynamicAttributesField, value) != true)) {
+                    this.dynamicAttributesField = value;
+                    this.RaisePropertyChanged("dynamicAttributes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int fromDay {
+            get {
+                return this.fromDayField;
+            }
+            set {
+                if ((this.fromDayField.Equals(value) != true)) {
+                    this.fromDayField = value;
+                    this.RaisePropertyChanged("fromDay");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int fromMonth {
+            get {
+                return this.fromMonthField;
+            }
+            set {
+                if ((this.fromMonthField.Equals(value) != true)) {
+                    this.fromMonthField = value;
+                    this.RaisePropertyChanged("fromMonth");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int fromYear {
+            get {
+                return this.fromYearField;
+            }
+            set {
+                if ((this.fromYearField.Equals(value) != true)) {
+                    this.fromYearField = value;
+                    this.RaisePropertyChanged("fromYear");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string status {
+            get {
+                return this.statusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.statusField, value) != true)) {
+                    this.statusField = value;
+                    this.RaisePropertyChanged("status");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tagDescription {
+            get {
+                return this.tagDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tagDescriptionField, value) != true)) {
+                    this.tagDescriptionField = value;
+                    this.RaisePropertyChanged("tagDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int toDay {
+            get {
+                return this.toDayField;
+            }
+            set {
+                if ((this.toDayField.Equals(value) != true)) {
+                    this.toDayField = value;
+                    this.RaisePropertyChanged("toDay");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int toMonth {
+            get {
+                return this.toMonthField;
+            }
+            set {
+                if ((this.toMonthField.Equals(value) != true)) {
+                    this.toMonthField = value;
+                    this.RaisePropertyChanged("toMonth");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int toYear {
+            get {
+                return this.toYearField;
+            }
+            set {
+                if ((this.toYearField.Equals(value) != true)) {
+                    this.toYearField = value;
+                    this.RaisePropertyChanged("toYear");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayDeparture", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayDeparture : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string departureIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> startDateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCityCodeEndField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCityCodeStartField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCountryCodeEndField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCountryCodeStartField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string departureId {
+            get {
+                return this.departureIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.departureIdField, value) != true)) {
+                    this.departureIdField = value;
+                    this.RaisePropertyChanged("departureId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> startDate {
+            get {
+                return this.startDateField;
+            }
+            set {
+                if ((this.startDateField.Equals(value) != true)) {
+                    this.startDateField = value;
+                    this.RaisePropertyChanged("startDate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCityCodeEnd {
+            get {
+                return this.tLGXCityCodeEndField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCityCodeEndField, value) != true)) {
+                    this.tLGXCityCodeEndField = value;
+                    this.RaisePropertyChanged("tLGXCityCodeEnd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCityCodeStart {
+            get {
+                return this.tLGXCityCodeStartField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCityCodeStartField, value) != true)) {
+                    this.tLGXCityCodeStartField = value;
+                    this.RaisePropertyChanged("tLGXCityCodeStart");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCountryCodeEnd {
+            get {
+                return this.tLGXCountryCodeEndField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCountryCodeEndField, value) != true)) {
+                    this.tLGXCountryCodeEndField = value;
+                    this.RaisePropertyChanged("tLGXCountryCodeEnd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCountryCodeStart {
+            get {
+                return this.tLGXCountryCodeStartField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCountryCodeStartField, value) != true)) {
+                    this.tLGXCountryCodeStartField = value;
+                    this.RaisePropertyChanged("tLGXCountryCodeStart");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayDestinations", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayDestinations : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCityCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCountryCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCountryNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tlgxCityCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tlgxCityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tlgxCountryCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tlgxCountryNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCityCode {
+            get {
+                return this.supplierCityCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCityCodeField, value) != true)) {
+                    this.supplierCityCodeField = value;
+                    this.RaisePropertyChanged("supplierCityCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCityName {
+            get {
+                return this.supplierCityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCityNameField, value) != true)) {
+                    this.supplierCityNameField = value;
+                    this.RaisePropertyChanged("supplierCityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCountryCode {
+            get {
+                return this.supplierCountryCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCountryCodeField, value) != true)) {
+                    this.supplierCountryCodeField = value;
+                    this.RaisePropertyChanged("supplierCountryCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCountryName {
+            get {
+                return this.supplierCountryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCountryNameField, value) != true)) {
+                    this.supplierCountryNameField = value;
+                    this.RaisePropertyChanged("supplierCountryName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tlgxCityCode {
+            get {
+                return this.tlgxCityCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tlgxCityCodeField, value) != true)) {
+                    this.tlgxCityCodeField = value;
+                    this.RaisePropertyChanged("tlgxCityCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tlgxCityName {
+            get {
+                return this.tlgxCityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tlgxCityNameField, value) != true)) {
+                    this.tlgxCityNameField = value;
+                    this.RaisePropertyChanged("tlgxCityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tlgxCountryCode {
+            get {
+                return this.tlgxCountryCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tlgxCountryCodeField, value) != true)) {
+                    this.tlgxCountryCodeField = value;
+                    this.RaisePropertyChanged("tlgxCountryCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tlgxCountryName {
+            get {
+                return this.tlgxCountryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tlgxCountryNameField, value) != true)) {
+                    this.tlgxCountryNameField = value;
+                    this.RaisePropertyChanged("tlgxCountryName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayInclusionExclusion", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayInclusionExclusion : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int orderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string serviceTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string textField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int order {
+            get {
+                return this.orderField;
+            }
+            set {
+                if ((this.orderField.Equals(value) != true)) {
+                    this.orderField = value;
+                    this.RaisePropertyChanged("order");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string serviceType {
+            get {
+                return this.serviceTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.serviceTypeField, value) != true)) {
+                    this.serviceTypeField = value;
+                    this.RaisePropertyChanged("serviceType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string text {
+            get {
+                return this.textField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.textField, value) != true)) {
+                    this.textField = value;
+                    this.RaisePropertyChanged("text");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayHighlights", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayHighlights : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string cityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string countryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> dateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int dayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string destinationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string textField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string typeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string city {
+            get {
+                return this.cityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.cityField, value) != true)) {
+                    this.cityField = value;
+                    this.RaisePropertyChanged("city");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string country {
+            get {
+                return this.countryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.countryField, value) != true)) {
+                    this.countryField = value;
+                    this.RaisePropertyChanged("country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> date {
+            get {
+                return this.dateField;
+            }
+            set {
+                if ((this.dateField.Equals(value) != true)) {
+                    this.dateField = value;
+                    this.RaisePropertyChanged("date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int day {
+            get {
+                return this.dayField;
+            }
+            set {
+                if ((this.dayField.Equals(value) != true)) {
+                    this.dayField = value;
+                    this.RaisePropertyChanged("day");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string destination {
+            get {
+                return this.destinationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.destinationField, value) != true)) {
+                    this.destinationField = value;
+                    this.RaisePropertyChanged("destination");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string text {
+            get {
+                return this.textField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.textField, value) != true)) {
+                    this.textField = value;
+                    this.RaisePropertyChanged("text");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.typeField, value) != true)) {
+                    this.typeField = value;
+                    this.RaisePropertyChanged("type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayIncludes", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayIncludes : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string airField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hotelField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string insuranceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string mealsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string sightseeingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string transfersField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string visaField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string air {
+            get {
+                return this.airField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.airField, value) != true)) {
+                    this.airField = value;
+                    this.RaisePropertyChanged("air");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hotel {
+            get {
+                return this.hotelField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hotelField, value) != true)) {
+                    this.hotelField = value;
+                    this.RaisePropertyChanged("hotel");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string insurance {
+            get {
+                return this.insuranceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.insuranceField, value) != true)) {
+                    this.insuranceField = value;
+                    this.RaisePropertyChanged("insurance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string meals {
+            get {
+                return this.mealsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.mealsField, value) != true)) {
+                    this.mealsField = value;
+                    this.RaisePropertyChanged("meals");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string sightseeing {
+            get {
+                return this.sightseeingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.sightseeingField, value) != true)) {
+                    this.sightseeingField = value;
+                    this.RaisePropertyChanged("sightseeing");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string transfers {
+            get {
+                return this.transfersField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.transfersField, value) != true)) {
+                    this.transfersField = value;
+                    this.RaisePropertyChanged("transfers");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string visa {
+            get {
+                return this.visaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.visaField, value) != true)) {
+                    this.visaField = value;
+                    this.RaisePropertyChanged("visa");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayTypes", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayTypes : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.SubType[] subTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string typeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.SubType[] subType {
+            get {
+                return this.subTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.subTypeField, value) != true)) {
+                    this.subTypeField = value;
+                    this.RaisePropertyChanged("subType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.typeField, value) != true)) {
+                    this.typeField = value;
+                    this.RaisePropertyChanged("type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SubType", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class SubType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string typeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.typeField, value) != true)) {
+                    this.typeField = value;
+                    this.RaisePropertyChanged("type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayMedia", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayMedia : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string cityField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string countryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string descriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int displayOrderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string fileCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string fileTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string heightField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string logicalFilePathField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string productDisplayNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string stateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string uRLField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string widthField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string city {
+            get {
+                return this.cityField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.cityField, value) != true)) {
+                    this.cityField = value;
+                    this.RaisePropertyChanged("city");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string country {
+            get {
+                return this.countryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.countryField, value) != true)) {
+                    this.countryField = value;
+                    this.RaisePropertyChanged("country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.descriptionField, value) != true)) {
+                    this.descriptionField = value;
+                    this.RaisePropertyChanged("description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int displayOrder {
+            get {
+                return this.displayOrderField;
+            }
+            set {
+                if ((this.displayOrderField.Equals(value) != true)) {
+                    this.displayOrderField = value;
+                    this.RaisePropertyChanged("displayOrder");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string fileCategory {
+            get {
+                return this.fileCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.fileCategoryField, value) != true)) {
+                    this.fileCategoryField = value;
+                    this.RaisePropertyChanged("fileCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string fileType {
+            get {
+                return this.fileTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.fileTypeField, value) != true)) {
+                    this.fileTypeField = value;
+                    this.RaisePropertyChanged("fileType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string height {
+            get {
+                return this.heightField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.heightField, value) != true)) {
+                    this.heightField = value;
+                    this.RaisePropertyChanged("height");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string logicalFilePath {
+            get {
+                return this.logicalFilePathField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.logicalFilePathField, value) != true)) {
+                    this.logicalFilePathField = value;
+                    this.RaisePropertyChanged("logicalFilePath");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string productDisplayName {
+            get {
+                return this.productDisplayNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.productDisplayNameField, value) != true)) {
+                    this.productDisplayNameField = value;
+                    this.RaisePropertyChanged("productDisplayName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string state {
+            get {
+                return this.stateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.stateField, value) != true)) {
+                    this.stateField = value;
+                    this.RaisePropertyChanged("state");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string uRL {
+            get {
+                return this.uRLField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.uRLField, value) != true)) {
+                    this.uRLField = value;
+                    this.RaisePropertyChanged("uRL");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string width {
+            get {
+                return this.widthField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.widthField, value) != true)) {
+                    this.widthField = value;
+                    this.RaisePropertyChanged("width");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PaceOfHoliday", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class PaceOfHoliday : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string paceField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pace {
+            get {
+                return this.paceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.paceField, value) != true)) {
+                    this.paceField = value;
+                    this.RaisePropertyChanged("pace");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PackagePrice", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class PackagePrice : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.BasePriceStructure[] basePriceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string categoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string displayNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string notesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string starRatingCategoryField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.BasePriceStructure[] basePrice {
+            get {
+                return this.basePriceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.basePriceField, value) != true)) {
+                    this.basePriceField = value;
+                    this.RaisePropertyChanged("basePrice");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string category {
+            get {
+                return this.categoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.categoryField, value) != true)) {
+                    this.categoryField = value;
+                    this.RaisePropertyChanged("category");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string displayName {
+            get {
+                return this.displayNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.displayNameField, value) != true)) {
+                    this.displayNameField = value;
+                    this.RaisePropertyChanged("displayName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string notes {
+            get {
+                return this.notesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.notesField, value) != true)) {
+                    this.notesField = value;
+                    this.RaisePropertyChanged("notes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string starRatingCategory {
+            get {
+                return this.starRatingCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.starRatingCategoryField, value) != true)) {
+                    this.starRatingCategoryField = value;
+                    this.RaisePropertyChanged("starRatingCategory");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BasePriceStructure", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class BasePriceStructure : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.DiscountStructure[] discountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hubIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hubNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.PriceDetailsStructure[] priceDetailsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.Tax[] taxField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.DiscountStructure[] discount {
+            get {
+                return this.discountField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.discountField, value) != true)) {
+                    this.discountField = value;
+                    this.RaisePropertyChanged("discount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hubId {
+            get {
+                return this.hubIdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hubIdField, value) != true)) {
+                    this.hubIdField = value;
+                    this.RaisePropertyChanged("hubId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hubName {
+            get {
+                return this.hubNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hubNameField, value) != true)) {
+                    this.hubNameField = value;
+                    this.RaisePropertyChanged("hubName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.PriceDetailsStructure[] priceDetails {
+            get {
+                return this.priceDetailsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.priceDetailsField, value) != true)) {
+                    this.priceDetailsField = value;
+                    this.RaisePropertyChanged("priceDetails");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.Tax[] tax {
+            get {
+                return this.taxField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.taxField, value) != true)) {
+                    this.taxField = value;
+                    this.RaisePropertyChanged("tax");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DiscountStructure", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class DiscountStructure : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double discountAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string typeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double discountAmount {
+            get {
+                return this.discountAmountField;
+            }
+            set {
+                if ((this.discountAmountField.Equals(value) != true)) {
+                    this.discountAmountField = value;
+                    this.RaisePropertyChanged("discountAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.typeField, value) != true)) {
+                    this.typeField = value;
+                    this.RaisePropertyChanged("type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PriceDetailsStructure", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class PriceDetailsStructure : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ageFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ageToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double amountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string currencyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string extraBeddingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int passengerRangeFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int passengerRangeToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string personTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string priceDescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string roomTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.TaxStructure[] taxField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> validFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> validToField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ageFrom {
+            get {
+                return this.ageFromField;
+            }
+            set {
+                if ((this.ageFromField.Equals(value) != true)) {
+                    this.ageFromField = value;
+                    this.RaisePropertyChanged("ageFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ageTo {
+            get {
+                return this.ageToField;
+            }
+            set {
+                if ((this.ageToField.Equals(value) != true)) {
+                    this.ageToField = value;
+                    this.RaisePropertyChanged("ageTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                if ((this.amountField.Equals(value) != true)) {
+                    this.amountField = value;
+                    this.RaisePropertyChanged("amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string currency {
+            get {
+                return this.currencyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.currencyField, value) != true)) {
+                    this.currencyField = value;
+                    this.RaisePropertyChanged("currency");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string extraBedding {
+            get {
+                return this.extraBeddingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.extraBeddingField, value) != true)) {
+                    this.extraBeddingField = value;
+                    this.RaisePropertyChanged("extraBedding");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int passengerRangeFrom {
+            get {
+                return this.passengerRangeFromField;
+            }
+            set {
+                if ((this.passengerRangeFromField.Equals(value) != true)) {
+                    this.passengerRangeFromField = value;
+                    this.RaisePropertyChanged("passengerRangeFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int passengerRangeTo {
+            get {
+                return this.passengerRangeToField;
+            }
+            set {
+                if ((this.passengerRangeToField.Equals(value) != true)) {
+                    this.passengerRangeToField = value;
+                    this.RaisePropertyChanged("passengerRangeTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string personType {
+            get {
+                return this.personTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.personTypeField, value) != true)) {
+                    this.personTypeField = value;
+                    this.RaisePropertyChanged("personType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string priceDescription {
+            get {
+                return this.priceDescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.priceDescriptionField, value) != true)) {
+                    this.priceDescriptionField = value;
+                    this.RaisePropertyChanged("priceDescription");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string roomType {
+            get {
+                return this.roomTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.roomTypeField, value) != true)) {
+                    this.roomTypeField = value;
+                    this.RaisePropertyChanged("roomType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.TaxStructure[] tax {
+            get {
+                return this.taxField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.taxField, value) != true)) {
+                    this.taxField = value;
+                    this.RaisePropertyChanged("tax");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> validFrom {
+            get {
+                return this.validFromField;
+            }
+            set {
+                if ((this.validFromField.Equals(value) != true)) {
+                    this.validFromField = value;
+                    this.RaisePropertyChanged("validFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> validTo {
+            get {
+                return this.validToField;
+            }
+            set {
+                if ((this.validToField.Equals(value) != true)) {
+                    this.validToField = value;
+                    this.RaisePropertyChanged("validTo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TaxStructure", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class TaxStructure : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double taxAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string taxRateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string taxTypeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double taxAmount {
+            get {
+                return this.taxAmountField;
+            }
+            set {
+                if ((this.taxAmountField.Equals(value) != true)) {
+                    this.taxAmountField = value;
+                    this.RaisePropertyChanged("taxAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string taxRate {
+            get {
+                return this.taxRateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.taxRateField, value) != true)) {
+                    this.taxRateField = value;
+                    this.RaisePropertyChanged("taxRate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string taxType {
+            get {
+                return this.taxTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.taxTypeField, value) != true)) {
+                    this.taxTypeField = value;
+                    this.RaisePropertyChanged("taxType");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Tax", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class Tax : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string applicableOnField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string inclusiveOfTaxesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string taxCalculatedOnRateTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double taxRateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string taxTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double taxValueField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> validFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> validToField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string applicableOn {
+            get {
+                return this.applicableOnField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.applicableOnField, value) != true)) {
+                    this.applicableOnField = value;
+                    this.RaisePropertyChanged("applicableOn");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string inclusiveOfTaxes {
+            get {
+                return this.inclusiveOfTaxesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.inclusiveOfTaxesField, value) != true)) {
+                    this.inclusiveOfTaxesField = value;
+                    this.RaisePropertyChanged("inclusiveOfTaxes");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string taxCalculatedOnRateType {
+            get {
+                return this.taxCalculatedOnRateTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.taxCalculatedOnRateTypeField, value) != true)) {
+                    this.taxCalculatedOnRateTypeField = value;
+                    this.RaisePropertyChanged("taxCalculatedOnRateType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double taxRate {
+            get {
+                return this.taxRateField;
+            }
+            set {
+                if ((this.taxRateField.Equals(value) != true)) {
+                    this.taxRateField = value;
+                    this.RaisePropertyChanged("taxRate");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string taxType {
+            get {
+                return this.taxTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.taxTypeField, value) != true)) {
+                    this.taxTypeField = value;
+                    this.RaisePropertyChanged("taxType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double taxValue {
+            get {
+                return this.taxValueField;
+            }
+            set {
+                if ((this.taxValueField.Equals(value) != true)) {
+                    this.taxValueField = value;
+                    this.RaisePropertyChanged("taxValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> validFrom {
+            get {
+                return this.validFromField;
+            }
+            set {
+                if ((this.validFromField.Equals(value) != true)) {
+                    this.validFromField = value;
+                    this.RaisePropertyChanged("validFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> validTo {
+            get {
+                return this.validToField;
+            }
+            set {
+                if ((this.validToField.Equals(value) != true)) {
+                    this.validToField = value;
+                    this.RaisePropertyChanged("validTo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayPerPersonPrice", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayPerPersonPrice : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double amountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string currencyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string priceBasisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string priceTextField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                if ((this.amountField.Equals(value) != true)) {
+                    this.amountField = value;
+                    this.RaisePropertyChanged("amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string currency {
+            get {
+                return this.currencyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.currencyField, value) != true)) {
+                    this.currencyField = value;
+                    this.RaisePropertyChanged("currency");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string priceBasis {
+            get {
+                return this.priceBasisField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.priceBasisField, value) != true)) {
+                    this.priceBasisField = value;
+                    this.RaisePropertyChanged("priceBasis");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string priceText {
+            get {
+                return this.priceTextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.priceTextField, value) != true)) {
+                    this.priceTextField = value;
+                    this.RaisePropertyChanged("priceText");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PreTourStructure", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class PreTourStructure : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hostCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hotelCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string hotelNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int numberOfNightsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string packageCategoryField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCityCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierCityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierProductCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCityCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCountryCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXCountryNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string tLGXProductCodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hostCategory {
+            get {
+                return this.hostCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hostCategoryField, value) != true)) {
+                    this.hostCategoryField = value;
+                    this.RaisePropertyChanged("hostCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hotelCategory {
+            get {
+                return this.hotelCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hotelCategoryField, value) != true)) {
+                    this.hotelCategoryField = value;
+                    this.RaisePropertyChanged("hotelCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string hotelName {
+            get {
+                return this.hotelNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.hotelNameField, value) != true)) {
+                    this.hotelNameField = value;
+                    this.RaisePropertyChanged("hotelName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int numberOfNights {
+            get {
+                return this.numberOfNightsField;
+            }
+            set {
+                if ((this.numberOfNightsField.Equals(value) != true)) {
+                    this.numberOfNightsField = value;
+                    this.RaisePropertyChanged("numberOfNights");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string packageCategory {
+            get {
+                return this.packageCategoryField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.packageCategoryField, value) != true)) {
+                    this.packageCategoryField = value;
+                    this.RaisePropertyChanged("packageCategory");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCityCode {
+            get {
+                return this.supplierCityCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCityCodeField, value) != true)) {
+                    this.supplierCityCodeField = value;
+                    this.RaisePropertyChanged("supplierCityCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierCityName {
+            get {
+                return this.supplierCityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierCityNameField, value) != true)) {
+                    this.supplierCityNameField = value;
+                    this.RaisePropertyChanged("supplierCityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierProductCode {
+            get {
+                return this.supplierProductCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierProductCodeField, value) != true)) {
+                    this.supplierProductCodeField = value;
+                    this.RaisePropertyChanged("supplierProductCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCityCode {
+            get {
+                return this.tLGXCityCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCityCodeField, value) != true)) {
+                    this.tLGXCityCodeField = value;
+                    this.RaisePropertyChanged("tLGXCityCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCityName {
+            get {
+                return this.tLGXCityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCityNameField, value) != true)) {
+                    this.tLGXCityNameField = value;
+                    this.RaisePropertyChanged("tLGXCityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCountryCode {
+            get {
+                return this.tLGXCountryCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCountryCodeField, value) != true)) {
+                    this.tLGXCountryCodeField = value;
+                    this.RaisePropertyChanged("tLGXCountryCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXCountryName {
+            get {
+                return this.tLGXCountryNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXCountryNameField, value) != true)) {
+                    this.tLGXCountryNameField = value;
+                    this.RaisePropertyChanged("tLGXCountryName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string tLGXProductCode {
+            get {
+                return this.tLGXProductCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.tLGXProductCodeField, value) != true)) {
+                    this.tLGXProductCodeField = value;
+                    this.RaisePropertyChanged("tLGXProductCode");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PreTourPrice", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class PreTourPrice : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int AgeToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ageFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double amountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string currencyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int discountAmountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string discountNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string extraBeddingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double passengerRangeFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double passengerRangeToField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string personTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string roomTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string supplierProductCodeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private KafkaConsumer.MDMSVC.TaxStructure[] taxField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> validFromField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<System.DateTime> validToField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int AgeTo {
+            get {
+                return this.AgeToField;
+            }
+            set {
+                if ((this.AgeToField.Equals(value) != true)) {
+                    this.AgeToField = value;
+                    this.RaisePropertyChanged("AgeTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ageFrom {
+            get {
+                return this.ageFromField;
+            }
+            set {
+                if ((this.ageFromField.Equals(value) != true)) {
+                    this.ageFromField = value;
+                    this.RaisePropertyChanged("ageFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                if ((this.amountField.Equals(value) != true)) {
+                    this.amountField = value;
+                    this.RaisePropertyChanged("amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string currency {
+            get {
+                return this.currencyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.currencyField, value) != true)) {
+                    this.currencyField = value;
+                    this.RaisePropertyChanged("currency");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int discountAmount {
+            get {
+                return this.discountAmountField;
+            }
+            set {
+                if ((this.discountAmountField.Equals(value) != true)) {
+                    this.discountAmountField = value;
+                    this.RaisePropertyChanged("discountAmount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string discountName {
+            get {
+                return this.discountNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.discountNameField, value) != true)) {
+                    this.discountNameField = value;
+                    this.RaisePropertyChanged("discountName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string extraBedding {
+            get {
+                return this.extraBeddingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.extraBeddingField, value) != true)) {
+                    this.extraBeddingField = value;
+                    this.RaisePropertyChanged("extraBedding");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double passengerRangeFrom {
+            get {
+                return this.passengerRangeFromField;
+            }
+            set {
+                if ((this.passengerRangeFromField.Equals(value) != true)) {
+                    this.passengerRangeFromField = value;
+                    this.RaisePropertyChanged("passengerRangeFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double passengerRangeTo {
+            get {
+                return this.passengerRangeToField;
+            }
+            set {
+                if ((this.passengerRangeToField.Equals(value) != true)) {
+                    this.passengerRangeToField = value;
+                    this.RaisePropertyChanged("passengerRangeTo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string personType {
+            get {
+                return this.personTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.personTypeField, value) != true)) {
+                    this.personTypeField = value;
+                    this.RaisePropertyChanged("personType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string roomType {
+            get {
+                return this.roomTypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.roomTypeField, value) != true)) {
+                    this.roomTypeField = value;
+                    this.RaisePropertyChanged("roomType");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string supplierProductCode {
+            get {
+                return this.supplierProductCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.supplierProductCodeField, value) != true)) {
+                    this.supplierProductCodeField = value;
+                    this.RaisePropertyChanged("supplierProductCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public KafkaConsumer.MDMSVC.TaxStructure[] tax {
+            get {
+                return this.taxField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.taxField, value) != true)) {
+                    this.taxField = value;
+                    this.RaisePropertyChanged("tax");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> validFrom {
+            get {
+                return this.validFromField;
+            }
+            set {
+                if ((this.validFromField.Equals(value) != true)) {
+                    this.validFromField = value;
+                    this.RaisePropertyChanged("validFrom");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> validTo {
+            get {
+                return this.validToField;
+            }
+            set {
+                if ((this.validToField.Equals(value) != true)) {
+                    this.validToField = value;
+                    this.RaisePropertyChanged("validTo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayStartingPrice", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayStartingPrice : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string amountField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string currencyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string priceBasisField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string priceTextField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.amountField, value) != true)) {
+                    this.amountField = value;
+                    this.RaisePropertyChanged("amount");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string currency {
+            get {
+                return this.currencyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.currencyField, value) != true)) {
+                    this.currencyField = value;
+                    this.RaisePropertyChanged("currency");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string priceBasis {
+            get {
+                return this.priceBasisField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.priceBasisField, value) != true)) {
+                    this.priceBasisField = value;
+                    this.RaisePropertyChanged("priceBasis");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string priceText {
+            get {
+                return this.priceTextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.priceTextField, value) != true)) {
+                    this.priceTextField = value;
+                    this.RaisePropertyChanged("priceText");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TravelFrequency", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class TravelFrequency : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string typeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.typeField, value) != true)) {
+                    this.typeField = value;
+                    this.RaisePropertyChanged("type");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HolidayUniqueSellingPoints", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class HolidayUniqueSellingPoints : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string textField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.idField, value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string text {
+            get {
+                return this.textField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.textField, value) != true)) {
+                    this.textField = value;
+                    this.RaisePropertyChanged("text");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CustomClassificationAttributes", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday")]
+    [System.SerializableAttribute()]
+    public partial class CustomClassificationAttributes : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsActiveField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string attributeSubTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string attributeTypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string attributeValueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
             }
         }
         
@@ -58299,92 +65048,40 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsSiteMapNode {
+        public string attributeSubType {
             get {
-                return this.IsSiteMapNodeField;
+                return this.attributeSubTypeField;
             }
             set {
-                if ((this.IsSiteMapNodeField.Equals(value) != true)) {
-                    this.IsSiteMapNodeField = value;
-                    this.RaisePropertyChanged("IsSiteMapNode");
+                if ((object.ReferenceEquals(this.attributeSubTypeField, value) != true)) {
+                    this.attributeSubTypeField = value;
+                    this.RaisePropertyChanged("attributeSubType");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ParentID {
+        public string attributeType {
             get {
-                return this.ParentIDField;
+                return this.attributeTypeField;
             }
             set {
-                if ((this.ParentIDField.Equals(value) != true)) {
-                    this.ParentIDField = value;
-                    this.RaisePropertyChanged("ParentID");
+                if ((object.ReferenceEquals(this.attributeTypeField, value) != true)) {
+                    this.attributeTypeField = value;
+                    this.RaisePropertyChanged("attributeType");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ParentTitle {
+        public string attributeValue {
             get {
-                return this.ParentTitleField;
+                return this.attributeValueField;
             }
             set {
-                if ((object.ReferenceEquals(this.ParentTitleField, value) != true)) {
-                    this.ParentTitleField = value;
-                    this.RaisePropertyChanged("ParentTitle");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Roles {
-            get {
-                return this.RolesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RolesField, value) != true)) {
-                    this.RolesField = value;
-                    this.RaisePropertyChanged("Roles");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid SiteMap_ID {
-            get {
-                return this.SiteMap_IDField;
-            }
-            set {
-                if ((this.SiteMap_IDField.Equals(value) != true)) {
-                    this.SiteMap_IDField = value;
-                    this.RaisePropertyChanged("SiteMap_ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Title {
-            get {
-                return this.TitleField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitleField, value) != true)) {
-                    this.TitleField = value;
-                    this.RaisePropertyChanged("Title");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Url {
-            get {
-                return this.UrlField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UrlField, value) != true)) {
-                    this.UrlField = value;
-                    this.RaisePropertyChanged("Url");
+                if ((object.ReferenceEquals(this.attributeValueField, value) != true)) {
+                    this.attributeValueField = value;
+                    this.RaisePropertyChanged("attributeValue");
                 }
             }
         }
@@ -58401,526 +65098,30 @@ namespace KafkaConsumer.MDMSVC {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_Roles", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DL_ML_DL_EntityStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.ML")]
     [System.SerializableAttribute()]
-    public partial class DC_Roles : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class DL_ML_DL_EntityStatus : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ApplicationIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RoleIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string RoleNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalRecordsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ApplicationID {
-            get {
-                return this.ApplicationIDField;
-            }
-            set {
-                if ((this.ApplicationIDField.Equals(value) != true)) {
-                    this.ApplicationIDField = value;
-                    this.RaisePropertyChanged("ApplicationID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RoleID {
-            get {
-                return this.RoleIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RoleIDField, value) != true)) {
-                    this.RoleIDField = value;
-                    this.RaisePropertyChanged("RoleID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RoleName {
-            get {
-                return this.RoleNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.RoleNameField, value) != true)) {
-                    this.RoleNameField = value;
-                    this.RaisePropertyChanged("RoleName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalRecords {
-            get {
-                return this.TotalRecordsField;
-            }
-            set {
-                if ((this.TotalRecordsField.Equals(value) != true)) {
-                    this.TotalRecordsField = value;
-                    this.RaisePropertyChanged("TotalRecords");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_RoleAuthorizedForUrl", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
-    [System.SerializableAttribute()]
-    public partial class DC_RoleAuthorizedForUrl : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UrlField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Url {
-            get {
-                return this.UrlField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UrlField, value) != true)) {
-                    this.UrlField = value;
-                    this.RaisePropertyChanged("Url");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string User {
-            get {
-                return this.UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UserField, value) != true)) {
-                    this.UserField = value;
-                    this.RaisePropertyChanged("User");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_EntityType", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
-    [System.SerializableAttribute()]
-    public partial class DC_EntityType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int EnityTypeIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityTypeNameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int EnityTypeID {
-            get {
-                return this.EnityTypeIDField;
-            }
-            set {
-                if ((this.EnityTypeIDField.Equals(value) != true)) {
-                    this.EnityTypeIDField = value;
-                    this.RaisePropertyChanged("EnityTypeID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EntityTypeName {
-            get {
-                return this.EntityTypeNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityTypeNameField, value) != true)) {
-                    this.EntityTypeNameField = value;
-                    this.RaisePropertyChanged("EntityTypeName");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_EntityDetails", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
-    [System.SerializableAttribute()]
-    public partial class DC_EntityDetails : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> EntityIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EntityNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int EntityTypeIDField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> EntityID {
-            get {
-                return this.EntityIDField;
-            }
-            set {
-                if ((this.EntityIDField.Equals(value) != true)) {
-                    this.EntityIDField = value;
-                    this.RaisePropertyChanged("EntityID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EntityName {
-            get {
-                return this.EntityNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityNameField, value) != true)) {
-                    this.EntityNameField = value;
-                    this.RaisePropertyChanged("EntityName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int EntityTypeID {
-            get {
-                return this.EntityTypeIDField;
-            }
-            set {
-                if ((this.EntityTypeIDField.Equals(value) != true)) {
-                    this.EntityTypeIDField = value;
-                    this.RaisePropertyChanged("EntityTypeID");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_UserEntity", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
-    [System.SerializableAttribute()]
-    public partial class DC_UserEntity : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ApplicationIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Create_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Create_UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Edit_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Edit_UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.Guid> EntityIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EntityTypeIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ManagerIDField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid UserIDField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ApplicationId {
-            get {
-                return this.ApplicationIdField;
-            }
-            set {
-                if ((this.ApplicationIdField.Equals(value) != true)) {
-                    this.ApplicationIdField = value;
-                    this.RaisePropertyChanged("ApplicationId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Create_Date {
-            get {
-                return this.Create_DateField;
-            }
-            set {
-                if ((this.Create_DateField.Equals(value) != true)) {
-                    this.Create_DateField = value;
-                    this.RaisePropertyChanged("Create_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Create_User {
-            get {
-                return this.Create_UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
-                    this.Create_UserField = value;
-                    this.RaisePropertyChanged("Create_User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Edit_Date {
-            get {
-                return this.Edit_DateField;
-            }
-            set {
-                if ((this.Edit_DateField.Equals(value) != true)) {
-                    this.Edit_DateField = value;
-                    this.RaisePropertyChanged("Edit_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Edit_User {
-            get {
-                return this.Edit_UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
-                    this.Edit_UserField = value;
-                    this.RaisePropertyChanged("Edit_User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.Guid> EntityID {
-            get {
-                return this.EntityIDField;
-            }
-            set {
-                if ((this.EntityIDField.Equals(value) != true)) {
-                    this.EntityIDField = value;
-                    this.RaisePropertyChanged("EntityID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EntityTypeID {
-            get {
-                return this.EntityTypeIDField;
-            }
-            set {
-                if ((this.EntityTypeIDField.Equals(value) != true)) {
-                    this.EntityTypeIDField = value;
-                    this.RaisePropertyChanged("EntityTypeID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IDField, value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ManagerID {
-            get {
-                return this.ManagerIDField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ManagerIDField, value) != true)) {
-                    this.ManagerIDField = value;
-                    this.RaisePropertyChanged("ManagerID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid UserID {
-            get {
-                return this.UserIDField;
-            }
-            set {
-                if ((this.UserIDField.Equals(value) != true)) {
-                    this.UserIDField = value;
-                    this.RaisePropertyChanged("UserID");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_UserDetails", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
-    [System.SerializableAttribute()]
-    public partial class DC_UserDetails : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ApplicationIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Create_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Create_UserField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<System.DateTime> Edit_DateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string Edit_UserField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EntityTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> EntityTypeIDField;
+        private System.DateTime LastUpdateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<bool> IsActiveField;
+        private decimal PerField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalRecordsField;
+        private string PushedCountField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UserNameField;
+        private string StatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UseridField;
+        private string TotalCountField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -58929,71 +65130,6 @@ namespace KafkaConsumer.MDMSVC {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ApplicationId {
-            get {
-                return this.ApplicationIdField;
-            }
-            set {
-                if ((this.ApplicationIdField.Equals(value) != true)) {
-                    this.ApplicationIdField = value;
-                    this.RaisePropertyChanged("ApplicationId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Create_Date {
-            get {
-                return this.Create_DateField;
-            }
-            set {
-                if ((this.Create_DateField.Equals(value) != true)) {
-                    this.Create_DateField = value;
-                    this.RaisePropertyChanged("Create_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Create_User {
-            get {
-                return this.Create_UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Create_UserField, value) != true)) {
-                    this.Create_UserField = value;
-                    this.RaisePropertyChanged("Create_User");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> Edit_Date {
-            get {
-                return this.Edit_DateField;
-            }
-            set {
-                if ((this.Edit_DateField.Equals(value) != true)) {
-                    this.Edit_DateField = value;
-                    this.RaisePropertyChanged("Edit_Date");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Edit_User {
-            get {
-                return this.Edit_UserField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.Edit_UserField, value) != true)) {
-                    this.Edit_UserField = value;
-                    this.RaisePropertyChanged("Edit_User");
-                }
             }
         }
         
@@ -59011,159 +65147,66 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> EntityTypeID {
+        public System.DateTime LastUpdate {
             get {
-                return this.EntityTypeIDField;
+                return this.LastUpdateField;
             }
             set {
-                if ((this.EntityTypeIDField.Equals(value) != true)) {
-                    this.EntityTypeIDField = value;
-                    this.RaisePropertyChanged("EntityTypeID");
+                if ((this.LastUpdateField.Equals(value) != true)) {
+                    this.LastUpdateField = value;
+                    this.RaisePropertyChanged("LastUpdate");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> IsActive {
+        public decimal Per {
             get {
-                return this.IsActiveField;
+                return this.PerField;
             }
             set {
-                if ((this.IsActiveField.Equals(value) != true)) {
-                    this.IsActiveField = value;
-                    this.RaisePropertyChanged("IsActive");
+                if ((this.PerField.Equals(value) != true)) {
+                    this.PerField = value;
+                    this.RaisePropertyChanged("Per");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalRecords {
+        public string PushedCount {
             get {
-                return this.TotalRecordsField;
+                return this.PushedCountField;
             }
             set {
-                if ((this.TotalRecordsField.Equals(value) != true)) {
-                    this.TotalRecordsField = value;
-                    this.RaisePropertyChanged("TotalRecords");
+                if ((object.ReferenceEquals(this.PushedCountField, value) != true)) {
+                    this.PushedCountField = value;
+                    this.RaisePropertyChanged("PushedCount");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UserName {
+        public string Status {
             get {
-                return this.UserNameField;
+                return this.StatusField;
             }
             set {
-                if ((object.ReferenceEquals(this.UserNameField, value) != true)) {
-                    this.UserNameField = value;
-                    this.RaisePropertyChanged("UserName");
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Userid {
+        public string TotalCount {
             get {
-                return this.UseridField;
+                return this.TotalCountField;
             }
             set {
-                if ((object.ReferenceEquals(this.UseridField, value) != true)) {
-                    this.UseridField = value;
-                    this.RaisePropertyChanged("Userid");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DC_ApplicationMgmt", Namespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin")]
-    [System.SerializableAttribute()]
-    public partial class DC_ApplicationMgmt : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Guid ApplicationIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ApplicationNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int TotalRecordsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Guid ApplicationId {
-            get {
-                return this.ApplicationIdField;
-            }
-            set {
-                if ((this.ApplicationIdField.Equals(value) != true)) {
-                    this.ApplicationIdField = value;
-                    this.RaisePropertyChanged("ApplicationId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApplicationName {
-            get {
-                return this.ApplicationNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ApplicationNameField, value) != true)) {
-                    this.ApplicationNameField = value;
-                    this.RaisePropertyChanged("ApplicationName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int TotalRecords {
-            get {
-                return this.TotalRecordsField;
-            }
-            set {
-                if ((this.TotalRecordsField.Equals(value) != true)) {
-                    this.TotalRecordsField = value;
-                    this.RaisePropertyChanged("TotalRecords");
+                if ((object.ReferenceEquals(this.TotalCountField, value) != true)) {
+                    this.TotalCountField = value;
+                    this.RaisePropertyChanged("TotalCount");
                 }
             }
         }
@@ -60990,6 +67033,34 @@ namespace KafkaConsumer.MDMSVC {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetMediaDetailByActivitiesReport", ReplyAction="http://tempuri.org/IMapping/GetMediaDetailByActivitiesReportResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS[]> GetMediaDetailByActivitiesReportAsync(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RQ param);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetHolidayMapping", ReplyAction="http://tempuri.org/IMapping/GetHolidayMappingResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMapping/GetHolidayMappingDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.HolidayMappingSearchResult GetHolidayMapping(KafkaConsumer.MDMSVC.DC_Holiday_Search_Params_RQ RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetHolidayMapping", ReplyAction="http://tempuri.org/IMapping/GetHolidayMappingResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.HolidayMappingSearchResult> GetHolidayMappingAsync(KafkaConsumer.MDMSVC.DC_Holiday_Search_Params_RQ RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetHolidayMappingById", ReplyAction="http://tempuri.org/IMapping/GetHolidayMappingByIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMapping/GetHolidayMappingByIdDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.HolidayModel GetHolidayMappingById(string Nak_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetHolidayMappingById", ReplyAction="http://tempuri.org/IMapping/GetHolidayMappingByIdResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.HolidayModel> GetHolidayMappingByIdAsync(string Nak_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetHolidayCustomMappingById", ReplyAction="http://tempuri.org/IMapping/GetHolidayCustomMappingByIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMapping/GetHolidayCustomMappingByIdDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        KafkaConsumer.MDMSVC.CustomClassificationAttributes[] GetHolidayCustomMappingById(string Nak_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/GetHolidayCustomMappingById", ReplyAction="http://tempuri.org/IMapping/GetHolidayCustomMappingByIdResponse")]
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.CustomClassificationAttributes[]> GetHolidayCustomMappingByIdAsync(string Nak_Id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/UpdateHolidayMappingById", ReplyAction="http://tempuri.org/IMapping/UpdateHolidayMappingByIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IMapping/UpdateHolidayMappingByIdDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        bool UpdateHolidayMappingById(KafkaConsumer.MDMSVC.HolidayModel RQ);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMapping/UpdateHolidayMappingById", ReplyAction="http://tempuri.org/IMapping/UpdateHolidayMappingByIdResponse")]
+        System.Threading.Tasks.Task<bool> UpdateHolidayMappingByIdAsync(KafkaConsumer.MDMSVC.HolidayModel RQ);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdmin/GetSiteMapMaster", ReplyAction="http://tempuri.org/IAdmin/GetSiteMapMasterResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IAdmin/GetSiteMapMasterDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -64374,6 +70445,38 @@ namespace KafkaConsumer.MDMSVC {
         
         public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RS[]> GetMediaDetailByActivitiesReportAsync(KafkaConsumer.MDMSVC.DC_ActivityImageReportDetails_RQ param) {
             return base.Channel.GetMediaDetailByActivitiesReportAsync(param);
+        }
+        
+        public KafkaConsumer.MDMSVC.HolidayMappingSearchResult GetHolidayMapping(KafkaConsumer.MDMSVC.DC_Holiday_Search_Params_RQ RQ) {
+            return base.Channel.GetHolidayMapping(RQ);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.HolidayMappingSearchResult> GetHolidayMappingAsync(KafkaConsumer.MDMSVC.DC_Holiday_Search_Params_RQ RQ) {
+            return base.Channel.GetHolidayMappingAsync(RQ);
+        }
+        
+        public KafkaConsumer.MDMSVC.HolidayModel GetHolidayMappingById(string Nak_Id) {
+            return base.Channel.GetHolidayMappingById(Nak_Id);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.HolidayModel> GetHolidayMappingByIdAsync(string Nak_Id) {
+            return base.Channel.GetHolidayMappingByIdAsync(Nak_Id);
+        }
+        
+        public KafkaConsumer.MDMSVC.CustomClassificationAttributes[] GetHolidayCustomMappingById(string Nak_Id) {
+            return base.Channel.GetHolidayCustomMappingById(Nak_Id);
+        }
+        
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.CustomClassificationAttributes[]> GetHolidayCustomMappingByIdAsync(string Nak_Id) {
+            return base.Channel.GetHolidayCustomMappingByIdAsync(Nak_Id);
+        }
+        
+        public bool UpdateHolidayMappingById(KafkaConsumer.MDMSVC.HolidayModel RQ) {
+            return base.Channel.UpdateHolidayMappingById(RQ);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateHolidayMappingByIdAsync(KafkaConsumer.MDMSVC.HolidayModel RQ) {
+            return base.Channel.UpdateHolidayMappingByIdAsync(RQ);
         }
         
         public KafkaConsumer.MDMSVC.DC_SiteMap[] GetSiteMapMaster(string ID, string applicationid) {
