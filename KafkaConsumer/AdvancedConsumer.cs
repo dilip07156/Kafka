@@ -94,61 +94,84 @@ namespace KafkaConsumer
         /// </summary>
         public static void Run_Poll(Dictionary<string, object> constructConfig, List<string> topics, CancellationTokenSource cancellationTokenSource)
         {
-            using (var consumer = new Confluent.Kafka.Consumer<Confluent.Kafka.Null, string>(constructConfig, null, new StringDeserializer(Encoding.UTF8)))
+            StartProcess sp = new StartProcess();
+
+            try
             {
-                // Note: All event handlers are called on the main thread.
-                consumer.OnMessage += (_, msg) => { ProcessKafkaMessage.InsertInto_StgKafka(msg); };
-
-                consumer.OnPartitionEOF += (_, end) => Console.WriteLine($"Reached end of topic {end.Topic} partition {end.Partition}, next message will be at offset {end.Offset}");
-
-                // Raised on critical errors, e.g. connection failures or all brokers down.
-                consumer.OnError += (_, error) => Console.WriteLine($"Error: {error}");
-
-                // Raised on deserialization errors or when a consumed message has an error != NoError.
-                consumer.OnConsumeError += (_, msg) => Console.WriteLine($"Error consuming from topic/partition/offset {msg.Topic}/{msg.Partition}/{msg.Offset}: {msg.Error}");
-
-                consumer.OnOffsetsCommitted += (_, commit) =>
+                using (var consumer = new Confluent.Kafka.Consumer<Confluent.Kafka.Null, string>(constructConfig, null, new StringDeserializer(Encoding.UTF8)))
                 {
-                    Console.WriteLine($"[{string.Join(", ", commit.Offsets)}]");
+                    sp.Log("Run_Poll Start");
+                    // Note: All event handlers are called on the main thread.
+                    consumer.OnMessage += (_, msg) => { /*sp.Log(msg.Value)*/;ProcessKafkaMessage.InsertInto_StgKafka(msg); };
 
-                    if (commit.Error)
+                    consumer.OnPartitionEOF += (_, end) =>
                     {
-                        Console.WriteLine($"Failed to commit offsets: {commit.Error}");
+                        sp.Log($"Reached end of topic {end.Topic} partition {end.Partition}, next message will be at offset {end.Offset}");
+                        Console.WriteLine($"Reached end of topic {end.Topic} partition {end.Partition}, next message will be at offset {end.Offset}");
+                    };
+                    // Raised on critical errors, e.g. connection failures or all brokers down.
+                    consumer.OnError += (_, error) =>
+                    {
+                        sp.Log($"Error: {error}");
+                        Console.WriteLine($"Error: {error}");
+                    };
+
+                    // Raised on deserialization errors or when a consumed message has an error != NoError.
+                    consumer.OnConsumeError += (_, msg) => {
+                        sp.Log($"Error consuming from topic/partition/offset {msg.Topic}/{msg.Partition}/{msg.Offset}: {msg.Error}");
+                        Console.WriteLine($"Error consuming from topic/partition/offset {msg.Topic}/{msg.Partition}/{msg.Offset}: {msg.Error}"); };
+
+                    consumer.OnOffsetsCommitted += (_, commit) =>
+                    {
+                        Console.WriteLine($"[{string.Join(", ", commit.Offsets)}]");
+
+                        if (commit.Error)
+                        {
+                            Console.WriteLine($"Failed to commit offsets: {commit.Error}");
+                        }
+                        Console.WriteLine($"Successfully committed offsets: [{string.Join(", ", commit.Offsets)}]");
+                    };
+
+                    consumer.OnPartitionsAssigned += (_, partitions) =>
+                    {
+                        Console.WriteLine($"Assigned partitions: [{string.Join(", ", partitions)}], member id: {consumer.MemberId}");
+                        consumer.Assign(partitions);
+                    };
+
+                    consumer.OnPartitionsRevoked += (_, partitions) =>
+                    {
+                        Console.WriteLine($"Revoked partitions: [{string.Join(", ", partitions)}]");
+                        consumer.Unassign();
+                    };
+
+                    consumer.OnStatistics += (_, json) => Console.WriteLine($"Statistics: {json}");
+
+                    consumer.Subscribe(topics);
+
+                    Console.WriteLine($"Subscribed to: [{string.Join(", ", consumer.Subscription)}]");
+
+                    //var cancelled = false;
+                    //Console.CancelKeyPress += (_, e) =>
+                    //{
+                    //    e.Cancel = true; // prevent the process from terminating.
+                    //    cancelled = true;
+                    //};
+                    sp.Log("Berfore Wile loop");
+                    Console.WriteLine("Ctrl-C to exit.");
+                    while (!cancellationTokenSource.IsCancellationRequested)
+                    {
+                        consumer.Poll(TimeSpan.FromMilliseconds(1000));
                     }
-                    Console.WriteLine($"Successfully committed offsets: [{string.Join(", ", commit.Offsets)}]");
-                };
+                    //consumer.CommitAsync();
 
-                consumer.OnPartitionsAssigned += (_, partitions) =>
-                {
-                    Console.WriteLine($"Assigned partitions: [{string.Join(", ", partitions)}], member id: {consumer.MemberId}");
-                    consumer.Assign(partitions);
-                };
-
-                consumer.OnPartitionsRevoked += (_, partitions) =>
-                {
-                    Console.WriteLine($"Revoked partitions: [{string.Join(", ", partitions)}]");
-                    consumer.Unassign();
-                };
-
-                consumer.OnStatistics += (_, json) => Console.WriteLine($"Statistics: {json}");
-
-                consumer.Subscribe(topics);
-
-                Console.WriteLine($"Subscribed to: [{string.Join(", ", consumer.Subscription)}]");
-
-                //var cancelled = false;
-                //Console.CancelKeyPress += (_, e) =>
-                //{
-                //    e.Cancel = true; // prevent the process from terminating.
-                //    cancelled = true;
-                //};
-
-                Console.WriteLine("Ctrl-C to exit.");
-                while (!cancellationTokenSource.IsCancellationRequested)
-                {
-                    consumer.Poll(TimeSpan.FromMilliseconds(1000));
+                    sp.Log("Run_Poll End");
                 }
-                //consumer.CommitAsync();
+            }
+            catch (Exception ex)
+            {
+                sp.Log("Exeception in Run_Poll ");
+                sp.Log(ex.ToString());
+                throw;
             }
         }
 

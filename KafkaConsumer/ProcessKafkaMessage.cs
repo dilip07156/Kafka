@@ -15,6 +15,7 @@ namespace KafkaConsumer
     {
         public static async void InsertInto_StgKafka(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
         {
+            StartProcess sp = new StartProcess();
             try
             {
                 await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], new DC_Stg_Kafka()
@@ -35,7 +36,8 @@ namespace KafkaConsumer
             }
             catch (Exception Ex)
             {
-
+                sp.Log("Execption occurs InsertInto_StgKafka Method");
+                sp.Log(Ex.ToString());
                 throw;
             }
         }
@@ -283,7 +285,7 @@ namespace KafkaConsumer
             accoToInsertUpdate.Country = acco.accomodationInfo.address.country;
             accoToInsertUpdate.Create_User = acco.createdBy ?? "Kafka_Sync";
             accoToInsertUpdate.DisplayName = acco.accomodationInfo.displayName;
-
+            accoToInsertUpdate.Interest = (acco.overview != null && acco.overview.interest != null && acco.overview.interest.Count > 0 ? string.Join(",", acco.overview.interest) : null);
             if (acco.lastUpdated != null && acco.lastUpdated <= DateTime.MinValue)
             {
                 accoToInsertUpdate.Edit_Date = null;
@@ -337,6 +339,7 @@ namespace KafkaConsumer
             accoToInsertUpdate.AccVersion.Area = acco.accomodationInfo.address.area;
             accoToInsertUpdate.AccVersion.Location = acco.accomodationInfo.address.location;
             accoToInsertUpdate.AccVersion.TLGXAccoId = acco._id;
+            accoToInsertUpdate.AccVersion.Interest = (acco.overview != null && acco.overview.interest != null && acco.overview.interest.Count > 0 ? string.Join(",", acco.overview.interest) : null); 
 
 
             if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)

@@ -1,131 +1,669 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.Admin" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-  <xs:complexType name="ArrayOfDC_SiteMap">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.Holiday" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.Holiday" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DC_Holiday_Search_Params_RQ">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SiteMap" nillable="true" type="tns:DC_SiteMap" />
+      <xs:element minOccurs="0" name="CityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomisedPackages" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HolidayFlavour" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HolidayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsComfortLevelMissing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInterestsMissing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsStayTypeMissing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTravelFrequencyMissing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsTravellerTypeMissing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUSPMissing" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MappingStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageNo" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="PreBuiltPackages" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Supplier" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfDC_SiteMap" nillable="true" type="tns:ArrayOfDC_SiteMap" />
-  <xs:complexType name="DC_SiteMap">
+  <xs:element name="DC_Holiday_Search_Params_RQ" nillable="true" type="tns:DC_Holiday_Search_Params_RQ" />
+  <xs:complexType name="HolidayMappingSearchResult">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ApplicationID" type="ser:guid" />
-      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="currentPage" type="xs:int" />
+      <xs:element minOccurs="0" name="holidays" nillable="true" type="tns:ArrayOfDC_Holiday_Search_RS" />
+      <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="totalNumberOfHolidays" type="xs:long" />
+      <xs:element minOccurs="0" name="totalPage" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayMappingSearchResult" nillable="true" type="tns:HolidayMappingSearchResult" />
+  <xs:complexType name="ArrayOfDC_Holiday_Search_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Holiday_Search_RS" nillable="true" type="tns:DC_Holiday_Search_RS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Holiday_Search_RS" nillable="true" type="tns:ArrayOfDC_Holiday_Search_RS" />
+  <xs:complexType name="DC_Holiday_Search_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="flavourId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="holidayFlavour" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="holidayId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="holidayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nakid" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="source" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Holiday_Search_RS" nillable="true" type="tns:DC_Holiday_Search_RS" />
+  <xs:complexType name="HolidayModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accommodation" nillable="true" type="tns:ArrayOfHolidayAccommodation" />
+      <xs:element minOccurs="0" name="activity" nillable="true" type="tns:ArrayOfHolidayActivity" />
+      <xs:element minOccurs="0" name="bU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bookingPolicy" nillable="true" type="tns:ArrayOfHolidayTermsConditions" />
+      <xs:element minOccurs="0" name="brands" nillable="true" type="tns:ArrayOfHolidayBrandsAndBrochures" />
+      <xs:element minOccurs="0" name="brochures" nillable="true" type="tns:ArrayOfHolidayBrandsAndBrochures" />
+      <xs:element minOccurs="0" name="callType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="classificationAttributes" nillable="true" type="tns:ArrayOfClassificationAttributes" />
+      <xs:element minOccurs="0" name="collections" nillable="true" type="tns:ArrayOfHolidayCollections" />
+      <xs:element minOccurs="0" name="comfortLevel" nillable="true" type="tns:ArrayOfComfortLevel" />
+      <xs:element minOccurs="0" name="company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="companyPackageCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="companyProductId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="createUSer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dayWiseItineraries" nillable="true" type="tns:ArrayOfHolidayDayWiseItineraries" />
+      <xs:element minOccurs="0" name="days" type="xs:int" />
+      <xs:element minOccurs="0" name="departure" nillable="true" type="tns:ArrayOfHolidayDeparture" />
+      <xs:element minOccurs="0" name="destinations" nillable="true" type="tns:ArrayOfHolidayDestinations" />
+      <xs:element minOccurs="0" name="duration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="editDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="editUser" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="effectiveFromDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="effectiveToDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="exclusions" nillable="true" type="tns:ArrayOfHolidayInclusionExclusion" />
+      <xs:element minOccurs="0" name="flavorType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="flavourValidFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="flavourValidTo" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="groupCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="groupOfCompany" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="highlights" nillable="true" type="tns:ArrayOfHolidayHighlights" />
+      <xs:element minOccurs="0" name="holidayIncludes" nillable="true" type="tns:ArrayOfHolidayIncludes" />
+      <xs:element minOccurs="0" name="inclusions" nillable="true" type="tns:ArrayOfHolidayInclusionExclusion" />
+      <xs:element minOccurs="0" name="interests" nillable="true" type="tns:ArrayOfHolidayTypes" />
+      <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isRecommended" type="xs:boolean" />
+      <xs:element minOccurs="0" name="media" nillable="true" type="tns:ArrayOfHolidayMedia" />
+      <xs:element minOccurs="0" name="nakshatraHolidayId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nights" type="xs:int" />
+      <xs:element minOccurs="0" name="overview" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="paceOfHoliday" nillable="true" type="tns:ArrayOfPaceOfHoliday" />
+      <xs:element minOccurs="0" name="packagePrice" nillable="true" type="tns:ArrayOfPackagePrice" />
+      <xs:element minOccurs="0" name="packageType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="perPersonPrice" nillable="true" type="tns:ArrayOfHolidayPerPersonPrice" />
+      <xs:element minOccurs="0" name="postTour" nillable="true" type="tns:ArrayOfPreTourStructure" />
+      <xs:element minOccurs="0" name="postTourPrice" nillable="true" type="tns:ArrayOfPreTourPrice" />
+      <xs:element minOccurs="0" name="preTour" nillable="true" type="tns:ArrayOfPreTourStructure" />
+      <xs:element minOccurs="0" name="preTourPrice" nillable="true" type="tns:ArrayOfPreTourPrice" />
+      <xs:element minOccurs="0" name="productCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productCategorySubtype" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productFlavorID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productFlavorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="rating" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sBU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startingPrice" nillable="true" type="tns:ArrayOfHolidayStartingPrice" />
+      <xs:element minOccurs="0" name="stayType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierHolidayId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="termsConditions" nillable="true" type="tns:ArrayOfHolidayTermsConditions" />
+      <xs:element minOccurs="0" name="tourNotes" nillable="true" type="tns:ArrayOfHolidayTermsConditions" />
+      <xs:element minOccurs="0" name="tourOptionID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="travelFrequency" nillable="true" type="tns:ArrayOfTravelFrequency" />
+      <xs:element minOccurs="0" name="travellerType" nillable="true" type="tns:ArrayOfHolidayTypes" />
+      <xs:element minOccurs="0" name="typeOfHoliday" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uniqueSellingPoints" nillable="true" type="tns:HolidayUniqueSellingPoints" />
+      <xs:element minOccurs="0" name="userRemarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="userReviewStatus" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayModel" nillable="true" type="tns:HolidayModel" />
+  <xs:complexType name="ArrayOfHolidayAccommodation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayAccommodation" nillable="true" type="tns:HolidayAccommodation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayAccommodation" nillable="true" type="tns:ArrayOfHolidayAccommodation" />
+  <xs:complexType name="HolidayAccommodation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hostCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hotelCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numberOfNights" type="xs:int" />
+      <xs:element minOccurs="0" name="packageCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXProductCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayAccommodation" nillable="true" type="tns:HolidayAccommodation" />
+  <xs:complexType name="ArrayOfHolidayActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayActivity" nillable="true" type="tns:HolidayActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayActivity" nillable="true" type="tns:ArrayOfHolidayActivity" />
+  <xs:complexType name="HolidayActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dayNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="departureEndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="departureId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="departureStartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dropDestination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hostCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pickupDestination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="session" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXActivityId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXActivityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCountryName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayActivity" nillable="true" type="tns:HolidayActivity" />
+  <xs:complexType name="ArrayOfHolidayTermsConditions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayTermsConditions" nillable="true" type="tns:HolidayTermsConditions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayTermsConditions" nillable="true" type="tns:ArrayOfHolidayTermsConditions" />
+  <xs:complexType name="HolidayTermsConditions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order" type="xs:int" />
+      <xs:element minOccurs="0" name="serviceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayTermsConditions" nillable="true" type="tns:HolidayTermsConditions" />
+  <xs:complexType name="ArrayOfHolidayBrandsAndBrochures">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayBrandsAndBrochures" nillable="true" type="tns:HolidayBrandsAndBrochures" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayBrandsAndBrochures" nillable="true" type="tns:ArrayOfHolidayBrandsAndBrochures" />
+  <xs:complexType name="HolidayBrandsAndBrochures">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayBrandsAndBrochures" nillable="true" type="tns:HolidayBrandsAndBrochures" />
+  <xs:complexType name="ArrayOfClassificationAttributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClassificationAttributes" nillable="true" type="tns:ClassificationAttributes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClassificationAttributes" nillable="true" type="tns:ArrayOfClassificationAttributes" />
+  <xs:complexType name="ClassificationAttributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="attributeSubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="attributeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="attributeValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isActive" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClassificationAttributes" nillable="true" type="tns:ClassificationAttributes" />
+  <xs:complexType name="ArrayOfHolidayCollections">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayCollections" nillable="true" type="tns:HolidayCollections" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayCollections" nillable="true" type="tns:ArrayOfHolidayCollections" />
+  <xs:complexType name="HolidayCollections">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayCollections" nillable="true" type="tns:HolidayCollections" />
+  <xs:complexType name="ArrayOfComfortLevel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ComfortLevel" nillable="true" type="tns:ComfortLevel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComfortLevel" nillable="true" type="tns:ArrayOfComfortLevel" />
+  <xs:complexType name="ComfortLevel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="level" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ComfortLevel" nillable="true" type="tns:ComfortLevel" />
+  <xs:complexType name="ArrayOfHolidayDayWiseItineraries">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayDayWiseItineraries" nillable="true" type="tns:HolidayDayWiseItineraries" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayDayWiseItineraries" nillable="true" type="tns:ArrayOfHolidayDayWiseItineraries" />
+  <xs:complexType name="HolidayDayWiseItineraries">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dates" nillable="true" type="tns:ArrayOfHolidayDates" />
+      <xs:element minOccurs="0" name="destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dynamicAttributes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="longDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productCategorySubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="session" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="shortDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCountry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tagDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tagType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayDayWiseItineraries" nillable="true" type="tns:HolidayDayWiseItineraries" />
+  <xs:complexType name="ArrayOfHolidayDates">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayDates" nillable="true" type="tns:HolidayDates" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayDates" nillable="true" type="tns:ArrayOfHolidayDates" />
+  <xs:complexType name="HolidayDates">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="dynamicAttributes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fromDay" type="xs:int" />
+      <xs:element minOccurs="0" name="fromMonth" type="xs:int" />
+      <xs:element minOccurs="0" name="fromYear" type="xs:int" />
+      <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tagDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="toDay" type="xs:int" />
+      <xs:element minOccurs="0" name="toMonth" type="xs:int" />
+      <xs:element minOccurs="0" name="toYear" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayDates" nillable="true" type="tns:HolidayDates" />
+  <xs:complexType name="ArrayOfHolidayDeparture">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayDeparture" nillable="true" type="tns:HolidayDeparture" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayDeparture" nillable="true" type="tns:ArrayOfHolidayDeparture" />
+  <xs:complexType name="HolidayDeparture">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="departureId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="tLGXCityCodeEnd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCityCodeStart" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCountryCodeEnd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCountryCodeStart" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayDeparture" nillable="true" type="tns:HolidayDeparture" />
+  <xs:complexType name="ArrayOfHolidayDestinations">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayDestinations" nillable="true" type="tns:HolidayDestinations" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayDestinations" nillable="true" type="tns:ArrayOfHolidayDestinations" />
+  <xs:complexType name="HolidayDestinations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="supplierCityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tlgxCityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tlgxCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tlgxCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tlgxCountryName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayDestinations" nillable="true" type="tns:HolidayDestinations" />
+  <xs:complexType name="ArrayOfHolidayInclusionExclusion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayInclusionExclusion" nillable="true" type="tns:HolidayInclusionExclusion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayInclusionExclusion" nillable="true" type="tns:ArrayOfHolidayInclusionExclusion" />
+  <xs:complexType name="HolidayInclusionExclusion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order" type="xs:int" />
+      <xs:element minOccurs="0" name="serviceType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayInclusionExclusion" nillable="true" type="tns:HolidayInclusionExclusion" />
+  <xs:complexType name="ArrayOfHolidayHighlights">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayHighlights" nillable="true" type="tns:HolidayHighlights" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayHighlights" nillable="true" type="tns:ArrayOfHolidayHighlights" />
+  <xs:complexType name="HolidayHighlights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="day" type="xs:int" />
+      <xs:element minOccurs="0" name="destination" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayHighlights" nillable="true" type="tns:HolidayHighlights" />
+  <xs:complexType name="ArrayOfHolidayIncludes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayIncludes" nillable="true" type="tns:HolidayIncludes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayIncludes" nillable="true" type="tns:ArrayOfHolidayIncludes" />
+  <xs:complexType name="HolidayIncludes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="air" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hotel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="insurance" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="meals" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sightseeing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="transfers" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="visa" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayIncludes" nillable="true" type="tns:HolidayIncludes" />
+  <xs:complexType name="ArrayOfHolidayTypes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayTypes" nillable="true" type="tns:HolidayTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayTypes" nillable="true" type="tns:ArrayOfHolidayTypes" />
+  <xs:complexType name="HolidayTypes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subType" nillable="true" type="tns:ArrayOfSubType" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayTypes" nillable="true" type="tns:HolidayTypes" />
+  <xs:complexType name="ArrayOfSubType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SubType" nillable="true" type="tns:SubType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSubType" nillable="true" type="tns:ArrayOfSubType" />
+  <xs:complexType name="SubType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubType" nillable="true" type="tns:SubType" />
+  <xs:complexType name="ArrayOfHolidayMedia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayMedia" nillable="true" type="tns:HolidayMedia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayMedia" nillable="true" type="tns:ArrayOfHolidayMedia" />
+  <xs:complexType name="HolidayMedia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="displayOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="fileCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fileType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="height" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="logicalFilePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="productDisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="uRL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="width" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayMedia" nillable="true" type="tns:HolidayMedia" />
+  <xs:complexType name="ArrayOfPaceOfHoliday">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PaceOfHoliday" nillable="true" type="tns:PaceOfHoliday" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPaceOfHoliday" nillable="true" type="tns:ArrayOfPaceOfHoliday" />
+  <xs:complexType name="PaceOfHoliday">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pace" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PaceOfHoliday" nillable="true" type="tns:PaceOfHoliday" />
+  <xs:complexType name="ArrayOfPackagePrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PackagePrice" nillable="true" type="tns:PackagePrice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackagePrice" nillable="true" type="tns:ArrayOfPackagePrice" />
+  <xs:complexType name="PackagePrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="basePrice" nillable="true" type="tns:ArrayOfBasePriceStructure" />
+      <xs:element minOccurs="0" name="category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="displayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="starRatingCategory" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PackagePrice" nillable="true" type="tns:PackagePrice" />
+  <xs:complexType name="ArrayOfBasePriceStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BasePriceStructure" nillable="true" type="tns:BasePriceStructure" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBasePriceStructure" nillable="true" type="tns:ArrayOfBasePriceStructure" />
+  <xs:complexType name="BasePriceStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="discount" nillable="true" type="tns:ArrayOfDiscountStructure" />
+      <xs:element minOccurs="0" name="hubId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hubName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="priceDetails" nillable="true" type="tns:ArrayOfPriceDetailsStructure" />
+      <xs:element minOccurs="0" name="tax" nillable="true" type="tns:ArrayOfTax" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BasePriceStructure" nillable="true" type="tns:BasePriceStructure" />
+  <xs:complexType name="ArrayOfDiscountStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiscountStructure" nillable="true" type="tns:DiscountStructure" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiscountStructure" nillable="true" type="tns:ArrayOfDiscountStructure" />
+  <xs:complexType name="DiscountStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="discountAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiscountStructure" nillable="true" type="tns:DiscountStructure" />
+  <xs:complexType name="ArrayOfPriceDetailsStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PriceDetailsStructure" nillable="true" type="tns:PriceDetailsStructure" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPriceDetailsStructure" nillable="true" type="tns:ArrayOfPriceDetailsStructure" />
+  <xs:complexType name="PriceDetailsStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ageFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="ageTo" type="xs:int" />
+      <xs:element minOccurs="0" name="amount" type="xs:double" />
+      <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="extraBedding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="passengerRangeFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="passengerRangeTo" type="xs:int" />
+      <xs:element minOccurs="0" name="personType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="priceDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="roomType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tax" nillable="true" type="tns:ArrayOfTaxStructure" />
+      <xs:element minOccurs="0" name="validFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="validTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PriceDetailsStructure" nillable="true" type="tns:PriceDetailsStructure" />
+  <xs:complexType name="ArrayOfTaxStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaxStructure" nillable="true" type="tns:TaxStructure" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTaxStructure" nillable="true" type="tns:ArrayOfTaxStructure" />
+  <xs:complexType name="TaxStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="taxAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="taxRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="taxType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaxStructure" nillable="true" type="tns:TaxStructure" />
+  <xs:complexType name="ArrayOfTax">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tax" nillable="true" type="tns:Tax" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTax" nillable="true" type="tns:ArrayOfTax" />
+  <xs:complexType name="Tax">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="applicableOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="inclusiveOfTaxes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="taxCalculatedOnRateType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="taxRate" type="xs:double" />
+      <xs:element minOccurs="0" name="taxType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="taxValue" type="xs:double" />
+      <xs:element minOccurs="0" name="validFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="validTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tax" nillable="true" type="tns:Tax" />
+  <xs:complexType name="ArrayOfHolidayPerPersonPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayPerPersonPrice" nillable="true" type="tns:HolidayPerPersonPrice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayPerPersonPrice" nillable="true" type="tns:ArrayOfHolidayPerPersonPrice" />
+  <xs:complexType name="HolidayPerPersonPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:double" />
+      <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="priceBasis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="priceText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayPerPersonPrice" nillable="true" type="tns:HolidayPerPersonPrice" />
+  <xs:complexType name="ArrayOfPreTourStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PreTourStructure" nillable="true" type="tns:PreTourStructure" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreTourStructure" nillable="true" type="tns:ArrayOfPreTourStructure" />
+  <xs:complexType name="PreTourStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hostCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hotelCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numberOfNights" type="xs:int" />
+      <xs:element minOccurs="0" name="packageCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCityCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCountryCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tLGXProductCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PreTourStructure" nillable="true" type="tns:PreTourStructure" />
+  <xs:complexType name="ArrayOfPreTourPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PreTourPrice" nillable="true" type="tns:PreTourPrice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPreTourPrice" nillable="true" type="tns:ArrayOfPreTourPrice" />
+  <xs:complexType name="PreTourPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AgeTo" type="xs:int" />
+      <xs:element minOccurs="0" name="ageFrom" type="xs:int" />
+      <xs:element minOccurs="0" name="amount" type="xs:double" />
+      <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="discountAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="discountName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="extraBedding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="passengerRangeFrom" type="xs:double" />
+      <xs:element minOccurs="0" name="passengerRangeTo" type="xs:double" />
+      <xs:element minOccurs="0" name="personType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="roomType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tax" nillable="true" type="tns:ArrayOfTaxStructure" />
+      <xs:element minOccurs="0" name="validFrom" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="validTo" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PreTourPrice" nillable="true" type="tns:PreTourPrice" />
+  <xs:complexType name="ArrayOfHolidayStartingPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayStartingPrice" nillable="true" type="tns:HolidayStartingPrice" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayStartingPrice" nillable="true" type="tns:ArrayOfHolidayStartingPrice" />
+  <xs:complexType name="HolidayStartingPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="priceBasis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="priceText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayStartingPrice" nillable="true" type="tns:HolidayStartingPrice" />
+  <xs:complexType name="ArrayOfTravelFrequency">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TravelFrequency" nillable="true" type="tns:TravelFrequency" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTravelFrequency" nillable="true" type="tns:ArrayOfTravelFrequency" />
+  <xs:complexType name="TravelFrequency">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TravelFrequency" nillable="true" type="tns:TravelFrequency" />
+  <xs:complexType name="HolidayUniqueSellingPoints">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayUniqueSellingPoints" nillable="true" type="tns:HolidayUniqueSellingPoints" />
+  <xs:complexType name="ArrayOfCustomClassificationAttributes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomClassificationAttributes" nillable="true" type="tns:CustomClassificationAttributes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomClassificationAttributes" nillable="true" type="tns:ArrayOfCustomClassificationAttributes" />
+  <xs:complexType name="CustomClassificationAttributes">
+    <xs:sequence>
       <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
-      <xs:element minOccurs="0" name="IsSiteMapNode" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ParentID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="ParentTitle" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Roles" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SiteMap_ID" type="ser:guid" />
-      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="attributeSubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="attributeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="attributeValue" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="DC_SiteMap" nillable="true" type="tns:DC_SiteMap" />
-  <xs:complexType name="ArrayOfDC_Roles">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Roles" nillable="true" type="tns:DC_Roles" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_Roles" nillable="true" type="tns:ArrayOfDC_Roles" />
-  <xs:complexType name="DC_Roles">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ApplicationID" type="ser:guid" />
-      <xs:element minOccurs="0" name="RoleID" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_Roles" nillable="true" type="tns:DC_Roles" />
-  <xs:complexType name="DC_RoleAuthorizedForUrl">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_RoleAuthorizedForUrl" nillable="true" type="tns:DC_RoleAuthorizedForUrl" />
-  <xs:complexType name="ArrayOfDC_EntityType">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_EntityType" nillable="true" type="tns:DC_EntityType" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_EntityType" nillable="true" type="tns:ArrayOfDC_EntityType" />
-  <xs:complexType name="DC_EntityType">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EnityTypeID" type="xs:int" />
-      <xs:element minOccurs="0" name="EntityTypeName" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_EntityType" nillable="true" type="tns:DC_EntityType" />
-  <xs:complexType name="DC_EntityDetails">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="EntityID" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="EntityName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EntityTypeID" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_EntityDetails" nillable="true" type="tns:DC_EntityDetails" />
-  <xs:complexType name="ArrayOfDC_EntityDetails">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_EntityDetails" nillable="true" type="tns:DC_EntityDetails" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_EntityDetails" nillable="true" type="tns:ArrayOfDC_EntityDetails" />
-  <xs:complexType name="DC_UserEntity">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
-      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EntityID" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="EntityTypeID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ManagerID" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_UserEntity" nillable="true" type="tns:DC_UserEntity" />
-  <xs:complexType name="ArrayOfDC_UserDetails">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_UserDetails" nillable="true" type="tns:DC_UserDetails" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_UserDetails" nillable="true" type="tns:ArrayOfDC_UserDetails" />
-  <xs:complexType name="DC_UserDetails">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
-      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EntityType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EntityTypeID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
-      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_UserDetails" nillable="true" type="tns:DC_UserDetails" />
-  <xs:complexType name="ArrayOfDC_ApplicationMgmt">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_ApplicationMgmt" nillable="true" type="tns:DC_ApplicationMgmt" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_ApplicationMgmt" nillable="true" type="tns:ArrayOfDC_ApplicationMgmt" />
-  <xs:complexType name="DC_ApplicationMgmt">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
-      <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_ApplicationMgmt" nillable="true" type="tns:DC_ApplicationMgmt" />
+  <xs:element name="CustomClassificationAttributes" nillable="true" type="tns:CustomClassificationAttributes" />
 </xs:schema>

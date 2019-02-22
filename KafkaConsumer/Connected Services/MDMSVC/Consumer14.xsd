@@ -25,6 +25,24 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_DynamicAttributes" nillable="true" type="tns:DC_DynamicAttributes" />
+  <xs:complexType name="ArrayOfDC_Statuses">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Statuses" nillable="true" type="tns:DC_Statuses" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Statuses" nillable="true" type="tns:ArrayOfDC_Statuses" />
+  <xs:complexType name="DC_Statuses">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CREATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CREATE_USER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status_Short" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UPDATE_DATE" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UPDATE_USER" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Statuses" nillable="true" type="tns:DC_Statuses" />
   <xs:complexType name="DC_Activity_Search_RQ">
     <xs:sequence>
       <xs:element minOccurs="0" name="Activity_Id" nillable="true" type="ser:guid" />
@@ -944,24 +962,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfDC_Supplier_ApiLocation" nillable="true" type="tns:ArrayOfDC_Supplier_ApiLocation" />
-  <xs:complexType name="ArrayOfDC_Statuses">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Statuses" nillable="true" type="tns:DC_Statuses" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_Statuses" nillable="true" type="tns:ArrayOfDC_Statuses" />
-  <xs:complexType name="DC_Statuses">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CREATE_DATE" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="CREATE_USER" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Status_ID" type="ser:guid" />
-      <xs:element minOccurs="0" name="Status_Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Status_Short" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="UPDATE_DATE" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="UPDATE_USER" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_Statuses" nillable="true" type="tns:DC_Statuses" />
   <xs:complexType name="ArrayOfDC_ActivitySearch_RS">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_ActivitySearch_RS" nillable="true" type="tns:DC_ActivitySearch_RS" />

@@ -976,8 +976,11 @@
   <xs:element name="DC_HotelMappingReport_RS" nillable="true" type="tns:DC_HotelMappingReport_RS" />
   <xs:complexType name="DC_ActivityImageReport_RQ">
     <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityId" nillable="true" type="xs:string" />
       <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="City" nillable="true" type="q13:ArrayOfstring" />
       <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Country" nillable="true" type="q14:ArrayOfstring" />
+      <xs:element minOccurs="0" name="SuplierProductCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupplierName" nillable="true" type="q15:ArrayOfstring" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_ActivityImageReport_RQ" nillable="true" type="tns:DC_ActivityImageReport_RQ" />
@@ -999,6 +1002,8 @@
       <xs:element minOccurs="0" name="MediaID" type="xs:int" />
       <xs:element minOccurs="0" name="Portrait" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ProductName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuplierProductCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="VerticalResolution" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Width" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -1006,9 +1011,11 @@
   <xs:element name="DC_ActivityImageReport_RS" nillable="true" type="tns:DC_ActivityImageReport_RS" />
   <xs:complexType name="DC_ActivityImageReportDetails_RQ">
     <xs:sequence>
-      <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="City" nillable="true" type="q15:ArrayOfstring" />
-      <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Country" nillable="true" type="q16:ArrayOfstring" />
-      <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupplierName" nillable="true" type="q17:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ActivityId" nillable="true" type="xs:string" />
+      <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="City" nillable="true" type="q16:ArrayOfstring" />
+      <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Country" nillable="true" type="q17:ArrayOfstring" />
+      <xs:element minOccurs="0" name="SuplierProductCode" nillable="true" type="xs:string" />
+      <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupplierName" nillable="true" type="q18:ArrayOfstring" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_ActivityImageReportDetails_RQ" nillable="true" type="tns:DC_ActivityImageReportDetails_RQ" />
@@ -1049,7 +1056,7 @@
       <xs:element minOccurs="0" name="NextSupplierScheduledRun" nillable="true" type="tns:ArrayOfDC_NextSupplierScheduledRun" />
       <xs:element minOccurs="0" name="SupplierId" type="ser:guid" />
       <xs:element minOccurs="0" name="SupplierName" nillable="true" type="xs:string" />
-      <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupplierNames" nillable="true" type="q18:ArrayOfstring" />
+      <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupplierNames" nillable="true" type="q19:ArrayOfstring" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_MappingStats" nillable="true" type="tns:DC_MappingStats" />
@@ -1352,7 +1359,7 @@
   <xs:complexType name="DC_SupplerVSupplier_Report_RQ">
     <xs:sequence>
       <xs:element minOccurs="0" name="Accommodation_Source_Id" type="ser:guid" />
-      <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Compare_WithSupplier_Ids" nillable="true" type="q19:ArrayOfguid" />
+      <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Compare_WithSupplier_Ids" nillable="true" type="q20:ArrayOfguid" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_SupplerVSupplier_Report_RQ" nillable="true" type="tns:DC_SupplerVSupplier_Report_RQ" />
