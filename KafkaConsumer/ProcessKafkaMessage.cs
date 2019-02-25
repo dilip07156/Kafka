@@ -38,7 +38,7 @@ namespace KafkaConsumer
             {
                 sp.Log("Execption occurs InsertInto_StgKafka Method");
                 sp.Log(Ex.ToString());
-                throw;
+                //throw;
             }
         }
 
