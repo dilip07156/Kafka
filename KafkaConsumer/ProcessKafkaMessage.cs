@@ -42,6 +42,105 @@ namespace KafkaConsumer
             }
         }
 
+
+        public static void InsertInto_StgKafkaV2(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
+        {
+            StartProcess sp = new StartProcess();
+            try
+            {
+                //await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], new DC_Stg_Kafka()
+                //{
+                //    Error = msg.Error.Reason,
+                //    TopicPartion = msg.TopicPartition.Partition.ToString(),
+                //    Key = Convert.ToString(msg.Key),
+                //    //TimeStamp = msg.Timestamp.UtcDateTime,
+                //    PayLoad = msg.Value,
+                //    Offset = msg.Offset.Value.ToString(),
+                //    Partion = msg.Partition.ToString(),
+                //    Create_User = "KafkaConsumer",
+                //    Create_Date = DateTime.Now,
+                //    Row_Id = Guid.NewGuid(),
+                //    Topic = msg.Topic,
+                //    TopicPartionOffset = msg.TopicPartition.Partition.ToString()
+                //});
+
+                using (ConsumerEntities context = new ConsumerEntities())
+                {
+
+                    Stg_Kafka sk = new Stg_Kafka()
+                    {
+                        Row_Id = Guid.NewGuid(),
+                        Topic = msg.Topic,
+                        PayLoad = msg.Value,
+                        Error = msg.Error.Reason,
+                        Key = Convert.ToString(msg.Key),
+                        Offset = msg.Offset.Value.ToString(),
+                        Partion = msg.Partition.ToString(),
+                        //TimeStamp = KafkaInfo.TimeStamp.get,
+                        TopicPartion = msg.TopicPartition.Partition.ToString(),
+                        TopicPartionOffset = msg.TopicPartition.Partition.ToString(),
+                        Create_User = "KafkaConsumer",
+                        Create_Date = DateTime.Now,
+                        Process_User = null,
+                        Process_Date = null,
+
+                    };
+                    context.Stg_Kafka.Add(sk);
+
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception Ex)
+            {
+                sp.Log("Execption occurs InsertInto_StgKafkaV2 Method");
+                sp.Log(Ex.ToString());
+                //throw;
+            }
+
+        }
+
+        public static void InsertInto_StgKafkaTestV2()
+        {
+            StartProcess sp = new StartProcess();
+            try
+            {
+               
+
+                using (ConsumerEntities context = new ConsumerEntities())
+                {
+
+                    Stg_Kafka sk = new Stg_Kafka()
+                    {
+                        Row_Id = Guid.NewGuid(),
+                        Topic = "TestGS",
+                        PayLoad = "TestGS",
+                        Error = "",
+                        Key = Convert.ToString("123"),
+                        Offset = "0",
+                        Partion = "0",
+                        //TimeStamp = KafkaInfo.TimeStamp.get,
+                        TopicPartion = "Test",
+                        TopicPartionOffset = "Test",
+                        Create_User = "KafkaConsumer",
+                        Create_Date = DateTime.Now,
+                        Process_User = null,
+                        Process_Date = null,
+
+                    };
+                    context.Stg_Kafka.Add(sk);
+
+                    context.SaveChanges();
+                }
+            }
+            catch (Exception Ex)
+            {
+                sp.Log("Execption occurs InsertInto_StgKafkaV2 Method");
+                sp.Log(Ex.ToString());
+                //throw;
+            }
+
+        }
+
         public static bool Process_StgKafkaData()
         {
             bool Result = false;
@@ -339,7 +438,7 @@ namespace KafkaConsumer
             accoToInsertUpdate.AccVersion.Area = acco.accomodationInfo.address.area;
             accoToInsertUpdate.AccVersion.Location = acco.accomodationInfo.address.location;
             accoToInsertUpdate.AccVersion.TLGXAccoId = acco._id;
-            accoToInsertUpdate.AccVersion.Interest = (acco.overview != null && acco.overview.interest != null && acco.overview.interest.Count > 0 ? string.Join(",", acco.overview.interest) : null); 
+            accoToInsertUpdate.AccVersion.Interest = (acco.overview != null && acco.overview.interest != null && acco.overview.interest.Count > 0 ? string.Join(",", acco.overview.interest) : null);
 
 
             if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)

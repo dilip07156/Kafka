@@ -102,7 +102,7 @@ namespace KafkaConsumer
                 {
                     sp.Log("Run_Poll Start");
                     // Note: All event handlers are called on the main thread.
-                    consumer.OnMessage += (_, msg) => { /*sp.Log(msg.Value)*/;ProcessKafkaMessage.InsertInto_StgKafka(msg); };
+                    consumer.OnMessage += (_, msg) => { /*sp.Log(msg.Value)*/; ProcessKafkaMessage.InsertInto_StgKafkaV2(msg); };
 
                     consumer.OnPartitionEOF += (_, end) =>
                     {
@@ -117,14 +117,16 @@ namespace KafkaConsumer
                     };
 
                     // Raised on deserialization errors or when a consumed message has an error != NoError.
-                    consumer.OnConsumeError += (_, msg) => {
+                    consumer.OnConsumeError += (_, msg) =>
+                    {
                         sp.Log($"Error consuming from topic/partition/offset {msg.Topic}/{msg.Partition}/{msg.Offset}: {msg.Error}");
-                        Console.WriteLine($"Error consuming from topic/partition/offset {msg.Topic}/{msg.Partition}/{msg.Offset}: {msg.Error}"); };
+                        Console.WriteLine($"Error consuming from topic/partition/offset {msg.Topic}/{msg.Partition}/{msg.Offset}: {msg.Error}");
+                    };
 
                     consumer.OnOffsetsCommitted += (_, commit) =>
                     {
                         Console.WriteLine($"[{string.Join(", ", commit.Offsets)}]");
-
+                        sp.Log(string.Join(", ", commit.Offsets));
                         if (commit.Error)
                         {
                             Console.WriteLine($"Failed to commit offsets: {commit.Error}");

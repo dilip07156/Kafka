@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Stg_Kafka">
+          <Key>
+            <PropertyRef Name="Row_Id" />
+          </Key>
+          <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Topic" Type="nvarchar" MaxLength="50" />
+          <Property Name="PayLoad" Type="text" />
+          <Property Name="Error" Type="nvarchar" MaxLength="255" />
+          <Property Name="Key" Type="nvarchar" MaxLength="255" />
+          <Property Name="Offset" Type="nvarchar" MaxLength="255" />
+          <Property Name="Partion" Type="nvarchar" MaxLength="255" />
+          <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="TopicPartion" Type="nvarchar" MaxLength="255" />
+          <Property Name="TopicPartionOffset" Type="nvarchar" MaxLength="255" />
+          <Property Name="Create_User" Type="nvarchar" MaxLength="255" />
+          <Property Name="Create_Date" Type="datetime" />
+          <Property Name="Process_User" Type="nvarchar" MaxLength="255" />
+          <Property Name="Process_Date" Type="datetime" />
+          <Property Name="Accommodation_Id" Type="uniqueidentifier" />
+          <Property Name="message_log" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Stg_Kafka" EntityType="Self.Stg_Kafka" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Stg_Kafka">
+          <Key>
+            <PropertyRef Name="Row_Id" />
+          </Key>
+          <Property Name="Row_Id" Type="Guid" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Topic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PayLoad" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Error" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Key" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Offset" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Partion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="TopicPartion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TopicPartionOffset" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Create_User" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Create_Date" Type="DateTime" Precision="3" />
+          <Property Name="Process_User" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Process_Date" Type="DateTime" Precision="3" />
+          <Property Name="Accommodation_Id" Type="Guid" />
+          <Property Name="message_log" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ConsumerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Stg_Kafka" EntityType="Self.Stg_Kafka" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ConsumerEntities">
+          <EntitySetMapping Name="Stg_Kafka">
+            <EntityTypeMapping TypeName="Model.Stg_Kafka">
+              <MappingFragment StoreEntitySet="Stg_Kafka">
+                <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Topic" ColumnName="Topic" />
+                <ScalarProperty Name="PayLoad" ColumnName="PayLoad" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="Offset" ColumnName="Offset" />
+                <ScalarProperty Name="Partion" ColumnName="Partion" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="TopicPartion" ColumnName="TopicPartion" />
+                <ScalarProperty Name="TopicPartionOffset" ColumnName="TopicPartionOffset" />
+                <ScalarProperty Name="Create_User" ColumnName="Create_User" />
+                <ScalarProperty Name="Create_Date" ColumnName="Create_Date" />
+                <ScalarProperty Name="Process_User" ColumnName="Process_User" />
+                <ScalarProperty Name="Process_Date" ColumnName="Process_Date" />
+                <ScalarProperty Name="Accommodation_Id" ColumnName="Accommodation_Id" />
+                <ScalarProperty Name="message_log" ColumnName="message_log" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

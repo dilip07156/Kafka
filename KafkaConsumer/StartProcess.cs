@@ -26,6 +26,7 @@ namespace KafkaConsumer
                 {
                     Log("Start PollingData : " + DateTime.Now.ToString());
                     PollingData();
+                    //ProcessKafkaMessage.InsertInto_StgKafkaTestV2();
                     Log("End PollingData");
                     await Task.Delay(TimerInterval, cancellationTokenSource.Token);
                 }

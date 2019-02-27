@@ -57,17 +57,17 @@ namespace KafkaConsumerDebugger
                 }
             });
 
-            Task.Run(async () =>
-            {
-                try
-                {
-                    await sp.StartConsuming(cancelSource);
-                }
-                catch (OperationCanceledException)
-                {
-                    Console.WriteLine("Canceled!");
-                }
-            });
+            //Task.Run(async () =>
+            //{
+            //    try
+            //    {
+            //        await sp.StartConsuming(cancelSource);
+            //    }
+            //    catch (OperationCanceledException)
+            //    {
+            //        Console.WriteLine("Canceled!");
+            //    }
+            //});
 
 
             input = Console.ReadLine();
