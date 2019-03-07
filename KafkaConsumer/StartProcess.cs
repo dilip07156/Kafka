@@ -22,14 +22,34 @@ namespace KafkaConsumer
             int TimerInterval = int.Parse(System.Configuration.ConfigurationManager.AppSettings["TimerInterval"]);
             try
             {
-                while (!cancellationTokenSource.IsCancellationRequested)
+
+                Log("Start PollingData : " + DateTime.Now.ToString());
+                PollingData();
+                //ProcessKafkaMessage.InsertInto_StgKafkaTestV2();
+                Log("End PollingData");
+                Log("Process_StgKafkaData : Start Process Data : " + DateTime.Now.ToString());
+
+
+                int count = ProcessKafkaMessage.GetPollDataCount();
+
+                while (count > 0)
                 {
-                    Log("Start PollingData : " + DateTime.Now.ToString());
-                    PollingData();
-                    //ProcessKafkaMessage.InsertInto_StgKafkaTestV2();
-                    Log("End PollingData");
-                    await Task.Delay(TimerInterval, cancellationTokenSource.Token);
+                    ProcessKafkaMessage.Process_StgKafkaData();
+                    count = ProcessKafkaMessage.GetPollDataCount();
                 }
+
+
+                if (count == 0)
+                {
+                    while (!cancellationTokenSource.IsCancellationRequested)
+                    {
+                        await Task.Delay(TimerInterval, cancellationTokenSource.Token);
+                        StartPolling(cancellationTokenSource);
+                    }
+                }
+
+                Log("Process_StgKafkaData : END Process Data : " + DateTime.Now.ToString());
+
             }
             catch (OperationCanceledException)
             {
@@ -147,7 +167,7 @@ namespace KafkaConsumer
 
             using (StreamWriter w = File.AppendText(System.Configuration.ConfigurationManager.AppSettings["FilePath"]))
             {
-             
+
                 w.WriteLine($"{logMessage}");
                 w.WriteLine("-------------------------------");
                 w.Flush();

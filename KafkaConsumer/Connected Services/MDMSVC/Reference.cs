@@ -68339,6 +68339,13 @@ namespace KafkaConsumer.MDMSVC {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKafka/GetPollData", ReplyAction="http://tempuri.org/IKafka/GetPollDataResponse")]
         System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Stg_Kafka[]> GetPollDataAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKafka/GetPollDataCount", ReplyAction="http://tempuri.org/IKafka/GetPollDataCountResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IKafka/GetPollDataCountDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
+        int GetPollDataCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKafka/GetPollDataCount", ReplyAction="http://tempuri.org/IKafka/GetPollDataCountResponse")]
+        System.Threading.Tasks.Task<int> GetPollDataCountAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IKafka/SelectKafkaInfo", ReplyAction="http://tempuri.org/IKafka/SelectKafkaInfoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IKafka/SelectKafkaInfoDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
         KafkaConsumer.MDMSVC.DC_Stg_Kafka[] SelectKafkaInfo(string Row_Id);
@@ -71845,6 +71852,14 @@ namespace KafkaConsumer.MDMSVC {
         
         public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_Stg_Kafka[]> GetPollDataAsync() {
             return base.Channel.GetPollDataAsync();
+        }
+        
+        public int GetPollDataCount() {
+            return base.Channel.GetPollDataCount();
+        }
+        
+        public System.Threading.Tasks.Task<int> GetPollDataCountAsync() {
+            return base.Channel.GetPollDataCountAsync();
         }
         
         public KafkaConsumer.MDMSVC.DC_Stg_Kafka[] SelectKafkaInfo(string Row_Id) {

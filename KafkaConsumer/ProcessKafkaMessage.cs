@@ -104,7 +104,7 @@ namespace KafkaConsumer
             StartProcess sp = new StartProcess();
             try
             {
-               
+
 
                 using (ConsumerEntities context = new ConsumerEntities())
                 {
@@ -174,6 +174,23 @@ namespace KafkaConsumer
             catch (Exception ex)
             {
                 returnObj = new List<DC_Stg_Kafka>();
+            }
+
+            return returnObj;
+        }
+
+
+        public static int GetPollDataCount()
+        {
+            int returnObj = 0;
+            try
+            {
+                //get all records from stg_kafka which are unread
+                returnObj = Proxy.Get<int>(System.Configuration.ConfigurationManager.AppSettings["GetPoll_DataCount"]).GetAwaiter().GetResult();
+            }
+            catch (Exception ex)
+            {
+                returnObj = 0;
             }
 
             return returnObj;

@@ -3818,6 +3818,15 @@
   <wsdl:message name="IConsumer_GetPollData_DC_ErrorStatusFault_FaultMessage">
     <wsdl:part xmlns:q421="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q421:DC_ErrorStatus" />
   </wsdl:message>
+  <wsdl:message name="IConsumer_GetPollDataCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPollDataCount" />
+  </wsdl:message>
+  <wsdl:message name="IConsumer_GetPollDataCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPollDataCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsumer_GetPollDataCount_DC_ErrorStatusFault_FaultMessage">
+    <wsdl:part xmlns:q422="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q422:DC_ErrorStatus" />
+  </wsdl:message>
   <wsdl:message name="IConsumer_SelectKafkaInfo_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectKafkaInfo" />
   </wsdl:message>
@@ -3825,7 +3834,7 @@
     <wsdl:part name="parameters" element="tns:SelectKafkaInfoResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_SelectKafkaInfo_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q422="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q422:DC_ErrorStatus" />
+    <wsdl:part xmlns:q423="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q423:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferMasterAccommodation_InputMessage">
     <wsdl:part name="parameters" element="tns:ML_DataTransferMasterAccommodation" />
@@ -3834,7 +3843,7 @@
     <wsdl:part name="parameters" element="tns:ML_DataTransferMasterAccommodationResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferMasterAccommodation_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q423="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q423:DC_ErrorStatus" />
+    <wsdl:part xmlns:q424="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q424:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferMasterAccommodationRoomFacilities_InputMessage">
     <wsdl:part name="parameters" element="tns:ML_DataTransferMasterAccommodationRoomFacilities" />
@@ -3843,7 +3852,7 @@
     <wsdl:part name="parameters" element="tns:ML_DataTransferMasterAccommodationRoomFacilitiesResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferMasterAccommodationRoomFacilities_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q424="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q424:DC_ErrorStatus" />
+    <wsdl:part xmlns:q425="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q425:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferMasterAccommodationRoomInformation_InputMessage">
     <wsdl:part name="parameters" element="tns:ML_DataTransferMasterAccommodationRoomInformation" />
@@ -3852,7 +3861,7 @@
     <wsdl:part name="parameters" element="tns:ML_DataTransferMasterAccommodationRoomInformationResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferMasterAccommodationRoomInformation_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q425="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q425:DC_ErrorStatus" />
+    <wsdl:part xmlns:q426="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q426:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferRoomTypeMatching_InputMessage">
     <wsdl:part name="parameters" element="tns:ML_DataTransferRoomTypeMatching" />
@@ -3861,7 +3870,7 @@
     <wsdl:part name="parameters" element="tns:ML_DataTransferRoomTypeMatchingResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferRoomTypeMatching_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q426="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q426:DC_ErrorStatus" />
+    <wsdl:part xmlns:q427="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q427:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferSupplierAccommodationData_InputMessage">
     <wsdl:part name="parameters" element="tns:ML_DataTransferSupplierAccommodationData" />
@@ -3870,7 +3879,7 @@
     <wsdl:part name="parameters" element="tns:ML_DataTransferSupplierAccommodationDataResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferSupplierAccommodationData_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q427="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q427:DC_ErrorStatus" />
+    <wsdl:part xmlns:q428="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q428:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferSupplierAccommodationRoomData_InputMessage">
     <wsdl:part name="parameters" element="tns:ML_DataTransferSupplierAccommodationRoomData" />
@@ -3879,7 +3888,7 @@
     <wsdl:part name="parameters" element="tns:ML_DataTransferSupplierAccommodationRoomDataResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferSupplierAccommodationRoomData_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q428="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q428:DC_ErrorStatus" />
+    <wsdl:part xmlns:q429="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q429:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferSupplierAccommodationRoomExtendedAttributes_InputMessage">
     <wsdl:part name="parameters" element="tns:ML_DataTransferSupplierAccommodationRoomExtendedAttributes" />
@@ -3888,7 +3897,7 @@
     <wsdl:part name="parameters" element="tns:ML_DataTransferSupplierAccommodationRoomExtendedAttributesResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransferSupplierAccommodationRoomExtendedAttributes_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q429="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q429:DC_ErrorStatus" />
+    <wsdl:part xmlns:q430="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q430:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_GetMLDataApiTransferStatus_InputMessage">
     <wsdl:part name="parameters" element="tns:GetMLDataApiTransferStatus" />
@@ -3897,7 +3906,7 @@
     <wsdl:part name="parameters" element="tns:GetMLDataApiTransferStatusResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_GetMLDataApiTransferStatus_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q430="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q430:DC_ErrorStatus" />
+    <wsdl:part xmlns:q431="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q431:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransfer_DeleteTrainingData_InputMessage">
     <wsdl:part name="parameters" element="tns:ML_DataTransfer_DeleteTrainingData" />
@@ -3906,7 +3915,7 @@
     <wsdl:part name="parameters" element="tns:ML_DataTransfer_DeleteTrainingDataResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransfer_DeleteTrainingData_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q431="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q431:DC_ErrorStatus" />
+    <wsdl:part xmlns:q432="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q432:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransfer_TrainingDataPushToAIML_InputMessage">
     <wsdl:part name="parameters" element="tns:ML_DataTransfer_TrainingDataPushToAIML" />
@@ -3915,7 +3924,7 @@
     <wsdl:part name="parameters" element="tns:ML_DataTransfer_TrainingDataPushToAIMLResponse" />
   </wsdl:message>
   <wsdl:message name="IConsumer_ML_DataTransfer_TrainingDataPushToAIML_DC_ErrorStatusFault_FaultMessage">
-    <wsdl:part xmlns:q432="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q432:DC_ErrorStatus" />
+    <wsdl:part xmlns:q433="http://schemas.datacontract.org/2004/07/DataContracts" name="detail" element="q433:DC_ErrorStatus" />
   </wsdl:message>
   <wsdl:portType name="IConsumer">
     <wsdl:operation name="GetAccomodationRuleInfo">
@@ -6026,6 +6035,11 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IKafka/GetPollData" message="tns:IConsumer_GetPollData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IKafka/GetPollDataResponse" message="tns:IConsumer_GetPollData_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IKafka/GetPollDataDC_ErrorStatusFault" name="DC_ErrorStatusFault" message="tns:IConsumer_GetPollData_DC_ErrorStatusFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPollDataCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKafka/GetPollDataCount" message="tns:IConsumer_GetPollDataCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKafka/GetPollDataCountResponse" message="tns:IConsumer_GetPollDataCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IKafka/GetPollDataCountDC_ErrorStatusFault" name="DC_ErrorStatusFault" message="tns:IConsumer_GetPollDataCount_DC_ErrorStatusFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="SelectKafkaInfo">
       <wsdl:input wsaw:Action="http://tempuri.org/IKafka/SelectKafkaInfo" message="tns:IConsumer_SelectKafkaInfo_InputMessage" />

@@ -92,6 +92,8 @@ namespace KafkaConsumer
         ///         - consumer.Poll / OnMessage is used to consume messages.
         ///         - no extra thread is created for the Poll loop.
         /// </summary>
+        /// 
+        private static bool checkReachedEnd = false;
         public static void Run_Poll(Dictionary<string, object> constructConfig, List<string> topics, CancellationTokenSource cancellationTokenSource)
         {
             StartProcess sp = new StartProcess();
@@ -102,12 +104,13 @@ namespace KafkaConsumer
                 {
                     sp.Log("Run_Poll Start");
                     // Note: All event handlers are called on the main thread.
-                    consumer.OnMessage += (_, msg) => { /*sp.Log(msg.Value)*/; ProcessKafkaMessage.InsertInto_StgKafkaV2(msg); };
+                    consumer.OnMessage += (_, msg) => { /*sp.Log(msg.Value)*/; ProcessKafkaMessage.InsertInto_StgKafka(msg); };
 
                     consumer.OnPartitionEOF += (_, end) =>
                     {
                         sp.Log($"Reached end of topic {end.Topic} partition {end.Partition}, next message will be at offset {end.Offset}");
                         Console.WriteLine($"Reached end of topic {end.Topic} partition {end.Partition}, next message will be at offset {end.Offset}");
+                         checkReachedEnd = true;
                     };
                     // Raised on critical errors, e.g. connection failures or all brokers down.
                     consumer.OnError += (_, error) =>
@@ -163,9 +166,12 @@ namespace KafkaConsumer
                     while (!cancellationTokenSource.IsCancellationRequested)
                     {
                         consumer.Poll(TimeSpan.FromMilliseconds(1000));
+                        if (checkReachedEnd)
+                        {
+                            break;
+                        }
                     }
                     //consumer.CommitAsync();
-
                     sp.Log("Run_Poll End");
                 }
             }
