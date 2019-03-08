@@ -1004,6 +1004,7 @@ namespace KafkaConsumer
             obj.Process_User = "Kafka";
             obj.Process_Date = DateTime.Now;
             obj.Status = "Processed";
+            obj.Offset = Kafka.Offset;
             await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Update"], obj);
             obj = null;
         }
