@@ -37,18 +37,21 @@ namespace KafkaConsumer
                     ProcessKafkaMessage.Process_StgKafkaData();
                     count = ProcessKafkaMessage.GetPollDataCount();
                 }
-
+                Log("Process_StgKafkaData : END Process Data : " + DateTime.Now.ToString());
 
                 if (count == 0)
                 {
+                    Log("Start RePollingData : Start : " + DateTime.Now.ToString());
                     while (!cancellationTokenSource.IsCancellationRequested)
                     {
                         await Task.Delay(TimerInterval, cancellationTokenSource.Token);
                         StartPolling(cancellationTokenSource);
                     }
+
+                    
                 }
 
-                Log("Process_StgKafkaData : END Process Data : " + DateTime.Now.ToString());
+              
 
             }
             catch (OperationCanceledException)
