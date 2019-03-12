@@ -36,6 +36,7 @@ namespace KafkaConsumer
                 {
                     ProcessKafkaMessage.Process_StgKafkaData();
                     count = ProcessKafkaMessage.GetPollDataCount();
+                    count = 0;
                 }
                 Log("Process_StgKafkaData : END Process Data : " + DateTime.Now.ToString());
 
@@ -168,14 +169,14 @@ namespace KafkaConsumer
         public void Log(string logMessage)
         {
 
-            using (StreamWriter w = File.AppendText(System.Configuration.ConfigurationManager.AppSettings["FilePath"]))
-            {
+            //using (StreamWriter w = File.AppendText(System.Configuration.ConfigurationManager.AppSettings["FilePath"]))
+            //{
 
-                w.WriteLine($"{logMessage}");
-                w.WriteLine("-------------------------------");
-                w.Flush();
-                w.Close();
-            }
+            //    w.WriteLine($"{logMessage}");
+            //    w.WriteLine("-------------------------------");
+            //    w.Flush();
+            //    w.Close();
+            //}
         }
 
         //public static Dictionary<string, object> constructConfig(string brokerList, bool enableAutoCommit) =>
