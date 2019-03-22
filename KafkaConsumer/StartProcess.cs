@@ -36,7 +36,7 @@ namespace KafkaConsumer
                 {
                     ProcessKafkaMessage.Process_StgKafkaData();
                     count = ProcessKafkaMessage.GetPollDataCount();
-                    count = 0;
+                   
                 }
                 Log("Process_StgKafkaData : END Process Data : " + DateTime.Now.ToString());
 
