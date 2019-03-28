@@ -34,25 +34,23 @@ namespace KafkaConsumer
 
                 while (count > 0)
                 {
-                    ProcessKafkaMessage.Process_StgKafkaData();
+                    //ProcessKafkaMessage.Process_StgKafkaData();
                     count = ProcessKafkaMessage.GetPollDataCount();
-                   
+
                 }
                 Log("Process_StgKafkaData : END Process Data : " + DateTime.Now.ToString());
 
                 if (count == 0)
                 {
                     Log("Start RePollingData : Start : " + DateTime.Now.ToString());
-                    while (!cancellationTokenSource.IsCancellationRequested)
-                    {
-                        await Task.Delay(TimerInterval, cancellationTokenSource.Token);
-                        StartPolling(cancellationTokenSource);
-                    }
 
-                    
+                    await Task.Delay(TimerInterval, cancellationTokenSource.Token);
+                    StartPolling(cancellationTokenSource);
+
+
                 }
 
-              
+
 
             }
             catch (OperationCanceledException)
@@ -108,14 +106,15 @@ namespace KafkaConsumer
 
 
                         var bootstrap = KafkaVariables.Where(w => w.AttributeValue.StartsWith("bootstrap.servers")).Select(s => s.OTA_CodeTableValue).ToList();
-
                         constructConfig.Add("bootstrap.servers", string.Join(",", bootstrap));
+                        //constructConfig.Add("bootstrap.servers", "172.23.236.68:9092");
                         constructConfig.Add("default.topic.config", new Dictionary<string, object>()
                     {
                         { "auto.offset.reset", KafkaVariables.Where(w => w.AttributeValue == "auto.offset.reset").Select(s => s.OTA_CodeTableValue).FirstOrDefault() }
                     //{ "auto.offset.reset", "smallest" }
                     });
                         topics = KafkaVariables.Where(w => w.AttributeValue.StartsWith("topic_acco")).Select(s => s.OTA_CodeTableValue).ToList();
+                        //topics = new List<string>() { "MDM.PROD.PRODUCTACCO.PUB" };
 
                         Log("Construct config End");
                     }
@@ -169,14 +168,14 @@ namespace KafkaConsumer
         public void Log(string logMessage)
         {
 
-            //using (StreamWriter w = File.AppendText(System.Configuration.ConfigurationManager.AppSettings["FilePath"]))
-            //{
+            using (StreamWriter w = File.AppendText(System.Configuration.ConfigurationManager.AppSettings["FilePath"]))
+            {
 
-            //    w.WriteLine($"{logMessage}");
-            //    w.WriteLine("-------------------------------");
-            //    w.Flush();
-            //    w.Close();
-            //}
+                w.WriteLine($"{logMessage}");
+                w.WriteLine("-------------------------------");
+                w.Flush();
+                w.Close();
+            }
         }
 
         //public static Dictionary<string, object> constructConfig(string brokerList, bool enableAutoCommit) =>
