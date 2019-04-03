@@ -25,6 +25,37 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_DynamicAttributes" nillable="true" type="tns:DC_DynamicAttributes" />
+  <xs:complexType name="DC_Supplier_Search_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategorySubType_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageNo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductCategory_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Supplier_Search_RQ" nillable="true" type="tns:DC_Supplier_Search_RQ" />
+  <xs:complexType name="ArrayOfDC_Supplier_DDL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Supplier_DDL" nillable="true" type="tns:DC_Supplier_DDL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Supplier_DDL" nillable="true" type="tns:ArrayOfDC_Supplier_DDL" />
+  <xs:complexType name="DC_Supplier_DDL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFullPull" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" type="xs:int" />
+      <xs:element minOccurs="0" name="Supplier_Id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Supplier_DDL" nillable="true" type="tns:DC_Supplier_DDL" />
   <xs:complexType name="ArrayOfDC_Statuses">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Statuses" nillable="true" type="tns:DC_Statuses" />
@@ -45,6 +76,7 @@
   <xs:element name="DC_Statuses" nillable="true" type="tns:DC_Statuses" />
   <xs:complexType name="DC_Activity_Search_RQ">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Activity_DisplayName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Activity_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="Activity_Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
@@ -227,22 +259,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_CityArea" nillable="true" type="tns:DC_CityArea" />
-  <xs:complexType name="ArrayOfDC_Supplier_DDL">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Supplier_DDL" nillable="true" type="tns:DC_Supplier_DDL" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_Supplier_DDL" nillable="true" type="tns:ArrayOfDC_Supplier_DDL" />
-  <xs:complexType name="DC_Supplier_DDL">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="IsFullPull" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Priority" type="xs:int" />
-      <xs:element minOccurs="0" name="Supplier_Id" type="ser:guid" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_Supplier_DDL" nillable="true" type="tns:DC_Supplier_DDL" />
   <xs:complexType name="ArrayOfDC_Activity_DDL">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Activity_DDL" nillable="true" type="tns:DC_Activity_DDL" />
@@ -843,21 +859,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_M_masterattributelists" nillable="true" type="tns:DC_M_masterattributelists" />
-  <xs:complexType name="DC_Supplier_Search_RQ">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CategorySubType_ID" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EntityType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PageNo" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="PageSize" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="ProductCategory_ID" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SupplierType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="ser:guid" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_Supplier_Search_RQ" nillable="true" type="tns:DC_Supplier_Search_RQ" />
   <xs:complexType name="ArrayOfDC_Supplier">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Supplier" nillable="true" type="tns:DC_Supplier" />
@@ -970,6 +971,7 @@
   <xs:element name="ArrayOfDC_ActivitySearch_RS" nillable="true" type="tns:ArrayOfDC_ActivitySearch_RS" />
   <xs:complexType name="DC_ActivitySearch_RS">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Activity_DisplayName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Activity_Flavour_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="Activity_Id" type="ser:guid" />
       <xs:element minOccurs="0" name="Activity_Status" nillable="true" type="xs:string" />
@@ -1420,6 +1422,7 @@
   <xs:element name="DC_Activity_Descriptions" nillable="true" type="tns:DC_Activity_Descriptions" />
   <xs:complexType name="DC_Activity_Flavour_RQ">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Activity_DisplayName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Activity_Flavour_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="Activity_Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
@@ -1460,6 +1463,7 @@
   <xs:element name="ArrayOfDC_Activity_Flavour" nillable="true" type="tns:ArrayOfDC_Activity_Flavour" />
   <xs:complexType name="DC_Activity_Flavour">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Activity_DisplayName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Activity_Flavour_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="Activity_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="Activity_Status" nillable="true" type="xs:string" />
@@ -1986,6 +1990,7 @@
       <xs:element minOccurs="0" name="CityID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CountryID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SystemProductNameSubType_ID" nillable="true" type="q4:ArrayOfstring" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_ActivityCountStats" nillable="true" type="tns:DC_ActivityCountStats" />
@@ -2000,6 +2005,7 @@
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemProductNameSubType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TotalCount" nillable="true" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
