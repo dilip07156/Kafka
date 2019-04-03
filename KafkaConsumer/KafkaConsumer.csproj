@@ -524,6 +524,9 @@
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Stg_Kafka.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_stg_SupplierHotelFlagMapping.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Supplier.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -627,6 +630,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DL_ML_DL_EntityStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.HolidayDetail.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.HolidayMappingSearchResult.datasource">

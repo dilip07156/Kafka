@@ -666,4 +666,38 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CustomClassificationAttributes" nillable="true" type="tns:CustomClassificationAttributes" />
+  <xs:complexType name="ArrayOfHolidayDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HolidayDetail" nillable="true" type="tns:HolidayDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHolidayDetail" nillable="true" type="tns:ArrayOfHolidayDetail" />
+  <xs:complexType name="HolidayDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="callDetails" nillable="true" type="tns:CallDetails" />
+      <xs:element minOccurs="0" name="callType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="supplierName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HolidayDetail" nillable="true" type="tns:HolidayDetail" />
+  <xs:complexType name="CallDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="supplierResponse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tourIDs" nillable="true" type="tns:ArrayOfTourIDs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CallDetails" nillable="true" type="tns:CallDetails" />
+  <xs:complexType name="ArrayOfTourIDs">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TourIDs" nillable="true" type="tns:TourIDs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTourIDs" nillable="true" type="tns:ArrayOfTourIDs" />
+  <xs:complexType name="TourIDs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tourID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tourName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TourIDs" nillable="true" type="tns:TourIDs" />
 </xs:schema>

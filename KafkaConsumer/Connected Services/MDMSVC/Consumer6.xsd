@@ -1,16 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="DataSet" nillable="true">
-    <xs:complexType>
-      <xs:annotation>
-        <xs:appinfo>
-          <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-        </xs:appinfo>
-      </xs:annotation>
-      <xs:sequence>
-        <xs:element ref="xs:schema" />
-        <xs:any />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.STG" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.STG" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="DC_stg_SupplierHotelFlagMapping_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBestSeller" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDirectContract" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUniqueProduct" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PageNo" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierHotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierImportFile_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="SupplierProductMapping_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierProductReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Supplier_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="uniqueFile_Id" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_stg_SupplierHotelFlagMapping_RQ" nillable="true" type="tns:DC_stg_SupplierHotelFlagMapping_RQ" />
+  <xs:complexType name="ArrayOfDC_stg_SupplierHotelFlagMapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_stg_SupplierHotelFlagMapping" nillable="true" type="tns:DC_stg_SupplierHotelFlagMapping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_stg_SupplierHotelFlagMapping" nillable="true" type="tns:ArrayOfDC_stg_SupplierHotelFlagMapping" />
+  <xs:complexType name="DC_stg_SupplierHotelFlagMapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Create_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBestSeller" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDirectContract" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUniqueProduct" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierHotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SupplierImportFile_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="SupplierProductMapping_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="SupplierProductReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Supplier_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
+      <xs:element minOccurs="0" name="uniqueFile_Id" nillable="true" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_stg_SupplierHotelFlagMapping" nillable="true" type="tns:DC_stg_SupplierHotelFlagMapping" />
+  <xs:complexType name="DC_Stg_Kafka">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accommodation_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Offset" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Partion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayLoad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Process_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Process_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Row_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Topic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TopicPartion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TopicPartionOffset" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="message_log" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Stg_Kafka" nillable="true" type="tns:DC_Stg_Kafka" />
+  <xs:complexType name="ArrayOfDC_Stg_Kafka">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Stg_Kafka" nillable="true" type="tns:DC_Stg_Kafka" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_Stg_Kafka" nillable="true" type="tns:ArrayOfDC_Stg_Kafka" />
 </xs:schema>

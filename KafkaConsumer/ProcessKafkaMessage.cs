@@ -849,7 +849,7 @@ namespace KafkaConsumer
                             CompanyName = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.CompanyName,
                             IsAmenityChanges = ExistingAccommodationRoom == null ? false : ExistingAccommodationRoom.IsAmenityChanges,
                             AmenityTypes = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.AmenityTypes,
-                            CommonRoomId = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.CommonRoomId,
+                            CommonRoomId = ExistingAccommodationRoom == null ? room.commonRoomId : ExistingAccommodationRoom.CommonRoomId,
 
 
 
@@ -887,7 +887,7 @@ namespace KafkaConsumer
                         RoomToAddUpdate.AccoRoomVersion.RoomDescription = room.roomDescription;
                         RoomToAddUpdate.AccoRoomVersion.TlgxAccoId = companyVersion.TLGXAccoId;
                         RoomToAddUpdate.AccoRoomVersion.TlgxAccoRoomId = room._id;
-
+                        RoomToAddUpdate.AccoRoomVersion.CommonRoomId = RoomToAddUpdate.CommonRoomId;
 
                         if (ExistingAccommodationRoom == null)
                         {
