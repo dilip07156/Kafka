@@ -92,6 +92,8 @@ namespace KafkaConsumer
         ///         - consumer.Poll / OnMessage is used to consume messages.
         ///         - no extra thread is created for the Poll loop.
         /// </summary>
+        /// 
+        private static bool checkReachedEnd = false;
         public static void Run_Poll(Dictionary<string, object> constructConfig, List<string> topics, CancellationTokenSource cancellationTokenSource)
         {
             StartProcess sp = new StartProcess();
@@ -102,12 +104,16 @@ namespace KafkaConsumer
                 {
                     sp.Log("Run_Poll Start");
                     // Note: All event handlers are called on the main thread.
-                    consumer.OnMessage += (_, msg) => { /*sp.Log(msg.Value)*/;ProcessKafkaMessage.InsertInto_StgKafka(msg); };
+                    consumer.OnMessage += (_, msg) => 
+                    { /*sp.Log(msg.Value)*/;
+                        ProcessKafkaMessage.InsertInto_StgKafka(msg);
+                    };
 
                     consumer.OnPartitionEOF += (_, end) =>
                     {
                         sp.Log($"Reached end of topic {end.Topic} partition {end.Partition}, next message will be at offset {end.Offset}");
                         Console.WriteLine($"Reached end of topic {end.Topic} partition {end.Partition}, next message will be at offset {end.Offset}");
+                         checkReachedEnd = true;
                     };
                     // Raised on critical errors, e.g. connection failures or all brokers down.
                     consumer.OnError += (_, error) =>
@@ -117,14 +123,16 @@ namespace KafkaConsumer
                     };
 
                     // Raised on deserialization errors or when a consumed message has an error != NoError.
-                    consumer.OnConsumeError += (_, msg) => {
+                    consumer.OnConsumeError += (_, msg) =>
+                    {
                         sp.Log($"Error consuming from topic/partition/offset {msg.Topic}/{msg.Partition}/{msg.Offset}: {msg.Error}");
-                        Console.WriteLine($"Error consuming from topic/partition/offset {msg.Topic}/{msg.Partition}/{msg.Offset}: {msg.Error}"); };
+                        Console.WriteLine($"Error consuming from topic/partition/offset {msg.Topic}/{msg.Partition}/{msg.Offset}: {msg.Error}");
+                    };
 
                     consumer.OnOffsetsCommitted += (_, commit) =>
                     {
                         Console.WriteLine($"[{string.Join(", ", commit.Offsets)}]");
-
+                        sp.Log(string.Join(", ", commit.Offsets));
                         if (commit.Error)
                         {
                             Console.WriteLine($"Failed to commit offsets: {commit.Error}");
@@ -135,6 +143,9 @@ namespace KafkaConsumer
                     consumer.OnPartitionsAssigned += (_, partitions) =>
                     {
                         Console.WriteLine($"Assigned partitions: [{string.Join(", ", partitions)}], member id: {consumer.MemberId}");
+                        partitions.RemoveAt(2);
+                        partitions.RemoveAt(1);
+                        
                         consumer.Assign(partitions);
                     };
 
@@ -161,9 +172,12 @@ namespace KafkaConsumer
                     while (!cancellationTokenSource.IsCancellationRequested)
                     {
                         consumer.Poll(TimeSpan.FromMilliseconds(1000));
+                        if (checkReachedEnd)
+                        {
+                            break;
+                        }
                     }
                     //consumer.CommitAsync();
-
                     sp.Log("Run_Poll End");
                 }
             }

@@ -22,13 +22,36 @@ namespace KafkaConsumer
             int TimerInterval = int.Parse(System.Configuration.ConfigurationManager.AppSettings["TimerInterval"]);
             try
             {
-                while (!cancellationTokenSource.IsCancellationRequested)
+
+                Log("Start PollingData : " + DateTime.Now.ToString());
+                PollingData();
+                //ProcessKafkaMessage.InsertInto_StgKafkaTestV2();
+                Log("End PollingData");
+                Log("Process_StgKafkaData : Start Process Data : " + DateTime.Now.ToString());
+
+
+                int count = ProcessKafkaMessage.GetPollDataCount();
+
+                while (count > 0)
                 {
-                    Log("Start PollingData : " + DateTime.Now.ToString());
-                    PollingData();
-                    Log("End PollingData");
-                    await Task.Delay(TimerInterval, cancellationTokenSource.Token);
+                    ProcessKafkaMessage.Process_StgKafkaData();
+                    count = ProcessKafkaMessage.GetPollDataCount();
+
                 }
+                Log("Process_StgKafkaData : END Process Data : " + DateTime.Now.ToString());
+
+                if (count == 0)
+                {
+                    Log("Start RePollingData : Start : " + DateTime.Now.ToString());
+
+                    await Task.Delay(TimerInterval, cancellationTokenSource.Token);
+                     StartPolling(cancellationTokenSource);
+
+
+                }
+
+
+
             }
             catch (OperationCanceledException)
             {
@@ -83,14 +106,15 @@ namespace KafkaConsumer
 
 
                         var bootstrap = KafkaVariables.Where(w => w.AttributeValue.StartsWith("bootstrap.servers")).Select(s => s.OTA_CodeTableValue).ToList();
-
                         constructConfig.Add("bootstrap.servers", string.Join(",", bootstrap));
+                        //constructConfig.Add("bootstrap.servers", "172.23.236.68:9092");
                         constructConfig.Add("default.topic.config", new Dictionary<string, object>()
                     {
                         { "auto.offset.reset", KafkaVariables.Where(w => w.AttributeValue == "auto.offset.reset").Select(s => s.OTA_CodeTableValue).FirstOrDefault() }
                     //{ "auto.offset.reset", "smallest" }
                     });
                         topics = KafkaVariables.Where(w => w.AttributeValue.StartsWith("topic_acco")).Select(s => s.OTA_CodeTableValue).ToList();
+                        //topics = new List<string>() { "MDM.PROD.PRODUCTACCO.PUB" };
 
                         Log("Construct config End");
                     }
@@ -146,7 +170,7 @@ namespace KafkaConsumer
 
             using (StreamWriter w = File.AppendText(System.Configuration.ConfigurationManager.AppSettings["FilePath"]))
             {
-             
+
                 w.WriteLine($"{logMessage}");
                 w.WriteLine("-------------------------------");
                 w.Flush();

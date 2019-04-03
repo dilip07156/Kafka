@@ -39,17 +39,17 @@ namespace KafkaConsumerService
                 }
             });
 
-            Task.Run(async () =>
-            {
-                try
-                {
-                    await objProcess.StartConsuming(cancelSource);
-                }
-                catch (OperationCanceledException)
-                {
-                    Console.WriteLine("Canceled!");
-                }
-            });
+            //Task.Run(async () =>
+            //{
+            //    try
+            //    {
+            //        await objProcess.StartConsuming(cancelSource);
+            //    }
+            //    catch (OperationCanceledException)
+            //    {
+            //        Console.WriteLine("Canceled!");
+            //    }
+            //});
         }
 
         protected override void OnStop()

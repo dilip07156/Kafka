@@ -32,7 +32,7 @@ namespace KafkaConsumerService
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message + Environment.NewLine + (e.InnerException != null ? e.InnerException.Message : "") , "Error while installing", MessageBoxButtons.OK);
+                MessageBox.Show(e.Message + Environment.NewLine + (e.InnerException != null ? e.InnerException.Message : ""), "Error while installing", MessageBoxButtons.OK);
                 base.Rollback(savedState);
             }
         }
@@ -71,8 +71,6 @@ namespace KafkaConsumerService
         {
             try
             {
-                //MessageBox.Show(Context.Parameters["SERVICEURLIP"] + Environment.NewLine + Context.Parameters["SERVICEURLPORT"] + Environment.NewLine + Context.Parameters["SERVICEURLMARKUP"] + Environment.NewLine + Context.Parameters["TIMERINTERVAL"]);
-
                 //IPAddress SERVICEURLIP;
                 double dTIMERINTERVAL = 0;
                 double dPOLLINTERVAL = 0;
@@ -81,12 +79,21 @@ namespace KafkaConsumerService
                 string TIMERINTERVAL = string.Empty;
                 string sSERVICEURLIP = string.Empty;
 
+                string SQLSERVER = string.Empty;
+                string SQLUSERNAME = string.Empty;
+                string SQLPASSWORD = string.Empty;
+
                 try
                 {
                     SERVICEURLPORT = Context.Parameters["SERVICEURLPORT"];
                     POLLINTERVAL = Context.Parameters["POLLINTERVAL"];
                     TIMERINTERVAL = Context.Parameters["TIMERINTERVAL"];
                     sSERVICEURLIP = Context.Parameters["SERVICEURLIP"];
+                    SQLSERVER = Context.Parameters["SQLSERVER"];
+                    SQLUSERNAME = Context.Parameters["SQLUSERNAME"];
+                    SQLPASSWORD = Context.Parameters["SQLPASSWORD"];
+
+
                 }
                 catch (Exception ex)
                 {
@@ -139,6 +146,7 @@ namespace KafkaConsumerService
                 }
                 else
                 {
+                    
                     if (!double.TryParse(POLLINTERVAL, out dPOLLINTERVAL))
                     {
                         throw new ApplicationException("Invalid Poll Interval.");
@@ -147,6 +155,7 @@ namespace KafkaConsumerService
                     {
                         if (!(dPOLLINTERVAL >= 1000 && dPOLLINTERVAL <= 60000))
                         {
+                            
                             throw new ApplicationException("Invalid Poll Interval.");
                         }
                     }
@@ -178,6 +187,33 @@ namespace KafkaConsumerService
                     throw new ApplicationException(ex.Message, ex.InnerException);
                 }
 
+
+                //Check Service Url Exists or Not.
+                try
+                {
+                    var request = (HttpWebRequest)WebRequest.Create(SERVICEURL.Trim());
+                    request.Timeout = 10000;
+                    request.KeepAlive = false;
+                    HttpWebResponse response = request.GetResponse() as HttpWebResponse;
+                    if (response.StatusCode != HttpStatusCode.OK)
+                    {
+                        throw new ApplicationException("Unable to communicate to Consumer Service using specified IP Address/FQDN and Port");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new ApplicationException(ex.Message, ex.InnerException);
+                }
+
+                //Construct SQL Connection String.
+                string ConnectionString = string.Empty;
+
+                if (!string.IsNullOrWhiteSpace(SQLSERVER) && !string.IsNullOrWhiteSpace(SQLUSERNAME) && !string.IsNullOrWhiteSpace(SQLPASSWORD))
+                    ConnectionString = "metadata=res://*/ConsumerModel.csdl|res://*/ConsumerModel.ssdl|res://*/ConsumerModel.msl;provider=System.Data.SqlClient;provider connection string='data source=" + SQLSERVER + ";initial catalog=TLGX_MAPPING;user id=" + SQLUSERNAME + ";password=" + SQLPASSWORD + ";multipleactiveresultsets=True;connect timeout=180;application name=EntityFramework'";
+                else
+                    ConnectionString = "metadata=res://*/ConsumerModel.csdl|res://*/ConsumerModel.ssdl|res://*/ConsumerModel.msl;provider=System.Data.SqlClient;provider connection string='Data Source=DEV-DB-MMSSQL.TRAVELOGIXX.NET,21443;Initial Catalog=TLGX_MAPPING;User Id=sqladmin;Password=I4mth354P455w0rd!*;MultipleActiveResultSets=True;connect timeout=180;application name=EntityFramework'";
+
+
                 // Get the path to the executable file that is being installed on the target computer  
                 string assemblypath = Context.Parameters["assemblypath"];
                 string appConfigPath = assemblypath + ".config";
@@ -198,10 +234,15 @@ namespace KafkaConsumerService
                     //MessageBox.Show("configuration != null");  
                     // Get the ‘appSettings’ node  
                     XmlNode settingNode = null;
+
+                    XmlNode connectionStringsNode = null;
                     foreach (XmlNode node in configuration.ChildNodes)
                     {
                         if (node.Name == "appSettings")
                             settingNode = node;
+
+                        if (node.Name == "connectionStrings")
+                            connectionStringsNode = node;
                     }
 
                     if (settingNode != null)
@@ -216,6 +257,9 @@ namespace KafkaConsumerService
                             XmlAttribute attribute = node.Attributes["value"];
                             //MessageBox.Show("attribute != null ");  
                             //MessageBox.Show("node.Attributes['value'] = " + node.Attributes["value"].Value);  
+
+
+
                             if (node.Attributes["key"] != null)
                             {
                                 //MessageBox.Show("node.Attributes['key'] != null ");  
@@ -234,6 +278,28 @@ namespace KafkaConsumerService
                                 }
                             }
                         }
+                    }
+
+
+                    if (connectionStringsNode != null)
+                    {
+                        foreach (XmlNode node in connectionStringsNode.ChildNodes)
+                        {
+                            if (node.Attributes == null)
+                                continue;
+
+
+                            XmlAttributeCollection attributes = node.Attributes;
+
+                            //MessageBox.Show("node.Attributes['name'] != null ");
+                            //MessageBox.Show("node.Attributes['name'] = " + node.Attributes["name"].Value);
+                            //MessageBox.Show("node.Attributes['connectionString'] != null ");
+                            //MessageBox.Show("node.Attributes['connectionString'] = " + node.Attributes["connectionString"].Value);
+                            //MessageBox.Show("ConnectionString = " + ConnectionString);
+
+                            node.Attributes["connectionString"].Value = ConnectionString;
+                        }
+
                     }
                     doc.Save(appConfigPath);
                 }
