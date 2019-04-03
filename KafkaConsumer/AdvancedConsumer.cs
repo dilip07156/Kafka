@@ -104,7 +104,10 @@ namespace KafkaConsumer
                 {
                     sp.Log("Run_Poll Start");
                     // Note: All event handlers are called on the main thread.
-                    consumer.OnMessage += (_, msg) => { /*sp.Log(msg.Value)*/; ProcessKafkaMessage.InsertInto_StgKafka(msg); };
+                    consumer.OnMessage += (_, msg) => 
+                    { /*sp.Log(msg.Value)*/;
+                        ProcessKafkaMessage.InsertInto_StgKafka(msg);
+                    };
 
                     consumer.OnPartitionEOF += (_, end) =>
                     {
@@ -140,6 +143,9 @@ namespace KafkaConsumer
                     consumer.OnPartitionsAssigned += (_, partitions) =>
                     {
                         Console.WriteLine($"Assigned partitions: [{string.Join(", ", partitions)}], member id: {consumer.MemberId}");
+                        partitions.RemoveAt(2);
+                        partitions.RemoveAt(1);
+                        
                         consumer.Assign(partitions);
                     };
 

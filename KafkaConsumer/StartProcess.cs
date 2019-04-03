@@ -34,7 +34,7 @@ namespace KafkaConsumer
 
                 while (count > 0)
                 {
-                    //ProcessKafkaMessage.Process_StgKafkaData();
+                    ProcessKafkaMessage.Process_StgKafkaData();
                     count = ProcessKafkaMessage.GetPollDataCount();
 
                 }
@@ -45,7 +45,7 @@ namespace KafkaConsumer
                     Log("Start RePollingData : Start : " + DateTime.Now.ToString());
 
                     await Task.Delay(TimerInterval, cancellationTokenSource.Token);
-                    StartPolling(cancellationTokenSource);
+                     StartPolling(cancellationTokenSource);
 
 
                 }

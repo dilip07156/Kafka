@@ -4,35 +4,35 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KafkaConsumer
 {
     public static class ProcessKafkaMessage
     {
-        public static async void InsertInto_StgKafka(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
+        public static void InsertInto_StgKafka(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
         {
             StartProcess sp = new StartProcess();
             try
             {
-                await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], new DC_Stg_Kafka()
-                {
-                    Error = msg.Error.Reason,
-                    TopicPartion = msg.TopicPartition.Partition.ToString(),
-                    Key = Convert.ToString(msg.Key),
-                    //TimeStamp = msg.Timestamp.UtcDateTime,
-                    PayLoad = msg.Value,
-                    Offset = msg.Offset.Value.ToString(),
-                    Partion = msg.Partition.ToString(),
-                    Create_User = "KafkaConsumer",
-                    Create_Date = DateTime.Now,
-                    Row_Id = Guid.NewGuid(),
-                    Topic = msg.Topic,
-                    TopicPartionOffset = msg.TopicPartition.Partition.ToString()
-                });
+                DC_Stg_Kafka stgKafka = new DC_Stg_Kafka();
+
+                stgKafka.Error = msg.Error.Reason;
+                stgKafka.TopicPartion = msg.TopicPartition.Partition.ToString();
+                stgKafka.Key = Convert.ToString(msg.Key);
+                //TimeStamp = msg.Timestamp.UtcDateTime,
+                stgKafka.PayLoad = msg.Value;
+                stgKafka.Offset = msg.Offset.Value.ToString();
+                stgKafka.Partion = msg.Partition.ToString();
+                stgKafka.Create_User = "KafkaConsumer";
+                stgKafka.Create_Date = DateTime.Now;
+                stgKafka.Row_Id = Guid.NewGuid();
+                stgKafka.Topic = msg.Topic;
+                stgKafka.TopicPartionOffset = msg.TopicPartition.Partition.ToString();
+                
+
+                var addContacts = Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], stgKafka).GetAwaiter().GetResult();
+                
             }
             catch (Exception Ex)
             {
