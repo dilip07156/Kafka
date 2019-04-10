@@ -1,178 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.Schedulers" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.Admin" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.Admin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-  <xs:complexType name="DC_Supplier_Schedule_RQ">
+  <xs:complexType name="ArrayOfDC_SiteMap">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Entities" nillable="true" type="q1:ArrayOfstring" />
-      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
-      <xs:element minOccurs="0" name="PageNo" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="PageSize" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SupplierScheduleID" type="ser:guid" />
-      <xs:element minOccurs="0" name="Suppllier_ID" type="ser:guid" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_SiteMap" nillable="true" type="tns:DC_SiteMap" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="DC_Supplier_Schedule_RQ" nillable="true" type="tns:DC_Supplier_Schedule_RQ" />
-  <xs:complexType name="ArrayOfDC_Supplier_Schedule">
+  <xs:element name="ArrayOfDC_SiteMap" nillable="true" type="tns:ArrayOfDC_SiteMap" />
+  <xs:complexType name="DC_SiteMap">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Supplier_Schedule" nillable="true" type="tns:DC_Supplier_Schedule" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_Supplier_Schedule" nillable="true" type="tns:ArrayOfDC_Supplier_Schedule" />
-  <xs:complexType name="DC_Supplier_Schedule">
-    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationID" type="ser:guid" />
       <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="CronExpression" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="DateOfMonth" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="DayOfWeek" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="EndYear" type="xs:int" />
-      <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FrequencyTypeCode" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ISUpdateFrequence" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ISXMLSupplier" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
       <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
-      <xs:element minOccurs="0" name="MonthOfYear" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Recur_No" type="xs:int" />
-      <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StartYear" type="xs:int" />
-      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SupplierName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SupplierScheduleID" type="ser:guid" />
-      <xs:element minOccurs="0" name="Suppllier_ID" type="ser:guid" />
-      <xs:element minOccurs="0" name="User_Role_Id" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="WeekOfMonth" nillable="true" type="xs:int" />
-      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstEnity" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="IsSiteMapNode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ParentID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Roles" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteMap_ID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="DC_Supplier_Schedule" nillable="true" type="tns:DC_Supplier_Schedule" />
-  <xs:complexType name="ArrayOfDC_Supplier_Schedule_RS">
+  <xs:element name="DC_SiteMap" nillable="true" type="tns:DC_SiteMap" />
+  <xs:complexType name="ArrayOfDC_Roles">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Supplier_Schedule_RS" nillable="true" type="tns:DC_Supplier_Schedule_RS" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_Roles" nillable="true" type="tns:DC_Roles" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfDC_Supplier_Schedule_RS" nillable="true" type="tns:ArrayOfDC_Supplier_Schedule_RS" />
-  <xs:complexType name="DC_Supplier_Schedule_RS">
+  <xs:element name="ArrayOfDC_Roles" nillable="true" type="tns:ArrayOfDC_Roles" />
+  <xs:complexType name="DC_Roles">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FrequencyTypeCode" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PageNo" type="xs:int" />
-      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
-      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SupplierScheduleID" type="ser:guid" />
-      <xs:element minOccurs="0" name="Suppllier_ID" type="ser:guid" />
-      <xs:element minOccurs="0" name="TotalSize" type="xs:int" />
+      <xs:element minOccurs="0" name="ApplicationID" type="ser:guid" />
+      <xs:element minOccurs="0" name="RoleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="DC_Supplier_Schedule_RS" nillable="true" type="tns:DC_Supplier_Schedule_RS" />
-  <xs:complexType name="DC_SupplierScheduledTaskRQ">
+  <xs:element name="DC_Roles" nillable="true" type="tns:DC_Roles" />
+  <xs:complexType name="DC_RoleAuthorizedForUrl">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_RoleAuthorizedForUrl" nillable="true" type="tns:DC_RoleAuthorizedForUrl" />
+  <xs:complexType name="ArrayOfDC_EntityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_EntityType" nillable="true" type="tns:DC_EntityType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_EntityType" nillable="true" type="tns:ArrayOfDC_EntityType" />
+  <xs:complexType name="DC_EntityType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EnityTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="EntityTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_EntityType" nillable="true" type="tns:DC_EntityType" />
+  <xs:complexType name="DC_EntityDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EntityID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="EntityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_EntityDetails" nillable="true" type="tns:DC_EntityDetails" />
+  <xs:complexType name="ArrayOfDC_EntityDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_EntityDetails" nillable="true" type="tns:DC_EntityDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_EntityDetails" nillable="true" type="tns:ArrayOfDC_EntityDetails" />
+  <xs:complexType name="DC_UserEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FromDate" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="IsAdminUser" type="xs:boolean" />
-      <xs:element minOccurs="0" name="LogId" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="Notification" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PageNo" type="xs:int" />
-      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
-      <xs:element minOccurs="0" name="RedirectFrom" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SortBy" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="TaskId" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="ToDate" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityID" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="EntityTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ManagerID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" type="ser:guid" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="DC_SupplierScheduledTaskRQ" nillable="true" type="tns:DC_SupplierScheduledTaskRQ" />
-  <xs:complexType name="ArrayOfSupplierScheduledTask">
+  <xs:element name="DC_UserEntity" nillable="true" type="tns:DC_UserEntity" />
+  <xs:complexType name="ArrayOfDC_UserDetails">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="SupplierScheduledTask" nillable="true" type="tns:SupplierScheduledTask" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_UserDetails" nillable="true" type="tns:DC_UserDetails" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfSupplierScheduledTask" nillable="true" type="tns:ArrayOfSupplierScheduledTask" />
-  <xs:complexType name="SupplierScheduledTask">
+  <xs:element name="ArrayOfDC_UserDetails" nillable="true" type="tns:ArrayOfDC_UserDetails" />
+  <xs:complexType name="DC_UserDetails">
     <xs:sequence>
-      <xs:element minOccurs="0" name="APIStatus" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ApiPath" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ISActive" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ISComplete" type="xs:boolean" />
-      <xs:element minOccurs="0" name="LogId" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="LogType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PendingFordays" type="xs:int" />
-      <xs:element minOccurs="0" name="Pentahocall_id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="ScheduledDate" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SupplierScheduleTaskID" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="SuppllierName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Suppllier_ID" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="TaskId" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="TotalRecord" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="SupplierScheduledTask" nillable="true" type="tns:SupplierScheduledTask" />
-  <xs:complexType name="ArrayOfSupplier_Task_Logs">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Supplier_Task_Logs" nillable="true" type="tns:Supplier_Task_Logs" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSupplier_Task_Logs" nillable="true" type="tns:ArrayOfSupplier_Task_Logs" />
-  <xs:complexType name="Supplier_Task_Logs">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LogType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Log_id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="PageNo" type="xs:int" />
-      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
-      <xs:element minOccurs="0" name="RedirectFrom" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SortBy" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StatusMessage" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Task_id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="EntityType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EntityTypeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
       <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Userid" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Supplier_Task_Logs" nillable="true" type="tns:Supplier_Task_Logs" />
-  <xs:complexType name="ArrayOfSupplier_Task_Notifications">
+  <xs:element name="DC_UserDetails" nillable="true" type="tns:DC_UserDetails" />
+  <xs:complexType name="ArrayOfDC_ApplicationMgmt">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Supplier_Task_Notifications" nillable="true" type="tns:Supplier_Task_Notifications" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_ApplicationMgmt" nillable="true" type="tns:DC_ApplicationMgmt" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfSupplier_Task_Notifications" nillable="true" type="tns:ArrayOfSupplier_Task_Notifications" />
-  <xs:complexType name="Supplier_Task_Notifications">
+  <xs:element name="ArrayOfDC_ApplicationMgmt" nillable="true" type="tns:ArrayOfDC_ApplicationMgmt" />
+  <xs:complexType name="DC_ApplicationMgmt">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Log_id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="NotificationType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Notification_Count" type="xs:int" />
-      <xs:element minOccurs="0" name="Status_Message" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Task_id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="ApplicationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecords" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Supplier_Task_Notifications" nillable="true" type="tns:Supplier_Task_Notifications" />
-  <xs:complexType name="ArrayOfSupplier_Task_Calender">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Supplier_Task_Calender" nillable="true" type="tns:Supplier_Task_Calender" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfSupplier_Task_Calender" nillable="true" type="tns:ArrayOfSupplier_Task_Calender" />
-  <xs:complexType name="Supplier_Task_Calender">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="className" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="color" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="start" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Supplier_Task_Calender" nillable="true" type="tns:Supplier_Task_Calender" />
+  <xs:element name="DC_ApplicationMgmt" nillable="true" type="tns:DC_ApplicationMgmt" />
 </xs:schema>

@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-  <xs:complexType name="ArrayOfstring">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataContracts" />
+  <xs:complexType name="ArrayOfTupleOfbooleanDC_Accommodation_RoomInfoArrayOfDC_Accomodation_RoomFacilities8EE_S_PdkK">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TupleOfbooleanDC_Accommodation_RoomInfoArrayOfDC_Accomodation_RoomFacilities8EE_S_PdkK" nillable="true" type="tns:TupleOfbooleanDC_Accommodation_RoomInfoArrayOfDC_Accomodation_RoomFacilities8EE_S_PdkK" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring" />
-  <xs:complexType name="ArrayOfanyType">
+  <xs:element name="ArrayOfTupleOfbooleanDC_Accommodation_RoomInfoArrayOfDC_Accomodation_RoomFacilities8EE_S_PdkK" nillable="true" type="tns:ArrayOfTupleOfbooleanDC_Accommodation_RoomInfoArrayOfDC_Accomodation_RoomFacilities8EE_S_PdkK" />
+  <xs:complexType name="TupleOfbooleanDC_Accommodation_RoomInfoArrayOfDC_Accomodation_RoomFacilities8EE_S_PdkK">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="TupleOf{0}{1}{2}{#}" Namespace="http://schemas.datacontract.org/2004/07/System" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="DC_Accommodation_RoomInfo" Namespace="http://schemas.datacontract.org/2004/07/DataContracts" />
+          <GenericParameter Name="ArrayOfDC_Accomodation_RoomFacilities" Namespace="http://schemas.datacontract.org/2004/07/DataContracts" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="m_Item1" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DataContracts" name="m_Item2" nillable="true" type="q1:DC_Accommodation_RoomInfo" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataContracts" name="m_Item3" nillable="true" type="q2:ArrayOfDC_Accomodation_RoomFacilities" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfanyType" nillable="true" type="tns:ArrayOfanyType" />
-  <xs:complexType name="ArrayOfguid">
+  <xs:element name="TupleOfbooleanDC_Accommodation_RoomInfoArrayOfDC_Accomodation_RoomFacilities8EE_S_PdkK" nillable="true" type="tns:TupleOfbooleanDC_Accommodation_RoomInfoArrayOfDC_Accomodation_RoomFacilities8EE_S_PdkK" />
+  <xs:complexType name="MarshalByRefObject">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="guid" type="ser:guid" />
+      <xs:element name="__identity" nillable="true" type="xs:anyType" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfguid" nillable="true" type="tns:ArrayOfguid" />
+  <xs:element name="MarshalByRefObject" nillable="true" type="tns:MarshalByRefObject" />
 </xs:schema>

@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.IO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.IO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/System" />
-  <xs:complexType name="Stream">
-    <xs:complexContent mixed="false">
-      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System" base="q1:MarshalByRefObject">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.FileTransfer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd17" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+  <xs:complexType name="DC_RemoteFileInfo">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.IO" minOccurs="0" name="FileByteStream" nillable="true" type="q1:Stream" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Length" type="xs:long" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:element name="Stream" nillable="true" type="tns:Stream" />
+  <xs:element name="DC_RemoteFileInfo" nillable="true" type="tns:DC_RemoteFileInfo" />
+  <xs:complexType name="DC_FileUploadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UploadedPath" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_FileUploadResponse" nillable="true" type="tns:DC_FileUploadResponse" />
+  <xs:complexType name="DC_FileData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BufferData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FilePostition" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_FileData" nillable="true" type="tns:DC_FileData" />
+  <xs:complexType name="DC_UploadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UploadSucceeded" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UploadedPath" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_UploadResponse" nillable="true" type="tns:DC_UploadResponse" />
 </xs:schema>
