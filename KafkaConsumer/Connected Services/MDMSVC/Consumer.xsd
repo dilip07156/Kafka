@@ -1,129 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/DataContracts.Pentaho" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DataContracts.Pentaho" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:57643/Consumer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-  <xs:complexType name="DC_PentahoTransStatus_TransStatus">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Error_desc" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="First_log_line_nr" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Last_log_line_nr" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Log_date" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Logging_string" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Paused" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Result" nillable="true" type="tns:DC_PentahoTransStatus_Result" />
-      <xs:element minOccurs="0" name="Status_desc" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Stepstatuslist" nillable="true" type="tns:DC_PentahoTransStatus_Stepstatuslist" />
-      <xs:element minOccurs="0" name="TransactionImage" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="TransactionLog" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Transname" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_PentahoTransStatus_TransStatus" nillable="true" type="tns:DC_PentahoTransStatus_TransStatus" />
-  <xs:complexType name="DC_PentahoTransStatus_Result">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Entry_nr" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Exit_status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Is_stopped" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Lines_deleted" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Lines_input" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Lines_output" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Lines_read" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Lines_rejected" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Lines_updated" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Lines_written" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Log_channel_id" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Log_text" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Nr_errors" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Nr_files_retrieved" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Resultfile" nillable="true" type="tns:ArrayOfDC_PentahoTransStatus_Resultfile" />
-      <xs:element minOccurs="0" name="Resultrows" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="sResult" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_PentahoTransStatus_Result" nillable="true" type="tns:DC_PentahoTransStatus_Result" />
-  <xs:complexType name="ArrayOfDC_PentahoTransStatus_Resultfile">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_PentahoTransStatus_Resultfile" nillable="true" type="tns:DC_PentahoTransStatus_Resultfile" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_PentahoTransStatus_Resultfile" nillable="true" type="tns:ArrayOfDC_PentahoTransStatus_Resultfile" />
-  <xs:complexType name="DC_PentahoTransStatus_Resultfile">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="File" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Parentorigin" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Timestamp" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_PentahoTransStatus_Resultfile" nillable="true" type="tns:DC_PentahoTransStatus_Resultfile" />
-  <xs:complexType name="DC_PentahoTransStatus_Stepstatuslist">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Stepstatus" nillable="true" type="tns:ArrayOfDC_PentahoTransStatus_Stepstatus" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_PentahoTransStatus_Stepstatuslist" nillable="true" type="tns:DC_PentahoTransStatus_Stepstatuslist" />
-  <xs:complexType name="ArrayOfDC_PentahoTransStatus_Stepstatus">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_PentahoTransStatus_Stepstatus" nillable="true" type="tns:DC_PentahoTransStatus_Stepstatus" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_PentahoTransStatus_Stepstatus" nillable="true" type="tns:ArrayOfDC_PentahoTransStatus_Stepstatus" />
-  <xs:complexType name="DC_PentahoTransStatus_Stepstatus">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Copy" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Errors" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LinesInput" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LinesOutput" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LinesRead" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LinesRejected" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LinesUpdated" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="LinesWritten" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Paused" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Seconds" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Speed" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="StatusDescription" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Stepname" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Stopped" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_PentahoTransStatus_Stepstatus" nillable="true" type="tns:DC_PentahoTransStatus_Stepstatus" />
-  <xs:complexType name="DC_PentahoApiCallLogDetails_RQ">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Entity_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="PageNo" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="PageSize" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="ser:guid" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_PentahoApiCallLogDetails_RQ" nillable="true" type="tns:DC_PentahoApiCallLogDetails_RQ" />
-  <xs:complexType name="ArrayOfDC_PentahoApiCallLogDetails">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_PentahoApiCallLogDetails" nillable="true" type="tns:DC_PentahoApiCallLogDetails" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfDC_PentahoApiCallLogDetails" nillable="true" type="tns:ArrayOfDC_PentahoApiCallLogDetails" />
-  <xs:complexType name="DC_PentahoApiCallLogDetails">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="ApiPath" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Entity" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Entity_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PentahoCall_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Supplier" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SupplierApiCallLog_Id" type="ser:guid" />
-      <xs:element minOccurs="0" name="SupplierApiLocation_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="TotalRecords" nillable="true" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_PentahoApiCallLogDetails" nillable="true" type="tns:DC_PentahoApiCallLogDetails" />
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element ref="xs:schema" />
+        <xs:any />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

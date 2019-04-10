@@ -20,7 +20,6 @@ namespace KafkaConsumer
                 stgKafka.Error = msg.Error.Reason;
                 stgKafka.TopicPartion = msg.TopicPartition.Partition.ToString();
                 stgKafka.Key = Convert.ToString(msg.Key);
-                //TimeStamp = msg.Timestamp.UtcDateTime,
                 stgKafka.PayLoad = msg.Value;
                 stgKafka.Offset = msg.Offset.Value.ToString();
                 stgKafka.Partion = msg.Partition.ToString();
@@ -29,41 +28,21 @@ namespace KafkaConsumer
                 stgKafka.Row_Id = Guid.NewGuid();
                 stgKafka.Topic = msg.Topic;
                 stgKafka.TopicPartionOffset = msg.TopicPartition.Partition.ToString();
-                
 
                 var addContacts = Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], stgKafka).GetAwaiter().GetResult();
-                
             }
             catch (Exception Ex)
             {
                 sp.Log("Execption occurs InsertInto_StgKafka Method");
                 sp.Log(Ex.ToString());
-                //throw;
             }
         }
-
 
         public static void InsertInto_StgKafkaV2(Confluent.Kafka.Message<Confluent.Kafka.Null, string> msg)
         {
             StartProcess sp = new StartProcess();
             try
             {
-                //await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Insert"], new DC_Stg_Kafka()
-                //{
-                //    Error = msg.Error.Reason,
-                //    TopicPartion = msg.TopicPartition.Partition.ToString(),
-                //    Key = Convert.ToString(msg.Key),
-                //    //TimeStamp = msg.Timestamp.UtcDateTime,
-                //    PayLoad = msg.Value,
-                //    Offset = msg.Offset.Value.ToString(),
-                //    Partion = msg.Partition.ToString(),
-                //    Create_User = "KafkaConsumer",
-                //    Create_Date = DateTime.Now,
-                //    Row_Id = Guid.NewGuid(),
-                //    Topic = msg.Topic,
-                //    TopicPartionOffset = msg.TopicPartition.Partition.ToString()
-                //});
-
                 using (ConsumerEntities context = new ConsumerEntities())
                 {
 
@@ -76,14 +55,12 @@ namespace KafkaConsumer
                         Key = Convert.ToString(msg.Key),
                         Offset = msg.Offset.Value.ToString(),
                         Partion = msg.Partition.ToString(),
-                        //TimeStamp = KafkaInfo.TimeStamp.get,
                         TopicPartion = msg.TopicPartition.Partition.ToString(),
                         TopicPartionOffset = msg.TopicPartition.Partition.ToString(),
                         Create_User = "KafkaConsumer",
                         Create_Date = DateTime.Now,
                         Process_User = null,
                         Process_Date = null,
-
                     };
                     context.Stg_Kafka.Add(sk);
 
@@ -94,9 +71,7 @@ namespace KafkaConsumer
             {
                 sp.Log("Execption occurs InsertInto_StgKafkaV2 Method");
                 sp.Log(Ex.ToString());
-                //throw;
             }
-
         }
 
         public static void InsertInto_StgKafkaTestV2()
@@ -104,11 +79,8 @@ namespace KafkaConsumer
             StartProcess sp = new StartProcess();
             try
             {
-
-
                 using (ConsumerEntities context = new ConsumerEntities())
                 {
-
                     Stg_Kafka sk = new Stg_Kafka()
                     {
                         Row_Id = Guid.NewGuid(),
@@ -118,17 +90,14 @@ namespace KafkaConsumer
                         Key = Convert.ToString("123"),
                         Offset = "0",
                         Partion = "0",
-                        //TimeStamp = KafkaInfo.TimeStamp.get,
                         TopicPartion = "Test",
                         TopicPartionOffset = "Test",
                         Create_User = "KafkaConsumer",
                         Create_Date = DateTime.Now,
                         Process_User = null,
                         Process_Date = null,
-
                     };
                     context.Stg_Kafka.Add(sk);
-
                     context.SaveChanges();
                 }
             }
@@ -136,9 +105,7 @@ namespace KafkaConsumer
             {
                 sp.Log("Execption occurs InsertInto_StgKafkaV2 Method");
                 sp.Log(Ex.ToString());
-                //throw;
             }
-
         }
 
         public static bool Process_StgKafkaData()
@@ -159,7 +126,6 @@ namespace KafkaConsumer
                     UpdateStg_KafkaInfo(KafkaData);
                 }
             }
-
             return Result;
         }
 
@@ -175,10 +141,8 @@ namespace KafkaConsumer
             {
                 returnObj = new List<DC_Stg_Kafka>();
             }
-
             return returnObj;
         }
-
 
         public static int GetPollDataCount()
         {
@@ -192,14 +156,12 @@ namespace KafkaConsumer
             {
                 returnObj = 0;
             }
-
             return returnObj;
         }
 
         public static bool ProcessKafkaPayload(DC_Stg_Kafka KafkaData)
         {
             bool Result = false;
-
             try
             {
                 string row_id = KafkaData.Row_Id.ToString();
@@ -223,9 +185,7 @@ namespace KafkaConsumer
                 {
                     Result = DeleteMasterRoom(data.ToString(), Guid.Empty);
                 }
-
                 return Result;
-
             }
             catch (Exception ex)
             {
@@ -246,7 +206,6 @@ namespace KafkaConsumer
                 bool IsUpdate = resAddUpdateAccommodationData.Item2;
                 if (dbAcco != null)
                 {
-
                     AccommodationId = dbAcco.Accommodation_Id;
 
                     UpdateStg_KafkaInfoWithLog(dC_Stg_Kafka, "Accommodation is Loaded.", AccommodationId);
@@ -299,23 +258,19 @@ namespace KafkaConsumer
                     }
                 }
             }
-
             return true;
         }
 
         #region Accommodation
         public static Tuple<DC_Accomodation, bool> AddUpdateAccommodationData(AccommodationPayload AccoData)
         {
-
             if (string.IsNullOrEmpty(AccoData.accomodationData.accomodationInfo.companyId))
             {
                 return new Tuple<DC_Accomodation, bool>(null, false);
             }
 
-
             Guid AccommodationId = Guid.Empty;
             bool IsUpdate = false;
-
             string TelephoneTX = string.Empty;
 
             var acco = AccoData.accomodationData;
@@ -457,13 +412,11 @@ namespace KafkaConsumer
             accoToInsertUpdate.AccVersion.TLGXAccoId = acco._id;
             accoToInsertUpdate.AccVersion.Interest = (acco.overview != null && acco.overview.interest != null && acco.overview.interest.Count > 0 ? string.Join(",", acco.overview.interest) : null);
 
-
             if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)
             {
                 accoToInsertUpdate.AccVersion.Latitude = acco.accomodationInfo.address.geometry.coordinates[0].ToString();
                 accoToInsertUpdate.AccVersion.Longitude = acco.accomodationInfo.address.geometry.coordinates[1].ToString();
             }
-
 
             if (acco.accomodationInfo.address.geometry.coordinates != null && acco.accomodationInfo.address.geometry.coordinates.Count > 0)
             {
@@ -521,7 +474,7 @@ namespace KafkaConsumer
 
             #region Update / Add Accommodation
 
-            var addUpdateAcco = Proxy.Post<bool, DC_Accomodation>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_UpdateURI"], accoToInsertUpdate).GetAwaiter().GetResult();
+            var addUpdateAcco = Proxy.Post<bool, DC_Accomodation>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_UpdateURIKafka"], accoToInsertUpdate).GetAwaiter().GetResult();
             #endregion
 
             return new Tuple<DC_Accomodation, bool>(accoToInsertUpdate, IsUpdate);
@@ -573,7 +526,6 @@ namespace KafkaConsumer
                 }
                 newLst = null;
             }
-
             return result;
         }
 
@@ -625,16 +577,13 @@ namespace KafkaConsumer
                     //AF.Legacy_Htl_Id = Convert.ToInt32(dt.data.accomodationData.accomodationInfo.commonProductId); AF.FacilityCategory = item.category;
                     //AF.FacilityType = item.type; AF.FacilityName = null; AF.Description = item.desc; AF.Create_Date = DateTime.Now; AF.Create_User = "Kafka";
                     //AF.Edit_Date = DateTime.Now; AF.Edit_User = "Kafka"; AF.IsActive = true; newLst.Add(AF);
-
                 }
-
                 if (newLst.Count > 0)
                 {
                     Result = Proxy.Post<bool, List<DC_Accommodation_Facility>>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_AddLstFacilitiesURI"], newLst).GetAwaiter().GetResult();
                 }
                 newLst = null;
             }
-
             return Result;
         }
 
@@ -735,7 +684,6 @@ namespace KafkaConsumer
                 }
                 else
                 {
-
                     DC_Accommodation_Status AC = new DC_Accommodation_Status();
                     {
                         AC.Accommodation_Status_Id = Guid.NewGuid();
@@ -761,7 +709,6 @@ namespace KafkaConsumer
 
                         Lst.Add(AC);
                     }
-
                 }
 
                 var result = Proxy.Post<bool, List<DC_Accommodation_Status>>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_AddLstStatusURI"], Lst).GetAwaiter().GetResult();
@@ -786,7 +733,6 @@ namespace KafkaConsumer
 
         public static bool ProcessAccoRoomData(DC_Accomodation dbAcco, List<AccomodationRoomData> AccoRoomData)
         {
-
             List<DC_Accommodation_RoomInfo> ExistingRooms = GetMasterRoomList(dbAcco.Accommodation_Id);
             var result = AddUpdateAccoRooms(ExistingRooms, dbAcco, AccoRoomData);
             return result;
@@ -807,16 +753,13 @@ namespace KafkaConsumer
                 List<Guid> NewRooms = new List<Guid>();
                 bool IsUpdate = false;
                 List<DC_Accommodation_CompanyVersion> lstAccommodation_CompanyVersion = GetAccomodationCompanyVersionInfo(dbAcco.Accommodation_Id);
-
+                List<Tuple<bool, DC_Accommodation_RoomInfo, List<DC_Accomodation_RoomFacilities>>> lstDCAccommodationRoomInfo = new List<Tuple<bool, DC_Accommodation_RoomInfo, List<DC_Accomodation_RoomFacilities>>>();
                 foreach (var room in AccoRoomData)
                 {
-
-
                     if (!string.IsNullOrEmpty(room.commonRoomId))
                     {
                         //Check if room is there
                         var ExistingAccommodationRoom = ExistingRooms.Where(w => w.TLGXAccoRoomId.ToUpper() == room._id.ToUpper() && w.CommonRoomId == (room.commonRoomId == null ? string.Empty : room.commonRoomId)).FirstOrDefault();
-
 
                         DC_Accommodation_RoomInfo RoomToAddUpdate = new DC_Accommodation_RoomInfo
                         {
@@ -827,9 +770,7 @@ namespace KafkaConsumer
                             BedType = room.bedType == null ? (ExistingAccommodationRoom == null ? room.bedType : ExistingAccommodationRoom.BedType) : room.bedType,
                             Category = room.category == null ? (ExistingAccommodationRoom == null ? room.category : ExistingAccommodationRoom.Category) : room.category,
                             CompanyRoomCategory = room.companyRoomCategory == null ? (ExistingAccommodationRoom == null ? room.companyRoomCategory : ExistingAccommodationRoom.CompanyRoomCategory) : room.companyRoomCategory,
-                            //Edit_Date = room.lastUpdated,
                             Edit_User = dbAcco.Edit_User,
-                            //Create_Date = room.createdAt,
                             Create_User = dbAcco.Create_User,
                             FloorName = room.floorName == null ? (ExistingAccommodationRoom == null ? room.floorName : ExistingAccommodationRoom.FloorName) : room.floorName,
                             FloorNumber = room.floorNo == 0 ? (ExistingAccommodationRoom == null ? room.floorNo.ToString() : ExistingAccommodationRoom.FloorNumber) : room.floorNo.ToString(),
@@ -850,10 +791,6 @@ namespace KafkaConsumer
                             IsAmenityChanges = ExistingAccommodationRoom == null ? false : ExistingAccommodationRoom.IsAmenityChanges,
                             AmenityTypes = ExistingAccommodationRoom == null ? null : ExistingAccommodationRoom.AmenityTypes,
                             CommonRoomId = ExistingAccommodationRoom == null ? room.commonRoomId : ExistingAccommodationRoom.CommonRoomId,
-
-
-
-
                         };
 
                         if (room.createdAt != null && room.createdAt <= DateTime.MinValue)
@@ -865,7 +802,6 @@ namespace KafkaConsumer
                             RoomToAddUpdate.Create_Date = room.createdAt;
                         }
 
-
                         if (room.lastUpdated != null && room.lastUpdated <= DateTime.MinValue)
                         {
                             RoomToAddUpdate.Create_Date = null;
@@ -875,7 +811,9 @@ namespace KafkaConsumer
                             RoomToAddUpdate.Edit_Date = room.lastUpdated;
                         }
 
-                        DC_Accommodation_CompanyVersion companyVersion = lstAccommodation_CompanyVersion.Where(x => x.Accommodation_Id == dbAcco.Accommodation_Id && x.CommonProductId == dbAcco.AccVersion.CommonProductId && x.CompanyId == dbAcco.AccVersion.CompanyId).SingleOrDefault();
+                        NewRooms.Add(RoomToAddUpdate.Accommodation_RoomInfo_Id);
+
+                        DC_Accommodation_CompanyVersion companyVersion = lstAccommodation_CompanyVersion.Where(x => x.Accommodation_Id == dbAcco.Accommodation_Id && x.CommonProductId == dbAcco.AccVersion.CommonProductId && x.CompanyId == dbAcco.AccVersion.CompanyId).FirstOrDefault();
 
                         RoomToAddUpdate.AccoRoomVersion = new Accommodation_RoomInfo_CompanyVersion();
                         RoomToAddUpdate.AccoRoomVersion.Accommodation_CompanyVersion_Id = companyVersion.Accommodation_CompanyVersion_Id;
@@ -889,30 +827,8 @@ namespace KafkaConsumer
                         RoomToAddUpdate.AccoRoomVersion.TlgxAccoRoomId = room._id;
                         RoomToAddUpdate.AccoRoomVersion.CommonRoomId = RoomToAddUpdate.CommonRoomId;
 
-                        if (ExistingAccommodationRoom == null)
-                        {
-                            var AddRoomResult = Proxy.Post<bool, DC_Accommodation_RoomInfo>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_AddRoomURI"], RoomToAddUpdate).GetAwaiter().GetResult();
-                            //Task.WaitAny(Proxy.Post<bool, DC_Accommodation_RoomInfo>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_AddRoomURI"], RoomToAddUpdate));
-
-                            IsUpdate = AddRoomResult;
-
-                        }
-                        else
-                        {
-                            var UpdateRoomResult = Proxy.Post<bool, DC_Accommodation_RoomInfo>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_UpdateRoomURI"], RoomToAddUpdate).GetAwaiter().GetResult();
-
-                            IsUpdate = UpdateRoomResult;
-
-                            //Remove Room Facilities
-                            if (room.amenities != null && room.amenities.Count() > 0)
-                            {
-                                var RemoveRoomFacilityResult = Proxy.Get<bool>(string.Format(System.Configuration.ConfigurationManager.AppSettings["Accommodation_DeleteRoomFacilities_ByAccoRoomId"], ExistingAccommodationRoom.Accommodation_RoomInfo_Id)).GetAwaiter().GetResult();
-                            }
-                        }
-
-                        NewRooms.Add(RoomToAddUpdate.Accommodation_RoomInfo_Id);
-
                         //Add Room Amenities
+                        List<DC_Accomodation_RoomFacilities> lstAccomodationRoomFacilities = new List<DC_Accomodation_RoomFacilities>();
                         if (room.amenities != null && room.amenities.Count() > 0)
                         {
                             foreach (var roomAmenity in room.amenities)
@@ -926,14 +842,10 @@ namespace KafkaConsumer
                                     AmenityType = roomAmenity.type,
                                     IsActive = true,
                                     IsRoomActive = true,
-
                                     Create_User = dbAcco.Create_User,
                                     Description = roomAmenity.desc,
-                                    //Edit_Date = room.lastUpdated,
                                     Edit_user = dbAcco.Edit_User
                                 };
-
-
                                 if (room.createdAt != null && room.createdAt <= DateTime.MinValue)
                                 {
                                     roomFacilites.Create_Date = null;
@@ -942,8 +854,6 @@ namespace KafkaConsumer
                                 {
                                     roomFacilites.Create_Date = room.createdAt;
                                 }
-
-
                                 if (room.lastUpdated != null && room.lastUpdated <= DateTime.MinValue)
                                 {
                                     roomFacilites.Create_Date = null;
@@ -953,23 +863,40 @@ namespace KafkaConsumer
                                     roomFacilites.Edit_Date = room.lastUpdated;
                                 }
 
-
-
-
-                                var AddRoomFacilityResult = Proxy.Post<bool, DC_Accomodation_RoomFacilities>(System.Configuration.ConfigurationManager.AppSettings["Accommodation_AddRoomFacilities"], roomFacilites).GetAwaiter().GetResult();
+                                lstAccomodationRoomFacilities.Add(roomFacilites);
                             }
                         }
-
+                        if (ExistingAccommodationRoom == null)
+                        {
+                            lstDCAccommodationRoomInfo.Add(new Tuple<bool, DC_Accommodation_RoomInfo, List<DC_Accomodation_RoomFacilities>>(true, RoomToAddUpdate, lstAccomodationRoomFacilities));
+                        }
+                        else
+                        {
+                            lstDCAccommodationRoomInfo.Add(new Tuple<bool, DC_Accommodation_RoomInfo, List<DC_Accomodation_RoomFacilities>>(false, RoomToAddUpdate, lstAccomodationRoomFacilities));
+                        }
                     }
                 }
 
+                var UpdateRoomResult = Proxy.Post<bool, List<Tuple<bool, DC_Accommodation_RoomInfo, List<DC_Accomodation_RoomFacilities>>>>(System.Configuration.ConfigurationManager.AppSettings["Accommodation_AddUpdateAccoRoom"], lstDCAccommodationRoomInfo).GetAwaiter().GetResult();
                 //Remove Unupdated Rooms
                 var RoomsToInActivate = ExistingRooms.Where(w => !NewRooms.Contains(w.Accommodation_RoomInfo_Id)).Select(s => s.Accommodation_RoomInfo_Id).ToList();
+                List<DC_Accommodation_RoomInfo> lstAccoRoomInfo = new List<DC_Accommodation_RoomInfo>();
                 foreach (Guid RoomInfoId in RoomsToInActivate)
                 {
-                    DeleteMasterRoom(null, RoomInfoId);
+                    lstAccoRoomInfo.Add(new DC_Accommodation_RoomInfo()
+                    {
+                        Edit_Date = DateTime.Now,
+                        Edit_User = "Kafka",
+                        IsActive = false,
+                        TLGXAccoRoomId = null,
+                        Accommodation_RoomInfo_Id = RoomInfoId,
+                        Accommodation_Id = null
+                    });
                 }
-
+                if (lstAccoRoomInfo.Count > 0)
+                {
+                    DeleteLstMasterRoom(lstAccoRoomInfo);
+                }
                 return IsUpdate;
             }
             catch (Exception ex)
@@ -977,10 +904,9 @@ namespace KafkaConsumer
                 return false;
             }
         }
-
+        
         public static bool DeleteMasterRoom(string AccoRoomId, Guid Accommodation_RoomInfo_Id)
         {
-
             DC_Accommodation_RoomInfo RoomToUpdate = new DC_Accommodation_RoomInfo
             {
                 Edit_Date = DateTime.Now,
@@ -989,14 +915,19 @@ namespace KafkaConsumer
                 TLGXAccoRoomId = AccoRoomId,
                 Accommodation_RoomInfo_Id = Accommodation_RoomInfo_Id
             };
-
             var UpdateRoomResult = Proxy.Post<bool, DC_Accommodation_RoomInfo>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_UpdateRoomURI"], RoomToUpdate).GetAwaiter().GetResult();
 
             return true;
         }
 
+        public static bool DeleteLstMasterRoom(List<DC_Accommodation_RoomInfo> lstAccoRoomInfo)
+        {
+            var UpdateRoomResult = Proxy.Post<bool, List<DC_Accommodation_RoomInfo>>(System.Configuration.ConfigurationManager.AppSettings["Accommodation_ListUpdateRoomURI"], lstAccoRoomInfo).GetAwaiter().GetResult();
+            return true;
+        }
         #endregion Room
 
+        #region UpdateStg_KafkaInfo
         public static async void UpdateStg_KafkaInfo(DC_Stg_Kafka Kafka)
         {
             DC_Stg_Kafka obj = new DC_Stg_Kafka();
@@ -1008,7 +939,9 @@ namespace KafkaConsumer
             await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Update"], obj);
             obj = null;
         }
+        #endregion
 
+        #region UpdateStg_KafkaInfoWithLog
         public static async void UpdateStg_KafkaInfoWithLog(DC_Stg_Kafka Kafka, string Message, Guid Accommodation_id)
         {
             DC_Stg_Kafka obj = new DC_Stg_Kafka();
@@ -1019,5 +952,7 @@ namespace KafkaConsumer
             await Proxy.Post<DC_Message, DC_Stg_Kafka>(System.Configuration.ConfigurationManager.AppSettings["Kafka_Update"], obj);
             obj = null;
         }
+        #endregion
+
     }
 }
