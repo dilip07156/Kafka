@@ -10,6 +10,8 @@ namespace KafkaConsumer
 {
     public static class Proxy
     {
+        // private static HttpClient client = new HttpClient();
+
         public static string MDMSVC_URL
         {
             get
@@ -18,83 +20,85 @@ namespace KafkaConsumer
             }
         }
 
-        //private static HttpClient client = null;
+        private static HttpClient client = null;
 
-        //private static readonly object padlock = new object();
+        private static readonly object padlock = new object();
 
         public static async Task<TResponse> Get<TResponse>(string RelativeUrl)
         {
-            using (HttpClient client = new HttpClient())
-            {
+            //using (HttpClient client = new HttpClient())
+            //{
 
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage response = await client.GetAsync(MDMSVC_URL + RelativeUrl);
-                if (response.IsSuccessStatusCode)
-                {
-                    return await response.Content.ReadAsAsync<TResponse>();
-                }
-                else
-                {
-                    return default(TResponse);
-                }
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client = Instance;
+            HttpResponseMessage response = await client.GetAsync(MDMSVC_URL + RelativeUrl);
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsAsync<TResponse>();
             }
+            else
+            {
+                return default(TResponse);
+            }
+            //}
         }
 
         public static async Task<TResponse> Post<TResponse, TRequest>(string RelativeUrl, TRequest value)
         {
-            using (HttpClient client = new HttpClient())
+
+            //using (HttpClient client = new HttpClient())
+            //{
+            client = Instance;
+
+
+            DataContractJsonSerializer serializerToUpload = new DataContractJsonSerializer(value.GetType());
+
+            ByteArrayContent content = null;
+
+            using (var memoryStream = new MemoryStream())
             {
-                //client = Instance;
-                client.Timeout = TimeSpan.FromMilliseconds(3600000);
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                DataContractJsonSerializer serializerToUpload = new DataContractJsonSerializer(value.GetType());
-
-                ByteArrayContent content = null;
-
-                using (var memoryStream = new MemoryStream())
+                using (var reader = new StreamReader(memoryStream))
                 {
-                    using (var reader = new StreamReader(memoryStream))
-                    {
-                        serializerToUpload.WriteObject(memoryStream, value);
-                        memoryStream.Position = 0;
-                        string body = reader.ReadToEnd();
-                        var buffer = System.Text.Encoding.UTF8.GetBytes(body);
-                        content = new ByteArrayContent(buffer);
-                        content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-                    }
-                }
-
-                HttpResponseMessage response = await client.PostAsync((MDMSVC_URL + RelativeUrl), content);
-                if (response.IsSuccessStatusCode)
-                {
-                    return await response.Content.ReadAsAsync<TResponse>();
-                }
-                else
-                {
-                    return default(TResponse);
+                    serializerToUpload.WriteObject(memoryStream, value);
+                    memoryStream.Position = 0;
+                    string body = reader.ReadToEnd();
+                    var buffer = System.Text.Encoding.UTF8.GetBytes(body);
+                    content = new ByteArrayContent(buffer);
+                    content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
                 }
             }
 
+            HttpResponseMessage response = await client.PostAsync((MDMSVC_URL + RelativeUrl), content);
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsAsync<TResponse>();
+            }
+            else
+            {
+                return default(TResponse);
+            }
         }
 
-
-        //public static HttpClient Instance
-        //{
-        //    get
-        //    {
-        //        lock (padlock)
-        //        {
-        //            if (client == null)
-        //            {
-        //                client = new HttpClient();
-        //                client.Timeout = TimeSpan.FromMilliseconds(2000);
-        //            }
-        //            return client;
-        //        }
-        //    }
         //}
+
+
+        public static HttpClient Instance
+        {
+            get
+            {
+                lock (padlock)
+                {
+                    if (client == null)
+                    {
+                        client = new HttpClient();
+                        client.Timeout = TimeSpan.FromMilliseconds(3600000);
+                        client.DefaultRequestHeaders.Accept.Clear();
+                        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    }
+                    return client;
+                }
+            }
+        }
     }
 }

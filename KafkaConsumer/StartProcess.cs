@@ -24,7 +24,7 @@ namespace KafkaConsumer
             {
 
                 Log("Start PollingData : " + DateTime.Now.ToString());
-                //PollingData();
+                PollingData();
                 Log("End PollingData");
                 Log("Process_StgKafkaData : Start Process Data : " + DateTime.Now.ToString());
 
@@ -52,10 +52,15 @@ namespace KafkaConsumer
 
 
             }
-            catch (OperationCanceledException)
+            catch(Exception ex)
             {
-                Console.WriteLine("Canceled!");
+                Log(ex.Message);
+                Log(ex.StackTrace);
             }
+            //catch (OperationCanceledException)
+            //{
+            //    Console.WriteLine("Canceled!");
+            //}
 
 
 
@@ -167,14 +172,14 @@ namespace KafkaConsumer
         public void Log(string logMessage)
         {
 
-            using (StreamWriter w = File.AppendText(System.Configuration.ConfigurationManager.AppSettings["FilePath"]))
-            {
+            //using (StreamWriter w = File.AppendText(System.Configuration.ConfigurationManager.AppSettings["FilePath"]))
+            //{
 
-                w.WriteLine($"{logMessage}");
-                w.WriteLine("-------------------------------");
-                w.Flush();
-                w.Close();
-            }
+            //    w.WriteLine($"{logMessage}");
+            //    w.WriteLine("-------------------------------");
+            //    w.Flush();
+            //    w.Close();
+            //}
         }
 
         //public static Dictionary<string, object> constructConfig(string brokerList, bool enableAutoCommit) =>
