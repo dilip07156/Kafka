@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace KafkaConsumerService
 {
-    internal partial class KafkaConsumer : ServiceBase
+    partial class KafkaConsumer : ServiceBase
     {
         private CancellationTokenSource cancelSource;
         public static int TimerInterval;
