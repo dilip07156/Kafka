@@ -1,22 +1,16 @@
 ﻿using KafkaConsumer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
+using System.Configuration;
 using System.ServiceProcess;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Timers;
 
 namespace KafkaConsumerService
 {
-    partial class KafkaConsumer : ServiceBase
+    internal partial class KafkaConsumer : ServiceBase
     {
-        CancellationTokenSource cancelSource;
+        private CancellationTokenSource cancelSource;
+        public static int TimerInterval;
         public KafkaConsumer()
         {
             InitializeComponent();
@@ -26,12 +20,20 @@ namespace KafkaConsumerService
         {
             cancelSource = new CancellationTokenSource();
             StartProcess objProcess = new StartProcess();
+            if (!int.TryParse(ConfigurationManager.AppSettings["TimerInterval"], out TimerInterval))
+            {
+                TimerInterval = 60000;
+            }
 
             Task.Run(async () =>
             {
                 try
                 {
-                    await objProcess.StartPolling(cancelSource);
+                    while (!cancelSource.IsCancellationRequested)
+                    {
+                        await objProcess.StartPolling(cancelSource);
+                        await Task.Delay(TimerInterval, cancelSource.Token);
+                    }
                 }
                 catch (OperationCanceledException)
                 {

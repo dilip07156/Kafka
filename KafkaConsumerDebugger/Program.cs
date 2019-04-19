@@ -1,5 +1,6 @@
 ﻿using KafkaConsumer;
 using System;
+using System.Configuration;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -7,6 +8,7 @@ namespace KafkaConsumerDebugger
 {
     class Program
     {
+        public static int TimerInterval;
         static void Main(string[] args)
         {
             string input = string.Empty;
@@ -45,11 +47,20 @@ namespace KafkaConsumerDebugger
 
             StartProcess sp = new StartProcess();
             Console.WriteLine("Press C to cancel the operation.");
+
+            if (!int.TryParse(ConfigurationManager.AppSettings["TimerInterval"], out TimerInterval))
+            {
+                TimerInterval = 60000;
+            }
             Task.Run(async () =>
             {
                 try
                 {
-                    await sp.StartPolling(cancelSource);
+                    while (!cancelSource.IsCancellationRequested)
+                    {
+                        await sp.StartPolling(cancelSource);
+                        await Task.Delay(TimerInterval, cancelSource.Token);
+                    }
                 }
                 catch (OperationCanceledException Ex)
                 {
