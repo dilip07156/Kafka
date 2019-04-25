@@ -61953,6 +61953,15 @@ namespace KafkaConsumer.MDMSVC {
         private string[] CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsBestSellerField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsDirectContractField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsUniqueProductField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string[] RegionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -62006,6 +62015,45 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.CountryField, value) != true)) {
                     this.CountryField = value;
                     this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsBestSeller {
+            get {
+                return this.IsBestSellerField;
+            }
+            set {
+                if ((this.IsBestSellerField.Equals(value) != true)) {
+                    this.IsBestSellerField = value;
+                    this.RaisePropertyChanged("IsBestSeller");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsDirectContract {
+            get {
+                return this.IsDirectContractField;
+            }
+            set {
+                if ((this.IsDirectContractField.Equals(value) != true)) {
+                    this.IsDirectContractField = value;
+                    this.RaisePropertyChanged("IsDirectContract");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsUniqueProduct {
+            get {
+                return this.IsUniqueProductField;
+            }
+            set {
+                if ((this.IsUniqueProductField.Equals(value) != true)) {
+                    this.IsUniqueProductField = value;
+                    this.RaisePropertyChanged("IsUniqueProduct");
                 }
             }
         }
@@ -66006,22 +66054,19 @@ namespace KafkaConsumer.MDMSVC {
         private System.Nullable<int> Legacy_HTL_IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MappedSupplierCodesField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PriorityField;
+        private System.Nullable<int> PriorityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string RegionNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SupplierNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string TLGXAccoIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> TotalMappedField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -66086,25 +66131,12 @@ namespace KafkaConsumer.MDMSVC {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MappedSupplierCodes {
-            get {
-                return this.MappedSupplierCodesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MappedSupplierCodesField, value) != true)) {
-                    this.MappedSupplierCodesField = value;
-                    this.RaisePropertyChanged("MappedSupplierCodes");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Priority {
+        public System.Nullable<int> Priority {
             get {
                 return this.PriorityField;
             }
             set {
-                if ((object.ReferenceEquals(this.PriorityField, value) != true)) {
+                if ((this.PriorityField.Equals(value) != true)) {
                     this.PriorityField = value;
                     this.RaisePropertyChanged("Priority");
                 }
@@ -66120,6 +66152,19 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.RegionNameField, value) != true)) {
                     this.RegionNameField = value;
                     this.RaisePropertyChanged("RegionName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status {
+            get {
+                return this.StatusField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
                 }
             }
         }
@@ -66146,19 +66191,6 @@ namespace KafkaConsumer.MDMSVC {
                 if ((object.ReferenceEquals(this.TLGXAccoIdField, value) != true)) {
                     this.TLGXAccoIdField = value;
                     this.RaisePropertyChanged("TLGXAccoId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> TotalMapped {
-            get {
-                return this.TotalMappedField;
-            }
-            set {
-                if ((this.TotalMappedField.Equals(value) != true)) {
-                    this.TotalMappedField = value;
-                    this.RaisePropertyChanged("TotalMapped");
                 }
             }
         }
@@ -68341,10 +68373,10 @@ namespace KafkaConsumer.MDMSVC {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticData/GetSupplierDataForExport", ReplyAction="http://tempuri.org/IStaticData/GetSupplierDataForExportResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IStaticData/GetSupplierDataForExportDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
-        KafkaConsumer.MDMSVC.DC_SupplierExportDataReport[] GetSupplierDataForExport(string AccoPriority, string SupplierID, string IsMdmDataOnly, string SuppPriority);
+        KafkaConsumer.MDMSVC.DC_SupplierExportDataReport[] GetSupplierDataForExport(string AccoPriority, string SupplierID, string IsMdmDataOnly, string SuppPriority, string IsBestSeller, string IsUniqueProduct, string IsDirectContract);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticData/GetSupplierDataForExport", ReplyAction="http://tempuri.org/IStaticData/GetSupplierDataForExportResponse")]
-        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_SupplierExportDataReport[]> GetSupplierDataForExportAsync(string AccoPriority, string SupplierID, string IsMdmDataOnly, string SuppPriority);
+        System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_SupplierExportDataReport[]> GetSupplierDataForExportAsync(string AccoPriority, string SupplierID, string IsMdmDataOnly, string SuppPriority, string IsBestSeller, string IsUniqueProduct, string IsDirectContract);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IStaticData/getStatisticforRuleReport", ReplyAction="http://tempuri.org/IStaticData/getStatisticforRuleReportResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(KafkaConsumer.MDMSVC.DC_ErrorStatus), Action="http://tempuri.org/IStaticData/getStatisticforRuleReportDC_ErrorStatusFault", Name="DC_ErrorStatus", Namespace="http://schemas.datacontract.org/2004/07/DataContracts")]
@@ -71868,12 +71900,12 @@ namespace KafkaConsumer.MDMSVC {
             return base.Channel.GetMappingStatisticsAsync(SupplierID, PriorityId, ProductCategory, ISMDM);
         }
         
-        public KafkaConsumer.MDMSVC.DC_SupplierExportDataReport[] GetSupplierDataForExport(string AccoPriority, string SupplierID, string IsMdmDataOnly, string SuppPriority) {
-            return base.Channel.GetSupplierDataForExport(AccoPriority, SupplierID, IsMdmDataOnly, SuppPriority);
+        public KafkaConsumer.MDMSVC.DC_SupplierExportDataReport[] GetSupplierDataForExport(string AccoPriority, string SupplierID, string IsMdmDataOnly, string SuppPriority, string IsBestSeller, string IsUniqueProduct, string IsDirectContract) {
+            return base.Channel.GetSupplierDataForExport(AccoPriority, SupplierID, IsMdmDataOnly, SuppPriority, IsBestSeller, IsUniqueProduct, IsDirectContract);
         }
         
-        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_SupplierExportDataReport[]> GetSupplierDataForExportAsync(string AccoPriority, string SupplierID, string IsMdmDataOnly, string SuppPriority) {
-            return base.Channel.GetSupplierDataForExportAsync(AccoPriority, SupplierID, IsMdmDataOnly, SuppPriority);
+        public System.Threading.Tasks.Task<KafkaConsumer.MDMSVC.DC_SupplierExportDataReport[]> GetSupplierDataForExportAsync(string AccoPriority, string SupplierID, string IsMdmDataOnly, string SuppPriority, string IsBestSeller, string IsUniqueProduct, string IsDirectContract) {
+            return base.Channel.GetSupplierDataForExportAsync(AccoPriority, SupplierID, IsMdmDataOnly, SuppPriority, IsBestSeller, IsUniqueProduct, IsDirectContract);
         }
         
         public KafkaConsumer.MDMSVC.DC_RollOffReportRule[] getStatisticforRuleReport(KafkaConsumer.MDMSVC.DC_RollOFParams parm) {

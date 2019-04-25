@@ -3944,6 +3944,9 @@
         <xs:element minOccurs="0" name="SupplierID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="IsMdmDataOnly" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="SuppPriority" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsBestSeller" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsUniqueProduct" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsDirectContract" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
