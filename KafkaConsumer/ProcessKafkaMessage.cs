@@ -293,14 +293,9 @@ namespace KafkaConsumer
             }
             else
             {
-                string tlgxAccoId = acco._id;
-                if (acco._id.Contains("EZ"))
-                {
-                    tlgxAccoId = acco._id.Substring(0, acco._id.IndexOf('E'));
-                }
                 var SearchAccommodation = Proxy.Post<List<DC_Accomodation_Search_RS>, DC_Accomodation_Search_RQ>(System.Configuration.ConfigurationManager.AppSettings["Accomodation_SearchURI"], new DC_Accomodation_Search_RQ
                 {
-                    TLGXAccoId = tlgxAccoId,
+                    TLGXAccoId = acco._id,
                     PageNo = 0,
                     PageSize = 1
                 }).GetAwaiter().GetResult();
