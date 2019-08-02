@@ -25,6 +25,42 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_DynamicAttributes" nillable="true" type="tns:DC_DynamicAttributes" />
+  <xs:complexType name="DC_Activity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activity_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Activity_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Affiliation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="CommonProductID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyProductID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyRating" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyRecommended" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Display_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinanceProductID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Legacy_Product_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="Mode_Of_Transport" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parent_Legacy_Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductCategorySubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductRating" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalRecord" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TourType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_Activity" nillable="true" type="tns:DC_Activity" />
   <xs:complexType name="DC_Supplier_Search_RQ">
     <xs:sequence>
       <xs:element minOccurs="0" name="CategorySubType_ID" nillable="true" type="xs:string" />
@@ -100,42 +136,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfDC_Activity" nillable="true" type="tns:ArrayOfDC_Activity" />
-  <xs:complexType name="DC_Activity">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Activity_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="Activity_Status" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Affiliation" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="City_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="CommonProductID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="CompanyProductID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="CompanyRating" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="CompanyRecommended" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Country_Id" nillable="true" type="ser:guid" />
-      <xs:element minOccurs="0" name="Create_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Create_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Display_Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Edit_Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Edit_User" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="FinanceProductID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Latitude" nillable="true" type="xs:double" />
-      <xs:element minOccurs="0" name="Legacy_Product_ID" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:double" />
-      <xs:element minOccurs="0" name="Mode_Of_Transport" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Parent_Legacy_Id" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="ProductCategory" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ProductCategorySubType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ProductRating" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="ProductType" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Product_Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="TotalRecord" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="TourType" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="DC_Activity" nillable="true" type="tns:DC_Activity" />
   <xs:complexType name="DC_Activity_Content">
     <xs:sequence>
       <xs:element minOccurs="0" name="ActivityContent_Id" type="ser:guid" />
@@ -272,6 +272,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_Activity_DDL" nillable="true" type="tns:DC_Activity_DDL" />
+  <xs:complexType name="ArrayOfDC_CompanyVersion_DDL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_CompanyVersion_DDL" nillable="true" type="tns:DC_CompanyVersion_DDL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_CompanyVersion_DDL" nillable="true" type="tns:ArrayOfDC_CompanyVersion_DDL" />
+  <xs:complexType name="DC_CompanyVersion_DDL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_CompanyVersion_DDL" nillable="true" type="tns:DC_CompanyVersion_DDL" />
   <xs:complexType name="DC_Keyword">
     <xs:sequence>
       <xs:element minOccurs="0" name="Alias" nillable="true" type="tns:ArrayOfDC_keyword_alias" />
@@ -373,6 +386,7 @@
       <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ZoneCityMapping_Id" nillable="true" type="ser:guid" />
       <xs:element minOccurs="0" name="ZoneProductMapping_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Zone_Code" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Zone_Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Zone_Radius" nillable="true" type="xs:double" />
       <xs:element minOccurs="0" name="Zone_SubType" nillable="true" type="xs:string" />
@@ -399,6 +413,7 @@
       <xs:element minOccurs="0" name="NoOfHotels" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TotalRecords" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Zone_Code" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Zone_Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Zone_Radius" nillable="true" type="xs:double" />
       <xs:element minOccurs="0" name="Zone_SubType" nillable="true" type="xs:string" />
@@ -2005,7 +2020,7 @@
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="SupplierName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="SystemProductNameSubType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemProductType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="TotalCount" nillable="true" type="xs:int" />
     </xs:sequence>
   </xs:complexType>

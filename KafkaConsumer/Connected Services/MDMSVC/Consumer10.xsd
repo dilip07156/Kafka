@@ -71,10 +71,10 @@
       <xs:element minOccurs="0" name="departure" nillable="true" type="tns:ArrayOfHolidayDeparture" />
       <xs:element minOccurs="0" name="destinations" nillable="true" type="tns:ArrayOfHolidayDestinations" />
       <xs:element minOccurs="0" name="duration" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="editDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="editDate" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="editUser" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="effectiveFromDate" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="effectiveToDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="effectiveFromDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="effectiveToDate" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="exclusions" nillable="true" type="tns:ArrayOfHolidayInclusionExclusion" />
       <xs:element minOccurs="0" name="flavorType" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="flavourValidFrom" nillable="true" type="xs:dateTime" />
@@ -310,11 +310,11 @@
   <xs:complexType name="HolidayDeparture">
     <xs:sequence>
       <xs:element minOccurs="0" name="departureId" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="tLGXCityCodeEnd" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tLGXCityCodeStart" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tLGXCountryCodeEnd" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="tLGXCountryCodeStart" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tlgxCityCodeEnd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tlgxCityCodeStart" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tlgxCountryCodeEnd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tlgxCountryCodeStart" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="HolidayDeparture" nillable="true" type="tns:HolidayDeparture" />
@@ -432,7 +432,7 @@
       <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="productDisplayName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="state" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="uRL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="width" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

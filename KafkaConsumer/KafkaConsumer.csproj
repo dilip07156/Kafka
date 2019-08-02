@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityStartProcess.cs" />
     <Compile Include="AdvancedConsumer.cs" />
     <Compile Include="CommonFunctions.cs" />
     <Compile Include="Connected Services\MDMSVC\Reference.cs">
@@ -97,6 +98,7 @@
       <DependentUpon>ConsumerModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AccommodationPayLoad.cs" />
+    <Compile Include="Models\ActivityMainDef.cs" />
     <Compile Include="ProcessKafkaMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proxy.cs" />
@@ -174,6 +176,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.CustomClassificationAttributes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_AccoImageQCReport_RS.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Accommodation_CompanyVersion.datasource">
@@ -365,6 +370,9 @@
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_City_Master_DDL.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_CompanyVersion_DDL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Country.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -372,6 +380,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_CountryMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_DuplicateActivityNameReport_RS.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_DynamicAttributes.datasource">
@@ -441,6 +452,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Master_State.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_MediaCount.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_Message.datasource">
@@ -536,7 +550,16 @@
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierEntity.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierEntityData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierEntityFieldData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierExportDataReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierFacInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MDMSVC\KafkaConsumer.MDMSVC.DC_SupplierImportAttributes.datasource">

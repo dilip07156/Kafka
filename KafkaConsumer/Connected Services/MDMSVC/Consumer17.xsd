@@ -70,7 +70,7 @@
       <xs:element minOccurs="0" name="Longitude" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Longitude_Tx" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MapId" nillable="true" type="xs:int" />
-      <xs:element minOccurs="0" name="MatchedBy" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MatchedBy" nillable="true" type="xs:short" />
       <xs:element minOccurs="0" name="MatchedByString" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OldLatitude" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="OldLongitude" nillable="true" type="xs:string" />
@@ -123,6 +123,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="AccomActive" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Accommodation_Id" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="Accommodation_ProductMapping_Id" type="ser:guid" />
       <xs:element minOccurs="0" name="Address_tx" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Brand" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="CalledFromTLGX" nillable="true" type="xs:string" />
@@ -137,7 +138,7 @@
       <xs:element minOccurs="0" name="IsBestSeller" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsDirectContract" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsUniqueProduct" type="xs:boolean" />
-      <xs:element minOccurs="0" name="MatchedBy" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MatchedBy" nillable="true" type="xs:short" />
       <xs:element minOccurs="0" name="PageNo" type="xs:int" />
       <xs:element minOccurs="0" name="PageSize" type="xs:int" />
       <xs:element minOccurs="0" name="PostCode" nillable="true" type="xs:string" />
@@ -253,6 +254,7 @@
       <xs:element minOccurs="0" name="ExtraBed" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FloorName" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FloorNumber" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsNotTraining" type="xs:boolean" />
       <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="MapId" nillable="true" type="xs:int" />
@@ -903,6 +905,9 @@
     <xs:sequence>
       <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="City" nillable="true" type="q2:ArrayOfstring" />
       <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Country" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element minOccurs="0" name="IsBestSeller" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDirectContract" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsUniqueProduct" type="xs:boolean" />
       <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Keys" nillable="true" type="q4:ArrayOfstring" />
       <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Priorities" nillable="true" type="q5:ArrayOfstring" />
       <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Ranks" nillable="true" type="q6:ArrayOfstring" />
@@ -1069,6 +1074,62 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_ActivityImageReportDetails_RS" nillable="true" type="tns:DC_ActivityImageReportDetails_RS" />
+  <xs:complexType name="DC_DuplicateActivityNameReport_RQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country_Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Supplier_Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_DuplicateActivityNameReport_RQ" nillable="true" type="tns:DC_DuplicateActivityNameReport_RQ" />
+  <xs:complexType name="ArrayOfDC_DuplicateActivityNameReport_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_DuplicateActivityNameReport_RS" nillable="true" type="tns:DC_DuplicateActivityNameReport_RS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_DuplicateActivityNameReport_RS" nillable="true" type="tns:ArrayOfDC_DuplicateActivityNameReport_RS" />
+  <xs:complexType name="DC_DuplicateActivityNameReport_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityCityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActivityCountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ActivityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CountOfDuplicateProducts" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_DuplicateActivityNameReport_RS" nillable="true" type="tns:DC_DuplicateActivityNameReport_RS" />
+  <xs:complexType name="DC_AccoImageQCReport_RQ">
+    <xs:sequence>
+      <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="City_Id" nillable="true" type="q19:ArrayOfstring" />
+      <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Country_Id" nillable="true" type="q20:ArrayOfstring" />
+      <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ImageQCStatus" nillable="true" type="q21:ArrayOfstring" />
+      <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Priority" nillable="true" type="q22:ArrayOfstring" />
+      <xs:element xmlns:q23="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RegionName" nillable="true" type="q23:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_AccoImageQCReport_RQ" nillable="true" type="tns:DC_AccoImageQCReport_RQ" />
+  <xs:complexType name="ArrayOfDC_AccoImageQCReport_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_AccoImageQCReport_RS" nillable="true" type="tns:DC_AccoImageQCReport_RS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDC_AccoImageQCReport_RS" nillable="true" type="tns:ArrayOfDC_AccoImageQCReport_RS" />
+  <xs:complexType name="DC_AccoImageQCReport_RS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CommonHotelID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HotelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageCategory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediaId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MediaURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReasonRejected" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TLGXAccoId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DC_AccoImageQCReport_RS" nillable="true" type="tns:DC_AccoImageQCReport_RS" />
   <xs:complexType name="ArrayOfDC_MappingStats">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="DC_MappingStats" nillable="true" type="tns:DC_MappingStats" />
@@ -1083,7 +1144,7 @@
       <xs:element minOccurs="0" name="NextSupplierScheduledRun" nillable="true" type="tns:ArrayOfDC_NextSupplierScheduledRun" />
       <xs:element minOccurs="0" name="SupplierId" type="ser:guid" />
       <xs:element minOccurs="0" name="SupplierName" nillable="true" type="xs:string" />
-      <xs:element xmlns:q19="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupplierNames" nillable="true" type="q19:ArrayOfstring" />
+      <xs:element xmlns:q24="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SupplierNames" nillable="true" type="q24:ArrayOfstring" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_MappingStats" nillable="true" type="tns:DC_MappingStats" />
@@ -1386,7 +1447,7 @@
   <xs:complexType name="DC_SupplerVSupplier_Report_RQ">
     <xs:sequence>
       <xs:element minOccurs="0" name="Accommodation_Source_Id" type="ser:guid" />
-      <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Compare_WithSupplier_Ids" nillable="true" type="q20:ArrayOfguid" />
+      <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Compare_WithSupplier_Ids" nillable="true" type="q25:ArrayOfguid" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DC_SupplerVSupplier_Report_RQ" nillable="true" type="tns:DC_SupplerVSupplier_Report_RQ" />

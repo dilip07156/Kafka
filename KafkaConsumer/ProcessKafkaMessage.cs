@@ -112,7 +112,7 @@ namespace KafkaConsumer
         {
             bool Result = false;
             List<DC_Stg_Kafka> objUnprocessedData = new List<DC_Stg_Kafka>();
-            objUnprocessedData = GetAllUnprocessedData();
+            objUnprocessedData = GetAllUnprocessedData("PRODUCTACCO.PUB");
 
             if (objUnprocessedData.Count > 0)
             {
@@ -129,13 +129,13 @@ namespace KafkaConsumer
             return Result;
         }
 
-        public static List<DC_Stg_Kafka> GetAllUnprocessedData()
+        public static List<DC_Stg_Kafka> GetAllUnprocessedData(string Topic)
         {
             List<DC_Stg_Kafka> returnObj = new List<DC_Stg_Kafka>();
             try
             {
-                //get all records from stg_kafka which are unread
-                returnObj = Proxy.Get<List<DC_Stg_Kafka>>(System.Configuration.ConfigurationManager.AppSettings["GetPoll_Data"]).GetAwaiter().GetResult();
+                //get all records from stg_kafka which are unread                
+                returnObj = Proxy.Get<List<DC_Stg_Kafka>>(String.Format("{0}/{1}",System.Configuration.ConfigurationManager.AppSettings["GetPoll_Data"], Topic)).GetAwaiter().GetResult();
             }
             catch (Exception ex)
             {
@@ -144,13 +144,13 @@ namespace KafkaConsumer
             return returnObj;
         }
 
-        public static int GetPollDataCount()
+        public static int GetPollDataCount(string Topic)
         {
             int returnObj = 0;
             try
             {
                 //get all records from stg_kafka which are unread
-                returnObj = Proxy.Get<int>(System.Configuration.ConfigurationManager.AppSettings["GetPoll_DataCount"]).GetAwaiter().GetResult();
+                returnObj = Proxy.Get<int>(String.Format("{0}/{1}",System.Configuration.ConfigurationManager.AppSettings["GetPoll_DataCount"],Topic)).GetAwaiter().GetResult();
             }
             catch (Exception ex)
             {
@@ -260,6 +260,126 @@ namespace KafkaConsumer
             }
             return true;
         }
+
+        #region Activity
+        public static bool Process_ActivityStgKafkaData()
+        {
+            bool Result = false;
+            List<DC_Stg_Kafka> objUnprocessedData = new List<DC_Stg_Kafka>();
+            objUnprocessedData = GetAllUnprocessedData("PRODUCTACTIVITY.PUB");
+
+            if (objUnprocessedData.Count > 0)
+            {
+                foreach (DC_Stg_Kafka KafkaData in objUnprocessedData)
+                {
+                    if (KafkaData.Error.ToUpper() == "SUCCESS")
+                    {
+                        Result = ProcessActivityKafkaPayload(KafkaData);
+                    }
+
+                   UpdateStg_KafkaInfo(KafkaData);
+                }
+            }
+            return Result;
+        }
+
+
+        public static bool ProcessActivityKafkaPayload(DC_Stg_Kafka KafkaData)
+        {
+            bool Result = false;
+            try
+            {
+                string row_id = KafkaData.Row_Id.ToString();
+                string payload = KafkaData.PayLoad;
+                string topic = KafkaData.Topic;
+
+                JObject rss = JObject.Parse(payload);
+                string method = (string)rss["method"];
+                JObject data = (JObject)rss["data"];
+
+                if ((method.ToUpper() == "PUT" || method.ToUpper() == "POST") && topic.ToUpper().EndsWith(".PRODUCTACTIVITY.PUB"))
+                {
+                    ActivityDataPayLoad ActPayload = JsonConvert.DeserializeObject<ActivityDataPayLoad>(data.ToString());
+
+                    if (ActPayload != null)
+                    {
+                        Result = Process_ActivityData(ActPayload, KafkaData);
+                    }
+                }               
+                return Result;
+            }
+            catch (Exception ex)
+            {
+                return Result;
+            }
+        }
+
+        public static bool Process_ActivityData(ActivityDataPayLoad ActivityData, DC_Stg_Kafka dC_Stg_Kafka)
+        {
+            if (ActivityData.activityMainData != null)
+            {
+                
+                DC_Activity dbAct = new DC_Activity();
+                var resAddUpdateAccommodationData = AddUpdateActivityData(ActivityData);
+                dbAct = resAddUpdateAccommodationData.Item1;
+                bool IsUpdate = resAddUpdateAccommodationData.Item2;
+                if (dbAct.Activity_Id.Value != null)
+                {
+                    UpdateStg_KafkaInfoWithLog(dC_Stg_Kafka, "Activity is Loaded.", dbAct.Activity_Id.Value);
+                }
+              
+            }
+            return true;
+        }
+
+        public static Tuple<DC_Activity, bool> AddUpdateActivityData(ActivityDataPayLoad ActData)
+        {
+            if (string.IsNullOrEmpty(ActData.activityMainData.productInfo.companyProductId))
+            {
+                return new Tuple<DC_Activity, bool>(null, false);
+            }
+
+            Guid AccommodationId = Guid.Empty;
+            bool IsUpdate = false;
+            string TelephoneTX = string.Empty;
+
+            var activitydata = ActData.activityMainData;          
+
+            #region Construct activity details to Add 
+
+            DC_Activity actToInsertUpdate = new DC_Activity();
+
+            actToInsertUpdate.Activity_Id = Guid.NewGuid();
+            actToInsertUpdate.CommonProductID = activitydata.productInfo.commonProductId;
+            actToInsertUpdate.CompanyProductID = activitydata.productInfo.companyProductId;
+            actToInsertUpdate.FinanceProductID = activitydata.productInfo.financeControlId;
+            actToInsertUpdate.Product_Name = activitydata.productInfo.productName;
+            actToInsertUpdate.Display_Name = activitydata.productInfo.displayName;
+            actToInsertUpdate.Country = activitydata.productInfo.country;
+            actToInsertUpdate.City = activitydata.productInfo.city;
+            actToInsertUpdate.ProductCategory = activitydata.productInfo.productCategory;
+            actToInsertUpdate.ProductCategorySubType = activitydata.productInfo.productCategorySubtype;
+            actToInsertUpdate.ProductType = activitydata.productInfo.productType;
+            actToInsertUpdate.Mode_Of_Transport = activitydata.productInfo.modeOfTransport;
+            actToInsertUpdate.Affiliation = activitydata.productInfo.affiliation;
+            actToInsertUpdate.Create_Date= (activitydata.createdAt != null && activitydata.createdAt <= DateTime.MinValue)?DateTime.Now.Date: activitydata.createdAt;
+            actToInsertUpdate.Create_User = actToInsertUpdate.Create_User ?? "Kafka_Sync";
+            actToInsertUpdate.IsActive = true;      
+           
+            #endregion
+
+            #region Update / Add activity
+
+            var addUpdateActivity = Proxy.Post<bool, DC_Activity>(System.Configuration.ConfigurationManager.AppSettings["Activity_InsertURIKafka"], actToInsertUpdate).GetAwaiter().GetResult();
+            #endregion
+
+            return new Tuple<DC_Activity, bool>(actToInsertUpdate, IsUpdate);
+        }
+
+        #endregion
+
+
+
 
         #region Accommodation
         public static Tuple<DC_Accomodation, bool> AddUpdateAccommodationData(AccommodationPayload AccoData)

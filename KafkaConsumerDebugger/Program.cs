@@ -46,6 +46,7 @@ namespace KafkaConsumerDebugger
             var cancelSource = new CancellationTokenSource();
 
             StartProcess sp = new StartProcess();
+            ActivityStartProcess activityStartProcess = new ActivityStartProcess();
             Console.WriteLine("Press C to cancel the operation.");
 
             if (!int.TryParse(ConfigurationManager.AppSettings["TimerInterval"], out TimerInterval))
@@ -58,7 +59,8 @@ namespace KafkaConsumerDebugger
                 {
                     while (!cancelSource.IsCancellationRequested)
                     {
-                        await sp.StartPolling(cancelSource);
+                        //await sp.StartPolling(cancelSource);
+                        await activityStartProcess.StartPolling(cancelSource);
                         await Task.Delay(TimerInterval, cancelSource.Token);
                     }
                 }

@@ -143,8 +143,8 @@ namespace KafkaConsumer
                     consumer.OnPartitionsAssigned += (_, partitions) =>
                     {
                         Console.WriteLine($"Assigned partitions: [{string.Join(", ", partitions)}], member id: {consumer.MemberId}");
-                        partitions.RemoveAt(2);
-                        partitions.RemoveAt(1);
+                        //partitions.RemoveAt(2);
+                        //partitions.RemoveAt(1);
                         
                         consumer.Assign(partitions);
                     };
